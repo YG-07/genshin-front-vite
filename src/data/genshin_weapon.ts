@@ -907,9 +907,9 @@ export const genshinWeapon: any[] = [
     "weapon": "1",
     "star": "4",
     "item": "9",
-    "mhy_url": "-",
+    "mhy_url": "4792",
     "wiki_url": "12415",
-    "icon_url": ""
+    "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2022/09/27/75833613/b2879f7524fa93c08740f7071f83b7c8_746417133740528223.png"
   },
   {
     "id": "77",

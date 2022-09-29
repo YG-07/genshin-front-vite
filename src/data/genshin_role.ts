@@ -275,9 +275,9 @@ export const genshinRole: any[] = [
     "weapon": "3",
     "book": "11",
     "area": "4",
-    "mhy_url": "-",
+    "mhy_url": "4781",
     "wiki_url": "candace_072",
-    "icon_url": ""
+    "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2022/09/20/4328207/0587df6ac5144c9dd023b0f73ceaf8be_7837788427682725710.png"
   },
   {
     "id": "21",
@@ -513,9 +513,9 @@ export const genshinRole: any[] = [
     "weapon": "3",
     "book": "11",
     "area": "4",
-    "mhy_url": "-",
+    "mhy_url": "4780",
     "wiki_url": "cyno_071",
-    "icon_url": ""
+    "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2022/09/20/4328207/b3847d2416145eb8bb6343302e2b4dca_6997837798254516316.png"
   },
   {
     "id": "38",
