@@ -42,8 +42,8 @@ const handleUrl = () => {
   else if(urlSelect == 'wiki') {
     url = props.wiki_url
   }
-  if(!url) {
-    message.warning('暂无有效链接！')
+  if(url.indexOf('-') != -1) {
+    message.warning('暂无有效链接，请尝试切换URL！')
     return
   }
   window.open(url, '_blank')

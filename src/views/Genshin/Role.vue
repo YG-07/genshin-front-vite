@@ -65,7 +65,7 @@
         </n-space>
         <n-space v-else :style="custStyle">
           <n-pagination :page="page.pageNum" :page-size="page.pageSize" :item-count="total"
-            :on-update:page="searchRoleList" show-size-picker :page-sizes="[10, 20, 30, 50]"
+            :on-update:page="searchRoleList" show-size-picker :page-sizes="[20, 30, 50, 100]"
             :on-update:page-size="changePageSize" />
         </n-space>
       </n-layout>
@@ -85,11 +85,42 @@ import UrlSelect from "@/components/content/UrlSelect.vue";
 import { checkUA } from "@/utils";
 import CommonIcon from "@/components/Icon/CommonIcon.vue";
 import { genshinSelectBook } from "@/data/genshin_select"
+import { useRoute } from "vue-router";
 
 const ua = ref(checkUA())
 const loading = ref(false)
 const loadingBar = useLoadingBar()
 const message = useMessage();
+const route = useRoute()
+  let queryDate = new Date()
+  let queryWeek = -2
+  let page = ref<Page>({
+    pageNum: 1,
+    pageSize: 20,
+  });
+  //  日期是否非法
+  const isValidDate = (date: any) => {
+    return date instanceof Date && !isNaN(date.getTime())
+  }
+  // 获取星期,如: 周5 => 2
+  const getWeek = (week: number) => {
+    if(week == 0) {
+      return -2
+    }
+    return week % 4
+  }
+
+  if(route.query?.t) {
+    let t = route.query.t as string    
+    if(/^\d+$/.test(t)) {
+      queryDate = new Date(Number(t))
+    } 
+    else {
+      queryDate = isValidDate(new Date(t)) ? new Date(t) : new Date()
+    }
+    queryWeek = getWeek(queryDate.getDay())
+    page.value.pageSize = 100
+  }
 
 let searchShow = ref(true)
 let searchName = ref("");
@@ -97,12 +128,9 @@ let element = ref<number>(-2);
 let area = ref<number>(-2);
 let book = ref<number>(-2);
 let weapon = ref<number>(-2);
-let week = ref<number>(-2);
+let week = ref<number>(queryWeek);
 let star = ref<number>(-2);
-let page = ref<Page>({
-  pageNum: 1,
-  pageSize: 20,
-});
+
 let total = ref(0)
 let roleList = ref<Array<any>>([]);
 let custStyle = ref<string>(`

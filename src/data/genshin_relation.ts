@@ -1,6 +1,6 @@
 export const genshinRelation: any[] = [
   {
-    "id": "-1",
+    "id": -1,
     "element_type": "全部元素",
     "weapon_type": null,
     "area_type": "未知地区",
@@ -9,7 +9,7 @@ export const genshinRelation: any[] = [
     "week_name": null
   },
   {
-    "id": "0",
+    "id": 0,
     "element_type": "火",
     "weapon_type": "单手剑",
     "area_type": "蒙德",
@@ -18,7 +18,7 @@ export const genshinRelation: any[] = [
     "week_name": null
   },
   {
-    "id": "1",
+    "id": 1,
     "element_type": "水",
     "weapon_type": "双手剑",
     "area_type": "璃月",
@@ -27,7 +27,7 @@ export const genshinRelation: any[] = [
     "week_name": "周一、周四"
   },
   {
-    "id": "2",
+    "id": 2,
     "element_type": "雷",
     "weapon_type": "弓",
     "area_type": "稻妻",
@@ -36,7 +36,7 @@ export const genshinRelation: any[] = [
     "week_name": "周二、周五"
   },
   {
-    "id": "3",
+    "id": 3,
     "element_type": "冰",
     "weapon_type": "长柄",
     "area_type": "至冬",
@@ -45,7 +45,7 @@ export const genshinRelation: any[] = [
     "week_name": "周三、周六"
   },
   {
-    "id": "4",
+    "id": 4,
     "element_type": "风",
     "weapon_type": "法器",
     "area_type": "须弥",
@@ -54,7 +54,7 @@ export const genshinRelation: any[] = [
     "week_name": null
   },
   {
-    "id": "5",
+    "id": 5,
     "element_type": "岩",
     "weapon_type": null,
     "area_type": null,
@@ -63,7 +63,7 @@ export const genshinRelation: any[] = [
     "week_name": null
   },
   {
-    "id": "6",
+    "id": 6,
     "element_type": "草",
     "weapon_type": null,
     "area_type": null,
@@ -72,7 +72,7 @@ export const genshinRelation: any[] = [
     "week_name": null
   },
   {
-    "id": "7",
+    "id": 7,
     "element_type": null,
     "weapon_type": null,
     "area_type": null,
@@ -81,7 +81,7 @@ export const genshinRelation: any[] = [
     "week_name": null
   },
   {
-    "id": "8",
+    "id": 8,
     "element_type": null,
     "weapon_type": null,
     "area_type": null,
@@ -90,7 +90,7 @@ export const genshinRelation: any[] = [
     "week_name": null
   },
   {
-    "id": "9",
+    "id": 9,
     "element_type": null,
     "weapon_type": null,
     "area_type": null,
@@ -99,7 +99,7 @@ export const genshinRelation: any[] = [
     "week_name": null
   },
   {
-    "id": "10",
+    "id": 10,
     "element_type": null,
     "weapon_type": null,
     "area_type": null,
@@ -108,7 +108,7 @@ export const genshinRelation: any[] = [
     "week_name": null
   },
   {
-    "id": "11",
+    "id": 11,
     "element_type": null,
     "weapon_type": null,
     "area_type": null,
