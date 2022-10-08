@@ -112,7 +112,7 @@ import { useRoute } from "vue-router";
     if(week == 0) {
       return -2
     }
-    return week % 4
+    return week > 3 ? week - 3 : week
   }
 
   if(route.query?.t) {
