@@ -66,7 +66,7 @@
             :item-count="total"
             :on-update:page="searchBookList"
             show-size-picker
-            :page-sizes="[10, 20, 30, 50]"
+            :page-sizes="[10, 50, 70, 100]"
             :on-update:page-size="changePageSize"
           />
         </n-space>
@@ -101,7 +101,7 @@ import { checkUA } from "@/utils";
   let week = ref<number>(-2);
   let page = ref<Page>({
     pageNum: 1,
-    pageSize: 20,
+    pageSize: 100,
   });
   let total = ref(0)
   let bookList = ref<Array<any>>([]);

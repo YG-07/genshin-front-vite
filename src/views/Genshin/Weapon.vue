@@ -67,7 +67,7 @@
             :item-count="total"
             :on-update:page="searchWeaponList"
             show-size-picker
-            :page-sizes="[20, 50, 100, 160]"
+            :page-sizes="[30, 50, 100, 150, 200, 300]"
             :on-update:page-size="changePageSize"
           />
         </n-space>
@@ -97,9 +97,10 @@ import { useRoute } from "vue-router";
   const route = useRoute()
   let queryDate = new Date()
   let queryWeek = -2
+  let searchFlag = true
   let page = ref<Page>({
     pageNum: 1,
-    pageSize: 20,
+    pageSize: 100,
   });
   //  日期是否非法
   const isValidDate = (date: any) => {
@@ -124,10 +125,11 @@ import { useRoute } from "vue-router";
       queryDate = isValidDate(new Date(t)) ? new Date(t) : new Date()
     }
     queryWeek = getWeek(queryDate.getDay())
-    page.value.pageSize = 100
+    searchFlag = false
+    page.value.pageSize = 300
   }
 
-  let searchShow = ref(true)
+  let searchShow = ref(searchFlag)
   let searchName = ref("");
   let weapon = ref<number>(-2);
   let item = ref<number>(-2);

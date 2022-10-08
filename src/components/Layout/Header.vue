@@ -1,7 +1,7 @@
 <template>
   <n-space class="Header" vertical size="large">
     <n-layout has-sider>
-      <n-layout-content content-style="padding: 20px;display: flex;justify-content: flex-end;">
+      <n-layout-content :content-style="ua?pcHeader:mbHeader">
         <div style="width:100%;">Vite App 原神图鉴</div>
         <div class="right">
           <div class="langSelect" size="large">
@@ -9,7 +9,7 @@
             <n-select :value="select"
               @update:value="handleSelect" :options="options" :style="ua?`width: 200px`:'width: 100px'" />
           </div>
-          <div class="user">Ukiyo</div>
+          <div class="user" @click="gotoLink3">Ukiyo</div>
         </div>
       </n-layout-content>
     </n-layout>
@@ -27,6 +27,14 @@ import { useRoute } from 'vue-router';
 const route = useRoute()
 const message = useMessage()
 const ua = ref(checkUA())
+
+const pcHeader = ref('padding: 20px;display: flex;justify-content: flex-end;align-items: center;')
+const mbHeader = ref('padding: 10px;display: flex;justify-content: flex-end;align-items: center;')
+
+const gotoLink3 = () => {
+  window.open('https://link3.cc/uky', '_blank')
+}
+
 let select = ref<string>(storage.get('nameLanguage') || 'name')
 const options = ref([
   {
@@ -86,6 +94,7 @@ const startFilter = () => {
   .user {
     display: flex;
     justify-content: flex-end;
+    cursor: pointer;
   }
   .langSelect {
     display: flex;

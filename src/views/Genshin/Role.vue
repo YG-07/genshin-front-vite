@@ -65,7 +65,7 @@
         </n-space>
         <n-space v-else :style="custStyle">
           <n-pagination :page="page.pageNum" :page-size="page.pageSize" :item-count="total"
-            :on-update:page="searchRoleList" show-size-picker :page-sizes="[20, 30, 50, 100]"
+            :on-update:page="searchRoleList" show-size-picker :page-sizes="[10, 50, 100, 150]"
             :on-update:page-size="changePageSize" />
         </n-space>
       </n-layout>
@@ -94,9 +94,10 @@ const message = useMessage();
 const route = useRoute()
   let queryDate = new Date()
   let queryWeek = -2
+  let searchFlag = true
   let page = ref<Page>({
     pageNum: 1,
-    pageSize: 20,
+    pageSize: 100,
   });
   //  日期是否非法
   const isValidDate = (date: any) => {
@@ -119,10 +120,11 @@ const route = useRoute()
       queryDate = isValidDate(new Date(t)) ? new Date(t) : new Date()
     }
     queryWeek = getWeek(queryDate.getDay())
-    page.value.pageSize = 100
+    searchFlag = false
+    page.value.pageSize = 150
   }
 
-let searchShow = ref(true)
+let searchShow = ref(searchFlag)
 let searchName = ref("");
 let element = ref<number>(-2);
 let area = ref<number>(-2);
@@ -134,7 +136,7 @@ let star = ref<number>(-2);
 let total = ref(0)
 let roleList = ref<Array<any>>([]);
 let custStyle = ref<string>(`
-    ${ua.value ? 'margin: 20px;' : 'margin:2px;'}
+    ${ua.value ? 'margin: 20px;' : 'margin:2px; gap: 8px 5px;'}
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
