@@ -16,7 +16,7 @@ const routes: Readonly<RouteRecordRaw[]> = [
   {
     path: '/genshin',
     name: 'genshin',
-    component: () => import(/* webpackChunkName: "home" */ '@/views/Home.vue'),
+    component: () => import(/* webpackChunkName: "genshin" */ '@/views/Home.vue'),
     meta: {
       title: '原神',
       keepAlive: true

@@ -144,7 +144,7 @@ import { checkUA } from "@/utils";
   const commonUrl = ref<any>({})
   const relationInfo = ref<any>({})
 
-  const querybookList = async () => {
+  const queryBookList = async () => {
     loadingBar.start()
     loading.value = true
     let params = {
@@ -180,14 +180,14 @@ import { checkUA } from "@/utils";
     page.value.pageNum = e
     bookList.value = []
     total.value = 0
-    querybookList()
+    queryBookList()
   }
 
   onBeforeMount(async () => {
     relationInfo.value = await queryGenshinRelation() as any
   })
   onMounted(() => {
-    querybookList()
+    queryBookList()
   })
 </script>
 

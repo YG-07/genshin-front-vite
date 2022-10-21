@@ -1,6 +1,3 @@
-import { emitter } from './../utils/common';
-import { dev } from '@/config';
-import { storage } from "@/utils";
 import { createRouter, createWebHashHistory } from "vue-router";
 import routes from "./routes";
 

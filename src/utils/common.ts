@@ -6,6 +6,7 @@ import { storage } from "./storage"
 import mitt from "mitt";
 
 const message = useMessage();
+// 全局事件总线
 export const emitter = mitt()
 
 // 获取assets静态资源

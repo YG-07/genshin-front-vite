@@ -208,7 +208,7 @@ import { useRoute } from "vue-router";
   const commonUrl = ref<any>({})
   const relationInfo = ref<any>({})
 
-  const queryweaponList = async () => {
+  const queryWeaponList = async () => {
     loadingBar.start()
     loading.value = true
     let params = {
@@ -245,14 +245,14 @@ import { useRoute } from "vue-router";
     page.value.pageNum = e
     weaponList.value = []
     total.value = 0
-    queryweaponList()
+    queryWeaponList()
   }
 
   onBeforeMount(async () => {
     relationInfo.value = await queryGenshinRelation() as any
   })
   onMounted(() => {
-    queryweaponList()
+    queryWeaponList()
   })
 </script>
 
