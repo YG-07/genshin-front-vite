@@ -265,6 +265,18 @@ export const genshinWeapon: any[] = [
   },
   {
     "id": "23",
+    "name": "东花坊时雨",
+    "name_en": "Floral Rainfall",
+    "name_ja": "東花坊時雨",
+    "weapon": "0",
+    "star": "4",
+    "item": "7",
+    "mhy_url": "-",
+    "wiki_url": "11422",
+    "icon_url": "https://genshin.honeyhunterworld.com/img/i_n11422_70.webp"
+  },
+  {
+    "id": "24",
     "name": "冬极白星",
     "name_en": "Polar Star",
     "name_ja": "冬極の白星",
@@ -276,7 +288,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2021/10/10/75833613/a85b5466576b356e2c9183fadc5ee458_5892604898832964943.png"
   },
   {
-    "id": "24",
+    "id": "25",
     "name": "嘟嘟可故事集",
     "name_en": "Dodoco Tales",
     "name_ja": "ドドコの物語",
@@ -288,7 +300,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2021/06/07/75833613/51be197c4c22bf78d9ce43a7ef93b79e_1541289858348302192.png"
   },
   {
-    "id": "25",
+    "id": "26",
     "name": "断浪长鳍",
     "name_en": "Wavebreaker's Fin",
     "name_ja": "斬波のひれ長",
@@ -300,7 +312,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2021/10/10/75833613/e39e9e7de2b4c8d7e4f82d2a5d78b00a_4188699791331957077.png"
   },
   {
-    "id": "26",
+    "id": "27",
     "name": "恶王丸",
     "name_en": "Akuoumaru",
     "name_ja": "惡王丸",
@@ -312,7 +324,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2021/10/11/75833613/4b661765eb32bfe396348b4bc2faa260_3864520739493627825.png"
   },
   {
-    "id": "27",
+    "id": "28",
     "name": "反曲弓",
     "name_en": "Recurve Bow",
     "name_ja": "リカーブボウ",
@@ -324,7 +336,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2020/06/21/75833613/e39707b29fa90b4f113673fba60f9b30_8985143992465766581.png"
   },
   {
-    "id": "28",
+    "id": "29",
     "name": "飞雷之弦振",
     "name_en": "Thundering Pulse",
     "name_ja": "飛雷の鳴弦",
@@ -336,7 +348,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2021/07/19/75833613/c4b968aa853f3180828836d3b856f35d_8616479233096643678.png"
   },
   {
-    "id": "29",
+    "id": "30",
     "name": "飞天大御剑",
     "name_en": "Skyrider Greatsword",
     "name_ja": "飛天大御剣",
@@ -348,7 +360,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2020/03/24/75833613/e5e54473e2037e6820fbcfc2033be1f8_6519699561249741656.png"
   },
   {
-    "id": "30",
+    "id": "31",
     "name": "飞天御剑",
     "name_en": "Skyrider Sword",
     "name_ja": "飛天御剣",
@@ -360,7 +372,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2020/03/19/75833613/2f7a7658839225d2180ff05943ffddc1_8130712469611269098.png"
   },
   {
-    "id": "31",
+    "id": "32",
     "name": "翡玉法球",
     "name_en": "Emerald Orb",
     "name_ja": "翡玉法珠",
@@ -372,7 +384,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2020/06/25/15363053/5fc36e1db7461a5086df18b58f0dcb8a_9079456443193854168.png"
   },
   {
-    "id": "32",
+    "id": "33",
     "name": "风花之颂",
     "name_en": "Windblume Ode",
     "name_ja": "風花の頌歌",
@@ -384,7 +396,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2021/03/15/75833613/bb170b4ece7137095f468122bf81e029_6798112072367620156.png"
   },
   {
-    "id": "33",
+    "id": "34",
     "name": "风信之锋",
     "name_en": "Shifting Windblade",
     "name_ja": "風信の刃",
@@ -396,7 +408,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2022/09/26/75833613/b56960736e190aa95845eae5eb287374_4015355838837067523.png"
   },
   {
-    "id": "34",
+    "id": "35",
     "name": "风鹰剑",
     "name_en": "Aquila Favonia",
     "name_ja": "風鷹剣",
@@ -408,7 +420,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2020/03/26/75833613/935c2d06ae29f29e51b902d131782b18_2882215894293509229.png"
   },
   {
-    "id": "35",
+    "id": "36",
     "name": "腐殖之剑",
     "name_en": "Festering Desire",
     "name_ja": "腐植の剣",
@@ -420,7 +432,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2020/12/03/75833613/7286ac5c1b6bc93fec0e01c5572ae334_2877649227856685290.png"
   },
   {
-    "id": "36",
+    "id": "37",
     "name": "钢轮弓",
     "name_en": "Compound Bow",
     "name_ja": "リングボウ",
@@ -432,7 +444,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2020/04/07/75833613/43246d1471d5297f9e53845ad86d2918_3500168414101532920.png"
   },
   {
-    "id": "37",
+    "id": "38",
     "name": "弓藏",
     "name_en": "Rust",
     "name_ja": "弓蔵",
@@ -444,7 +456,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2020/03/21/75833613/baa762ef9f5c22d30bc249a2ae0dfaea_4031849230616127867.png"
   },
   {
-    "id": "38",
+    "id": "39",
     "name": "贯虹之槊",
     "name_en": "Vortex Vanquisher",
     "name_ja": "破天の槍",
@@ -456,7 +468,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2020/11/03/75833613/7b10471712c6fd13d69289320b6823df_4067250632358740826.png"
   },
   {
-    "id": "39",
+    "id": "40",
     "name": "贯月矢",
     "name_en": "Moonpiercer",
     "name_ja": "ムーンピアサー",
@@ -468,7 +480,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2022/08/22/75833613/578afe8ea7f885a9d97eb1f4faaea38d_7370168682020541436.png"
   },
   {
-    "id": "40",
+    "id": "41",
     "name": "桂木斩长正",
     "name_en": "Katsuragikiri Nagamasa",
     "name_ja": "桂木斬長正",
@@ -480,7 +492,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2021/07/19/75833613/a7b03317a161f04f66cd839c5ac391c1_1029134430971906843.png"
   },
   {
-    "id": "41",
+    "id": "42",
     "name": "和璞鸢",
     "name_en": "Primordial Jade Winged-Spear",
     "name_ja": "和璞鳶",
@@ -492,7 +504,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2020/04/01/75833613/cda9841711c3d126c81a531a02e94953_1861909156499226758.png"
   },
   {
-    "id": "42",
+    "id": "43",
     "name": "黑剑",
     "name_en": "The Black Sword",
     "name_ja": "黒剣",
@@ -504,7 +516,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2020/07/12/76373921/22a34b562052859421a1b0b366093f81_6117536199136265054.png"
   },
   {
-    "id": "43",
+    "id": "44",
     "name": "黑檀弓",
     "name_en": "Ebony Bow",
     "name_ja": "黒檀の弓",
@@ -516,7 +528,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://genshin.honeyhunterworld.com/img/i_n15306_70.webp"
   },
   {
-    "id": "44",
+    "id": "45",
     "name": "黑岩刺枪",
     "name_en": "Blackcliff Pole",
     "name_ja": "黒岩の突槍",
@@ -528,7 +540,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2020/03/22/75833613/b4e0f6c437598a77e7660997daf5260a_7404028432687991788.png"
   },
   {
-    "id": "45",
+    "id": "46",
     "name": "黑岩绯玉",
     "name_en": "Blackcliff Agate",
     "name_ja": "黒岩の緋玉",
@@ -540,7 +552,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2020/03/22/75833613/58b3373fb5bb57023c89c60d5ede5956_1330376353772326494.png"
   },
   {
-    "id": "46",
+    "id": "47",
     "name": "黑岩斩刀",
     "name_en": "Blackcliff Slasher",
     "name_ja": "黒岩の斬刀",
@@ -552,7 +564,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2020/06/23/76373921/572b49753770be07dec7065ed8aa9e33_6768616184571698394.png"
   },
   {
-    "id": "47",
+    "id": "48",
     "name": "黑岩战弓",
     "name_en": "Blackcliff Warbow",
     "name_ja": "黒岩の戦弓",
@@ -564,7 +576,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2020/06/23/76373921/da4fe7434ec5f0ed5f95cfb9da7a844b_1105425832417481917.png"
   },
   {
-    "id": "48",
+    "id": "49",
     "name": "黑岩长剑",
     "name_en": "Blackcliff Longsword",
     "name_ja": "黒岩の長剣",
@@ -576,7 +588,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2020/03/25/75833613/d293b11207ee53181851b43e1d190d7a_1880864215301475464.png"
   },
   {
-    "id": "49",
+    "id": "50",
     "name": "黑缨枪",
     "name_en": "Black Tassel",
     "name_ja": "黒纓槍",
@@ -588,7 +600,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2020/03/19/75833613/abfa4d0c2ac36f7e59d892ad6a929316_7872280644216449533.png"
   },
   {
-    "id": "50",
+    "id": "51",
     "name": "琥珀玥",
     "name_en": "Amber Bead",
     "name_ja": "琥珀の玥",
@@ -600,7 +612,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://genshin.honeyhunterworld.com/img/i_n14306_70.webp"
   },
   {
-    "id": "51",
+    "id": "52",
     "name": "护摩之杖",
     "name_en": "Staff of Homa",
     "name_ja": "護摩の杖",
@@ -612,7 +624,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2021/02/02/75833613/61dfa80da5cbd313dea70b12f48c7048_1985763051506243400.png"
   },
   {
-    "id": "52",
+    "id": "53",
     "name": "祭礼残章",
     "name_en": "Sacrificial Fragments",
     "name_ja": "祭礼の断片",
@@ -624,7 +636,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2020/03/22/75833613/fadc9fb70048164753b72345362c0c21_7122974106862334603.png"
   },
   {
-    "id": "53",
+    "id": "54",
     "name": "祭礼大剑",
     "name_en": "Sacrificial Greatsword",
     "name_ja": "祭礼の大剣",
@@ -636,7 +648,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2020/04/11/75833613/642e8c429133fad5355e6d24c0abdb15_8391048341219333900.png"
   },
   {
-    "id": "54",
+    "id": "55",
     "name": "祭礼弓",
     "name_en": "Sacrificial Bow",
     "name_ja": "祭礼の弓",
@@ -648,7 +660,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2020/03/22/75833613/303b9b8c0b5b7a8b3a9ce4aab816e5d1_5279618247464402934.png"
   },
   {
-    "id": "55",
+    "id": "56",
     "name": "祭礼剑",
     "name_en": "Sacrificial Sword",
     "name_ja": "祭礼の剣",
@@ -660,7 +672,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2020/03/25/75833613/f9c145f07db2787008c50e7c292a46a2_3901382013212830483.png"
   },
   {
-    "id": "56",
+    "id": "57",
     "name": "甲级宝珏",
     "name_en": "Twin Nephrite",
     "name_ja": "特級の宝玉",
@@ -672,7 +684,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2020/06/21/75833613/86bb969cdb644cf54cf0ab62350b2e63_7664010052774139997.png"
   },
   {
-    "id": "57",
+    "id": "58",
     "name": "降临之剑",
     "name_en": "Sword of Descension",
     "name_ja": "降臨の剣",
@@ -684,7 +696,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2020/12/03/75833613/8dddea52e964ac7a53d2c80282f23a4b_2487031582911632276.png"
   },
   {
-    "id": "58",
+    "id": "59",
     "name": "竭泽",
     "name_en": "Trawler",
     "name_ja": "竭沢",
@@ -696,7 +708,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2022/08/22/75833613/309f2eeac9f89fbcad57cdfa6e70b193_1880593930919834126.png"
   },
   {
-    "id": "59",
+    "id": "60",
     "name": "决斗之枪",
     "name_en": "Deathmatch",
     "name_ja": "死闘の槍",
@@ -708,7 +720,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2020/07/13/76373921/bfb97f07e9bc595b008fed2337c7289d_8534797406018130646.png"
   },
   {
-    "id": "60",
+    "id": "61",
     "name": "绝弦",
     "name_en": "The Stringless",
     "name_ja": "絶弦",
@@ -720,7 +732,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2020/03/22/75833613/2ea701466be00898d0ada7d09a2f849c_4135463535146683034.png"
   },
   {
-    "id": "61",
+    "id": "62",
     "name": "口袋魔导书",
     "name_en": "Pocket Grimoire",
     "name_ja": "ポケット魔導書",
@@ -732,7 +744,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2020/03/19/75833613/877be88d4393febf2eebf0d0842991b1_5203967974566406481.png"
   },
   {
-    "id": "62",
+    "id": "63",
     "name": "狼的末路",
     "name_en": "Wolf's Gravestone",
     "name_ja": "狼の末路",
@@ -744,7 +756,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2020/03/23/75833613/22b30db150bfea372b73678157955047_3499980040949492760.png"
   },
   {
-    "id": "63",
+    "id": "64",
     "name": "冷刃",
     "name_en": "Cool Steel",
     "name_ja": "冷刃",
@@ -756,7 +768,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2020/03/20/75833613/24bdaea5978d2634d74dad47442d6122_9127538621522062301.png"
   },
   {
-    "id": "64",
+    "id": "65",
     "name": "黎明神剑",
     "name_en": "Harbinger of Dawn",
     "name_ja": "黎明の神剣",
@@ -768,7 +780,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2020/03/20/75833613/471586149ecedabc50df80a71c1a4e13_7638998658566853121.png"
   },
   {
-    "id": "65",
+    "id": "66",
     "name": "历练的猎弓",
     "name_en": "Seasoned Hunter's Bow",
     "name_ja": "歴戦の狩猟弓",
@@ -780,7 +792,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2020/03/19/75833613/bda299007ed693390a7629dec62ad9c8_4027560520984292648.png"
   },
   {
-    "id": "66",
+    "id": "67",
     "name": "猎弓",
     "name_en": "Hunter's Bow",
     "name_ja": "狩猟弓",
@@ -792,7 +804,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2020/03/19/75833613/bf332b2c47143efb3f9c99baf63e72b3_5155894237240012716.png"
   },
   {
-    "id": "67",
+    "id": "68",
     "name": "猎人之径",
     "name_en": "Hunter's Path",
     "name_ja": "狩人の道",
@@ -804,7 +816,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2022/08/23/75833613/0e8ee7822fc3f5ea9aafb3cff3050cc6_9046847550919521806.png"
   },
   {
-    "id": "68",
+    "id": "69",
     "name": "流浪的晚星",
     "name_en": "Wandering Evenstar",
     "name_ja": "彷徨いし星",
@@ -816,7 +828,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2022/09/27/75833613/b5f48ce0a7de21a6b64d634b28fd4439_2784641002626504821.png"
   },
   {
-    "id": "69",
+    "id": "70",
     "name": "流浪乐章",
     "name_en": "The Widsith",
     "name_ja": "流浪楽章",
@@ -828,7 +840,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2020/03/22/75833613/e827b8eb972d3ac0f42569fe6d5e291b_1329731327757714701.png"
   },
   {
-    "id": "70",
+    "id": "71",
     "name": "流月针",
     "name_en": "Crescent Pike",
     "name_ja": "流月の針",
@@ -840,7 +852,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2020/03/28/75833613/5c5a76b799e189de9257fe0bad6ab347_9004313317699341160.png"
   },
   {
-    "id": "71",
+    "id": "72",
     "name": "龙脊长枪",
     "name_en": "Dragonspine Spear",
     "name_ja": "ドラゴンスピア",
@@ -852,7 +864,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2020/12/03/75833613/a9505cecd5f3c45d8b857ccff349b35d_8684082608956278787.png"
   },
   {
-    "id": "72",
+    "id": "73",
     "name": "笼钓瓶一心",
     "name_en": "Kagotsurube Isshin",
     "name_ja": "籠釣瓶一心",
@@ -864,7 +876,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2022/07/12/75833613/680747c67b82c468a6f7d52729d55ab2_2604332460683105535.png"
   },
   {
-    "id": "73",
+    "id": "74",
     "name": "落霞",
     "name_en": "Fading Twilight",
     "name_ja": "落霞",
@@ -876,7 +888,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2022/05/27/75833613/ef7f8ca8e6e70dcb479ce05f5e291598_7248274570035336894.png"
   },
   {
-    "id": "74",
+    "id": "75",
     "name": "旅行剑",
     "name_en": "Traveler's Handy Sword",
     "name_ja": "旅道の剣",
@@ -888,7 +900,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2020/06/25/15363053/ea426d267c69897cc818c5d5a9e386ea_4399217366335298544.png"
   },
   {
-    "id": "75",
+    "id": "76",
     "name": "掠食者",
     "name_en": "Predator",
     "name_ja": "プレデター",
@@ -900,7 +912,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2021/08/30/75833613/ef3893709fb8e9becbc9376e211552c6_3729425257940998281.png"
   },
   {
-    "id": "76",
+    "id": "77",
     "name": "玛海菈的水色",
     "name_en": "Mahara Aquamarine",
     "name_ja": "マカイラの水色",
@@ -912,7 +924,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2022/09/27/75833613/b2879f7524fa93c08740f7071f83b7c8_746417133740528223.png"
   },
   {
-    "id": "77",
+    "id": "78",
     "name": "曚云之月",
     "name_en": "Mouun's Moon",
     "name_ja": "曚雲の月",
@@ -924,7 +936,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2021/10/11/75833613/dbd17d93d77cb60ccc2cf17327ff95c2_5638231530432896456.png"
   },
   {
-    "id": "78",
+    "id": "79",
     "name": "魔导绪论",
     "name_en": "Magic Guide",
     "name_ja": "魔導緒論",
@@ -936,7 +948,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2020/03/20/75833613/c154d6129fabcfd551b6f33b88d06d37_8283966138624579260.png"
   },
   {
-    "id": "79",
+    "id": "80",
     "name": "沐浴龙血的剑",
     "name_en": "Bloodtainted Greatsword",
     "name_ja": "龍血を浴びた剣",
@@ -948,7 +960,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2020/03/19/75833613/6612743f57016119d5d86d65b0bb3c78_6863185488096462582.png"
   },
   {
-    "id": "80",
+    "id": "81",
     "name": "磐岩结绿",
     "name_en": "Primordial Jade Cutter",
     "name_ja": "磐岩結緑",
@@ -960,7 +972,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2021/02/02/75833613/bfa02af5665193d9b8153107d5484e57_8272816573994913980.png"
   },
   {
-    "id": "81",
+    "id": "82",
     "name": "破魔之弓",
     "name_en": "Hamayumi",
     "name_ja": "破魔の弓",
@@ -972,7 +984,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2021/07/19/75833613/dda4a567d9ae43dc385e1fd3b7b5fed8_657560530658326338.png"
   },
   {
-    "id": "82",
+    "id": "83",
     "name": "千岩古剑",
     "name_en": "Lithic Blade",
     "name_ja": "千岩古剣",
@@ -984,7 +996,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2021/02/02/75833613/a457b731ddc05ea27498c1dbab1ad4e9_5817136873215016548.png"
   },
   {
-    "id": "83",
+    "id": "84",
     "name": "千岩长枪",
     "name_en": "Lithic Spear",
     "name_ja": "千岩長槍",
@@ -996,19 +1008,19 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2021/02/02/75833613/ea70a04d4aa0df1574e7f3d807551883_6915284450779257640.png"
   },
   {
-    "id": "84",
+    "id": "85",
     "name": "千夜浮梦",
     "name_en": "A Thousand Floating Dreams",
     "name_ja": "千夜に浮かぶ夢",
     "weapon": "4",
     "star": "5",
     "item": "10",
-    "mhy_url": "-",
+    "mhy_url": "5110",
     "wiki_url": "14511",
-    "icon_url": "https://genshin.honeyhunterworld.com/img/i_n14511_70.webp"
+    "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2022/10/30/75833613/d7bf0d1fc452b0485a8e34f351647914_359689588087564593.png"
   },
   {
-    "id": "85",
+    "id": "86",
     "name": "忍冬之果",
     "name_en": "Frostbearer",
     "name_ja": "冬忍びの実",
@@ -1020,7 +1032,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2020/12/16/75833613/ac42040366e47673837f75b3e7fc1263_8560032881788677555.png"
   },
   {
-    "id": "86",
+    "id": "87",
     "name": "若水",
     "name_en": "Aqua Simulacra",
     "name_ja": "若水",
@@ -1032,7 +1044,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2022/05/27/75833613/47d410a40f030af54aa7de9ae8981c70_7226284745793519243.png"
   },
   {
-    "id": "87",
+    "id": "88",
     "name": "森林王器",
     "name_en": "Forest Regalia",
     "name_ja": "森林のレガリア",
@@ -1044,7 +1056,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2022/08/23/75833613/881de45b96f658cd4dc2cb41887b658a_4120914496140254122.png"
   },
   {
-    "id": "88",
+    "id": "89",
     "name": "神乐之真意",
     "name_en": "Kagura's Verity",
     "name_ja": "神楽の真意",
@@ -1056,7 +1068,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2022/02/13/75833613/97f9c91d1d85b8975969b043e8ff673b_1750342366655799865.png"
   },
   {
-    "id": "89",
+    "id": "90",
     "name": "神射手之誓",
     "name_en": "Sharpshooter's Oath",
     "name_ja": "シャープシューターの誓い",
@@ -1068,7 +1080,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2020/03/20/75833613/8ec0ab79c3a2e30828331e0d53428fec_5600004519324126064.png"
   },
   {
-    "id": "90",
+    "id": "91",
     "name": "圣显之钥",
     "name_en": "Key of Hierophany",
     "name_ja": "ヒエロファニーの鍵",
@@ -1080,7 +1092,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2022/10/13/75833613/17063cbff7f8f01b9c5a45cb6f0f0bff_152247890090555758.png"
   },
   {
-    "id": "91",
+    "id": "92",
     "name": "石英大剑",
     "name_en": "Quartz",
     "name_ja": "石英大剣",
@@ -1092,7 +1104,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://genshin.honeyhunterworld.com/img/i_n12304_70.webp"
   },
   {
-    "id": "92",
+    "id": "93",
     "name": "试作澹月",
     "name_en": "Prototype Crescent",
     "name_ja": "澹月·試作",
@@ -1104,7 +1116,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2020/03/24/75833613/6d9776dea64400a58adb4eaf824c1618_8563998658668279437.png"
   },
   {
-    "id": "93",
+    "id": "94",
     "name": "试作古华",
     "name_en": "Prototype Archaic",
     "name_ja": "古華·試作",
@@ -1116,7 +1128,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2020/03/19/75833613/8f971bf97933800f22eeb1d1afeec757_5656486488252227606.png"
   },
   {
-    "id": "94",
+    "id": "95",
     "name": "试作金珀",
     "name_en": "Prototype Amber",
     "name_ja": "金珀·試作",
@@ -1128,7 +1140,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2020/03/27/75833613/043803dbf1729027d76feaa7c24aa67b_1248549900106447863.png"
   },
   {
-    "id": "95",
+    "id": "96",
     "name": "试作星镰",
     "name_en": "Prototype Starglitter",
     "name_ja": "星鎌·試作",
@@ -1140,7 +1152,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2020/04/08/75833613/388378b90036d2b75302bb7b67bae64f_7385946179060436684.png"
   },
   {
-    "id": "96",
+    "id": "97",
     "name": "试作斩岩",
     "name_en": "Prototype Rancour",
     "name_ja": "斬岩·試作",
@@ -1152,7 +1164,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2020/03/24/75833613/7916a14d5e0ecaea8a37db5505c01f2e_1831722239667693958.png"
   },
   {
-    "id": "97",
+    "id": "98",
     "name": "四风原典",
     "name_en": "Lost Prayer to the Sacred Winds",
     "name_ja": "四風原典",
@@ -1164,7 +1176,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2020/03/26/75833613/6804c9a9c7e8444a9e9d41523bc9da04_4817566713925112072.png"
   },
   {
-    "id": "98",
+    "id": "99",
     "name": "松籁响起之时",
     "name_en": "Song of Broken Pines",
     "name_ja": "松韻の響く頃",
@@ -1176,7 +1188,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2021/05/12/75833613/9601bc8290aa991fe52c42b81f57a6d2_6288984929976131281.png"
   },
   {
-    "id": "99",
+    "id": "100",
     "name": "讨龙英杰谭",
     "name_en": "Thrilling Tales of Dragon Slayers",
     "name_ja": "龍殺しの英傑譚",
@@ -1188,7 +1200,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2020/03/19/75833613/960be0723a8299db9ccb6a02f74e8e2e_8743657917550828069.png"
   },
   {
-    "id": "100",
+    "id": "101",
     "name": "天空之傲",
     "name_en": "Skyward Pride",
     "name_ja": "天空の傲",
@@ -1200,7 +1212,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2020/03/26/75833613/93684c0ffeb85fa7388967a178260f1a_8512604404883559254.png"
   },
   {
-    "id": "101",
+    "id": "102",
     "name": "天空之脊",
     "name_en": "Skyward Spine",
     "name_ja": "天空の脊",
@@ -1212,7 +1224,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2020/09/17/75833613/fe7b0e7f80a4e1c9876d27b89cbc93ec_8576774571833165082.png"
   },
   {
-    "id": "102",
+    "id": "103",
     "name": "天空之卷",
     "name_en": "Skyward Atlas",
     "name_ja": "天空の巻",
@@ -1224,7 +1236,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2020/03/24/75833613/d16313992a8ba86e6ba4a84977b59ca4_8815818653896805010.png"
   },
   {
-    "id": "103",
+    "id": "104",
     "name": "天空之刃",
     "name_en": "Skyward Blade",
     "name_ja": "天空の刃",
@@ -1236,7 +1248,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2020/03/23/75833613/445ee7341d31462920858367cadc6fc1_3531531098390151221.png"
   },
   {
-    "id": "104",
+    "id": "105",
     "name": "天空之翼",
     "name_en": "Skyward Harp",
     "name_ja": "天空の翼",
@@ -1248,7 +1260,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2020/03/29/75833613/05f12093a755817ad3c51f53db1039a4_5002287290900373405.png"
   },
   {
-    "id": "105",
+    "id": "106",
     "name": "天目影打刀",
     "name_en": "Amenoma Kageuchi",
     "name_ja": "天目影打",
@@ -1260,7 +1272,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2021/10/21/75833613/ed49afc0e189b8292bba65e91d19fecf_4776350835348014308.png"
   },
   {
-    "id": "106",
+    "id": "107",
     "name": "铁蜂刺",
     "name_en": "Iron Sting",
     "name_ja": "鉄蜂の刺し",
@@ -1272,7 +1284,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2020/03/22/75833613/3aab2b1b2703f755d88330ed161568b1_8216113915867690243.png"
   },
   {
-    "id": "107",
+    "id": "108",
     "name": "铁尖枪",
     "name_en": "Iron Point",
     "name_ja": "鉄尖槍",
@@ -1284,7 +1296,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2020/03/20/75833613/6189a5177288ec1a426710bfcb41885b_1406125984012296163.png"
   },
   {
-    "id": "108",
+    "id": "109",
     "name": "铁影阔剑",
     "name_en": "Ferrous Shadow",
     "name_ja": "鉄影段平",
@@ -1296,7 +1308,19 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2020/03/19/75833613/9f92bc7c1b1c9f667d8b36a2890dba3c_4966013475177272313.png"
   },
   {
-    "id": "109",
+    "id": "110",
+    "name": "图莱杜拉的回忆",
+    "name_en": "Tullaytullah’s Remembrance",
+    "name_ja": "トゥライトゥーラの記憶",
+    "weapon": "4",
+    "star": "5",
+    "item": "9",
+    "mhy_url": "-",
+    "wiki_url": "14512",
+    "icon_url": "https://genshin.honeyhunterworld.com/img/i_n14512_70.webp"
+  },
+  {
+    "id": "111",
     "name": "万国诸海图谱",
     "name_en": "Mappa Mare",
     "name_ja": "万国諸海の図譜",
@@ -1308,7 +1332,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2020/03/22/75833613/bb5d973a357ab939cc3c6c193000cfca_8857068874429107380.png"
   },
   {
-    "id": "110",
+    "id": "112",
     "name": "王下近侍",
     "name_en": "King's Squire",
     "name_ja": "王の近侍",
@@ -1320,7 +1344,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2022/08/23/75833613/d3d10fa92028b6f036c34d52ecee3a20_7523555327997551643.png"
   },
   {
-    "id": "111",
+    "id": "113",
     "name": "无锋剑",
     "name_en": "Dull Blade",
     "name_ja": "無鋒の剣",
@@ -1332,7 +1356,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2020/03/19/75833613/fee1b4cdc14a3dce1f548a99967d0a4d_3322549636151970165.png"
   },
   {
-    "id": "112",
+    "id": "114",
     "name": "无工之剑",
     "name_en": "The Unforged",
     "name_ja": "無工の剣",
@@ -1344,7 +1368,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2020/11/03/75833613/d4ecd5c1f63d73c86a17ad3b382ab95c_6771529426315730357.png"
   },
   {
-    "id": "113",
+    "id": "115",
     "name": "雾切之回光",
     "name_en": "Mistsplitter Reforged",
     "name_ja": "霧切の廻光",
@@ -1356,7 +1380,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2021/07/18/75833613/a3eb5b2dbfaed0dc91f39038db3919b2_3947809028567339166.png"
   },
   {
-    "id": "114",
+    "id": "116",
     "name": "西风大剑",
     "name_en": "Favonius Greatsword",
     "name_ja": "西風大剣",
@@ -1368,7 +1392,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2020/03/22/75833613/60cca5eecb54f5df17e9aadae0f20116_5349417019139180282.png"
   },
   {
-    "id": "115",
+    "id": "117",
     "name": "西风剑",
     "name_en": "Favonius Sword",
     "name_ja": "西風剣",
@@ -1380,7 +1404,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2020/03/23/75833613/0b4101418da4c458e2df1ee94953c21f_743806312164207500.png"
   },
   {
-    "id": "116",
+    "id": "118",
     "name": "西风猎弓",
     "name_en": "Favonius Warbow",
     "name_ja": "西風猟弓",
@@ -1392,7 +1416,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2020/04/03/75833613/e0761fb637cb5fd3971f4195bbb1b58c_2054410022054716358.png"
   },
   {
-    "id": "117",
+    "id": "119",
     "name": "西风秘典",
     "name_en": "Favonius Codex",
     "name_ja": "西風秘典",
@@ -1404,7 +1428,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2020/03/22/75833613/d5fd5471553ba8ef97c9a8a1dd967470_2181206993669361058.png"
   },
   {
-    "id": "118",
+    "id": "120",
     "name": "西风长枪",
     "name_en": "Favonius Lance",
     "name_ja": "西風長槍",
@@ -1416,7 +1440,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2020/09/18/75833613/6140a0079a81382e3c44a02a9e84126e_3640803810731897553.png"
   },
   {
-    "id": "119",
+    "id": "121",
     "name": "西福斯的月光",
     "name_en": "Xiphos' Moonlight",
     "name_ja": "サイフォスの月明かり",
@@ -1428,7 +1452,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2022/10/13/75833613/0588b3acc33fe683a499ede1fd154358_1475750523378583293.png"
   },
   {
-    "id": "120",
+    "id": "122",
     "name": "息灾",
     "name_en": "Calamity Queller",
     "name_ja": "息災",
@@ -1440,7 +1464,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2022/01/04/75833613/bc53d31707c6d8c7637162871f59ba4e_4605074879267649188.png"
   },
   {
-    "id": "121",
+    "id": "123",
     "name": "喜多院十文字",
     "name_en": "Kitain Cross Spear",
     "name_ja": "喜多院十文字槍",
@@ -1452,7 +1476,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2021/07/20/75833613/7783dfe92cfe7e589471ba204ec37f6d_932589671452620706.png"
   },
   {
-    "id": "122",
+    "id": "124",
     "name": "匣里龙吟",
     "name_en": "Lion's Roar",
     "name_ja": "匣中龍吟",
@@ -1464,7 +1488,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2020/03/19/75833613/157123aec9296f06c27def671ac923b1_3170648805240315119.png"
   },
   {
-    "id": "123",
+    "id": "125",
     "name": "匣里灭辰",
     "name_en": "Dragon's Bane",
     "name_ja": "匣中滅龍",
@@ -1476,7 +1500,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2020/03/22/75833613/b753959a45fc9989e39dd945e8769e4a_6217077251181025856.png"
   },
   {
-    "id": "124",
+    "id": "126",
     "name": "匣里日月",
     "name_en": "Solar Pearl",
     "name_ja": "匣中日月",
@@ -1488,7 +1512,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2020/03/23/75833613/ac439934d1093ab4f9eaac59784f3a0c_3374221950943383956.png"
   },
   {
-    "id": "125",
+    "id": "127",
     "name": "衔珠海皇",
     "name_en": "Luxurious Sea-Lord",
     "name_ja": "銜玉の海皇",
@@ -1500,7 +1524,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2021/08/29/75833613/da92ce666f6f5a37c283b29c2f2eb592_1653541597481079247.png"
   },
   {
-    "id": "126",
+    "id": "128",
     "name": "新手长枪",
     "name_en": "Beginner's Protector",
     "name_ja": "新米の長槍",
@@ -1512,7 +1536,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2020/03/20/75833613/b72786043e38c86cfca0605f587f83d5_7801496279198261696.png"
   },
   {
-    "id": "127",
+    "id": "129",
     "name": "信使",
     "name_en": "Messenger",
     "name_ja": "文使い",
@@ -1524,7 +1548,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2020/06/21/75833613/16f64d570b8d5a72000191df60f62601_8526863970829738869.png"
   },
   {
-    "id": "128",
+    "id": "130",
     "name": "学徒笔记",
     "name_en": "Apprentice's Notes",
     "name_ja": "生徒ノート",
@@ -1536,7 +1560,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2020/03/19/75833613/79bdee9646f7cd1f3e757d9f26bd3d68_8508785103108153146.png"
   },
   {
-    "id": "129",
+    "id": "131",
     "name": "雪葬的星银",
     "name_en": "Snow-Tombed Starsilver",
     "name_ja": "雪葬の星銀",
@@ -1548,7 +1572,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2020/12/03/75833613/1d809e4dc4cb46d286de580f7d37b84b_2295500733774520474.png"
   },
   {
-    "id": "130",
+    "id": "132",
     "name": "训练大剑",
     "name_en": "Waster Greatsword",
     "name_ja": "訓練用大剣",
@@ -1560,7 +1584,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2020/03/19/75833613/2fc6f5c0c4a8f0547ab17cd06e2d9a14_6235791695356383945.png"
   },
   {
-    "id": "131",
+    "id": "133",
     "name": "鸦羽弓",
     "name_en": "Raven Bow",
     "name_ja": "鴉羽の弓",
@@ -1572,7 +1596,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2020/03/19/75833613/3624d7d0a0ef89d91cb1166bac6d5518_603388374697378447.png"
   },
   {
-    "id": "132",
+    "id": "134",
     "name": "以理服人",
     "name_en": "Debate Club",
     "name_ja": "理屈責め",
@@ -1584,7 +1608,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2020/03/19/75833613/059f200b99d098fd1791a5b6df57fb15_2429287944097179245.png"
   },
   {
-    "id": "133",
+    "id": "135",
     "name": "异世界行记",
     "name_en": "Otherworldly Story",
     "name_ja": "異世界旅行記",
@@ -1596,7 +1620,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2020/06/21/75833613/99f89aff67fb655d40c72b4c9e3c2dbd_3678797272332929121.png"
   },
   {
-    "id": "134",
+    "id": "136",
     "name": "银剑",
     "name_en": "Silver Sword",
     "name_ja": "銀の剣",
@@ -1608,7 +1632,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2020/03/19/75833613/8abcfb0e788eee0d872a8b5ab36b54c9_3740162289790477109.png"
   },
   {
-    "id": "135",
+    "id": "137",
     "name": "盈满之实",
     "name_en": "Fruit of Fulfillment",
     "name_ja": "満悦の実",
@@ -1620,7 +1644,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2022/08/22/75833613/789a0c301fd928969ac55776a30ec2d1_1756473021548622532.png"
   },
   {
-    "id": "136",
+    "id": "138",
     "name": "佣兵重剑",
     "name_en": "Old Merc's Pal",
     "name_ja": "傭兵の重剣",
@@ -1632,7 +1656,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2020/03/20/75833613/478f9e83909a2bf2545d7f70d765b788_5488112487273325804.png"
   },
   {
-    "id": "137",
+    "id": "139",
     "name": "幽夜华尔兹",
     "name_en": "Mitternachts Waltz",
     "name_ja": "幽夜のワルツ",
@@ -1644,7 +1668,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2021/06/07/75833613/20fae82e8d237efc703cebebe371a32a_7003112924895248286.png"
   },
   {
-    "id": "138",
+    "id": "140",
     "name": "雨裁",
     "name_en": "Rainslasher",
     "name_ja": "雨裁",
@@ -1656,7 +1680,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2020/03/21/75833613/d1004336c0b48f25a7d3546b57bce070_1026700881516126262.png"
   },
   {
-    "id": "139",
+    "id": "141",
     "name": "原木刀",
     "name_en": "Sapwood Blade",
     "name_ja": "原木刀",
@@ -1668,7 +1692,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2022/08/23/75833613/fd6ba0f1c2db8473aece023a6edec48a_1888608505606874212.png"
   },
   {
-    "id": "140",
+    "id": "142",
     "name": "钺矛",
     "name_en": "Halberd",
     "name_ja": "鉾槍",
@@ -1680,7 +1704,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2020/06/21/75833613/2ef0c79a0d05d49f3c7c884520e70ef6_7423804349833045135.png"
   },
   {
-    "id": "141",
+    "id": "143",
     "name": "昭心",
     "name_en": "Eye of Perception",
     "name_ja": "昭心",
@@ -1692,7 +1716,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2020/06/21/76373921/dafe7f5cdecac90aec82b1a4ba04ff25_8710250991471280781.png"
   },
   {
-    "id": "142",
+    "id": "144",
     "name": "证誓之明瞳",
     "name_en": "Oathsworn Eye",
     "name_ja": "誓いの明瞳",
@@ -1704,7 +1728,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2022/02/13/75833613/47899a33ddd3f573f55c76df4a7802d2_3094185401289107894.png"
   },
   {
-    "id": "143",
+    "id": "145",
     "name": "薙草之稻光",
     "name_en": "Engulfing Lightning",
     "name_ja": "草薙の稲光",
@@ -1716,7 +1740,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2021/08/29/75833613/8b0a05031b78c76f506045a2a990c411_8186351970748341837.png"
   },
   {
-    "id": "144",
+    "id": "146",
     "name": "终末嗟叹之诗",
     "name_en": "Elegy for the End",
     "name_ja": "終焉を嘆く詩",
@@ -1728,7 +1752,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2021/03/15/75833613/7543084fd200a934c835c5f4e3c43561_1445795416639899431.png"
   },
   {
-    "id": "145",
+    "id": "147",
     "name": "钟剑",
     "name_en": "The Bell",
     "name_ja": "鐘の剣",
@@ -1740,7 +1764,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2020/03/23/75833613/17fa7c1aaf90e8ee33985e9bede2c57a_8855621887112870500.png"
   },
   {
-    "id": "146",
+    "id": "148",
     "name": "斫峰之刃",
     "name_en": "Summit Shaper",
     "name_ja": "斬山の刃",
@@ -1752,7 +1776,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2020/12/23/75833613/16d127e84bb154ad5b18322f8cce9cf2_7289288347603811546.png"
   },
   {
-    "id": "147",
+    "id": "149",
     "name": "宗室大剑",
     "name_en": "Royal Greatsword",
     "name_ja": "旧貴族大剣",
@@ -1764,7 +1788,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2020/03/23/75833613/21ba2927f014300431edad9fc7d519d1_1243866720697859716.png"
   },
   {
-    "id": "148",
+    "id": "150",
     "name": "宗室猎枪",
     "name_en": "Royal Spear",
     "name_ja": "旧貴族猟槍",
@@ -1776,7 +1800,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2020/11/03/75833613/5f0ecdf6675c087059ef9bdcf34f8bb7_8359121231390835579.png"
   },
   {
-    "id": "149",
+    "id": "151",
     "name": "宗室秘法录",
     "name_en": "Royal Grimoire",
     "name_ja": "旧貴族秘法録",
@@ -1788,7 +1812,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2020/03/22/75833613/098ee6b954cc8b44400d6ed3c601f107_5142741724020145957.png"
   },
   {
-    "id": "150",
+    "id": "152",
     "name": "宗室长弓",
     "name_en": "Royal Bow",
     "name_ja": "旧貴族長弓",
@@ -1800,7 +1824,7 @@ export const genshinWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2020/03/22/75833613/5e126c30f3d95cdf7c9d173527e82919_3096417559484041900.png"
   },
   {
-    "id": "151",
+    "id": "153",
     "name": "宗室长剑",
     "name_en": "Royal Longsword",
     "name_ja": "旧貴族長剣",
