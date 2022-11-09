@@ -18,6 +18,7 @@ import RoleIcon from "@/components/Icon/RoleIcon.vue";
 import WeaponIcon from "@/components/Icon/WeaponIcon.vue";
 import BookIcon from "@/components/Icon/BookIcon.vue";
 import ItemIcon from "@/components/Icon/ItemIcon.vue";
+import CommonIcon from "@/components/Icon/CommonIcon.vue";
 
 const route = useRoute();
 
@@ -28,8 +29,15 @@ const renderIcon = (icon: Component) => {
 const renderRoute = (name: string, text: string) => {
   return () => h(RouterLink, { to: { name } }, text);
 };
+
+const normalIcon = (url: string) => {
+  return h(CommonIcon, {url, size: 20}, { default: () => h('') })
+}
+
 let activeKey = ref<string | undefined | null>(route.name as string || null);
 let collapsed = ref<boolean>(!checkUA());
+
+
 const menuOptions: MenuOption[] = [
   {
     label: renderRoute("home", "首页"),
@@ -39,22 +47,27 @@ const menuOptions: MenuOption[] = [
   {
     label: renderRoute("role", "角色"),
     key: "role",
-    icon: renderIcon(RoleIcon),
+    icon: renderIcon(normalIcon('https://genshin.honeyhunterworld.com/img/icons/char_35.webp')),
   },
   {
     label: renderRoute("weapon", "武器"),
     key: "weapon",
-    icon: renderIcon(WeaponIcon),
+    icon: renderIcon(normalIcon('https://genshin.honeyhunterworld.com/img/icons/weapons_35.webp')),
   },
   {
     label: renderRoute("book", "天赋书"),
     key: "book",
-    icon: renderIcon(BookIcon),
+    icon: renderIcon(normalIcon('https://genshin.honeyhunterworld.com/img/icons/talent_35.webp')),
   },
   {
     label: renderRoute("item", "武器突破材料"),
     key: "item",
-    icon: renderIcon(ItemIcon),
+    icon: renderIcon(normalIcon('https://genshin.honeyhunterworld.com/img/icons/bag_35.webp')),
+  },
+  {
+    label: renderRoute("card", "「七圣召唤」卡牌"),
+    key: "card",
+    icon: renderIcon(normalIcon('https://genshin.honeyhunterworld.com/img/i_n146_35.webp')),
   },
 ];
 </script>

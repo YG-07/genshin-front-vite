@@ -4,6 +4,8 @@ import { genshinBook } from '@/data/genshin_book';
 import { genshinRelation } from '@/data/genshin_relation';
 import { genshinRole } from '@/data/genshin_role';
 import { genshinWeapon } from '@/data/genshin_weapon';
+import { genshinCard } from '@/data/genshin_card';
+
 import { Page } from "@/utils";
 
 const Res = (data?: any, code?: number, msg?: string) => {
@@ -14,7 +16,8 @@ const Res = (data?: any, code?: number, msg?: string) => {
   }
 }
 
-// 检查参数，并模拟SQL过滤
+// 检查参数，并模拟SQL过滤。根据缓存的关系对象判断过滤条件
+// 参数：[[过滤数据, 全部数据], ...]
 const Chk = (sth: any[]) => {
   let flag: boolean = true
   for (let i = 0; i < sth.length; ++i) {
@@ -206,6 +209,40 @@ export const _getBookInfo = (params = {} as any) => {
       return resolve(Res({
         records: _genshinBook.slice(m, n),
         total: _genshinBook.length
+      }))
+    } else {
+      return reject(Res({
+        records: [],
+        total: 0
+      }, 500, '获取失败'))
+    }
+  })
+}
+
+export const _getCardInfo = (params = {} as any) => {
+  return new Promise((resolve, reject) => {
+    if (genshinCard) {
+      let { name, card, page } = params
+      name = name || ''
+      let _genshinCard: any[] = []
+      for (let i = 0; i < genshinCard.length; ++i) {
+        let e = genshinCard[i] as any
+        let flag: boolean = true
+        if (e.name.indexOf(name) > -1) {
+          console.log([card, e.type]);
+          
+          flag = Chk([
+            [card, e.type],
+          ])
+          if (flag) {
+            _genshinCard.push(e);
+          }
+        }
+      }
+      let { m, n } = GetPage(_genshinCard.length, page)
+      return resolve(Res({
+        records: _genshinCard.slice(m, n),
+        total: _genshinCard.length
       }))
     } else {
       return reject(Res({

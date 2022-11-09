@@ -5,6 +5,36 @@ import { storage } from "./storage"
 
 const message = useMessage();
 const zh = ['一', '二', '三', '四', '五']
+const cardList = [
+  {
+    label: '牌面',
+    value: 'card'
+  },
+  {
+    label: '角色牌',
+    value: 'role'
+  },
+  {
+    label: '武器牌',
+    value: 'weapon'
+  },
+  {
+    label: '辅助牌',
+    value: 'assist'
+  },
+  {
+    label: '食物牌',
+    value: 'food'
+  },
+  {
+    label: '事件牌',
+    value: 'event'
+  },
+  {
+    label: '技能牌',
+    value: 'skill'
+  },
+]
 
 export const queryGenshinRelation = async () => {
   let genshinRelation = storage.get('genshinRelation')
@@ -70,8 +100,9 @@ export const queryGenshinRelation = async () => {
       value: i
     })
   }
+  let card = [all, ...cardList]
   const relation = {
-    area, book, element, item, weapon, week, star
+    area, book, element, item, weapon, week, star, card
   } as any
   storage.set('genshinRelation', relation)
   return relation

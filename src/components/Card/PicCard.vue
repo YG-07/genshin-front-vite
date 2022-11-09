@@ -1,8 +1,8 @@
 <template>
   <div class="PicCard" @click="handleUrl">
     <div class="pic-item">
-      <n-image :width="size" :height="size" :preview-disabled="true" lazy :src="src"> </n-image>
-      <n-ellipsis :style="ua?`max-width: 90px`:`max-width: 50px;font-size: 12px;`">
+      <n-image :width="w" :height="h" :preview-disabled="true" lazy :src="src"> </n-image>
+      <n-ellipsis :style="ua?`max-width: 90px`:`max-width: 40px;transform: scale(0.9);font-size: 12px;`">
         {{ item[nameType] }}
       </n-ellipsis>
     </div>
@@ -16,16 +16,23 @@ import { checkUA } from "@/utils";
 import { ref } from 'vue';
 import { emitter } from '@/utils';
 
-const ua = ref(checkUA())
-let size = ref<number>(ua.value ? 100 : 45)
 interface Props {
-  src: string,
+  src?: string,
+  width?: string | number,
+  height?: string | number,
   item: any,
   mhy_url: string,
   wiki_url: string,
 }
 
+const ua = ref(checkUA())
+let size = ref<number>(ua.value ? 100 : 45)
+
 const props = withDefaults(defineProps<Props>(), {});
+
+let w = ref<number>(props.width ? Number(props.width) : size.value)
+let h = ref<number>(props.height ? Number(props.height) : size.value)
+
 const message = useMessage();
 let nameType = ref(storage.get('nameLanguage') || 'name')
 

@@ -3,7 +3,8 @@ import {
   _getWeaponInfo,
   _getItemInfo,
   _getBookInfo,
-  _getRelationInfo
+  _getRelationInfo,
+  _getCardInfo
 } from '@/backEnd';
 // 原神相关接口
 
@@ -27,4 +28,8 @@ export const getItemInfo = (params: any) => {
 // 分页查询天赋书信息
 export const getBookInfo = (params: any) => {
   return _getBookInfo(params)
+}
+// 分页查询卡牌信息
+export const getCardInfo = (params: any) => {
+  return _getCardInfo(params)
 }

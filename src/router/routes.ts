@@ -58,7 +58,15 @@ const routes: Readonly<RouteRecordRaw[]> = [
           keepAlive: true
         }
       },
-
+      {
+        path: 'card',
+        name: 'card',
+        component: () => import(/* webpackChunkName: "card" */ '@/views/Genshin/Card.vue'),
+        meta: {
+          title: '「七圣召唤」卡牌',
+          keepAlive: true
+        }
+      },
     ]
   },
 ]
