@@ -1,3 +1,5 @@
+import { honkaiRelation } from './../data/honkai_relation';
+import { honkaiRole } from '@/data/honkai_role';
 import { commonConst } from "@/data/common_const.js"
 import { genshinItem } from '@/data/genshin_item';
 import { genshinBook } from '@/data/genshin_book';
@@ -229,8 +231,6 @@ export const _getCardInfo = (params = {} as any) => {
         let e = genshinCard[i] as any
         let flag: boolean = true
         if (e.name.indexOf(name) > -1) {
-          console.log([card, e.type]);
-          
           flag = Chk([
             [card, e.type],
           ])
@@ -253,3 +253,49 @@ export const _getCardInfo = (params = {} as any) => {
   })
 }
 
+export const _getHonkaiRelationInfo = (type = "") => {
+  return new Promise((resolve, reject) => {
+    if (honkaiRelation) {
+      return resolve(Res(honkaiRelation))
+    } else {
+      return reject(Res([], 500, '获取失败'))
+    }
+  })
+}
+
+export const _getHonkaiRoleInfo = (params = {} as any) => {
+  return new Promise((resolve, reject) => {
+    if (honkaiRole) {
+      let { name, element, role, star, damage, page } = params
+      name = name || ''
+      let _honkaiRole: any[] = []
+      const f_honkaiRole = [...honkaiRole]
+      for (let i = 0; i < f_honkaiRole.length; ++i) {
+        let e = f_honkaiRole[i] as any
+        let flag: boolean = true
+        // 关键字包括 正式名字或人物类型
+        if (e.name.indexOf(name) > -1 || honkaiRelation[Number(e.role)+1].role.indexOf(name) > -1) {
+          flag = Chk([
+            [element, e.element],
+            [role, e.role],
+            [star, e.star],
+            [damage, e.damage]
+          ])
+          if (flag) {
+            _honkaiRole.push(e)
+          }
+        }
+      }
+      let { m, n } = GetPage(_honkaiRole.length, page)
+      return resolve(Res({
+        records: _honkaiRole.slice(m, n),
+        total: _honkaiRole.length
+      }))
+    } else {
+      return reject(Res({
+        records: [],
+        total: 0
+      }, 500, '获取失败'))
+    }
+  })
+}

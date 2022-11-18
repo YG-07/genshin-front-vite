@@ -2,6 +2,7 @@ import { Page } from './interface';
 import { storage } from './storage';
 import { commonMethod, checkUA, queryCommonUrl, emitter } from './common';
 import { queryGenshinRelation } from './genshin';
+import { queryHonkaiRelation } from './honkai';
 
 const {
   cloneDeep, debounce, throttle, moment
@@ -13,5 +14,6 @@ export {
   checkUA,
   cloneDeep, debounce, throttle, moment, emitter,
   queryCommonUrl,
-  queryGenshinRelation
+  queryGenshinRelation,
+  queryHonkaiRelation
 }

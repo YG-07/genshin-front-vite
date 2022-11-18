@@ -3,7 +3,7 @@
     <div class="pic-item">
       <n-image :width="w" :height="h" :preview-disabled="true" lazy :src="src"> </n-image>
       <n-ellipsis :style="ua?`max-width: 90px`:`max-width: 40px;transform: scale(0.9);font-size: 12px;`">
-        {{ item[nameType] }}
+        {{ item[nameType] || item.name }}
       </n-ellipsis>
     </div>
   </div>

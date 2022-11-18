@@ -69,6 +69,26 @@ const routes: Readonly<RouteRecordRaw[]> = [
       },
     ]
   },
+  {
+    path: '/honkai',
+    name: 'honkai',
+    component: () => import(/* webpackChunkName: "honkai" */ '@/views/Home.vue'),
+    meta: {
+      title: '崩三',
+      keepAlive: true
+    },
+    children: [
+      {
+        path: 'role',
+        name: 'honkai_role',
+        component: () => import(/* webpackChunkName: "honkai_role" */ '@/views/Honkai/Role.vue'),
+        meta: {
+          title: '女武神',
+          keepAlive: true
+        }
+      },
+    ]
+  }
 ]
 
 export default routes as any

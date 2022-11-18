@@ -2,7 +2,7 @@
   <n-space class="Header" vertical size="large">
     <n-layout has-sider>
       <n-layout-content :content-style="ua?pcHeader:mbHeader">
-        <div style="width:100%;">Vite App 原神图鉴</div>
+        <div style="width:100%;">Vite App 游戏图鉴</div>
         <div class="right">
           <div class="langSelect" size="large">
             <span v-show="ua" style="margin-right:5px;">切换名称的语言：</span>

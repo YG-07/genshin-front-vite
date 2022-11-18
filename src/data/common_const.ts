@@ -34,5 +34,41 @@ export const commonConst: any[] = [
     "key": "wiki_book_item",
     "value": "/i_{id}/?lang=CHS",
     "type": "genshin"
+  },
+  {
+    "id": "7",
+    "key": "blue_archive_base",
+    "value": "https://ba.gamekee.com",
+    "type": "blueArchive"
+  },
+  {
+    "id": "8",
+    "key": "blue_archive_detail",
+    "value": "/{id}.html",
+    "type": "blueArchive"
+  },
+  {
+    "id": "9",
+    "key": "azur_line_base",
+    "value": "https://wiki.biligame.com/blhx/",
+    "type": "azurLine"
+  },
+  {
+    "id": "10",
+    "key": "azur_line_icon_base",
+    "value": "https://patchwiki\\.biligame\\.com/images/blhx",
+    "type": "azurLine"
+  },
+  {
+    "id": "11",
+    "key": "map_base",
+    "value": "https://webstatic.mihoyo.com/ys/app/interactive-map/#/map/2",
+    "type": "genshin"
+  },
+  {
+    "id": "12",
+    "key": "mys_bh3_url",
+    "value": "/bh3/wiki/content/{id}/detail",
+    "type": "honkai"
   }
 ]

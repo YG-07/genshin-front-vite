@@ -45,30 +45,49 @@ const menuOptions: MenuOption[] = [
     icon: renderIcon(HomeIcon),
   },
   {
-    label: renderRoute("role", "角色"),
-    key: "role",
+    label: "原神",
+    key: "genshin",
     icon: renderIcon(normalIcon('https://genshin.honeyhunterworld.com/img/icons/char_35.webp')),
+    children: [
+      {
+        label: renderRoute("role", "角色"),
+        key: "role",
+        icon: renderIcon(normalIcon('https://genshin.honeyhunterworld.com/img/icons/char_35.webp')),
+      },
+      {
+        label: renderRoute("weapon", "武器"),
+        key: "weapon",
+        icon: renderIcon(normalIcon('https://genshin.honeyhunterworld.com/img/icons/weapons_35.webp')),
+      },
+      {
+        label: renderRoute("book", "天赋书"),
+        key: "book",
+        icon: renderIcon(normalIcon('https://genshin.honeyhunterworld.com/img/icons/talent_35.webp')),
+      },
+      {
+        label: renderRoute("item", "武器突破材料"),
+        key: "item",
+        icon: renderIcon(normalIcon('https://genshin.honeyhunterworld.com/img/icons/bag_35.webp')),
+      },
+      {
+        label: renderRoute("card", "「七圣召唤」卡牌"),
+        key: "card",
+        icon: renderIcon(normalIcon('https://genshin.honeyhunterworld.com/img/i_n146_35.webp')),
+      },
+    ]
   },
   {
-    label: renderRoute("weapon", "武器"),
-    key: "weapon",
-    icon: renderIcon(normalIcon('https://genshin.honeyhunterworld.com/img/icons/weapons_35.webp')),
-  },
-  {
-    label: renderRoute("book", "天赋书"),
-    key: "book",
-    icon: renderIcon(normalIcon('https://genshin.honeyhunterworld.com/img/icons/talent_35.webp')),
-  },
-  {
-    label: renderRoute("item", "武器突破材料"),
-    key: "item",
-    icon: renderIcon(normalIcon('https://genshin.honeyhunterworld.com/img/icons/bag_35.webp')),
-  },
-  {
-    label: renderRoute("card", "「七圣召唤」卡牌"),
-    key: "card",
-    icon: renderIcon(normalIcon('https://genshin.honeyhunterworld.com/img/i_n146_35.webp')),
-  },
+    label: "崩坏3",
+    key: "honkai",
+    icon: renderIcon(normalIcon('https://uploadstatic.mihoyo.com/bh3-wiki/2021/10/21/6100274/e81e5f299d84ca0e8ec6b36f85328529_7664417501365594823.png')),
+    children: [
+      {
+        label: renderRoute("honkai_role", "女武神"),
+        key: "honkai_role",
+        icon: renderIcon(normalIcon('https://uploadstatic.mihoyo.com/bh3-wiki/2021/10/21/6100274/e81e5f299d84ca0e8ec6b36f85328529_7664417501365594823.png')),
+      },
+    ]
+  }
 ];
 </script>
 
