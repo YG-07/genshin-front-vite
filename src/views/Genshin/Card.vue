@@ -2,7 +2,7 @@
 <n-layout>
     <n-layout-header class="header-top">
       <div>
-        <h2>「七圣召唤」卡牌</h2>
+        <h2>「七圣召唤」卡牌（分类仅供参考）</h2>
         <n-skeleton v-if="loading" :width="150" :sharp="false" size="medium" />
         <n-gradient-text v-else :gradient="{ from: 'rgb(85, 85, 85)', to: 'rgb(170, 170, 170)' }">
           共{{total}}个，已展示{{itemList.length}}个

@@ -163,9 +163,9 @@ export const genshinRole: any[] = [
     "weapon": "2",
     "book": "11",
     "area": "4",
-    "mhy_url": "-",
+    "mhy_url": "5493",
     "wiki_url": "faruzan_076",
-    "icon_url": "https://genshin.honeyhunterworld.com/img/faruzan_076_icon_70.webp"
+    "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2022/12/06/4328207/38a192da1174b705cc6648e854162ab0_6403431489397028121.png"
   },
   {
     "id": "13",
@@ -345,9 +345,9 @@ export const genshinRole: any[] = [
     "weapon": "0",
     "book": "10",
     "area": "4",
-    "mhy_url": "-",
+    "mhy_url": "5297",
     "wiki_url": "layla_074",
-    "icon_url": "https://genshin.honeyhunterworld.com/img/layla_074_icon_70.webp"
+    "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2022/10/24/4328207/f7f5c758e157cc6d6ca7b7a378d665e6_8346107013175588314.png"
   },
   {
     "id": "26",
@@ -401,9 +401,9 @@ export const genshinRole: any[] = [
     "weapon": "4",
     "book": "9",
     "area": "4",
-    "mhy_url": "-",
+    "mhy_url": "5494",
     "wiki_url": "wanderer_075",
-    "icon_url": "https://genshin.honeyhunterworld.com/img/wanderer_075_icon_70.webp"
+    "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2022/12/06/4328207/fb1713aa667884c5552452170b5931fa_2453175231688862665.png"
   },
   {
     "id": "30",
