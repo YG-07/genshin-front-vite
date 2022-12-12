@@ -798,5 +798,15 @@ export const honkaiRole: any[] = [
     "damage": "0",
     "url": "74",
     "icon_url": "https://uploadstatic.mihoyo.com/bh3-wiki/2021/09/04/81417673/69ecd56d8fcb5c508eb97f5de33bcab1_528022664381526258.png"
+  },
+  {
+    "id": "81",
+    "name": "真理之律者",
+    "element": "4",
+    "role": "2",
+    "star": "0",
+    "damage": "1",
+    "url": "1937",
+    "icon_url": "https://uploadstatic.mihoyo.com/bh3-wiki/2022/11/26/50494840/d18a2f8b79062b6b0855a91b61b5b37a_7009407622785809505.png"
   }
 ]
