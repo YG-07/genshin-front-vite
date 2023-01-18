@@ -37,9 +37,9 @@ export const genshinRole: any[] = [
     "weapon": "0",
     "book": "10",
     "area": "4",
-    "mhy_url": "-",
+    "mhy_url": "5865",
     "wiki_url": "alhatham_078",
-    "icon_url": "https://genshin.honeyhunterworld.com/img/alhatham_078_icon_70.webp"
+    "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2023/01/17/4328207/c1c6746b3d53c687c3f570337dbecb32_6481052590976555773.png"
   },
   {
     "id": "4",
@@ -807,9 +807,9 @@ export const genshinRole: any[] = [
     "weapon": "3",
     "book": "4",
     "area": "4",
-    "mhy_url": "-",
+    "mhy_url": "5866",
     "wiki_url": "yaoyao_077",
-    "icon_url": "https://genshin.honeyhunterworld.com/img/yaoyao_077_icon_70.webp"
+    "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2023/01/17/4328207/6616c1963d8b8cd12303e683872778d6_5414525268363973241.png"
   },
   {
     "id": "59",
