@@ -155,6 +155,20 @@ export const genshinRole: any[] = [
   },
   {
     "id": "12",
+    "name": "迪希雅",
+    "name_en": "Dehya",
+    "name_ja": "ディシア",
+    "star": "5",
+    "element": "0",
+    "weapon": "1",
+    "book": "9",
+    "area": "4",
+    "mhy_url": "-",
+    "wiki_url": "dehya_079",
+    "icon_url": "https://genshin.honeyhunterworld.com/img/dehya_079_icon_70.webp"
+  },
+  {
+    "id": "13",
     "name": "多莉",
     "name_en": "Dori",
     "name_ja": "ドリー",
@@ -168,7 +182,7 @@ export const genshinRole: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2022/09/07/195563531/844969ce9b8bc5ebf9d1be69d7b6d7b2_4659886404719657655.png"
   },
   {
-    "id": "13",
+    "id": "14",
     "name": "珐露珊",
     "name_en": "Faruzan",
     "name_ja": "ファルザン",
@@ -182,7 +196,7 @@ export const genshinRole: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2022/12/06/4328207/38a192da1174b705cc6648e854162ab0_6403431489397028121.png"
   },
   {
-    "id": "14",
+    "id": "15",
     "name": "菲谢尔",
     "name_en": "Fischl",
     "name_ja": "フィッシュル",
@@ -196,7 +210,7 @@ export const genshinRole: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2021/08/23/75276545/18a67c8802d7184db1449693908fe6cf_7858478886557060389.png"
   },
   {
-    "id": "15",
+    "id": "16",
     "name": "枫原万叶",
     "name_en": "Kaedehara Kazuha",
     "name_ja": "楓原万葉",
@@ -210,7 +224,7 @@ export const genshinRole: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2021/08/23/75276545/2566b97ea262980d9bcd7db6a116bfd4_6795571745044574054.png"
   },
   {
-    "id": "16",
+    "id": "17",
     "name": "甘雨",
     "name_en": "Ganyu",
     "name_ja": "甘雨",
@@ -224,7 +238,7 @@ export const genshinRole: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2021/08/23/75276545/8b9946e573bf7aff9801c580707a23e1_3026364173026253689.png"
   },
   {
-    "id": "17",
+    "id": "18",
     "name": "胡桃",
     "name_en": "Hu Tao",
     "name_ja": "胡桃",
@@ -238,7 +252,7 @@ export const genshinRole: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2021/08/23/75276545/8980427ee3cecce2a46400d2c0af6d20_4290442929626456243.png"
   },
   {
-    "id": "18",
+    "id": "19",
     "name": "荒泷一斗",
     "name_en": "Arataki Itto",
     "name_ja": "荒瀧一斗",
@@ -252,7 +266,7 @@ export const genshinRole: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2021/12/14/16314655/567d0cf114a7f799d650df6e4c7cc0e2_8422200515118882596.jpg"
   },
   {
-    "id": "19",
+    "id": "20",
     "name": "九条裟罗",
     "name_en": "Kujou Sara",
     "name_ja": "九条裟羅",
@@ -266,7 +280,7 @@ export const genshinRole: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2021/09/01/16314655/5284b4f47bf6d9e9451d79ad5066d744_9148992125502860596.png"
   },
   {
-    "id": "20",
+    "id": "21",
     "name": "久岐忍",
     "name_en": "Kuki Shinobu",
     "name_ja": "久岐忍",
@@ -280,7 +294,7 @@ export const genshinRole: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2022/05/10/4328207/33c41932d1b5531ac73bca243c761816_9206912725698153960.png"
   },
   {
-    "id": "21",
+    "id": "22",
     "name": "凯亚",
     "name_en": "Kaeya",
     "name_ja": "ガイア",
@@ -294,7 +308,7 @@ export const genshinRole: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2021/08/23/75276545/60d8b985eef1e6e0e959410893a75dc0_6659933186171988912.png"
   },
   {
-    "id": "22",
+    "id": "23",
     "name": "坎蒂丝",
     "name_en": "Candace",
     "name_ja": "キャンディス",
@@ -308,7 +322,7 @@ export const genshinRole: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2022/09/20/4328207/0587df6ac5144c9dd023b0f73ceaf8be_7837788427682725710.png"
   },
   {
-    "id": "23",
+    "id": "24",
     "name": "柯莱",
     "name_en": "Collei",
     "name_ja": "コレイ",
@@ -322,7 +336,7 @@ export const genshinRole: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2022/08/23/75379475/a0150a8489abc5011a44b4f6419ccec7_2812696932246907984.png"
   },
   {
-    "id": "24",
+    "id": "25",
     "name": "可莉",
     "name_en": "Klee",
     "name_ja": "クレー",
@@ -336,7 +350,7 @@ export const genshinRole: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2021/06/21/283462834/d2972c634d9d81979774b22b49d1ab01_887661176891008491.png"
   },
   {
-    "id": "25",
+    "id": "26",
     "name": "刻晴",
     "name_en": "Keqing",
     "name_ja": "刻晴",
@@ -350,7 +364,7 @@ export const genshinRole: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2021/08/23/75276545/666155bbd60391341253e4b1daace9d4_2687379046030308520.png"
   },
   {
-    "id": "26",
+    "id": "27",
     "name": "莱依拉",
     "name_en": "Layla",
     "name_ja": "レイラ",
@@ -364,7 +378,7 @@ export const genshinRole: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2022/10/24/4328207/f7f5c758e157cc6d6ca7b7a378d665e6_8346107013175588314.png"
   },
   {
-    "id": "27",
+    "id": "28",
     "name": "雷电将军",
     "name_en": "Raiden Shogun",
     "name_ja": "雷電将軍",
@@ -378,7 +392,7 @@ export const genshinRole: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2021/09/01/16314655/4f2125e44d2b9e15611877eda1794ec7_7083452076426995696.png"
   },
   {
-    "id": "28",
+    "id": "29",
     "name": "雷泽",
     "name_en": "Razor",
     "name_ja": "レザー",
@@ -392,7 +406,7 @@ export const genshinRole: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2021/08/23/75276545/24edfa5586de73329a2b2c5c5d4262a3_3505783202009716970.png"
   },
   {
-    "id": "29",
+    "id": "30",
     "name": "丽莎",
     "name_en": "Lisa",
     "name_ja": "リサ",
@@ -406,7 +420,7 @@ export const genshinRole: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2021/08/23/75276545/014d59ec5b78c3499b90f45fc80c00a4_5392359609224242061.png"
   },
   {
-    "id": "30",
+    "id": "31",
     "name": "流浪者",
     "name_en": "The Wanderer",
     "name_ja": "放浪者",
@@ -420,7 +434,7 @@ export const genshinRole: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2022/12/06/4328207/fb1713aa667884c5552452170b5931fa_2453175231688862665.png"
   },
   {
-    "id": "31",
+    "id": "32",
     "name": "鹿野院平藏",
     "name_en": "Shikanoin Heizou",
     "name_ja": "鹿野院平蔵",
@@ -434,7 +448,7 @@ export const genshinRole: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2022/07/09/4328207/cc145e6cd2f0dacb39ce36f7ebf257fc_7138351098291917226.png"
   },
   {
-    "id": "32",
+    "id": "33",
     "name": "罗莎莉亚",
     "name_en": "Rosaria",
     "name_ja": "ロサリア",
@@ -448,7 +462,7 @@ export const genshinRole: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2022/02/16/6276411/bdec34acae15315368017c1dbc29e106_1767613545250694082.png"
   },
   {
-    "id": "33",
+    "id": "34",
     "name": "旅行者（空）",
     "name_en": "Traveler",
     "name_ja": "旅人（空）",
@@ -462,7 +476,7 @@ export const genshinRole: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2022/05/24/4328207/cb560b65a2880d2fa03d1d25faa50805_8382943334706958229.png"
   },
   {
-    "id": "34",
+    "id": "35",
     "name": "旅行者（荧）",
     "name_en": "Traveler",
     "name_ja": "旅人（荧）",
@@ -476,7 +490,21 @@ export const genshinRole: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2022/05/25/16314655/6e51d9aefcd8a391b4e58cff0825eda8_664966728335952334.png"
   },
   {
-    "id": "35",
+    "id": "36",
+    "name": "米卡",
+    "name_en": "Mika",
+    "name_ja": "ミカ",
+    "star": "4",
+    "element": "3",
+    "weapon": "3",
+    "book": "2",
+    "area": "0",
+    "mhy_url": "-",
+    "wiki_url": "mika_080",
+    "icon_url": "https://genshin.honeyhunterworld.com/img/mika_080_icon_70.webp"
+  },
+  {
+    "id": "37",
     "name": "莫娜",
     "name_en": "Mona",
     "name_ja": "モナ",
@@ -490,7 +518,7 @@ export const genshinRole: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2022/02/16/6276411/d7d8e4a15f70e31a16edaa6d7389437f_2242463119371173498.png"
   },
   {
-    "id": "36",
+    "id": "38",
     "name": "纳西妲",
     "name_en": "Nahida",
     "name_ja": "ナヒーダ",
@@ -504,7 +532,7 @@ export const genshinRole: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2022/10/24/4328207/f9f8f331dea3cc4920037df2018437d0_4958876478140111847.png"
   },
   {
-    "id": "37",
+    "id": "39",
     "name": "妮露",
     "name_en": "Nilou",
     "name_ja": "ニィロウ",
@@ -518,7 +546,7 @@ export const genshinRole: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2022/10/14/4328207/4507cd1faa4999738dac3d6d5f5d7f94_7463503381974788231.png"
   },
   {
-    "id": "38",
+    "id": "40",
     "name": "凝光",
     "name_en": "Ningguang",
     "name_ja": "凝光",
@@ -532,7 +560,7 @@ export const genshinRole: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2021/08/23/75276545/e4e41cdfac3bdc225f0b847f2cc2cd72_5640782607282153058.png"
   },
   {
-    "id": "39",
+    "id": "41",
     "name": "诺艾尔",
     "name_en": "Noelle",
     "name_ja": "ノエル",
@@ -546,7 +574,7 @@ export const genshinRole: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2021/08/23/75276545/5cd5b91e504b2466197796cb26fcb7be_508847912159113655.png"
   },
   {
-    "id": "40",
+    "id": "42",
     "name": "七七",
     "name_en": "Qiqi",
     "name_ja": "七七",
@@ -560,7 +588,7 @@ export const genshinRole: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2021/08/23/75276545/a08d22cf34d2836519a80a8537fe12c8_7861266877849414180.png"
   },
   {
-    "id": "41",
+    "id": "43",
     "name": "琴",
     "name_en": "Jean",
     "name_ja": "ジン",
@@ -574,7 +602,7 @@ export const genshinRole: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2022/02/16/6276411/a7608c6a588467440f7685a22ab6547c_3946325001679449884.png"
   },
   {
-    "id": "42",
+    "id": "44",
     "name": "赛诺",
     "name_en": "Cyno",
     "name_ja": "セノ",
@@ -588,7 +616,7 @@ export const genshinRole: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2022/09/20/4328207/b3847d2416145eb8bb6343302e2b4dca_6997837798254516316.png"
   },
   {
-    "id": "43",
+    "id": "45",
     "name": "砂糖",
     "name_en": "Sucrose",
     "name_ja": "スクロース",
@@ -602,7 +630,7 @@ export const genshinRole: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2021/08/23/75276545/b30efaf1e19725ddda490a2028b17464_6998283335917930867.png"
   },
   {
-    "id": "44",
+    "id": "46",
     "name": "珊瑚宫心海",
     "name_en": "Sangonomiya Kokomi",
     "name_ja": "珊瑚宮心海",
@@ -616,7 +644,7 @@ export const genshinRole: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2021/09/21/75379475/5f6f5d0c81155aea5c939ba08249e5d5_6649173224604660824.png"
   },
   {
-    "id": "45",
+    "id": "47",
     "name": "申鹤",
     "name_en": "Shenhe",
     "name_ja": "申鶴",
@@ -630,7 +658,7 @@ export const genshinRole: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2022/01/05/16314655/e2dfeee83654c0a6a7436b7c120c105a_6628180966971160404.png"
   },
   {
-    "id": "46",
+    "id": "48",
     "name": "神里绫华",
     "name_en": "Kamisato Ayaka",
     "name_ja": "神里綾華",
@@ -644,7 +672,7 @@ export const genshinRole: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2021/07/21/75276545/eaef31b81b190dc676413b099c540526_6543346382757797116.png"
   },
   {
-    "id": "47",
+    "id": "49",
     "name": "神里绫人",
     "name_en": "Kamisato Ayato",
     "name_ja": "神里綾人",
@@ -658,7 +686,7 @@ export const genshinRole: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2022/03/25/4328207/d16fbf95d62771daa65ab5d04f6abbd5_8453888407594383379.png"
   },
   {
-    "id": "48",
+    "id": "50",
     "name": "提纳里",
     "name_en": "Tighnari",
     "name_ja": "ティナリ",
@@ -672,7 +700,7 @@ export const genshinRole: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2022/08/23/75379475/6953568084aaa02bc7a774430f1f3b56_9172357402103659910.png"
   },
   {
-    "id": "49",
+    "id": "51",
     "name": "托马",
     "name_en": "Thoma",
     "name_ja": "トーマ",
@@ -686,7 +714,7 @@ export const genshinRole: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2021/11/02/16314655/f4b404cae89b96327a5b87500f7833c9_6577116317420146203.png"
   },
   {
-    "id": "50",
+    "id": "52",
     "name": "温迪",
     "name_en": "Venti",
     "name_ja": "ウェンティ",
@@ -700,7 +728,7 @@ export const genshinRole: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2021/08/23/75276545/3008da32b80ba05f243bc2c858b534b5_540461000064419548.png"
   },
   {
-    "id": "51",
+    "id": "53",
     "name": "五郎",
     "name_en": "Gorou",
     "name_ja": "ゴロー",
@@ -714,7 +742,7 @@ export const genshinRole: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2021/12/14/16314655/1535aaa6189d4262445c0a66ead22eb9_8396030312270652951.png"
   },
   {
-    "id": "52",
+    "id": "54",
     "name": "香菱",
     "name_en": "Xiangling",
     "name_ja": "香菱",
@@ -728,7 +756,7 @@ export const genshinRole: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2021/08/23/75276545/83a69074378a0837ca65d33e9052d729_6648871595979928785.png"
   },
   {
-    "id": "53",
+    "id": "55",
     "name": "宵宫",
     "name_en": "Yoimiya",
     "name_ja": "宵宮",
@@ -742,7 +770,7 @@ export const genshinRole: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2021/08/10/75276545/43014af35ae9c4cdf19a8323aa04a0a9_2108182380466335233.png"
   },
   {
-    "id": "54",
+    "id": "56",
     "name": "魈",
     "name_en": "Xiao",
     "name_ja": "魈",
@@ -756,7 +784,7 @@ export const genshinRole: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2021/08/23/75276545/a02533e3ac055344982bcfd04865ae72_6103227973780149519.png"
   },
   {
-    "id": "55",
+    "id": "57",
     "name": "辛焱",
     "name_en": "Xinyan",
     "name_ja": "辛炎",
@@ -770,7 +798,7 @@ export const genshinRole: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2021/08/23/75276545/a4b09e58a0d52ea0808b4cef5725ac93_6743022430414510479.png"
   },
   {
-    "id": "56",
+    "id": "58",
     "name": "行秋",
     "name_en": "Xingqiu",
     "name_ja": "行秋",
@@ -784,7 +812,7 @@ export const genshinRole: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2021/08/23/75276545/cd48b60376438c60dbaaa8a85e6a480b_2048377578381627282.png"
   },
   {
-    "id": "57",
+    "id": "59",
     "name": "烟绯",
     "name_en": "Yanfei",
     "name_ja": "煙緋",
@@ -798,7 +826,7 @@ export const genshinRole: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2021/08/23/75276545/b8952d8a5d2d266126ce370c4eb78438_4209492093986588378.png"
   },
   {
-    "id": "58",
+    "id": "60",
     "name": "瑶瑶",
     "name_en": "Yaoyao",
     "name_ja": "ヨォーヨ",
@@ -812,7 +840,7 @@ export const genshinRole: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2023/01/17/4328207/6616c1963d8b8cd12303e683872778d6_5414525268363973241.png"
   },
   {
-    "id": "59",
+    "id": "61",
     "name": "夜兰",
     "name_en": "Yelan",
     "name_ja": "夜蘭",
@@ -826,7 +854,7 @@ export const genshinRole: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2022/05/10/4328207/79396e8f1225b66e201036e086dd2d8a_128490390219389789.png"
   },
   {
-    "id": "60",
+    "id": "62",
     "name": "优菈",
     "name_en": "Eula",
     "name_ja": "エウルア",
@@ -840,7 +868,7 @@ export const genshinRole: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2021/08/23/75276545/525f808e85fb7a13c37debaf3c7d1463_4010662131576296773.png"
   },
   {
-    "id": "61",
+    "id": "63",
     "name": "云堇",
     "name_en": "Yun Jin",
     "name_ja": "雲菫",
@@ -854,7 +882,7 @@ export const genshinRole: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2022/01/05/16314655/6f4bbe7d060f72a0c84e868887ac7a32_4711867403945994990.png"
   },
   {
-    "id": "62",
+    "id": "64",
     "name": "早柚",
     "name_en": "Sayu",
     "name_ja": "早柚",
@@ -868,7 +896,7 @@ export const genshinRole: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2021/08/10/75276545/4f50355892c08017346ea3ab80071b9c_1725343112540399387.png"
   },
   {
-    "id": "63",
+    "id": "65",
     "name": "钟离",
     "name_en": "Zhongli",
     "name_ja": "鍾離",
@@ -882,7 +910,7 @@ export const genshinRole: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2021/08/23/75276545/6682780141a9e7788da99c71b1cfd5c3_6751062493374563471.png"
   },
   {
-    "id": "64",
+    "id": "66",
     "name": "重云",
     "name_en": "Chongyun",
     "name_ja": "重雲",

@@ -1,6 +1,6 @@
 <template>
   <n-space class="Footer" vertical size="large">
-    <div class="rights" :style="ua?`margin: 20px 0;`:'margin: 8px 0;'">©Copyright 2022 Ukiyo All Rights Reserved.</div>
+    <div class="rights" :style="ua?`margin: 20px 0;`:'margin: 8px 0;'">©Copyright 2022 Ukiyo All Rights Reserved. V1.0.230119</div>
   </n-space>
 </template>
 
