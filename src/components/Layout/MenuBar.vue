@@ -70,6 +70,11 @@ const menuOptions: MenuOption[] = [
         icon: renderIcon(normalIcon('https://genshin.honeyhunterworld.com/img/icons/bag_35.webp')),
       },
       {
+        label: renderRoute("pool", "角色武器卡池信息"),
+        key: "pool",
+        icon: renderIcon(normalIcon('https://genshin.honeyhunterworld.com/img/icons/wish_35.webp')),
+      },
+      {
         label: renderRoute("card", "「七圣召唤」卡牌"),
         key: "card",
         icon: renderIcon(normalIcon('https://genshin.honeyhunterworld.com/img/i_n146_35.webp')),

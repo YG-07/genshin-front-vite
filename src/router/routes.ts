@@ -67,6 +67,15 @@ const routes: Readonly<RouteRecordRaw[]> = [
           keepAlive: true
         }
       },
+      {
+        path: 'pool',
+        name: 'pool',
+        component: () => import(/* webpackChunkName: "pool" */ '@/views/Genshin/Pool.vue'),
+        meta: {
+          title: '角色武器卡池信息',
+          keepAlive: true
+        }
+      },
     ]
   },
   {

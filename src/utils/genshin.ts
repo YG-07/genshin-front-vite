@@ -36,6 +36,21 @@ const cardList = [
   },
 ]
 
+export const poolTableCol: {key: string, label: string}[] = [
+  { key: 'id', label: '序号' },
+  { key: 'version', label: '版本' },
+  { key: 'pool_stage', label: '卡池阶段' },
+  { key: 'up5_imgs', label: '五星' },
+  { key: 'up5_count', label: '五星次数' },
+  { key: 'up4_imgs', label: '四星' },
+  { key: 'up4_count', label: '四星次数' },
+  { key: 'day2now', label: '距今天数' },
+  { key: 'version_info', label: '版本信息' },
+  { key: 'pool_info', label: '卡池信息' },
+  { key: 'pool_day', label: '卡池天数' },
+  // { key: 'remark', label: '备注' },
+]
+
 export const queryGenshinRelation = async () => {
   let genshinRelation = storage.get('genshinRelation')
   if(genshinRelation) {

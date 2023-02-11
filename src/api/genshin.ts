@@ -4,7 +4,8 @@ import {
   _getItemInfo,
   _getBookInfo,
   _getRelationInfo,
-  _getCardInfo
+  _getCardInfo,
+  _getPoolInfo
 } from '@/backEnd';
 // 原神相关接口
 
@@ -32,4 +33,8 @@ export const getBookInfo = (params: any) => {
 // 分页查询卡牌信息
 export const getCardInfo = (params: any) => {
   return _getCardInfo(params)
+}
+// 分页获取卡池和版本信息
+export const getPoolInfo = (params: any) => {
+  return _getPoolInfo(params)
 }

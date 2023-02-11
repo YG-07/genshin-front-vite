@@ -2,16 +2,19 @@
   <n-config-provider :locale="zhCN" :date-locale="dateZhCN">
     <n-loading-bar-provider>
     <n-message-provider>
-      <router-view />
+      <n-dialog-provider>
+        <router-view />
+      </n-dialog-provider>
     </n-message-provider>
   </n-loading-bar-provider>
   </n-config-provider>
 </template>
 
 <script lang="ts" setup>
-import { NConfigProvider } from 'naive-ui'
+import { NConfigProvider, NDialogProvider, NMessageProvider } from 'naive-ui'
 import { zhCN, dateZhCN } from 'naive-ui'
 import { env } from './config';
+
 console.log(env, 'env');
 </script>
 
