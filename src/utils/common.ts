@@ -5,6 +5,9 @@ import { useMessage } from "naive-ui";
 import { storage } from "./storage"
 import mitt from "mitt";
 
+//一天的毫秒数
+export const DAY = 1000 * 3600 * 24
+
 const message = useMessage();
 // 全局事件总线
 export const emitter = mitt()
@@ -45,5 +48,5 @@ export const checkUA = () => {
 }
 
 export const commonMethod = {
-  cloneDeep, debounce, throttle, moment, queryCommonUrl
+  DAY, cloneDeep, debounce, throttle, moment, queryCommonUrl
 }

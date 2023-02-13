@@ -42,13 +42,26 @@ export const poolTableCol: {key: string, label: string}[] = [
   { key: 'pool_stage', label: '卡池阶段' },
   { key: 'up5_imgs', label: '五星' },
   { key: 'up5_count', label: '五星次数' },
+  { key: 'up5_day2last', label: '五星距上次Up天数' },
   { key: 'up4_imgs', label: '四星' },
   { key: 'up4_count', label: '四星次数' },
+  { key: 'up4_day2last', label: '四星距上次Up天数' },
   { key: 'day2now', label: '距今天数' },
   { key: 'version_info', label: '版本信息' },
   { key: 'pool_info', label: '卡池信息' },
   { key: 'pool_day', label: '卡池天数' },
-  // { key: 'remark', label: '备注' },
+  { key: 'remark', label: '备注' },
+]
+
+export const poolCalcTableCol : {key: string, label: string}[] = [
+  { key: 'id', label: '序号' },
+  { key: 'item_img', label: '祈愿物品'},
+  { key: 'itemInfo', label: '物品信息' },
+  { key: 'day2now', label: '距今天数'},
+  { key: 'day2last', label: '距上次Up天数'},
+  { key: 'count', label: 'Up次数'},
+  { key: 'version', label: '版本号' },
+  { key: 'pool_info', label: '卡池信息' }
 ]
 
 export const queryGenshinRelation = async () => {

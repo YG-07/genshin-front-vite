@@ -9,10 +9,8 @@ import { genshinWeapon } from '@/data/genshin_weapon';
 import { genshinCard } from '@/data/genshin_card';
 import { genshinPool } from '@/data/genshin_pool';
 import { genshinVersion } from '@/data/genshin_version';
+import { DAY, Page } from "@/utils";
 
-import { Page } from "@/utils";
-//一天的毫秒数
-const DAY = 1000 * 3600 * 24
 // 武器池名称
 const WEAPON_POOL = '神铸赋形'
 
@@ -385,70 +383,108 @@ const checkPoolInfoData = () => {
 // 预处理卡池数据
 const calcPoolData = () => {
   let roleNumOjb = {} as any
-  let weaponNuObj = {} as any
+  let weaponNumObj = {} as any
   // 记录数量
   for(let i = 0; i < genshinRole.length; ++i) {
     let role = genshinRole[i]
     roleNumOjb[role.name] = {
-      count: 0,
-      icon_url: role.icon_url
+      count: 0,   // up次数
+      star: 0,    // 星级
+      type: 0,    // 类型 角色/武器
+      icon_url: role.icon_url,     // 图标链接
+      last_up: {},    // 上次up时间信息
+      now_up: {},     // 当前up时间信息
     }
   }
   for(let i = 0; i < genshinWeapon.length; ++i) {
     let weapon = genshinWeapon[i]
-    weaponNuObj[weapon.name] = {
+    weaponNumObj[weapon.name] = {
       count: 0,
-      icon_url: weapon.icon_url
+      star: 0,
+      type: 0,
+      icon_url: weapon.icon_url,
+      last_up: {},
+      now_up: {},
     }
   }
   // 处理up次数
   // 返回次数字符串和对象数组
-  const dealUpCount = (nameStr: string, type: any): [any, any] => {
+  const dealUpCount = (poolItem: any, nameStr: string, star: any, type: any): [any, any] => {
     if(!nameStr) { return ['', []] }
     let tmpCount = [] as any
     let countStr = ''
     let objArr = nameStr.split(' ').map((name: any) => {
-      let count = -2 // 角色名称错误
-      let icon_url = '-'
-      if(type == 1 && roleNumOjb[name] && roleNumOjb[name].count != undefined) {
-        count = ++roleNumOjb[name].count;
-        icon_url = roleNumOjb[name].icon_url
+      let upContext = {} as any  // 卡池up的前后信息
+      let rObj = roleNumOjb[name]
+      let wObj = weaponNumObj[name]
+      if(type == 1 && rObj && rObj.count != undefined) {
+        ++roleNumOjb[name].count;
+        roleNumOjb[name].star = star
+        roleNumOjb[name].type = type
+
+        // 存在当期则先把now_up作为last_up，并且版本号不同，然后都把当期作为now_up
+        if(rObj.now_up && rObj.now_up.id && poolItem.version != rObj.now_up.version) {
+          roleNumOjb[name].last_up = { ...rObj.now_up }
+        }
+        roleNumOjb[name].now_up = { 
+          id: poolItem.id,
+          version: poolItem.version,
+          name: poolItem.name,
+          pool_start: poolItem.pool_start,
+          pool_end: poolItem.pool_end
+        }
+        upContext = { ...roleNumOjb[name] }
       } 
-      else if(type == 2 && weaponNuObj[name] && weaponNuObj[name].count != undefined) {
-        count = ++weaponNuObj[name].count;
-        icon_url = weaponNuObj[name].icon_url
+      else if(type == 2 && wObj && wObj.count != undefined) {
+        ++weaponNumObj[name].count;
+        weaponNumObj[name].star = star
+        weaponNumObj[name].type = type
+
+        if(wObj.now_up && wObj.now_up.id) {
+          weaponNumObj[name].last_up = { ...wObj.now_up }
+        }
+        weaponNumObj[name].now_up = { 
+          id: poolItem.id,
+          version: poolItem.version,
+          name: poolItem.name,
+          pool_start: poolItem.pool_start,
+          pool_end: poolItem.pool_end
+        }
+        upContext = { ...weaponNumObj[name] }
       }
-      tmpCount.push(count)
-      return { name, count, icon_url }
+      tmpCount.push(upContext.count)
+      return { name, ...upContext }
     })
     countStr = tmpCount.join(' ')
     return [countStr, objArr]
   }
 
-  let rolePooNum = 0
+  let rolePoolNum = 0
   let weaponPoolNum = 0
   let pool: any[] = genshinPool.map((p: any) => {
     let rp = { ...p } as any
     // 结束距今天数
-    rp.day2now = Math.ceil((new Date().getTime() - new Date(p.pool_end).getTime()) / DAY)
+    rp.day2now = Math.ceil((new Date().getTime() - new Date(p.pool_start).getTime()) / DAY)
     // 卡池天数
     rp.pool_day = Math.ceil((new Date(p.pool_end).getTime() - new Date(p.pool_start).getTime()) / DAY)
     if(rp.name) {
       rp.type = 1;
-      rp.up5 = dealUpCount(rp.up_5, 1); // 5星up次数
-      rp.up4 = dealUpCount(rp.up_4, 1); // 4星up次数
-      rp.pool_index = ++rolePooNum; // 第几个卡池
+      rp.up5 = dealUpCount(rp, rp.up_5, 5, 1); // 5星up次数
+      rp.up4 = dealUpCount(rp, rp.up_4, 4, 1); // 4星up次数
+      rp.pool_index = ++rolePoolNum; // 第几个卡池
     } else {
       rp.type = 2
       rp.name = WEAPON_POOL
       rp.up_4 = "";
-      rp.up5 = dealUpCount(rp.up_5, 2);
-      rp.up4 = dealUpCount(rp.up_4, 2);
+      rp.up5 = dealUpCount(rp, rp.up_5, 5, 2);
+      rp.up4 = dealUpCount(rp, rp.up_4, 4, 2);
       rp.pool_index = ++weaponPoolNum;
     }
     return rp
   })
-  return pool
+  return {
+    pool, roleNumOjb, weaponNumObj
+  }
 }
 
 export const _getPoolInfo = (params = {} as any) => {
@@ -456,8 +492,9 @@ export const _getPoolInfo = (params = {} as any) => {
     let resp = checkPoolInfoData()
     if(!resp) {
       let { search, page } = params
+      let { pool, roleNumOjb, weaponNumObj } = calcPoolData()
       // 先整理和计算数据和 连表
-      let f_genshinPool = LeftJoin(calcPoolData(), [
+      let f_genshinPool = LeftJoin(pool, [
         {
           joinArr: genshinVersion,
           key: ['version', 'version'],
@@ -500,6 +537,8 @@ export const _getPoolInfo = (params = {} as any) => {
       let { m, n } = GetPage(_genshinPool.length, page)
       return resolve(Res({
         records: _genshinPool.slice(m, n),
+        roleCalc: roleNumOjb,
+        weaponCalc: weaponNumObj,
         total: _genshinPool.length
       }))
     } else {

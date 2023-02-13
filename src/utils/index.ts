@@ -5,14 +5,15 @@ import { queryGenshinRelation } from './genshin';
 import { queryHonkaiRelation } from './honkai';
 
 const {
-  cloneDeep, debounce, throttle, moment
+  cloneDeep, debounce, throttle, moment, DAY
 } = commonMethod
 
 export {
   type Page,
   storage,
   checkUA,
-  cloneDeep, debounce, throttle, moment, emitter,
+  cloneDeep, debounce, throttle, moment, DAY,
+  emitter,
   queryCommonUrl,
   queryGenshinRelation,
   queryHonkaiRelation
