@@ -491,7 +491,7 @@ export const _getPoolInfo = (params = {} as any) => {
   return new Promise((resolve, reject) => {
     let resp = checkPoolInfoData()
     if(!resp) {
-      let { search, page } = params
+      let { search, type, page } = params
       let { pool, roleNumOjb, weaponNumObj } = calcPoolData()
       // 先整理和计算数据和 连表
       let f_genshinPool = LeftJoin(pool, [
@@ -515,20 +515,26 @@ export const _getPoolInfo = (params = {} as any) => {
         let { version, version_name, name, up_5, up_4 } = e
         let flag: boolean = true
         // 关键字包括 正式名字或人物类型
+        console.log(search ,
+          version.includes(search) ,
+          version_name.includes(search) ,
+          name.includes(search) ,
+          up_5.includes(search) ,
+          up_4.includes(search));
+        
         if (
-          !search ||
-          version.includes(search) ||
-          version_name.includes(search) ||
-          name.includes(search) ||
-          up_5.includes(search) ||
-          up_4.includes(search)
+          !search || (
+            search &&
+            version.includes(search) ||
+            version_name.includes(search) ||
+            name.includes(search) ||
+            up_5.includes(search) ||
+            up_4.includes(search)
+          )
         ) {
-          // flag = Chk([
-          //   [element, e.element],
-          //   [role, e.role],
-          //   [star, e.star],
-          //   [damage, e.damage]
-          // ])
+          flag = Chk([
+            [type, e.type]
+          ])
           if (flag) {
             _genshinPool.push(e)
           }

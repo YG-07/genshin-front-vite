@@ -5,48 +5,45 @@
         <h2>角色武器卡池信息</h2>
         <n-skeleton v-if="loading" :width="150" :sharp="false" size="medium" />
         <n-gradient-text v-else :gradient="{ from: 'rgb(85, 85, 85)', to: 'rgb(170, 170, 170)' }">
-          共{{total}}个，已展示{{tableData.length}}个
+          共{{total}}个，已展示{{ changeShow ? tableData.length : computedTable1.length}}个
         </n-gradient-text>
       </div>
       <n-skeleton v-if="loading" :width="300" :sharp="false" size="medium" />
     </n-layout-header>
     <n-layout>
       <n-layout-header>
-        <div>搜索功能待定</div>
         <n-space v-show="searchShow" v-if="loading" :style="custStyle">
           <n-skeleton v-for="(item, index) in new Array(8)" :key="index"
             :width="200" :sharp="false" size="medium" />
         </n-space>
         <!-- 搜索卡池表 -->
         <n-space v-show="searchShow" v-else-if="!loading && changeShow" class="space-main" :style="custStyle">
-          <!-- <n-select :value="star" @update:value="handleStar" :options="relationInfo?.star" :style="ua?'width: 200px':''" />
-          <n-select :value="week" @update:value="handleWeek" :options="relationInfo?.week" :style="ua?'width: 200px':''" />
-          <n-select :value="item" @update:value="handleItem" :options="relationInfo?.item" :style="ua?'width: 200px':''" />
-          <n-input :value="searchName" @keyup.enter="handleNameChg" @update:value="handleName" type="text" placeholder="搜索突破材料名" :style="ua?'width: 200px':'min-width: 200px;'" />
+          <n-select :value="type" @update:value="handleType" :options="_tableTypeCol" :style="ua?'width: 200px':''" />
+          <n-input :value="searchName" @keyup.enter="handleNameChg" @update:value="handleName" type="text" placeholder="搜索物品名称/版本/卡池名" :style="ua?'width: 200px':'min-width: 200px;'" />
           <n-space :style="ua?`flex:1;`:`min-width: 200px;`">
-            <n-button type="success" style="width: 84px;" @click="searchItemList(1)">搜索</n-button>
+            <n-button type="success" style="width: 84px;" @click="searchPoolList(1)">搜索</n-button>
             <n-button type="warning" @click="clickReset">重置条件</n-button>
-          </n-space> -->
+          </n-space>
         </n-space>
         <!-- 搜索统计表 -->
         <n-space v-show="searchShow" v-else-if="!loading && !changeShow" class="space-main" :style="custStyle">
-          <!-- <n-select :value="star" @update:value="handleStar" :options="relationInfo?.star" :style="ua?'width: 200px':''" />
-          <n-select :value="week" @update:value="handleWeek" :options="relationInfo?.week" :style="ua?'width: 200px':''" />
-          <n-select :value="item" @update:value="handleItem" :options="relationInfo?.item" :style="ua?'width: 200px':''" />
-          <n-input :value="searchName" @keyup.enter="handleNameChg" @update:value="handleName" type="text" placeholder="搜索突破材料名" :style="ua?'width: 200px':'min-width: 200px;'" />
+          <n-select placeholder="选择过滤的物品类型" multiple max-tag-count="responsive" :value="calcTableCheckType" @update:value="handleCalcTableCheckType" :options="_calcTableCheckTypeCol" :style="ua?'width: 200px':'min-width: 200px;'" />
+          <n-input :value="calcTableSearch" @update:value="handleCalcTableSearch" type="text" placeholder="搜索名称/版本号/up次数" :style="ua?'width: 200px':'min-width: 200px;'" />
           <n-space :style="ua?`flex:1;`:`min-width: 200px;`">
-            <n-button type="success" style="width: 84px;" @click="searchItemList(1)">搜索</n-button>
-            <n-button type="warning" @click="clickReset">重置条件</n-button>
-          </n-space> -->
+            <!-- <n-button type="success" style="width: 84px;" @click="searchTable1List(1)">搜索</n-button> -->
+            <n-button type="warning" @click="clickReset1">重置条件</n-button>
+          </n-space>
+        </n-space>
+        <n-space :style="custStyle" style="margin: 10px 2px !important;">
+          <n-radio-group v-model:value="changeShow" name="radiobuttongroup1">
+            <n-radio-button :value="true" label="卡池数据表"/>
+            <n-radio-button :value="false" label="统计数据表"/>
+          </n-radio-group>
         </n-space>
         <n-divider v-if="!ua" @click="searchShow=!searchShow">{{searchShow?"收起搜索":"展开搜索"}}</n-divider>
-        <n-radio-group v-model:value="changeShow" name="radiobuttongroup1">
-          <n-radio-button :value="true" label="卡池数据表"/>
-          <n-radio-button :value="false" label="统计数据表"/>
-        </n-radio-group>
       </n-layout-header>
       <!-- 卡池基本信息 -->
-      <n-layout-content v-show="changeShow" has-sider :content-style="{overflow: 'scroll'}">
+      <n-layout-content v-show="changeShow" has-sider :content-style="{overflow: 'scroll', display: 'flex', 'justify-content': 'center'}">
         <n-space v-if="loading" :style="custStyle">
           <div v-for="(item, index) in new Array(20) " :key="index">
             <n-skeleton :width="100" :height="123" :sharp="false" size="medium" />
@@ -113,25 +110,25 @@
             :item-count="total"
             :on-update:page="searchPoolList"
             show-size-picker
-            :page-sizes="[10, 20, 30, 50]"
+            :page-sizes="[20, 50, 100, 150, 200, 300]"
             :on-update:page-size="changePageSize"
           />
         </n-space>
       </n-layout>
       <!-- 卡池统计表格 -->
-      <n-layout-content v-show="!changeShow" has-sider :content-style="{overflow: 'scroll'}">
+      <n-layout-content v-show="!changeShow" has-sider :content-style="{overflow: 'scroll', display: 'flex', 'justify-content': 'center'}">
         <n-space v-if="loading" :style="custStyle">
           <div v-for="(item, index) in new Array(20) " :key="index">
             <n-skeleton :width="100" :height="123" :sharp="false" size="medium" />
           </div>
         </n-space>
-        <n-space v-else-if="!loading && tableData1.length > 0" :style="custStyle">
+        <n-space v-else-if="!loading && computedTable1.length > 0" :style="custStyle">
           <n-table striped>
             <thead>
               <tr><td v-for="(head, headIndex) in col1" :key="headIndex">{{ head.label }}</td></tr>
             </thead>
             <tbody>
-              <tr v-for="(data, dataIndex) in tableData1" :key="dataIndex">
+              <tr v-for="(data, dataIndex) in computedTable1" :key="dataIndex">
                 <td v-for="(head, headIndex) in col1" :key="headIndex">
                   <!-- up物品图片列表 -->
                   <div v-if="head.key == 'item_img'">
@@ -171,12 +168,17 @@
 import PicCard from "@/components/Card/PicCard.vue";
 import { useMessage } from "naive-ui";
 import { getPoolInfo } from "@/api/genshin";
-import { ref, onMounted, onBeforeMount } from "vue";
+import { ref, onMounted, nextTick, onBeforeMount, watch, computed } from "vue";
 import { Page, queryGenshinRelation, queryCommonUrl } from "@/utils"
 import { useLoadingBar, useDialog } from 'naive-ui'
 import { Aperture } from "@vicons/ionicons5";
 import { checkUA, DAY } from "@/utils";
-import { poolTableCol, poolCalcTableCol } from "@/utils/genshin";
+import { 
+  poolTableCol, 
+  poolCalcTableCol,
+  calcTableCheckTypeCol, 
+  tableTypeCol
+} from "@/utils/genshin";
 
   const ua = ref(checkUA())
 
@@ -189,11 +191,32 @@ import { poolTableCol, poolCalcTableCol } from "@/utils/genshin";
   const changeShow = ref(true) 
   const col = ref(poolTableCol) // 卡池信息
   const col1 = ref(poolCalcTableCol) // 统计信息
-  
+
+  const _calcTableCheckTypeCol = ref(calcTableCheckTypeCol)
+  let calcTableCheckType = ref([])
+  let calcTableSearch = ref<any>('')
+  const handleCalcTableCheckType = (value: any) => {
+    calcTableCheckType.value = value
+  }
+  const handleCalcTableSearch = (value: any) => {
+    calcTableSearch.value = value
+  }
 
   let searchShow = ref(true)
   let searchName = ref("");
-  let star = ref<number>(-2);
+  let type = ref<number>(-2);
+  let _tableTypeCol = ref(tableTypeCol)
+  const handleType = (value: any) => {
+    type.value = value
+    searchPoolList(1)
+  }
+  const handleName = (value: any) => {
+    searchName.value = value
+  }
+  const handleNameChg = (event: Event) => {
+    searchPoolList(1)
+  }
+
   let page = ref<Page>({
     pageNum: 1,
     pageSize: 20,
@@ -208,6 +231,42 @@ import { poolTableCol, poolCalcTableCol } from "@/utils/genshin";
     justify-content: center;
     flex-wrap: wrap;
   `)
+
+  
+
+  // 物品类型 过滤规则
+  const filtRule = [
+    (sth: any) => (sth.type != 2),
+    (sth: any) => (sth.type != 2 && sth.star != 4),
+    (sth: any) => (sth.type != 2 && sth.star != 5),
+    (sth: any) => (sth.type != 1),
+    (sth: any) => (sth.type != 2 && sth.star != 4),
+    (sth: any) => (sth.type != 2 && sth.star != 5),
+  ]
+
+  let computedTable1 = computed(() => {
+    if(tableData1.value.length < 1) { return [] }
+    let tmpTable1 = [...tableData1.value]
+    for(let i = 0; i < calcTableCheckType.value.length; ++i) {
+      tmpTable1 = tmpTable1.filter(item => filtRule[calcTableCheckType.value[i]](item))
+    }
+    if(calcTableSearch.value) {
+      let s = calcTableSearch.value
+      tmpTable1 = tmpTable1.filter(item => (item.name.includes(s) || item.version == s || item.count == s))
+    }
+    return tmpTable1
+  })
+
+  const clickReset = () => {
+    type.value = -2
+    searchName.value = ''
+    searchPoolList(1)
+  }
+
+  const clickReset1 = () => {
+    calcTableCheckType.value = []
+    calcTableSearch.value = ''
+  }
 
   const changePageSize = (size: number) => {
     page.value.pageSize = size
@@ -247,6 +306,7 @@ import { poolTableCol, poolCalcTableCol } from "@/utils/genshin";
     loading.value = true
     let params = {
       search: searchName.value,
+      type: type.value,
       page: page.value,
     } as any;
     let { code, data, msg } = await getPoolInfo(params) as any;
@@ -257,7 +317,6 @@ import { poolTableCol, poolCalcTableCol } from "@/utils/genshin";
       return;
     }
     total.value = data.total
-    console.log(data, "data!!");
     
     tableData.value = data?.records.map((e: any) => {
       e.pool_stage = `第${e.pool_index}池${e.stage}期`
@@ -305,6 +364,8 @@ import { poolTableCol, poolCalcTableCol } from "@/utils/genshin";
           day2last: deal2day(last_up.pool_start, now_up.pool_start),
           day2now: deal2day(now_up.pool_start, 'now'),
           count,
+          star,
+          type,
           version: now_up.version,
           itemInfo: `<font color='${star > 4 ? '#fcb040' : '#8a2be2'}'>${tmpKeys[i]}</font><div>${star}星${(type > 1) ? '武器' : '角色'}</div>`,
           pool_info: `<font color='#18a058'>${now_up.name}</font><div>(${now_up.pool_start} ~ ${now_up.pool_end})</div>`,
@@ -319,10 +380,7 @@ import { poolTableCol, poolCalcTableCol } from "@/utils/genshin";
       })
       tableData1.value = [...calcTable]
     }
-    console.log(tableData.value, 'tableData.value');
-    console.log(tableData1.value, '111tableData.value');
 
-    
     loadingBar.finish()
     loading.value = false
   }

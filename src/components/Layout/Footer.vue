@@ -1,12 +1,14 @@
 <template>
   <n-space class="Footer" vertical size="large">
-    <div class="rights" :style="ua?`margin: 20px 0;`:'margin: 8px 0;'">©Copyright 2022 Ukiyo All Rights Reserved. V1.0.230119</div>
+    <div class="rights" :style="ua?`margin: 20px 0;`:'margin: 8px 0;'">©Copyright 2022 Ukiyo All Rights Reserved. {{ _version }}</div>
   </n-space>
 </template>
 
 <script lang="ts" setup>
 import { checkUA } from "@/utils";
 import { ref } from "vue";
+import { version } from "@/config"
+const _version = ref(version)
 const ua = ref(checkUA())
 </script>
 

@@ -18,7 +18,7 @@ export const genshinPool: any[] = [
     "stage": 1,
     "name": "",
     "pool_start": "2020.9.28",
-    "pool_end": "2020.9.28",
+    "pool_end": "2020.10.18",
     "up_5": "风鹰剑 阿莫斯之弓",
     "up_4": null,
     "pool_img": null,
@@ -91,7 +91,7 @@ export const genshinPool: any[] = [
     "name": "",
     "pool_start": "2020.12.1",
     "pool_end": "2020.12.22",
-    "up_5": "无工大剑 天空之卷",
+    "up_5": "无工之剑 天空之卷",
     "up_4": null,
     "pool_img": null,
     "remark": null
@@ -512,7 +512,7 @@ export const genshinPool: any[] = [
     "pool_start": "2021.11.24",
     "pool_end": "2021.12.14",
     "up_5": "阿贝多",
-    "up_4": "班尼特 诺艾尔 罗莎莉亚 ",
+    "up_4": "班尼特 诺艾尔 罗莎莉亚",
     "pool_img": null,
     "remark": null
   },
@@ -524,7 +524,7 @@ export const genshinPool: any[] = [
     "pool_start": "2021.11.24",
     "pool_end": "2021.12.14",
     "up_5": "优菈",
-    "up_4": "班尼特 诺艾尔 罗莎莉亚 ",
+    "up_4": "班尼特 诺艾尔 罗莎莉亚",
     "pool_img": null,
     "remark": null
   },
@@ -811,7 +811,7 @@ export const genshinPool: any[] = [
     "name": "",
     "pool_start": "2022.6.21",
     "pool_end": "2022.7.12",
-    "up_5": "赤脚石溃杵 尘世之锁",
+    "up_5": "赤角石溃杵 尘世之锁",
     "up_4": null,
     "pool_img": null,
     "remark": null
@@ -835,7 +835,7 @@ export const genshinPool: any[] = [
     "name": "闪焰的驻足",
     "pool_start": "2022.7.13",
     "pool_end": "2022.8.2",
-    "up_5": "柯莱",
+    "up_5": "可莉",
     "up_4": "凝光 托马 鹿野院平藏",
     "pool_img": null,
     "remark": null
@@ -871,7 +871,7 @@ export const genshinPool: any[] = [
     "name": "",
     "pool_start": "2022.8.2",
     "pool_end": "2022.8.23",
-    "up_5": "飞雷之弦振 斫风之刃",
+    "up_5": "飞雷之弦振 斫锋之刃",
     "up_4": null,
     "pool_img": null,
     "remark": null
@@ -1123,7 +1123,7 @@ export const genshinPool: any[] = [
     "name": "",
     "pool_start": "2022.12.07",
     "pool_end": "2022.12.27",
-    "up_5": "图莱杜拉的回忆 赤脚石溃杵",
+    "up_5": "图莱杜拉的回忆 赤角石溃杵",
     "up_4": null,
     "pool_img": null,
     "remark": null
