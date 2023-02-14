@@ -18,7 +18,7 @@
         </n-space>
         <!-- 搜索卡池表 -->
         <n-space v-show="searchShow" v-else-if="!loading && changeShow" class="space-main" :style="custStyle">
-          <n-select :value="type" @update:value="handleType" :options="_tableTypeCol" :style="ua?'width: 200px':''" />
+          <n-select :value="type" @update:value="handleType" :options="_tableTypeCol" :style="ua?'width: 200px':'min-width: 200px;'" />
           <n-input :value="searchName" @keyup.enter="handleNameChg" @update:value="handleName" type="text" placeholder="搜索物品名称/版本/卡池名" :style="ua?'width: 200px':'min-width: 200px;'" />
           <n-space :style="ua?`flex:1;`:`min-width: 200px;`">
             <n-button type="success" style="width: 84px;" @click="searchPoolList(1)">搜索</n-button>
@@ -43,7 +43,7 @@
         <n-divider v-if="!ua" @click="searchShow=!searchShow">{{searchShow?"收起搜索":"展开搜索"}}</n-divider>
       </n-layout-header>
       <!-- 卡池基本信息 -->
-      <n-layout-content v-show="changeShow" has-sider :content-style="{overflow: 'scroll', display: 'flex', 'justify-content': 'center'}">
+      <n-layout-content v-show="changeShow" has-sider :content-style="{overflow: 'scroll'}">
         <n-space v-if="loading" :style="custStyle">
           <div v-for="(item, index) in new Array(20) " :key="index">
             <n-skeleton :width="100" :height="123" :sharp="false" size="medium" />
@@ -116,7 +116,7 @@
         </n-space>
       </n-layout>
       <!-- 卡池统计表格 -->
-      <n-layout-content v-show="!changeShow" has-sider :content-style="{overflow: 'scroll', display: 'flex', 'justify-content': 'center'}">
+      <n-layout-content v-show="!changeShow" has-sider :content-style="{overflow: 'scroll'}">
         <n-space v-if="loading" :style="custStyle">
           <div v-for="(item, index) in new Array(20) " :key="index">
             <n-skeleton :width="100" :height="123" :sharp="false" size="medium" />
