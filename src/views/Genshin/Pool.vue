@@ -169,7 +169,7 @@ import PicCard from "@/components/Card/PicCard.vue";
 import { useMessage } from "naive-ui";
 import { getPoolInfo } from "@/api/genshin";
 import { ref, onMounted, nextTick, onBeforeMount, watch, computed } from "vue";
-import { Page, queryGenshinRelation, queryCommonUrl } from "@/utils"
+import { Page, queryGenshinRelation, queryCommonUrl, storage } from "@/utils"
 import { useLoadingBar, useDialog } from 'naive-ui'
 import { Aperture } from "@vicons/ionicons5";
 import { checkUA, DAY } from "@/utils";
@@ -189,11 +189,13 @@ import {
 
   // 改变表格显示状态 true为卡池信息，false为统计信息
   const changeShow = ref(true) 
+  ua.value ? poolTableCol : poolTableCol.splice(2, 1)
   const col = ref(poolTableCol) // 卡池信息
+  ua.value ? poolCalcTableCol : poolCalcTableCol.splice(2, 1)
   const col1 = ref(poolCalcTableCol) // 统计信息
 
   const _calcTableCheckTypeCol = ref(calcTableCheckTypeCol)
-  let calcTableCheckType = ref([])
+  let calcTableCheckType = ref([0, 2])  // 默认过滤武器和4星角色
   let calcTableSearch = ref<any>('')
   const handleCalcTableCheckType = (value: any) => {
     calcTableCheckType.value = value
@@ -219,7 +221,7 @@ import {
 
   let page = ref<Page>({
     pageNum: 1,
-    pageSize: 20,
+    pageSize: 200,
   });
   let total = ref(0)
   let tableData = ref<Array<any>>([]);
@@ -237,8 +239,8 @@ import {
   // 物品类型 过滤规则
   const filtRule = [
     (sth: any) => (sth.type != 2),
-    (sth: any) => (sth.type != 2 && sth.star != 4),
-    (sth: any) => (sth.type != 2 && sth.star != 5),
+    // (sth: any) => (sth.type != 2 && sth.star != 4),
+    // (sth: any) => (sth.type != 2 && sth.star != 5),
     (sth: any) => (sth.type != 1),
     (sth: any) => (sth.type != 2 && sth.star != 4),
     (sth: any) => (sth.type != 2 && sth.star != 5),
@@ -347,38 +349,55 @@ import {
     })
     // 获取统计数据
     if(tableData1.value.length == 0) {
-      let calcRecords = { ...data.roleCalc, ...data.weaponCalc }
-      let tmpKeys = Object.keys(calcRecords)
-      let tmpValues: any[] = Object.values(calcRecords)
-      let calcTable: any[] = []
-      let tmp = {} as any
-      // 过滤无效角色武器，并计算day2last，day2now，typeLabel
-      for(let i = 0; i < tmpValues.length; ++i) {
-        tmp = tmpValues[i]
-        if(tmp.count == 0 || !tmp.now_up) { continue }
-        let { now_up, last_up, icon_url, star, type, count } = tmp
-        let calcData = {
-          id: now_up.id,
-          name: tmpKeys[i],
-          item_img: icon_url,
-          day2last: deal2day(last_up.pool_start, now_up.pool_start),
-          day2now: deal2day(now_up.pool_start, 'now'),
-          count,
-          star,
-          type,
-          version: now_up.version,
-          itemInfo: `<font color='${star > 4 ? '#fcb040' : '#8a2be2'}'>${tmpKeys[i]}</font><div>${star}星${(type > 1) ? '武器' : '角色'}</div>`,
-          pool_info: `<font color='#18a058'>${now_up.name}</font><div>(${now_up.pool_start} ~ ${now_up.pool_end})</div>`,
-        }
-        calcTable.push(calcData)
+      let tmpArr = storage.get('genshinPoolCalcTable')
+      if(tmpArr) {
+        tableData1.value = tmpArr
       }
-      calcTable.sort((a: any, b: any) => {
-        if(a.day2now <= b.day2now) {
-          return 1
+      else {
+        let calcRecords = { ...data.roleCalc, ...data.weaponCalc }
+        let tmpKeys = Object.keys(calcRecords)
+        let tmpValues: any[] = Object.values(calcRecords)
+        let calcTable: any[] = []
+        let tmp = {} as any
+        // 过滤无效角色武器，并计算day2last，day2now，typeLabel
+        for(let i = 0; i < tmpValues.length; ++i) {
+          tmp = tmpValues[i]
+          if(tmp.count == 0 || !tmp.now_up) { continue }
+          let { now_up, last_up, icon_url, star, type, count } = tmp
+          let calcData = {
+            id: now_up.id,
+            name: tmpKeys[i],
+            item_img: icon_url,
+            day2last: deal2day(last_up.pool_start, now_up.pool_start),
+            day2now: deal2day(now_up.pool_start, 'now'),
+            count,
+            star,
+            type,
+            version: now_up.version,
+            pool_start: now_up.pool_start,
+            itemInfo: `<font color='${star > 4 ? '#fcb040' : '#8a2be2'}'>${tmpKeys[i]}</font><div>${star}星${(type > 1) ? '武器' : '角色'}</div>`,
+            pool_info: `<font color='#18a058'>${now_up.name}</font><div>(${now_up.pool_start} ~ ${now_up.pool_end})</div>`,
+          }
+          calcTable.push(calcData)
         }
-        else return -1
-      })
-      tableData1.value = [...calcTable]
+        calcTable.sort((a: any, b: any) => {
+          if(a.day2now <= b.day2now) {
+            return 1
+          }
+          else return -1
+        })
+        tableData1.value = [...calcTable]
+        storage.set('genshinPoolCalcTable', tableData1.value.map((d: any) => {
+          return {
+            name: d.name,
+            star: d.star,
+            type: d.type,
+            version: d.version,
+            pool_start: d.pool_start,
+            count: d.count
+          }
+        }))
+      }
     }
 
     loadingBar.finish()

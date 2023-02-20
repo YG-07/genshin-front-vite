@@ -1,3 +1,4 @@
+import { storage } from './../utils/storage';
 import { honkaiRelation } from './../data/honkai_relation';
 import { honkaiRole } from '@/data/honkai_role';
 import { commonConst } from "@/data/common_const.js"
@@ -492,7 +493,13 @@ export const _getPoolInfo = (params = {} as any) => {
     let resp = checkPoolInfoData()
     if(!resp) {
       let { search, type, page } = params
-      let { pool, roleNumOjb, weaponNumObj } = calcPoolData()
+      let calcPool = storage.get('genshinPool')
+      if(!calcPool) {
+        calcPool = calcPoolData()
+        storage.set('genshinPool', calcPool)
+      }
+      let { pool, roleNumOjb, weaponNumObj } = calcPool
+      
       // 先整理和计算数据和 连表
       let f_genshinPool = LeftJoin(pool, [
         {
@@ -514,13 +521,6 @@ export const _getPoolInfo = (params = {} as any) => {
         let e = f_genshinPool[i] as any
         let { version, version_name, name, up_5, up_4 } = e
         let flag: boolean = true
-        // 关键字包括 正式名字或人物类型
-        console.log(search ,
-          version.includes(search) ,
-          version_name.includes(search) ,
-          name.includes(search) ,
-          up_5.includes(search) ,
-          up_4.includes(search));
         
         if (
           !search || (

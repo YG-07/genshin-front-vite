@@ -871,7 +871,7 @@ export const genshinPool: any[] = [
     "name": "",
     "pool_start": "2022.8.2",
     "pool_end": "2022.8.23",
-    "up_5": "飞雷之弦振 斫锋之刃",
+    "up_5": "飞雷之弦振 斫峰之刃",
     "up_4": null,
     "pool_img": null,
     "remark": null

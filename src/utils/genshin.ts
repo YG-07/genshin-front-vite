@@ -67,11 +67,11 @@ export const poolCalcTableCol : {key: string, label: string}[] = [
 // 过滤物品类型条件
 export const calcTableCheckTypeCol: { label: string, value: any}[] = [
   { label: '武器', value: 0 },
-  { label: '4星武器', value: 1 },
-  { label: '5星武器', value: 2 },
-  { label: '角色', value: 3 },
-  { label: '4星角色', value: 4 },
-  { label: '5星角色', value: 5 },
+  // { label: '4星武器', value: 1 },
+  // { label: '5星武器', value: 2 },
+  { label: '角色', value: 1 },
+  { label: '4星角色', value: 2 },
+  { label: '5星角色', value: 3 },
 ]
 export const tableTypeCol: { label: string, value: any}[] = [
   { label: '全部', value: -2 },

@@ -1,17 +1,17 @@
 /*
  Navicat Premium Data Transfer
 
- Source Server         : Mysql80
+ Source Server         : 127.0.0.1
  Source Server Type    : MySQL
  Source Server Version : 80030
- Source Host           : localhost:3306
+ Source Host           : 127.0.0.1:3306
  Source Schema         : data
 
  Target Server Type    : MySQL
  Target Server Version : 80030
  File Encoding         : 65001
 
- Date: 19/01/2023 16:47:41
+ Date: 20/02/2023 21:24:56
 */
 
 SET NAMES utf8mb4;
@@ -22,13 +22,13 @@ SET FOREIGN_KEY_CHECKS = 0;
 -- ----------------------------
 DROP TABLE IF EXISTS `blue_archive_npc`;
 CREATE TABLE `blue_archive_npc`  (
-  `id` int(0) NOT NULL,
+  `id` int NOT NULL,
   `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `name_ja` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `img_urls` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of blue_archive_npc
@@ -105,11 +105,11 @@ INSERT INTO `blue_archive_npc` VALUES (66, '渚', '桐藤（きりふじ）ナ�
 -- ----------------------------
 DROP TABLE IF EXISTS `blue_archive_relation`;
 CREATE TABLE `blue_archive_relation`  (
-  `id` int(0) NOT NULL,
+  `id` int NOT NULL,
   `position_type` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `weapon_type` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of blue_archive_relation
@@ -130,16 +130,16 @@ INSERT INTO `blue_archive_relation` VALUES (9, NULL, 'MT');
 -- ----------------------------
 DROP TABLE IF EXISTS `blue_archive_student`;
 CREATE TABLE `blue_archive_student`  (
-  `id` int(0) NOT NULL,
+  `id` int NOT NULL,
   `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `name_ja` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
-  `star` int(0) NULL DEFAULT NULL,
-  `position` int(0) NULL DEFAULT NULL,
-  `weapon` int(0) NULL DEFAULT NULL,
+  `star` int NULL DEFAULT NULL,
+  `position` int NULL DEFAULT NULL,
+  `weapon` int NULL DEFAULT NULL,
   `url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `img_urls` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of blue_archive_student
@@ -254,16 +254,272 @@ INSERT INTO `blue_archive_student` VALUES (107, '梓', '白洲アズサ（白洲
 INSERT INTO `blue_archive_student` VALUES (108, '梓（泳装）', '白洲梓', 3, 0, 2, '81811', 'https://cdnimg.gamekee.com/wiki2.0/images/829/94828/2021/10/4/388490.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_1920/h_1080/829/190853/2022/6/16/189457.png,https://cdnimg.gamekee.com/wiki2.0/images/829/43637/2022/5/9/983515.gif');
 
 -- ----------------------------
+-- Table structure for chat_menu
+-- ----------------------------
+DROP TABLE IF EXISTS `chat_menu`;
+CREATE TABLE `chat_menu`  (
+  `id` int NOT NULL,
+  `up` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
+  `s` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
+  `src` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = DYNAMIC;
+
+-- ----------------------------
+-- Records of chat_menu
+-- ----------------------------
+INSERT INTO `chat_menu` VALUES (1, '2023-01-19 20:20:00.000', '[3D同人/无修正]Pantsushi大佬2022九月-2023一月作品合集  ', '/1/1.19/Pantsushi/download.png');
+INSERT INTO `chat_menu` VALUES (2, '补档', '2022-12-23 每日涩涩 精品女菩萨福利姬/二次元涩图 106P', '/1/每日/12.23/download.png');
+INSERT INTO `chat_menu` VALUES (3, '补档', '2022-12-24 每日涩涩 精品女菩萨福利姬/二次元涩图 126P', '/1/每日/12.24/download.png');
+INSERT INTO `chat_menu` VALUES (4, '补档', '2022-12-26 每日涩涩 精品女菩萨福利姬/二次元涩图 159P', '/1/每日/12.26/download.png');
+INSERT INTO `chat_menu` VALUES (5, '补档', '2022-12-27 每日涩涩 精品女菩萨福利姬/二次元涩图 133P', '/1/每日/12.27/download.png');
+INSERT INTO `chat_menu` VALUES (6, '补档', '2022-12-28 每日涩涩 精品女菩萨福利姬/二次元涩图 177P', '/1/每日/12.28/download.png');
+INSERT INTO `chat_menu` VALUES (7, '补档', '2022-12-29 每日涩涩 精品女菩萨福利姬/二次元涩图 228P', '/1/每日/12.29/download.png');
+INSERT INTO `chat_menu` VALUES (8, '补档', '2022-12-30 每日涩涩 精品女菩萨福利姬/二次元涩图 168P', '/1/每日/12.30/download.png');
+INSERT INTO `chat_menu` VALUES (9, '2023-01-20 13:36:00.000', '2[l2d/同人动画/无修正]laomeng大佬23年1月奖励作品', '/1/1.20/laomeng/download.png');
+INSERT INTO `chat_menu` VALUES (10, '2023-01-20 15:25:00.000', 'HongKongDoll玩偶姐姐-情侣游戏 套图x17', '/1/1.20/玩偶/download图.png');
+INSERT INTO `chat_menu` VALUES (11, '2023-01-20 15:25:00.000', 'HongKongDoll玩偶姐姐-情侣游戏 视频x2', '/1/1.20/玩偶/download视频.png');
+INSERT INTO `chat_menu` VALUES (12, '补档', '2023-01-01 每日涩涩 精品女菩萨福利姬/二次元涩图 223P', '/1/每日/1.1/download.png');
+INSERT INTO `chat_menu` VALUES (13, '补档', '2023-01-06 每日涩涩 精品女菩萨福利姬/二次元涩图 109P', '/1/每日/1.6/download.png');
+INSERT INTO `chat_menu` VALUES (14, '补档', '2023-01-07 每日涩涩 精品女菩萨福利姬/二次元涩图 94P', '/1/每日/1.7/download.png');
+INSERT INTO `chat_menu` VALUES (15, '补档', '2023-01-08 每日涩涩 精品女菩萨福利姬/二次元涩图 117P', '/1/每日/1.8/download.png');
+INSERT INTO `chat_menu` VALUES (16, '补档', '2023-01-10 每日涩涩 精品女菩萨福利姬/二次元涩图 88P', '/1/每日/1.10/download.png');
+INSERT INTO `chat_menu` VALUES (17, '补档', '2023-01-11 每日涩涩 精品女菩萨福利姬/二次元涩图 157P', '/1/每日/1.11/download.png');
+INSERT INTO `chat_menu` VALUES (18, '补档', '2023-01-13 每日涩涩 精品女菩萨福利姬/二次元涩图 205P', '/1/每日/1.13/download.png');
+INSERT INTO `chat_menu` VALUES (19, '补档', '2023-01-14 每日涩涩 精品女菩萨福利姬/二次元涩图 174P', '/1/每日/1.14/download.png');
+INSERT INTO `chat_menu` VALUES (20, '补档', '2023-01-16 每日涩涩 精品女菩萨福利姬/二次元涩图 114P', '/1/每日/1.16/download.png');
+INSERT INTO `chat_menu` VALUES (21, '补档', '2023-01-17 每日涩涩 精品女菩萨福利姬/二次元涩图 128P', '/1/每日/1.17/download.png');
+INSERT INTO `chat_menu` VALUES (22, '补档', '2023-01-18 每日涩涩 精品女菩萨福利姬/二次元涩图 151P', '/1/每日/1.18/download.png');
+INSERT INTO `chat_menu` VALUES (23, '补档', '2023-01-19 每日涩涩 精品女菩萨福利姬/二次元涩图 148P', '/1/每日/1.19/download.png');
+INSERT INTO `chat_menu` VALUES (24, '2023-01-21 17:08:00.000', '[MMD/无修正]shantianxiaozhi大佬23年1月作品', '/1/1.21/shantian/download.png');
+INSERT INTO `chat_menu` VALUES (25, '(补档)2023/1/21 19:52', '与神里的难忘时刻（涩图+小文章）', '/1/11.28/shenli/download.png');
+INSERT INTO `chat_menu` VALUES (26, '2023-01-23 15:50:00.000', 'Redcomet大佬 为美好的世界献上祝福 阿库娅', '/1/1.23/Redcomet/download.png');
+INSERT INTO `chat_menu` VALUES (27, '补档', '浮力合集', '/1/fuli/download.png');
+INSERT INTO `chat_menu` VALUES (28, '补档', '2021年1月里番作品合集', '/1/fuli/lifan/21-01/download.png');
+INSERT INTO `chat_menu` VALUES (29, '补档', '福利姬-柚子猫', '/1/11.26/youzimao/download.png');
+INSERT INTO `chat_menu` VALUES (30, '补档', '画师jndfh作品合集', '/1/11.26/jndfh/download.png');
+INSERT INTO `chat_menu` VALUES (31, '补档', '河北彩花写真', '/1/11.27/EXC-095/download.png');
+INSERT INTO `chat_menu` VALUES (32, '补档', '画师dikk0作品合集', '/1/11.27/dikk0/download.png');
+INSERT INTO `chat_menu` VALUES (33, '补档', '喵小吉-黑呆', '/1/11.27/maoxiaoji/download.png');
+INSERT INTO `chat_menu` VALUES (34, '补档', 'av极品踩点混剪-tm的燃起来了', '/1/11.25/hunjian/download.png');
+INSERT INTO `chat_menu` VALUES (35, '补档', '[冬野みかん] 巨大なお姉ちゃんのunbirth漫画 [中国翻訳]', '/1/11.25/juren/download.png');
+INSERT INTO `chat_menu` VALUES (36, '补档', '[打个胶先] 第一期 FC2PPV-1035997', '/1/11.25/pian/download.png');
+INSERT INTO `chat_menu` VALUES (37, '补档', '偷玩手机的惩罚～（futa德x能', '/1/11.25/mingri/download.png');
+INSERT INTO `chat_menu` VALUES (38, '补档', '画师DIO作品合集', '/1/11.25/DIO/download.png');
+INSERT INTO `chat_menu` VALUES (39, '补档', '电锯人-玛奇玛', '/1/11.25/m7m/download.png');
+INSERT INTO `chat_menu` VALUES (40, '2023/01/24/14:02', '画师Camonome作品合集（推特）', '/1/11.24/camonome/download.png');
+INSERT INTO `chat_menu` VALUES (41, '2023/01/24/14:25', 'NaNa-修女幻想1', '/1/11.24/nana/download.png');
+INSERT INTO `chat_menu` VALUES (42, '2023/01/24/14:43', '画师bbolalus作品合集 全是大大大大欧派', '/1/11.23/bbolalus/download.png');
+INSERT INTO `chat_menu` VALUES (43, '2023/01/24/15:00', '妮蔻×奈德丽', '/1/11.23/nikou/download.png');
+INSERT INTO `chat_menu` VALUES (44, '2023/01/24/15:17', '[毛玉牛乳 (玉之けだま)] 甘リリス [中国翻訳] [無修正] [DL版]', '/1/11.22/maoyu/download.png');
+INSERT INTO `chat_menu` VALUES (45, '2023/01/24/15:34', '『兔子先生』特别节目《直击日本AV拍摄现场》近距离接触摄影组如何工作', '/1/11.21/tuzi/download.png');
+INSERT INTO `chat_menu` VALUES (46, '2023/01/24/15:34', '『兔子先生』特别节目《直击日本AV拍摄现场》近距离接触摄影组如何工作', '/1/11.21/tuzi/download.png');
+INSERT INTO `chat_menu` VALUES (47, '2023/01/24/16:45', '坚贞不屈的清纯人妻大小姐，移情别恋的全部经过1', '/1/11.21/daxiaojie1/download.png');
+INSERT INTO `chat_menu` VALUES (48, '2023/01/24/18:20', '坚贞不屈的清纯人妻大小姐，移情别恋的全部经过2', '/1/11.21/daxiaojie2/download.png');
+INSERT INTO `chat_menu` VALUES (49, '2023/01/24/19:04', '毛玉牛乳-我是娇小魅魔的忠实仆人[无修正] 总集篇', '/1/11.20/puren/download.png');
+INSERT INTO `chat_menu` VALUES (50, '2023/01/24/19:20', '福利姬', '/1/11.19/fuliji/download.png');
+INSERT INTO `chat_menu` VALUES (51, '2023/01/24/21:03', '羞耻1+2', '/1/11.18/xiuchi/download.png');
+INSERT INTO `chat_menu` VALUES (52, '2023/01/24/21:38', '沖田凛花 巧克力草莓兔兔', '/1/11.18/tutu/download.png');
+INSERT INTO `chat_menu` VALUES (53, '2023/01/24/22:00', '土下座で頼んでみた', '/1/11.18/tuxiazuo/download.png');
+INSERT INTO `chat_menu` VALUES (54, '2023/01/24/22:03', '冰宫Asylum 2022.08.16 - 2022.11.07 [無修正]', '/1/11.17/binggong/download.png');
+INSERT INTO `chat_menu` VALUES (55, '2023/01/24/22:36', 'JVID 取精快递服务员 婕咪 我的身体就是存精容器', '/1/11.17/jiemi/download.png');
+INSERT INTO `chat_menu` VALUES (56, '2023/01/25/00:30', '[福利姬]MNS_Dame – Girlfriend', '/1/11.17/mns/download.png');
+INSERT INTO `chat_menu` VALUES (57, '2023/01/25/16:12', '我的肚子才不是虫子的繁育场 (明日方舟) [中国語] [無修正]', '/1/11.16/fanzhi/download.png');
+INSERT INTO `chat_menu` VALUES (58, '2023/01/25/16:41', 'JVID 紫欣 – 野外全露出', '/1/11.16/zixin/download.png');
+INSERT INTO `chat_menu` VALUES (59, '2023/01/25/17:16', '[打个胶先]第二期', '/1/11.15/dajiao/download.png');
+INSERT INTO `chat_menu` VALUES (60, '2023/01/25/17:37', 'N位浮力姬 掰批特辑  136P大合集', '/1/11.15/pi/download.png');
+INSERT INTO `chat_menu` VALUES (61, '2023/01/25/17:54', '[福利姬]萌量守恒 – 牛奶', '/1/11.15/niunai/download.png');
+INSERT INTO `chat_menu` VALUES (62, '2023/01/25/23:39', '[福利姬]Rina [JVID] The Best Inflatable Doll (P)', '/1/11.11/rina/download.png');
+INSERT INTO `chat_menu` VALUES (63, '2023/01/25/23:57', '[福利姬][MIKELY] Ye-Eun – Pure', '/1/11.8/yeeun/download.png');
+INSERT INTO `chat_menu` VALUES (64, '2023/01/26/00:25', '[あよ] バーバラズリ (原神)', '/1/11.8/babala/download.png');
+INSERT INTO `chat_menu` VALUES (65, '2023/01/26/00:40', '[あよ] 刻晴とえっち (原神)', '/1/11.8/keqing/download.png');
+INSERT INTO `chat_menu` VALUES (66, '2023/01/26/01:04', 'eloise软软 – OL', '/1/11.8/ruan/download.png');
+INSERT INTO `chat_menu` VALUES (67, '2023/01/26/14:11', '[だにまるstudio (だにまる)] 酔った後輩が素直になるまで [中国翻訳]', '/1/11.8/houbei/download.png');
+INSERT INTO `chat_menu` VALUES (68, '2023/01/26/14:37', '[diletta, だにまる] 満たされて目覚める朝に、地味な朝食を [中国翻訳]', '/1/11.8/diwei/download.png');
+INSERT INTO `chat_menu` VALUES (69, '2023/01/26/15:12', '[Loozy] Sonson (손손) – Smer + S.Ver', '/1/11.7/smer/download.png');
+INSERT INTO `chat_menu` VALUES (70, '2023/01/26/15:38', '人妻与OL赤裸的性生活告白 无套性爱直播', '/1/11.7/xingai/download.png');
+INSERT INTO `chat_menu` VALUES (71, '2023/01/26/15:57', '画师TAKASHIA作品合集', '/1/11.7/takashia/download.png');
+INSERT INTO `chat_menu` VALUES (72, '2023/01/26/17:35', 'eloise软软 乖乖的白丝', '/1/11.7/ruanruan/download.png');
+INSERT INTO `chat_menu` VALUES (73, '2023/01/26/19:01', 'G-cup Yuanyuan -a charming busty racing girl (P)', '/1/11.7/gcup/download.png');
+INSERT INTO `chat_menu` VALUES (74, '2023/01/26/19:47', '[Eonsang]M16[中国翻訳]', '/1/11.6/m16/download.png');
+INSERT INTO `chat_menu` VALUES (75, '2023/01/26/20:07', '[LEEHEE EXPRESS] LEDB Vol.031 – Son Ye-Eun', '/1/11.6/son/download.png');
+INSERT INTO `chat_menu` VALUES (76, '2023/01/26/20:37', '[実々みみず] 乳とりどり [中国翻訳] [DL版]', '/1/11.5/benzi/download.png');
+INSERT INTO `chat_menu` VALUES (77, '2023/01/26/21:38', '[ARTGRAVIA] VOL438 Leesnoww', '/1/11.5/438/download.png');
+INSERT INTO `chat_menu` VALUES (78, '2023/01/26/22:27', '小鸟酱足交', '/1/11.4/xiaoniao/download.png');
+INSERT INTO `chat_menu` VALUES (79, '2023/01/26/23:01', '喵小吉 – 临江仙', '/1/11.4/miaoxiaoji/download.png');
+INSERT INTO `chat_menu` VALUES (80, '2023/01/26/00:06', '[Eonsang] 용돈낭비금지', '/1/11.4/sang1/download.png');
+INSERT INTO `chat_menu` VALUES (81, '2023/01/27/16:39', '[Eonsang]RO635[中国翻訳]', '/1/11.4/sang2/download.png');
+INSERT INTO `chat_menu` VALUES (82, '2023/01/27/17:11', '肉肉 – (Nikumikyo)', '/1/11.4/rourou/download.png');
+INSERT INTO `chat_menu` VALUES (83, '2023/01/27/17:34', '3D-蒂法', '/1/11.4/difa/download.png');
+INSERT INTO `chat_menu` VALUES (84, '2023/01/27/19:07', '原神甘雨涩图特辑260P', '/1/11.3/ganyu/download.png');
+INSERT INTO `chat_menu` VALUES (85, '2023/01/27/19:30', '[小鸟酱]星奈奈cos系列 霞之丘诗羽', '/1/11.3/xiaoniao/download.png');
+INSERT INTO `chat_menu` VALUES (86, '2023/01/27/19:51', '[にぎりうさぎ] ２人のお仕事1~4[中国翻訳]', '/1/11.3/2ren/download.png');
+INSERT INTO `chat_menu` VALUES (87, '2023/01/27/20:39', '[PureMedia] VOL193 Jia', '/1/11.3/jia/download.png');
+INSERT INTO `chat_menu` VALUES (88, '2023/01/27/21:09', '蕾姆涩图特辑184p', '/1/11.2/leimu/download.png');
+INSERT INTO `chat_menu` VALUES (89, '2023/01/27/21:36', '[ARTGRAVIA] VOL428 혠둥이', '/1/11.1/428/download.png');
+INSERT INTO `chat_menu` VALUES (90, '2023/01/27/22:05', '[ほるもんカレー (鳶村)] 反逆溫泉1 (少女前線) [中国翻訳]', '/1/11.1/nifan1/download.png');
+INSERT INTO `chat_menu` VALUES (91, '2023/01/27/23:36', '[ほるもんカレー (鳶村)] 反逆溫泉2 (少女前線) [中国翻訳]', '/1/11.1/nifan2/download.png');
+INSERT INTO `chat_menu` VALUES (92, '2023/01/27/23:54', '[ほるもんカレー (鳶村)] 反逆溫泉3 (少女前線) [中国翻訳]', '/1/11.1/nifan3/download.png');
+INSERT INTO `chat_menu` VALUES (93, '2023/01/28/00:25', '[JVID] SOD Sister Salon Plan (P)', '/1/11.1/sis/download.png');
+INSERT INTO `chat_menu` VALUES (94, '2023/01/28/15:23', '[DJAWA] Mozzi 모찌 – Azur Lane HMS Cheshire', '/1/11.1/lane/download.png');
+INSERT INTO `chat_menu` VALUES (95, '2023/01/28/16:12', '一之瀬 アスナの宅配便', '/1/11.1/nitian/download.png');
+INSERT INTO `chat_menu` VALUES (96, '2023/01/28/16:37', '画师s16雪作品合集  [無修正]', '/1/11.1/s16/download.png');
+INSERT INTO `chat_menu` VALUES (97, '2023/01/28/19:11', '画师iumu作品合集', '/1/10.30/iumu/download.png');
+INSERT INTO `chat_menu` VALUES (98, '2023/01/28/19:55', 'eloise软软 – 河边JK', '/1/10.30/ruanruan/download.png');
+INSERT INTO `chat_menu` VALUES (99, '2023/01/28/20:43', '喵小吉 – 小吉的暑期补习班', '/1/10.29/miaoxiaoji/download.png');
+INSERT INTO `chat_menu` VALUES (100, '2023/01/28/21:11', '画师タブヘッド（Pixiv Fanbox）', '/1/10.29/sese/download.png');
+INSERT INTO `chat_menu` VALUES (101, '2023/01/28/21:33', '有 能 狂 喜', '/1/10.26/neng/download.png');
+INSERT INTO `chat_menu` VALUES (102, '2023/01/28/22:06', '喵小吉 – 小吉的小镇生活', '/1/10.26/maoxiaoji/download.png');
+INSERT INTO `chat_menu` VALUES (103, '2023/01/28/22:26', '[虎助遥人]臀臀臀部[中国翻訳]', '/1/10.26/tunbu/download.png');
+INSERT INTO `chat_menu` VALUES (104, '2023/01/28/22:48', '橙子喵酱合集', '/1/10.25/chenzimiao/download.png');
+INSERT INTO `chat_menu` VALUES (105, '2023/01/28/23:22', '有料少女【高額支援版】～お金を払うと〇〇してくれる 1', '/1/10.24/youliao1/download.png');
+INSERT INTO `chat_menu` VALUES (106, '2023/01/28/23:38', '有料少女【高額支援版】～お金を払うと〇〇してくれる 2', '/1/10.24/youliao2/download.png');
+INSERT INTO `chat_menu` VALUES (107, '2023/01/28/23:55', '有料少女【高額支援版】～お金を払うと〇〇してくれる 3', '/1/10.24/youliao3/download.png');
+INSERT INTO `chat_menu` VALUES (108, '2023/01/29/00:13', '金鱼kinngyo – 花音栗子5套', '/1/10.24/jinyu/download.png');
+INSERT INTO `chat_menu` VALUES (109, '2023/01/29/00:51', 'YunaTamago onlyfans', '/1/10.24/yuna/download.png');
+INSERT INTO `chat_menu` VALUES (110, '2023/01/29/15:56', '村上西瓜 – 刹那', '/1/10.24/chana/download.png');
+INSERT INTO `chat_menu` VALUES (111, '2023/01/29/16:34', '画师Msk12003作品合集', '/1/10.24/12003/download.png');
+INSERT INTO `chat_menu` VALUES (112, '2023/01/29/16:59', '画师Shengtian作品+GIF动图', '/1/10.23/shengtian/download.png');
+INSERT INTO `chat_menu` VALUES (113, '2023/01/29/17:33', '喵小吉 – 小魅魔', '/1/10.23/miaoxiaoji/download.png');
+INSERT INTO `chat_menu` VALUES (114, '2023/01/29/18:22', '小鸟酱 – 情侣系列', '/1/10.23/xiaoniao/download.png');
+INSERT INTO `chat_menu` VALUES (115, '2023/01/29/18:49', '[ぽち小屋。 (ぽち。)]姉なるもの 1-7 [無修正]', '/1/10.23/xiaowu/download.png');
+INSERT INTO `chat_menu` VALUES (116, '2023/01/29/19:19', '[pixiv]ユヨウ(附带pixiv文案，已整理阅读顺序）', '/1/10.21/sese/download.png');
+INSERT INTO `chat_menu` VALUES (117, '2023/01/29/19:43', '诺艾尔小姐无法拒绝！ [无修正]', '/1/10.21/jujue/download.png');
+INSERT INTO `chat_menu` VALUES (118, '2023/01/29/20:22', '画师Monobe作品合集', '/1/10.21/monobe/download.png');
+INSERT INTO `chat_menu` VALUES (119, '2023/01/29/20:59', '[Kataokasan] Futa德狗x阿能 (Arknights) [Chinese]', '/1/10.20/futa/download.png');
+INSERT INTO `chat_menu` VALUES (120, '2023/01/29/21:40', '【大罕见】注入爱国基因，東雪莲！', '/1/10.19/hanjian/download.png');
+INSERT INTO `chat_menu` VALUES (121, '2023/01/29/22:06', 'あい（I_cup_JD）- 白T恤', '/1/10.19/cup/download.png');
+INSERT INTO `chat_menu` VALUES (122, '2023/01/29/23:12', '喵小吉 – 风铃公主', '/1/10.19/miaoxiaoji/download.png');
+INSERT INTO `chat_menu` VALUES (123, '2023/01/29/23:32', '赛高萝莉 蓝色', '/1/10.19/luoli/download.png');
+INSERT INTO `chat_menu` VALUES (124, '2023/01/29/23:55', '夫妻同居一个月与一年的区别', '/1/10.18/fuqi/download.png');
+INSERT INTO `chat_menu` VALUES (125, '2023/01/30/00:25', '少女秩序', '/1/10.18/shaonv/download.png');
+INSERT INTO `chat_menu` VALUES (126, '2023/01/30/00:57', '[雨] Fanbox', '/1/10.17/yu/download.png');
+INSERT INTO `chat_menu` VALUES (127, '2023/01/30/01:24', '齋齋 Itsukichan いつき', '/1/10.17/zhai/download.png');
+INSERT INTO `chat_menu` VALUES (128, '2023/01/30/01:44', '[TAKK] Mori Patrol Tighnari (原神) [中国翻訳]', '/1/10.15/ti/download.png');
+INSERT INTO `chat_menu` VALUES (129, '2023/01/30/02:05', '橙子喵酱 – 甘雨刻晴', '/1/10.15/chenzi/download.png');
+INSERT INTO `chat_menu` VALUES (130, '2023/01/30/02:41', 'JVID 阿黎 – 暗黑空姐', '/1/10.14/ali/download.png');
+INSERT INTO `chat_menu` VALUES (131, '2023/01/30/02:59', 'I_cup_JD – 紫内衣', '/1/10.14/cup/download.png');
+INSERT INTO `chat_menu` VALUES (132, '2023/01/30/19:11', 'ナツメと性愛対決 (喫茶ステラと死神の蝶) [中国語] [無修正]', '/1/10.13/duijue/download.png');
+INSERT INTO `chat_menu` VALUES (133, '2023/01/30/19:30', '[Son Ye-Eun 손예은] 2B [BLUECAKE]', '/1/10.11/2b/download.png');
+INSERT INTO `chat_menu` VALUES (134, '2023/01/30/19:52', '[Club3] Bathroom', '/1/10.10/club/download.png');
+INSERT INTO `chat_menu` VALUES (135, '2023/01/30/20:12', '喵小吉 – Re：从零开始的女体盛宴', '/1/10.10/miaoxiaoji/download.png');
+INSERT INTO `chat_menu` VALUES (136, '2023/01/30/20:32', '[Loozy] Sonson – Reading room', '/1/10.10/loozy/download.png');
+INSERT INTO `chat_menu` VALUES (137, '2023/01/30/20:52', '小志乃酱 – 凛凛蝶 常服', '/1/10.8/xiaozhinai/download.png');
+INSERT INTO `chat_menu` VALUES (138, '2023/01/30/21:11', '落落raku 3套', '/1/10.8/luoluo/download.png');
+INSERT INTO `chat_menu` VALUES (139, '2023/01/30/22:06', '村上西瓜 – 多莉', '/1/10.7/duoli/download.png');
+INSERT INTO `chat_menu` VALUES (140, '2023/01/30/22:27', 'あい（I_cup_JD）- 奶咖啡', '/1/10.5/kafei/download.png');
+INSERT INTO `chat_menu` VALUES (141, '2023/01/30/22:59', '画师houk1se1作品合集', '/1/10.2/houk1se1/download.png');
+INSERT INTO `chat_menu` VALUES (142, '2023/01/30/23:22', '小志乃酱 – 猫咪圆舞曲', '/1/10.2/xiaozhinai/download.png');
+INSERT INTO `chat_menu` VALUES (143, '2023/01/31/14:18', 'Son Ye-Eun私教 Rrivate tutor', '/1/10.1/sijiao/download.png');
+INSERT INTO `chat_menu` VALUES (144, '2023/01/31/15:15', '[Pixiv] 小柴胡', '/1/11.12/xiaochaihu/download.png');
+INSERT INTO `chat_menu` VALUES (145, '2023/01/31/15:34', '里菜と穴', '/1/11.29/licai/download.png');
+INSERT INTO `chat_menu` VALUES (146, '2023/01/31/15:50', '[海凪コウ] 挑発JK [中国翻訳]', '/1/11.29/jk/download.png');
+INSERT INTO `chat_menu` VALUES (147, '2023/01/31/16:10', '[ICECAKE] 飞行的训练', '/1/11.29/feixing/download.png');
+INSERT INTO `chat_menu` VALUES (148, '2023/01/31/16:46', '小鸟酱一小时足交合集', '/1/11.29/xiaoniao/download.png');
+INSERT INTO `chat_menu` VALUES (149, '2023/01/31/17:06', '落落Raku SunSeeker', '/1/11.29/luoluo/download.png');
+INSERT INTO `chat_menu` VALUES (150, '2023/01/31/18:34', '[ARTGRAVIA] VOL453 leesnoww', '/1/11.30/453/download.png');
+INSERT INTO `chat_menu` VALUES (151, '2023/01/31/18:57', 'HongKongDoll-玩偶姐姐-粉色吊带睡裙', '/1/11.30/wanou/download.png');
+INSERT INTO `chat_menu` VALUES (152, '2023/01/31/19:20', '酒儿酱', '/1/11.30/jiu/download.png');
+INSERT INTO `chat_menu` VALUES (153, '2023/01/31/19:56', '落落Raku Love Atago', '/1/11.30/luoluo/download.png');
+INSERT INTO `chat_menu` VALUES (154, '2023/01/31/20:27', '只想交欢的年纪1', '/1/12.1/jiaohuan1/download.png');
+INSERT INTO `chat_menu` VALUES (155, '2023/01/31/20:45', '只想交欢的年纪2', '/1/12.1/jiaohuan2/download.png');
+INSERT INTO `chat_menu` VALUES (156, '2023/01/31/21:22', '只想交欢的年纪3', '/1/12.1/jiaohuan3/download.png');
+INSERT INTO `chat_menu` VALUES (157, '2023/01/31/21:55', '[打个胶先]第三期 STARS-140', '/1/12.1/STARS140/download.png');
+INSERT INTO `chat_menu` VALUES (158, '2023/01/31/22:18', '小酒酱-浴室自嗨', '/1/12.1/xiaojiu/download.png');
+INSERT INTO `chat_menu` VALUES (159, '2023/01/31/22:38', '喵小吉-罪恶王冠 套图x51', '/1/12.2/miaoxiaoji/downloadtb.png');
+INSERT INTO `chat_menu` VALUES (160, '2023/01/31/22:38', '喵小吉-罪恶王冠 视频花絮x6', '/1/12.2/miaoxiaoji/downloadsp.png');
+INSERT INTO `chat_menu` VALUES (161, '2023/01/31/23:08', '柚子猫-边看世界杯边...', '/1/12.2/youzi/download.png');
+INSERT INTO `chat_menu` VALUES (162, '2023/02/01/12:26', '关于涩涩的服装对射精的时间会有多少影响的实验', '/1/12.3/shiyan/download.png');
+INSERT INTO `chat_menu` VALUES (163, '2023/02/01/13:05', '地雷系游戏少女', '/1/12.3/youxi/download.png');
+INSERT INTO `chat_menu` VALUES (164, '2023/02/01/14:07', '原神-刻晴甘雨', '/1/12.3/a22/download1.png');
+INSERT INTO `chat_menu` VALUES (165, '2023/02/01/15:00', '原神-刻晴黑丝+裸足', '/1/12.3/a22/download2.png');
+INSERT INTO `chat_menu` VALUES (166, '2023/02/01/15:18', '原神-空vs妮露', '/1/12.3/a22/download3.png');
+INSERT INTO `chat_menu` VALUES (167, '2023/02/01/15:55', '原神-旅行者第一人称独享', '/1/12.4/mmd/download1.png');
+INSERT INTO `chat_menu` VALUES (168, '2023/02/01/16:14', '原神-旅行者纯啪混剪', '/1/12.4/mmd/download2.png');
+INSERT INTO `chat_menu` VALUES (169, '2023/02/01/16:33', '原神-旅行者异世后入篇', '/1/12.4/mmd/download3.png');
+INSERT INTO `chat_menu` VALUES (170, '2023/02/01/17:11', 'HongKongDoll玩偶姐姐-闲暇时刻', '/1/12.5/wanou/download.png');
+INSERT INTO `chat_menu` VALUES (171, '2023/02/01/17:29', '[海凪コウ] フリーハグやってます', '/1/12.5/hai/download.png');
+INSERT INTO `chat_menu` VALUES (172, '2023/02/01/18:24', '画师zzp2作品合集', '/1/12.5/zzp2/download.png');
+INSERT INTO `chat_menu` VALUES (173, '2023/02/01/19:00', '原神会員制餐厅[中国翻訳]', '/1/12.11/huiyuan/download.png');
+INSERT INTO `chat_menu` VALUES (174, '2023/02/01/19:29', '粉色情人陪玩の情人', '/1/12.11/peiwan/download.png');
+INSERT INTO `chat_menu` VALUES (175, '2023/02/01/20:20', '[空色工房] 黒いウワサのあるうちの学校の先生たち', '/1/12.12/gongfang/download.png');
+INSERT INTO `chat_menu` VALUES (176, '2023/02/01/20:50', '(原神)空—妮露 无修正 [中国翻訳]', '/1/12.12/kong/download.png');
+INSERT INTO `chat_menu` VALUES (177, '2023/02/01/21:12', '[同人动画]电锯人-玛奇玛', '/1/12.12/dianju/download.png');
+INSERT INTO `chat_menu` VALUES (178, '2023/02/01/22:30', '相位土豆大佬12月作品 开淫趴', '/1/12.13/tudou/download.png');
+INSERT INTO `chat_menu` VALUES (179, '2023/02/02/16:23', '少女观察日记', '/1/12.14/balla/download.png');
+INSERT INTO `chat_menu` VALUES (180, '2023/02/02/17:01', '奶牛超级白丝大奶子夹住大鸡巴疯狂乳交', '/1/12.14/rujiao/download.png');
+INSERT INTO `chat_menu` VALUES (181, '2023/02/02/17:30', '小鹿酱-尺度全开①', '/1/12.15/xiaolu/download1.png');
+INSERT INTO `chat_menu` VALUES (182, '2023/02/02/17:45', '小鹿酱-尺度全开②', '/1/12.15/xiaolu/download2.png');
+INSERT INTO `chat_menu` VALUES (183, '2023/02/02/17:55', '小鹿酱-尺度全开③', '/1/12.15/xiaolu/download3.png');
+INSERT INTO `chat_menu` VALUES (184, '2023/02/02/19:01', '小鹿酱-尺度全开④', '/1/12.15/xiaolu/download4.png');
+INSERT INTO `chat_menu` VALUES (185, '2023/02/02/21:00', '[3D同人无修正]Puuguy大佬 原神-妮露', '/1/12.15/puuguy/download1.png');
+INSERT INTO `chat_menu` VALUES (186, '2023/02/02/21:13', '[3D同人无修正]Puuguy大佬 圣诞蒂法', '/1/12.15/puuguy/download2.png');
+INSERT INTO `chat_menu` VALUES (187, '2023/02/02/21:50', '画师remora作品合集', '/1/12.15/remora/download.png');
+INSERT INTO `chat_menu` VALUES (188, '2023/02/02/23:08', '[ASMR-耳舐め] 保健の先生との性授業♡耳舐め密着え●ち♡【恋人アーカイブ公開1ヵ月-ニコニコより高音質＆高画質-KU100】', '/1/12.15/asmr/download.png');
+INSERT INTO `chat_menu` VALUES (189, '2023/02/03/00:12', '巨乳女友爱上NTR', '/1/12.16/nvyou/download.png');
+INSERT INTO `chat_menu` VALUES (190, '2023/02/03/00:44', 'pi-haruka与小草神的甜蜜性爱', '/1/12.16/pi/download.png');
+INSERT INTO `chat_menu` VALUES (191, '2023/02/03/01:11', '【SLG/动态/2D】九条裟罗NejiSimSara2 Ver1.03【安卓直装/PC】', '/1/12.17/jiutiao/download.png');
+INSERT INTO `chat_menu` VALUES (192, '2023/02/03/14:59', '寻宝的暑假たからさがしのなつやすみ【前篇】', '/1/12.17/xunbao/download.png');
+INSERT INTO `chat_menu` VALUES (193, '2023/02/03/15:54', '寻宝的暑假たからさがしのなつやすみ【中篇】', '/1/12.17/xunbao2/download.png');
+INSERT INTO `chat_menu` VALUES (194, '2023/02/03/18:32', '我认为的丝袜神作之藤环奈JUQ-162、给老公戴绿帽的秘书和自己的社长沉沦在性爱的海洋、口水湿吻、吊带黑丝、白虎无毛荡妇、NTR、绿帽奴、场面火爆震撼十足', '/1/12.18/siwa/download.png');
+INSERT INTO `chat_menu` VALUES (195, '2023/02/03/19:20', 'Nana-洗衣机の花式玩法', '/1/12.18/nana/download.png');
+INSERT INTO `chat_menu` VALUES (196, '2023/02/03/20:03', '【MMD/无修正】xiaodidi09', '/1/12.18/xiaodidi/download.png');
+INSERT INTO `chat_menu` VALUES (197, '2023/02/03/21:52', 'Rinhee大佬12月新作', '/1/12.19/lianjian/download.png');
+INSERT INTO `chat_menu` VALUES (198, '2023/02/03/22:14', 'bengugu大佬作品', '/1/12.19/bengugu/download.png');
+INSERT INTO `chat_menu` VALUES (199, '2023/02/03/22:31', 'bengugu大佬作品-原神莫娜', '/1/12.19/bengugu2/download.png');
+INSERT INTO `chat_menu` VALUES (200, '2023/02/03/23:07', '0721masterPAISEN大佬12月新作', '/1/12.20/master/download.png');
+INSERT INTO `chat_menu` VALUES (201, '2023/02/03/23:41', 'Naimi奶咪-OnlyFans小合集 共21视频', '/1/12.20/naimi/download.png');
+INSERT INTO `chat_menu` VALUES (202, '2023/02/04/00:25', '【ASMR-耳舐め】【真琴/Macoto/まこと 】公主连接 (プリコネ）Jカップ騎士メイドが耳元で吐息たっぷり耳舐め♡', '/1/12.20/asmr/download.png');
+INSERT INTO `chat_menu` VALUES (203, '2023/02/04/15:36', 'Naimi奶咪-OnlyFans小合集 共114图片', '/1/12.20/naimi2/download.png');
+INSERT INTO `chat_menu` VALUES (204, '2023/02/04/16:19', '【2d动画】lapin gris灰葉作品①', '/1/12.20/hui/download.png');
+INSERT INTO `chat_menu` VALUES (205, '2023/02/04/16:42', '【2d动画】lapin gris灰葉作品②', '/1/12.20/hui2/download.png');
+INSERT INTO `chat_menu` VALUES (206, '2023/02/04/17:13', '【Motion Anime】エロい願いが叶います!現実設定が変えれちゃう御守りでクラスの爆乳も担任のケツ穴もギャルも学園中の女子を全員オ〇ホ化っ(モーションアニメ版)', '/1/12.20/donghua/download.png');
+INSERT INTO `chat_menu` VALUES (207, '2023/02/04/17:54', '画师 大猫板蓝根 作品合集', '/1/12.20/damao/download.png');
+INSERT INTO `chat_menu` VALUES (208, '2023/02/04/18:50', '爆机少女喵小吉-双休日', '/1/12.21/miaoxiaoji/download.png');
+INSERT INTO `chat_menu` VALUES (209, '2023/02/04/19:30', '[Candy Club (スカイ)] お姉ちゃんととろける気持ち [中国翻訳][无修正]', '/1/12.21/kaidache/download.png');
+INSERT INTO `chat_menu` VALUES (210, '2023/02/04/20:53', '[打个胶先]第四期 adn-142-C', '/1/12.21/adn/download.png');
+INSERT INTO `chat_menu` VALUES (211, '2023/02/04/21:25', '八月未央-黑丝胸带', '/1/12.22/bayue/download.png');
+INSERT INTO `chat_menu` VALUES (212, '2023/02/04/21:26', '柚子喵-美女上司线下陪玩', '/1/12.23/youzi/download.png');
+INSERT INTO `chat_menu` VALUES (213, '2023/02/04/21:49', 'ww-蓝色JK裙', '/1/12.23/lanse/download.png');
+INSERT INTO `chat_menu` VALUES (214, '2023/02/04/22:33', 'Lewd Froggo动画作品1', '/1/12.23/lewd/download.png');
+INSERT INTO `chat_menu` VALUES (215, '2023/02/04/22:48', 'Lewd Froggo动画作品2', '/1/12.23/lewd2/download.png');
+INSERT INTO `chat_menu` VALUES (216, '2023/02/04/23:16', '推特MMD大神作品合集 视频x14', '/1/12.23/mmd1/download.png');
+INSERT INTO `chat_menu` VALUES (217, '2023/02/04/23:41', '推特MMD大神作品合集 CGx148', '/1/12.23/mmd2/download.png');
+INSERT INTO `chat_menu` VALUES (218, '2023/02/05/00:07', 'topu作品 原神-少女', '/1/12.23/topu1/download.png');
+INSERT INTO `chat_menu` VALUES (219, '2023/02/05/00:30', 'topu作品 原神-甘雨', '/1/12.23/topu2/download.png');
+INSERT INTO `chat_menu` VALUES (220, '2023/02/05/15:50', 'topu作品 原神-心海', '/1/12.23/topu3/download.png');
+INSERT INTO `chat_menu` VALUES (221, '2023/02/05/16:07', 'topu作品 原神-旅行者荧', '/1/12.23/topu4/download.png');
+INSERT INTO `chat_menu` VALUES (222, '2023/02/05/16:21', 'topu作品 碧蓝档案-亚子', '/1/12.23/topu5/download.png');
+INSERT INTO `chat_menu` VALUES (223, '2023/02/05/16:21', 'topu作品 碧蓝档案-亚子', '/1/12.23/topu5/download.png');
+INSERT INTO `chat_menu` VALUES (224, '2023/02/05/16:39', 'topu作品 原神-甘雨2', '/1/12.23/topu6/download.png');
+INSERT INTO `chat_menu` VALUES (225, '2023/02/05/17:43', '陽夜作品-原神申鹤', '/1/12.24/yangye1/download.png');
+INSERT INTO `chat_menu` VALUES (226, '2023/02/05/18:00', '陽夜作品-原神夜兰', '/1/12.24/yangye2/download.png');
+INSERT INTO `chat_menu` VALUES (227, '2023/02/05/18:31', '柚木-家庭VR游戏机', '/1/12.24/youmu/download.png');
+INSERT INTO `chat_menu` VALUES (228, '2023/02/05/19:13', '[打个胶先]第五期 未步奈奈_FC2PPV-2589532', '/1/12.25/bushu/download.png');
+INSERT INTO `chat_menu` VALUES (229, '2023/02/05/19:46', '香草少女-圣诞服', '/1/12.25/xiangcao/download.png');
+INSERT INTO `chat_menu` VALUES (230, '2023/02/05/20:02', '小菜头喵喵喵-圣诞主题', '/1/12.25/xiaocai/download.png');
+INSERT INTO `chat_menu` VALUES (231, '2023/02/05/20:34', '押尾猫-cos圣诞雷姆', '/1/12.25/yawei/download.png');
+INSERT INTO `chat_menu` VALUES (232, '2023/02/05/20:49', '芋圆呀呀-HAPPY！圣诞', '/1/12.25/yuyuan/download.png');
+INSERT INTO `chat_menu` VALUES (233, '2023/02/05/21:15', 'maloxx大佬作品-爆炒雌小鬼', '/1/12.26/maloxx/download.png');
+INSERT INTO `chat_menu` VALUES (234, '2023/02/05/21:35', '[3D同人/无修正]exprational大佬作品 死眠少女菲雅', '/1/12.27/ex/download.png');
+INSERT INTO `chat_menu` VALUES (235, '2023/02/05/21:54', '来点波奇酱小孤独图集(涩图美图 雅 俗 共 赏)', '/1/12.27/boqi/download.png');
+INSERT INTO `chat_menu` VALUES (236, '2023/02/05/22:25', '[MMD/无修正]相位土豆大佬 凌华+珐露珊分差', '/1/12.27/tudou/download.png');
+INSERT INTO `chat_menu` VALUES (237, '2023/02/05/23:11', 'Nana-老师の私教课', '/1/12.28/nana/download.png');
+INSERT INTO `chat_menu` VALUES (238, '2023/02/05/23:33', 'cuteli-真空圣诞装', '/1/12.29/zhenkong/download.png');
+INSERT INTO `chat_menu` VALUES (239, '2023/02/05/23:58', '三无皮卡喵 – 初音酱', '/1/12.29/chuyin/download.png');
+INSERT INTO `chat_menu` VALUES (240, '2023/02/05/00:06', '[SLG佳作/官中/PC+安卓] 妹生活～单色～ 官方中文版 v2.03 +修改存档', '/1/12.29/game/download.png');
+
+-- ----------------------------
 -- Table structure for common_const
 -- ----------------------------
 DROP TABLE IF EXISTS `common_const`;
 CREATE TABLE `common_const`  (
-  `id` int(0) NOT NULL,
+  `id` int NOT NULL,
   `key` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `value` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `type` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of common_const
@@ -286,18 +542,18 @@ INSERT INTO `common_const` VALUES (12, 'mys_bh3_url', '/bh3/wiki/content/{id}/de
 -- ----------------------------
 DROP TABLE IF EXISTS `genshin_book`;
 CREATE TABLE `genshin_book`  (
-  `id` int(0) NOT NULL,
+  `id` int NOT NULL,
   `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `name_en` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `name_ja` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
-  `book` int(0) NULL DEFAULT NULL,
-  `star` int(0) NULL DEFAULT NULL,
-  `week` int(0) NULL DEFAULT NULL,
+  `book` int NULL DEFAULT NULL,
+  `star` int NULL DEFAULT NULL,
+  `week` int NULL DEFAULT NULL,
   `mhy_url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `wiki_url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `icon_url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of genshin_book
@@ -344,13 +600,13 @@ INSERT INTO `genshin_book` VALUES (36, '「自由」的指引', 'Guide to Freedo
 -- ----------------------------
 DROP TABLE IF EXISTS `genshin_card`;
 CREATE TABLE `genshin_card`  (
-  `id` int(0) NOT NULL,
+  `id` int NOT NULL,
   `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `icon_url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `type` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of genshin_card
@@ -538,18 +794,18 @@ INSERT INTO `genshin_card` VALUES (177, '月桂的宝冠', 'n331033', '/img/i_n3
 -- ----------------------------
 DROP TABLE IF EXISTS `genshin_item`;
 CREATE TABLE `genshin_item`  (
-  `id` int(0) NOT NULL,
+  `id` int NOT NULL,
   `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `name_en` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `name_ja` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
-  `item` int(0) NULL DEFAULT NULL,
-  `star` int(0) NULL DEFAULT NULL,
-  `week` int(0) NULL DEFAULT NULL,
+  `item` int NULL DEFAULT NULL,
+  `star` int NULL DEFAULT NULL,
+  `week` int NULL DEFAULT NULL,
   `mhy_url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `wiki_url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `icon_url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of genshin_item
@@ -608,11 +864,11 @@ INSERT INTO `genshin_item` VALUES (48, '远海夷地的玉枝', 'Jeweled Branch 
 -- ----------------------------
 DROP TABLE IF EXISTS `genshin_map`;
 CREATE TABLE `genshin_map`  (
-  `id` int(0) NOT NULL,
+  `id` int NOT NULL,
   `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `icon` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of genshin_map
@@ -700,11 +956,136 @@ INSERT INTO `genshin_map` VALUES (449, '刺葵木', 'https://uploadstatic.mihoyo
 INSERT INTO `genshin_map` VALUES (450, '柽木', 'https://uploadstatic.mihoyo.com/ys-obc/2022/09/27/75379475/ba4bca3a8f4cf7d3889691424801804e_1326742780268606507.png');
 
 -- ----------------------------
+-- Table structure for genshin_pool
+-- ----------------------------
+DROP TABLE IF EXISTS `genshin_pool`;
+CREATE TABLE `genshin_pool`  (
+  `id` int NOT NULL COMMENT '主键',
+  `version` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '版本号',
+  `stage` tinyint NULL DEFAULT NULL COMMENT '卡池阶段(1, 2, 3期)',
+  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '卡池名称',
+  `pool_start` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL COMMENT '卡池开始日期',
+  `pool_end` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL COMMENT '卡池结束日期',
+  `up_5` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL COMMENT '五星物品',
+  `up_4` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL COMMENT '四星物品',
+  `pool_img` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL COMMENT '卡池封面图',
+  `remark` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL COMMENT '备注',
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of genshin_pool
+-- ----------------------------
+INSERT INTO `genshin_pool` VALUES (1, '1.0', 1, '杯装之诗', '2020.9.28', '2020.10.18', '温迪', '菲谢尔 芭芭拉 香菱', NULL, NULL);
+INSERT INTO `genshin_pool` VALUES (2, '1.0', 1, '', '2020.9.28', '2020.10.18', '风鹰剑 阿莫斯之弓', NULL, NULL, NULL);
+INSERT INTO `genshin_pool` VALUES (3, '1.0', 2, '闪焰的驻足', '2020.10.20', '2020.11.9', '可莉', '砂糖 行秋 诺艾尔', NULL, NULL);
+INSERT INTO `genshin_pool` VALUES (4, '1.0', 2, '', '2020.10.20', '2020.11.9', '四风原典 狼的末路', NULL, NULL, NULL);
+INSERT INTO `genshin_pool` VALUES (5, '1.1', 1, '暂别冬都', '2020.11.11', '2020.12.1', '达达利亚', '北斗 凝光 迪奥娜', NULL, NULL);
+INSERT INTO `genshin_pool` VALUES (6, '1.1', 1, '', '2020.11.11', '2020.12.1', '天空之翼 尘世之锁', NULL, NULL, NULL);
+INSERT INTO `genshin_pool` VALUES (7, '1.1', 2, '陵薮市朝', '2020.12.1', '2020.12.22', '钟离', '雷泽 辛焱 重云', NULL, NULL);
+INSERT INTO `genshin_pool` VALUES (8, '1.1', 2, '', '2020.12.1', '2020.12.22', '无工之剑 天空之卷', NULL, NULL, NULL);
+INSERT INTO `genshin_pool` VALUES (9, '1.2', 1, '深秘之息', '2020.12.23', '2021.1.12', '阿贝多', '班尼特 砂糖 菲谢尔', NULL, NULL);
+INSERT INTO `genshin_pool` VALUES (10, '1.2', 1, '', '2020.12.23', '2021.1.12', '斫峰之刃 天空之卷', NULL, NULL, NULL);
+INSERT INTO `genshin_pool` VALUES (11, '1.2', 2, '浮生熟来', '2021.1.13', '2021.2.2', '甘雨', '香菱 行秋 诺艾尔', NULL, NULL);
+INSERT INTO `genshin_pool` VALUES (12, '1.2', 2, '', '2021.1.13', '2021.2.2', '阿莫斯之弓 天空之傲', NULL, NULL, NULL);
+INSERT INTO `genshin_pool` VALUES (13, '1.3', 1, '烟火之邀', '2021.2.3', '2021.2.17', '魈', '辛焱 北斗 迪奥娜', NULL, NULL);
+INSERT INTO `genshin_pool` VALUES (14, '1.3', 1, '', '2021.2.3', '2021.2.17', '和璞鸢 磐岩结绿', NULL, NULL, NULL);
+INSERT INTO `genshin_pool` VALUES (15, '1.3', 2, '鱼龙灯昼', '2021.2.17', '2021.3.2', '刻晴', '班尼特 凝光 芭芭拉', NULL, NULL);
+INSERT INTO `genshin_pool` VALUES (16, '1.3', 2, '', '2021.2.17', '2021.3.2', '和璞鸢 磐岩结绿', NULL, NULL, NULL);
+INSERT INTO `genshin_pool` VALUES (17, '1.3', 3, '赤团开时', '2021.3.2', '2021.3.16', '胡桃', '香菱 重云 行秋', NULL, NULL);
+INSERT INTO `genshin_pool` VALUES (18, '1.3', 3, '', '2021.3.2', '2021.3.16', '狼的末路 护摩之杖', NULL, NULL, NULL);
+INSERT INTO `genshin_pool` VALUES (19, '1.4', 1, '杯装之诗', '2021.3.17', '2021.4.6', '温迪', '雷泽 砂糖 诺艾尔', NULL, NULL);
+INSERT INTO `genshin_pool` VALUES (20, '1.4', 1, '', '2021.3.17', '2021.4.6', '终末嗟叹之诗 天空之刃', NULL, NULL, NULL);
+INSERT INTO `genshin_pool` VALUES (21, '1.4', 2, '暂别冬都', '2021.4.6', '2021.4.27', '达达利亚', '芭芭拉 菲谢尔 罗莎莉亚', NULL, NULL);
+INSERT INTO `genshin_pool` VALUES (22, '1.4', 2, '', '2021.4.6', '2021.4.27', '天空之翼 四风原典', NULL, NULL, NULL);
+INSERT INTO `genshin_pool` VALUES (23, '1.5', 1, '陵薮市朝', '2021.4.28', '2021.5.18', '钟离', '烟绯 诺艾尔 迪奥娜', NULL, NULL);
+INSERT INTO `genshin_pool` VALUES (24, '1.5', 1, '', '2021.4.28', '2021.5.18', '斫峰之刃 尘世之锁', NULL, NULL, NULL);
+INSERT INTO `genshin_pool` VALUES (25, '1.5', 2, '浪涌之瞬', '2021.5.18', '2021.6.8', '优菈', '辛焱 北斗 行秋', NULL, NULL);
+INSERT INTO `genshin_pool` VALUES (26, '1.5', 2, '', '2021.5.18', '2021.6.8', '松籁响起之时 风鹰剑', NULL, NULL, NULL);
+INSERT INTO `genshin_pool` VALUES (27, '1.6', 1, '闪焰的驻足', '2021.6.9', '2021.6.29', '可莉', '芭芭拉 砂糖 菲谢尔', NULL, NULL);
+INSERT INTO `genshin_pool` VALUES (28, '1.6', 1, '', '2021.6.9', '2021.6.29', '四风原典 天空之傲', NULL, NULL, NULL);
+INSERT INTO `genshin_pool` VALUES (29, '1.6', 2, '叶落风随', '2021.6.29', '2021.7.20', '枫原万叶', '班尼特 雷泽 罗莎莉亚', NULL, NULL);
+INSERT INTO `genshin_pool` VALUES (30, '1.6', 2, '', '2021.6.29', '2021.7.20', '天空之卷 苍古自由之誓', NULL, NULL, NULL);
+INSERT INTO `genshin_pool` VALUES (31, '2.0', 1, '白鹭之庭', '2021.7.21', '2021.8.10', '神里绫华', '烟绯 凝光 重云', NULL, NULL);
+INSERT INTO `genshin_pool` VALUES (32, '2.0', 1, '', '2021.7.21', '2021.8.10', '雾切之回光 天空之脊', NULL, NULL, NULL);
+INSERT INTO `genshin_pool` VALUES (33, '2.0', 2, '焰色天河', '2021.8.10', '2021.8.31', '宵宫', '辛焱 早柚 迪奥娜', NULL, NULL);
+INSERT INTO `genshin_pool` VALUES (34, '2.0', 2, '', '2021.8.10', '2021.8.31', '飞雷之弦振 天空之刃', NULL, NULL, NULL);
+INSERT INTO `genshin_pool` VALUES (35, '2.1', 1, '影寂天下人', '2021.9.1', '2021.9.21', '雷电将军', '香菱 砂糖 九条裟罗', NULL, NULL);
+INSERT INTO `genshin_pool` VALUES (36, '2.1', 1, '', '2021.9.1', '2021.9.21', '薙草之稻光 无工之剑', NULL, NULL, NULL);
+INSERT INTO `genshin_pool` VALUES (37, '2.1', 2, '浮岳虹珠', '2021.9.21', '2021.10.12', '珊瑚宫心海', '行秋 北斗 罗莎莉亚', NULL, NULL);
+INSERT INTO `genshin_pool` VALUES (38, '2.1', 2, '', '2021.9.21', '2021.10.12', '磐岩结绿 不灭月华', NULL, NULL, NULL);
+INSERT INTO `genshin_pool` VALUES (39, '2.2', 1, '暂别冬都', '2021.10.13', '2021.11.2', '达达利亚', '烟绯 凝光 重云', NULL, NULL);
+INSERT INTO `genshin_pool` VALUES (40, '2.2', 1, '', '2021.10.13', '2021.11.2', '冬极白星 尘世之锁', NULL, NULL, NULL);
+INSERT INTO `genshin_pool` VALUES (41, '2.2', 2, '赤团开时', '2021.11.2', '2021.11.23', '胡桃', '迪奥娜 早柚 托马', NULL, NULL);
+INSERT INTO `genshin_pool` VALUES (42, '2.2', 2, '', '2021.11.2', '2021.11.23', '终末嗟叹之诗 护摩之杖', NULL, NULL, NULL);
+INSERT INTO `genshin_pool` VALUES (43, '2.3', 1, '深秘之息', '2021.11.24', '2021.12.14', '阿贝多', '班尼特 诺艾尔 罗莎莉亚', NULL, NULL);
+INSERT INTO `genshin_pool` VALUES (44, '2.3', 1, '浪涌之瞬', '2021.11.24', '2021.12.14', '优菈', '班尼特 诺艾尔 罗莎莉亚', NULL, NULL);
+INSERT INTO `genshin_pool` VALUES (45, '2.3', 1, '', '2021.11.24', '2021.12.14', '苍古自由之誓 松籁响起之时', NULL, NULL, NULL);
+INSERT INTO `genshin_pool` VALUES (46, '2.3', 2, '鬼门斗宴', '2021.12.14', '2022.1.4', '荒泷一斗', '香菱 五郎 芭芭拉', NULL, NULL);
+INSERT INTO `genshin_pool` VALUES (47, '2.3', 2, '', '2021.12.14', '2022.1.4', '天空之翼 赤角石溃杵', NULL, NULL, NULL);
+INSERT INTO `genshin_pool` VALUES (48, '2.4', 1, '出尘入世', '2022.1.5', '2022.1.25', '申鹤', '重云 凝光 云堇', NULL, NULL);
+INSERT INTO `genshin_pool` VALUES (49, '2.4', 1, '烟火之邀', '2022.1.5', '2022.1.25', '魈', '重云 凝光 云堇', NULL, NULL);
+INSERT INTO `genshin_pool` VALUES (50, '2.4', 1, '', '2022.1.5', '2022.1.25', '息灾 和璞鸢', NULL, NULL, NULL);
+INSERT INTO `genshin_pool` VALUES (51, '2.4', 2, '浮生熟来', '2022.1.25', '2022.2.15', '甘雨', '烟绯 北斗 行秋', NULL, NULL);
+INSERT INTO `genshin_pool` VALUES (52, '2.4', 2, '陵薮市朝', '2022.1.25', '2022.2.15', '钟离', '烟绯 北斗 行秋', NULL, NULL);
+INSERT INTO `genshin_pool` VALUES (53, '2.4', 2, '', '2022.1.25', '2022.2.15', '阿莫斯之弓 贯虹之槊', NULL, NULL, NULL);
+INSERT INTO `genshin_pool` VALUES (54, '2.5', 1, '华紫樱绯', '2022.2.16', '2022.3.8', '八重神子', '迪奥娜 菲谢尔 托马', NULL, NULL);
+INSERT INTO `genshin_pool` VALUES (55, '2.5', 1, '', '2022.2.16', '2022.3.8', '神乐之真意 磐岩结绿', NULL, NULL, NULL);
+INSERT INTO `genshin_pool` VALUES (56, '2.5', 2, '影寂天下人', '2022.3.8', '2022.3.29', '雷电将军', '班尼特 辛焱 九条裟罗', NULL, NULL);
+INSERT INTO `genshin_pool` VALUES (57, '2.5', 2, '浮岳虹珠', '2022.3.8', '2022.3.29', '珊瑚宫心海', '班尼特 辛焱 九条裟罗', NULL, NULL);
+INSERT INTO `genshin_pool` VALUES (58, '2.5', 2, '', '2022.3.8', '2022.3.29', '薙草之稻光 不灭月华', NULL, NULL, NULL);
+INSERT INTO `genshin_pool` VALUES (59, '2.6', 1, '苍流踏花', '2022.3.30', '2022.4.19', '神里绫人', '香菱 砂糖 云堇', NULL, NULL);
+INSERT INTO `genshin_pool` VALUES (60, '2.6', 1, '杯装之诗', '2022.3.30', '2022.4.19', '温迪', '香菱 砂糖 云堇', NULL, NULL);
+INSERT INTO `genshin_pool` VALUES (61, '2.6', 1, '', '2022.3.30', '2022.4.19', '波乱月白经津 终末嗟叹之诗', NULL, NULL, NULL);
+INSERT INTO `genshin_pool` VALUES (62, '2.6', 2, '白鹭之庭', '2022.4.19', '2022.5.10', '神里绫华', '早柚 雷泽 罗莎莉亚', NULL, NULL);
+INSERT INTO `genshin_pool` VALUES (63, '2.6', 2, '', '2022.4.19', '2022.5.10', '雾切之回光 无工之剑', NULL, NULL, NULL);
+INSERT INTO `genshin_pool` VALUES (64, '2.7', 1, '素霓伣天', '2022.5.31', '2022.6.21', '夜兰', '烟绯 诺艾尔 芭芭拉', NULL, NULL);
+INSERT INTO `genshin_pool` VALUES (65, '2.7', 1, '烟火之邀', '2022.5.31', '2022.6.21', '魈', '烟绯 诺艾尔 芭芭拉', NULL, NULL);
+INSERT INTO `genshin_pool` VALUES (66, '2.7', 1, '', '2022.5.31', '2022.6.21', '若水 和璞鸢', NULL, NULL, NULL);
+INSERT INTO `genshin_pool` VALUES (67, '2.7', 2, '鬼门斗宴', '2022.6.21', '2022.7.12', '荒泷一斗', '重云 五郎 久岐忍', NULL, NULL);
+INSERT INTO `genshin_pool` VALUES (68, '2.7', 2, '', '2022.6.21', '2022.7.12', '赤角石溃杵 尘世之锁', NULL, NULL, NULL);
+INSERT INTO `genshin_pool` VALUES (69, '2.8', 1, '叶落风随', '2022.7.13', '2022.8.2', '枫原万叶', '凝光 托马 鹿野院平藏', NULL, NULL);
+INSERT INTO `genshin_pool` VALUES (70, '2.8', 1, '闪焰的驻足', '2022.7.13', '2022.8.2', '可莉', '凝光 托马 鹿野院平藏', NULL, NULL);
+INSERT INTO `genshin_pool` VALUES (71, '2.8', 1, '', '2022.7.13', '2022.8.2', '苍古自由之誓 四风原典', NULL, NULL, NULL);
+INSERT INTO `genshin_pool` VALUES (72, '2.8', 2, '焰色天河', '2022.8.2', '2022.8.23', '宵宫', '班尼特 辛焱 云堇', NULL, NULL);
+INSERT INTO `genshin_pool` VALUES (73, '2.8', 2, '', '2022.8.2', '2022.8.23', '飞雷之弦振 斫峰之刃', NULL, NULL, NULL);
+INSERT INTO `genshin_pool` VALUES (74, '3.0', 1, '巡御蘙荟', '2022.8.24', '2022.09.09', '提纳里', '菲谢尔 迪奥娜 柯莱', NULL, NULL);
+INSERT INTO `genshin_pool` VALUES (75, '3.0', 1, '陵薮市朝', '2022.8.24', '2022.09.09', '钟离', '菲谢尔 迪奥娜 柯莱', NULL, NULL);
+INSERT INTO `genshin_pool` VALUES (76, '3.0', 1, '', '2022.8.24', '2022.09.09', '猎人之径 贯虹之槊', NULL, NULL, NULL);
+INSERT INTO `genshin_pool` VALUES (77, '3.0', 2, '浮生熟来', '2022.09.09', '2022.09.27', '甘雨', '行秋 砂糖 多莉', NULL, NULL);
+INSERT INTO `genshin_pool` VALUES (78, '3.0', 2, '浮岳虹珠', '2022.09.09', '2022.09.27', '珊瑚宫心海', '行秋 砂糖 多莉', NULL, NULL);
+INSERT INTO `genshin_pool` VALUES (79, '3.0', 2, '', '2022.09.09', '2022.09.27', '阿莫斯之弓 不灭月华', NULL, NULL, NULL);
+INSERT INTO `genshin_pool` VALUES (80, '3.1', 1, '雳裁冥昭', '2022.09.28', '2022.10.14', '赛诺', '早柚 坎蒂丝 久岐忍', NULL, NULL);
+INSERT INTO `genshin_pool` VALUES (81, '3.1', 1, '杯装之诗', '2022.09.28', '2022.10.14', '温迪', '早柚 坎蒂丝 久岐忍', NULL, NULL);
+INSERT INTO `genshin_pool` VALUES (82, '3.1', 1, '', '2022.09.28', '2022.10.14', '终末嗟叹之诗 赤沙之杖', NULL, NULL, NULL);
+INSERT INTO `genshin_pool` VALUES (83, '3.1', 2, '翩舞歈莲', '2022.10.14', '2022.11.01', '妮露', '香菱 北斗 芭芭拉', NULL, NULL);
+INSERT INTO `genshin_pool` VALUES (84, '3.1', 2, '深秘之息', '2022.10.14', '2022.11.01', '阿贝多', '香菱 北斗 芭芭拉', NULL, NULL);
+INSERT INTO `genshin_pool` VALUES (85, '3.1', 2, '', '2022.10.14', '2022.11.01', '圣显之钥 磐岩结绿', NULL, NULL, NULL);
+INSERT INTO `genshin_pool` VALUES (86, '3.2', 1, '月草的赐慧', '2022.11.02', '2022.11.18', '纳西妲', '班尼特 雷泽 诺艾尔', NULL, NULL);
+INSERT INTO `genshin_pool` VALUES (87, '3.2', 1, '焰色天河', '2022.11.02', '2022.11.18', '宵宫', '班尼特 雷泽 诺艾尔', NULL, NULL);
+INSERT INTO `genshin_pool` VALUES (88, '3.2', 1, '', '2022.11.02', '2022.11.18', '千夜浮梦 飞雷之弦振', NULL, NULL, NULL);
+INSERT INTO `genshin_pool` VALUES (89, '3.2', 2, '暂别冬都', '2022.11.18', '2022.12.06', '达达利亚', '托马 鹿野院平藏 莱依拉', NULL, NULL);
+INSERT INTO `genshin_pool` VALUES (90, '3.2', 2, '华紫樱绯', '2022.11.18', '2022.12.06', '八重神子', '托马 鹿野院平藏 莱依拉', NULL, NULL);
+INSERT INTO `genshin_pool` VALUES (91, '3.2', 2, '', '2022.11.18', '2022.12.06', '神乐之真意 冬极白星', NULL, NULL, NULL);
+INSERT INTO `genshin_pool` VALUES (92, '3.3', 1, '余火变相', '2022.12.07', '2022.12.27', '流浪者', '烟绯 五郎 珐露珊', NULL, NULL);
+INSERT INTO `genshin_pool` VALUES (93, '3.3', 1, '鬼门斗宴', '2022.12.07', '2022.12.27', '荒泷一斗', '烟绯 五郎 珐露珊', NULL, NULL);
+INSERT INTO `genshin_pool` VALUES (94, '3.3', 1, '', '2022.12.07', '2022.12.27', '图莱杜拉的回忆 赤角石溃杵', NULL, NULL, NULL);
+INSERT INTO `genshin_pool` VALUES (95, '3.3', 2, '影寂天下人', '2022.12.28', '2023.01.17', '雷电将军', '早柚 罗莎莉亚 九条裟罗', NULL, NULL);
+INSERT INTO `genshin_pool` VALUES (96, '3.3', 2, '苍流踏花', '2022.12.28', '2023.01.17', '神里绫人', '早柚 罗莎莉亚 九条裟罗', NULL, NULL);
+INSERT INTO `genshin_pool` VALUES (97, '3.3', 2, '', '2022.12.28', '2023.01.17', '波乱月白经津 薙草之稻光', NULL, NULL, NULL);
+INSERT INTO `genshin_pool` VALUES (98, '3.4', 1, '敕诫枢谋', '2023.01.18', '2023.02.07', '艾尔海森', '辛焱 云堇 瑶瑶', NULL, NULL);
+INSERT INTO `genshin_pool` VALUES (99, '3.4', 1, '烟火之邀', '2023.01.18', '2023.02.07', '魈', '辛焱 云堇 瑶瑶', NULL, NULL);
+INSERT INTO `genshin_pool` VALUES (100, '3.4', 1, '', '2023.01.18', '2023.02.07', '裁叶萃光 和璞鸢', NULL, NULL, NULL);
+INSERT INTO `genshin_pool` VALUES (101, '3.4', 2, '素霓伣天', '2023.02.07', '2023.02.28', '夜兰', '北斗 凝光 行秋', NULL, NULL);
+INSERT INTO `genshin_pool` VALUES (102, '3.4', 2, '赤团开时', '2023.02.07', '2023.02.28', '胡桃', '北斗 凝光 行秋', NULL, NULL);
+INSERT INTO `genshin_pool` VALUES (103, '3.4', 2, '', '2023.02.07', '2023.02.28', '若水 护摩之杖', NULL, NULL, NULL);
+
+-- ----------------------------
 -- Table structure for genshin_relation
 -- ----------------------------
 DROP TABLE IF EXISTS `genshin_relation`;
 CREATE TABLE `genshin_relation`  (
-  `id` int(0) NOT NULL,
+  `id` int NOT NULL,
   `element_type` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `weapon_type` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `area_type` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
@@ -712,7 +1093,7 @@ CREATE TABLE `genshin_relation`  (
   `item_type` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `week_name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of genshin_relation
@@ -736,20 +1117,20 @@ INSERT INTO `genshin_relation` VALUES (11, NULL, NULL, NULL, '「诤言」', '�
 -- ----------------------------
 DROP TABLE IF EXISTS `genshin_role`;
 CREATE TABLE `genshin_role`  (
-  `id` int(0) NOT NULL,
+  `id` int NOT NULL,
   `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `name_en` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `name_ja` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
-  `star` int(0) NULL DEFAULT NULL,
-  `element` int(0) NULL DEFAULT NULL,
-  `weapon` int(0) NULL DEFAULT NULL,
-  `book` int(0) NULL DEFAULT NULL,
-  `area` int(0) NULL DEFAULT NULL,
+  `star` int NULL DEFAULT NULL,
+  `element` int NULL DEFAULT NULL,
+  `weapon` int NULL DEFAULT NULL,
+  `book` int NULL DEFAULT NULL,
+  `area` int NULL DEFAULT NULL,
   `mhy_url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `wiki_url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `icon_url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of genshin_role
@@ -822,22 +1203,64 @@ INSERT INTO `genshin_role` VALUES (65, '钟离', 'Zhongli', '鍾離', 5, 5, 3, 5
 INSERT INTO `genshin_role` VALUES (66, '重云', 'Chongyun', '重雲', 4, 3, 1, 4, 1, '644', 'chongyun_036', 'https://uploadstatic.mihoyo.com/ys-obc/2021/08/23/75276545/0bd80f58871b97281be47fcd6e2d7487_1302151446666002486.png');
 
 -- ----------------------------
+-- Table structure for genshin_version
+-- ----------------------------
+DROP TABLE IF EXISTS `genshin_version`;
+CREATE TABLE `genshin_version`  (
+  `id` int NOT NULL COMMENT '主键',
+  `version` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '版本号',
+  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL COMMENT '版本名称',
+  `version_start` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL COMMENT '版本开始日期',
+  `version_end` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL COMMENT '版本结束日期',
+  `version_img` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL COMMENT '版本主题图',
+  `remark` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL COMMENT '备注',
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of genshin_version
+-- ----------------------------
+INSERT INTO `genshin_version` VALUES (1, '0.0', '天空岛', '2020-09-15', '2020-11-10', NULL, 'PS4、IOS、Andriod、PC');
+INSERT INTO `genshin_version` VALUES (2, '0.1', '世界树', '2020-09-28', '2020-11-10', NULL, 'Bilibili、小米服');
+INSERT INTO `genshin_version` VALUES (3, '1.0', '捕风的异乡人', '2020-09-28', '2020-11-10', NULL, NULL);
+INSERT INTO `genshin_version` VALUES (4, '1.1', '迫近的客星', '2020-11-11', '2020-12-22', NULL, NULL);
+INSERT INTO `genshin_version` VALUES (5, '1.2', '白垩与黑龙', '2020-12-23', '2021-02-02', NULL, '开启龙脊雪山');
+INSERT INTO `genshin_version` VALUES (6, '1.3', '明霄升海平', '2021-02-03', '2021-03-16', NULL, '海灯节3卡池');
+INSERT INTO `genshin_version` VALUES (7, '1.4', '风花的邀约', '2021-03-17', '2021-04-27', NULL, '风花节');
+INSERT INTO `genshin_version` VALUES (8, '1.5', '玉扉绕尘歌', '2021-04-28', '2021-06-08', NULL, NULL);
+INSERT INTO `genshin_version` VALUES (9, '1.6', '盛夏！海岛？大冒险！', '2021-06-09', '2021-07-20', NULL, NULL);
+INSERT INTO `genshin_version` VALUES (10, '2.0', '不动鸣神，泡影断灭', '2021-07-21', '2021-08-31', NULL, '开启稻妻地区');
+INSERT INTO `genshin_version` VALUES (11, '2.1', '韶光抚月，天下人间', '2021-09-01', '2021-10-12', NULL, NULL);
+INSERT INTO `genshin_version` VALUES (12, '2.2', '雾海悬谜境', '2021-10-13', '2021-11-23', NULL, NULL);
+INSERT INTO `genshin_version` VALUES (13, '2.3', '皑尘与雪影', '2021-11-24', '2022-01-04', NULL, '开始双UP池');
+INSERT INTO `genshin_version` VALUES (14, '2.4', '飞彩镌流年', '2022-01-05', '2022-02-15', NULL, NULL);
+INSERT INTO `genshin_version` VALUES (15, '2.5', '薄樱初绽时', '2022-02-16', '2022-03-29', NULL, NULL);
+INSERT INTO `genshin_version` VALUES (16, '2.6', '流风眷堇庭', '2022-03-30', '2022-05-30', NULL, '疫情延期一个小版本，最长绫华池');
+INSERT INTO `genshin_version` VALUES (17, '2.7', '荒梦藏虞渊', '2022-05-31', '2022-07-12', NULL, NULL);
+INSERT INTO `genshin_version` VALUES (18, '2.8', '仲夏！幻夜？奇想曲！', '2022-07-13', '2022-08-23', NULL, NULL);
+INSERT INTO `genshin_version` VALUES (19, '3.0', '千朵玫瑰带来的黎明', '2022-08-24', '2022-09-27', NULL, '开启须弥地区');
+INSERT INTO `genshin_version` VALUES (20, '3.1', '赤土之王与三朝圣者', '2022-09-28', '2022-11-01', NULL, NULL);
+INSERT INTO `genshin_version` VALUES (21, '3.2', '虚空鼓动，劫火高扬', '2022-11-02', '2022-12-06', NULL, NULL);
+INSERT INTO `genshin_version` VALUES (22, '3.3', '六入尽明 诸相皆空', '2022-12-07', '2023-01-17', NULL, '正式开启常驻七圣召唤');
+INSERT INTO `genshin_version` VALUES (23, '3.4', '磬弦奏华夜', '2023-01-18', '2023-02-28', NULL, '神里绫华、丽萨衣装');
+
+-- ----------------------------
 -- Table structure for genshin_weapon
 -- ----------------------------
 DROP TABLE IF EXISTS `genshin_weapon`;
 CREATE TABLE `genshin_weapon`  (
-  `id` int(0) NOT NULL,
+  `id` int NOT NULL,
   `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `name_en` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `name_ja` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
-  `weapon` int(0) NULL DEFAULT NULL,
-  `star` int(0) NULL DEFAULT NULL,
-  `item` int(0) NULL DEFAULT NULL,
+  `weapon` int NULL DEFAULT NULL,
+  `star` int NULL DEFAULT NULL,
+  `item` int NULL DEFAULT NULL,
   `mhy_url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `wiki_url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `icon_url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of genshin_weapon
@@ -1001,13 +1424,13 @@ INSERT INTO `genshin_weapon` VALUES (153, '宗室长剑', 'Royal Longsword', '�
 -- ----------------------------
 DROP TABLE IF EXISTS `honkai_relation`;
 CREATE TABLE `honkai_relation`  (
-  `id` int(0) NOT NULL,
+  `id` int NOT NULL,
   `element` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL COMMENT '基本属性',
   `role` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL COMMENT '人物类型',
   `star` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL COMMENT '品质阶级',
   `damage` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL COMMENT '伤害类型',
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of honkai_relation
@@ -1044,7 +1467,7 @@ INSERT INTO `honkai_relation` VALUES (24, NULL, '爱衣', NULL, NULL);
 -- ----------------------------
 DROP TABLE IF EXISTS `honkai_role`;
 CREATE TABLE `honkai_role`  (
-  `id` int(0) NOT NULL,
+  `id` int NOT NULL,
   `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `element` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `role` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
@@ -1053,7 +1476,7 @@ CREATE TABLE `honkai_role`  (
   `url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `icon_url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of honkai_role
@@ -1141,5 +1564,26 @@ INSERT INTO `honkai_role` VALUES (80, '真理之律者', '4', '2', '0', '1', '19
 INSERT INTO `honkai_role` VALUES (81, '真我 · 人之律者', '1', '13', '0', '1', '1784', 'https://uploadstatic.mihoyo.com/bh3-wiki/2022/08/02/264755623/075a2ae601c87cce283ecbaacea8a382_9124843153772421079.png');
 INSERT INTO `honkai_role` VALUES (82, '真炎幸魂', '0', '7', '1', '0', '74', 'https://uploadstatic.mihoyo.com/bh3-wiki/2021/09/04/81417673/69ecd56d8fcb5c508eb97f5de33bcab1_528022664381526258.png');
 INSERT INTO `honkai_role` VALUES (83, '终焉之律者', '4', '0', '0', '0', '2086', 'https://uploadstatic.mihoyo.com/bh3-wiki/2023/01/04/264755623/54085ecaead652d8e84cd1c9907f7b38_5757792017872581659.png');
+
+-- ----------------------------
+-- Table structure for qq_chat
+-- ----------------------------
+DROP TABLE IF EXISTS `qq_chat`;
+CREATE TABLE `qq_chat`  (
+  `id` int NOT NULL,
+  `type` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL COMMENT 'word/img/mp4/file',
+  `msg` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
+  `class` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
+  `style` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
+  `url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = DYNAMIC;
+
+-- ----------------------------
+-- Records of qq_chat
+-- ----------------------------
+INSERT INTO `qq_chat` VALUES (1, 'word', '你好！', NULL, NULL, NULL);
+INSERT INTO `qq_chat` VALUES (2, 'img', 'assets\\img\\page1\\001.jpg', NULL, NULL, NULL);
+INSERT INTO `qq_chat` VALUES (3, 'img', 'assets\\img\\page1\\002.jpg', NULL, NULL, 'assets\\img\\page1\\002.jpg');
 
 SET FOREIGN_KEY_CHECKS = 1;
