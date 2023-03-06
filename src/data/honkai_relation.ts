@@ -180,5 +180,12 @@ export const honkaiRelation: any[] = [
     "role": "爱衣",
     "star": "",
     "damage": ""
+  },
+  {
+    "id": "25",
+    "element": "",
+    "role": "苏莎娜",
+    "star": "",
+    "damage": ""
   }
 ]
