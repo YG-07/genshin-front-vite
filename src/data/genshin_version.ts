@@ -206,5 +206,23 @@ export const genshinVersion: any[] = [
     "version_end": "2023-02-28",
     "version_img": null,
     "remark": "神里绫华、丽萨衣装"
+  },
+  {
+    "id": 24,
+    "version": "3.5",
+    "name": "风花的呼吸",
+    "version_start": "2023-03-01",
+    "version_end": "2023-04-11",
+    "version_img": null,
+    "remark": null
+  },
+  {
+    "id": 25,
+    "version": "3.6",
+    "name": "盛典与慧业",
+    "version_start": "2023-04-12",
+    "version_end": "2023-05-24",
+    "version_img": null,
+    "remark": null
   }
 ]
