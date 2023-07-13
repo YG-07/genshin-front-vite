@@ -1,11 +1,11 @@
 export const genshinRelation: any[] = [
   {
     "id": -1,
-    "element_type": "全部元素",
-    "weapon_type": null,
-    "area_type": "未知地区",
-    "book_type": null,
-    "item_type": null,
+    "element_type": "全部",
+    "weapon_type": "全部",
+    "area_type": "其他",
+    "book_type": "全部",
+    "item_type": "全部",
     "week_name": null
   },
   {
@@ -15,7 +15,7 @@ export const genshinRelation: any[] = [
     "area_type": "蒙德",
     "book_type": "「自由」",
     "item_type": "高塔孤王",
-    "week_name": null
+    "week_name": "未知"
   },
   {
     "id": 1,
@@ -57,7 +57,7 @@ export const genshinRelation: any[] = [
     "id": 5,
     "element_type": "岩",
     "weapon_type": null,
-    "area_type": null,
+    "area_type": "枫丹",
     "book_type": "「黄金」",
     "item_type": "漆黑陨铁",
     "week_name": null
@@ -114,6 +114,33 @@ export const genshinRelation: any[] = [
     "area_type": null,
     "book_type": "「诤言」",
     "item_type": "谧林涓露",
+    "week_name": null
+  },
+  {
+    "id": 12,
+    "element_type": null,
+    "weapon_type": null,
+    "area_type": null,
+    "book_type": "「公平」",
+    "item_type": "悠古弦音",
+    "week_name": null
+  },
+  {
+    "id": 13,
+    "element_type": null,
+    "weapon_type": null,
+    "area_type": null,
+    "book_type": "「正义」",
+    "item_type": "纯圣露滴",
+    "week_name": null
+  },
+  {
+    "id": 14,
+    "element_type": null,
+    "weapon_type": null,
+    "area_type": null,
+    "book_type": "「秩序」",
+    "item_type": "无垢之海",
     "week_name": null
   }
 ]

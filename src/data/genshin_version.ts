@@ -221,7 +221,25 @@ export const genshinVersion: any[] = [
     "version": "3.6",
     "name": "盛典与慧业",
     "version_start": "2023-04-12",
-    "version_end": "2023-05-24",
+    "version_end": "2023-05-23",
+    "version_img": null,
+    "remark": null
+  },
+  {
+    "id": 26,
+    "version": "3.7",
+    "name": "决斗！召唤之巅！",
+    "version_start": "2023-05-24",
+    "version_end": "2023-07-04",
+    "version_img": null,
+    "remark": null
+  },
+  {
+    "id": 27,
+    "version": "3.8",
+    "name": "清夏！乐园？大秘境！",
+    "version_start": "2023-07-05",
+    "version_end": "2023-08-16",
     "version_img": null,
     "remark": null
   }

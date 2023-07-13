@@ -59,6 +59,21 @@ export const genshinSelectBook: any[] = [
     "id": "11",
     "name": "「诤言」",
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2022/08/20/4820086/d62bd81605203d46b57ad7bc71357f1e_8614656753128774889.png"
+  },
+  {
+    "id": "12",
+    "name": "「公平」",
+    "icon_url": "https://genshin.honeyhunterworld.com/img/i_n104340_35.webp"
+  },
+  {
+    "id": "13",
+    "name": "「正义」",
+    "icon_url": "https://genshin.honeyhunterworld.com/img/i_n104343_35.webp"
+  },
+  {
+    "id": "14",
+    "name": "「秩序」",
+    "icon_url": "https://genshin.honeyhunterworld.com/img/i_n104346_35.webp"
   }
 ]
 
@@ -122,5 +137,20 @@ export const genshinSelectItem: any[] = [
     "id": "11",
     "name": "谧林涓露",
     "icon_url": "https://uploadstatic.mihoyo.com/ys-obc/2022/08/20/4820086/55416fff3427034075a4201d4fb4abbe_682407200285386977.png"
-  }
+  },
+  {
+    "id": "12",
+    "name": "无垢之海",
+    "icon_url": "https://genshin.honeyhunterworld.com/img/i_n114060_35.webp"
+  },
+  {
+    "id": "13",
+    "name": "悠古弦音",
+    "icon_url": "https://genshin.honeyhunterworld.com/img/i_n114052_35.webp"
+  },
+  {
+    "id": "14",
+    "name": "纯圣露滴",
+    "icon_url": "https://genshin.honeyhunterworld.com/img/i_n114056_35.webp"
+  },
 ]
