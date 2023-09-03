@@ -5,7 +5,7 @@
         <h2>女武神</h2>
         <n-skeleton v-if="loading" :width="150" :sharp="false" size="medium" />
         <n-gradient-text v-else :gradient="{ from: 'rgb(85, 85, 85)', to: 'rgb(170, 170, 170)' }">
-          共{{  total  }}位，已展示{{  roleList.length  }}位
+          共{{ total }}位，已展示{{ roleList.length }}位
         </n-gradient-text>
       </div>
       <n-skeleton v-if="loading" :width="300" :sharp="false" size="medium" />
@@ -32,7 +32,7 @@
             <n-button type="warning" @click="clickReset">重置条件</n-button>
           </n-space>
         </n-space>
-        <n-divider v-if="!ua" @click="searchShow = !searchShow">{{  searchShow ? "收起搜索" : "展开搜索"  }}</n-divider>
+        <n-divider v-if="!ua" @click="searchShow = !searchShow">{{ searchShow ? "收起搜索" : "展开搜索" }}</n-divider>
       </n-layout-header>
       <n-layout-content has-sider>
         <n-space v-if="loading" :style="custStyle">
@@ -86,37 +86,37 @@ const loading = ref(false)
 const loadingBar = useLoadingBar()
 const message = useMessage();
 const route = useRoute()
-  let queryDate = new Date()
-  let queryWeek = -2
-  let searchFlag = true
-  let page = ref<Page>({
-    pageNum: 1,
-    pageSize: 100,
-  });
-  //  日期是否非法
-  const isValidDate = (date: any) => {
-    return date instanceof Date && !isNaN(date.getTime())
+let queryDate = new Date()
+let queryWeek = -2
+let searchFlag = true
+let page = ref<Page>({
+  pageNum: 1,
+  pageSize: 100,
+});
+//  日期是否非法
+const isValidDate = (date: any) => {
+  return date instanceof Date && !isNaN(date.getTime())
+}
+// 获取星期,如: 周5 => 2
+const getWeek = (week: number) => {
+  if (week == 0) {
+    return -2
   }
-  // 获取星期,如: 周5 => 2
-  const getWeek = (week: number) => {
-    if(week == 0) {
-      return -2
-    }
-    return week > 3 ? week - 3 : week
-  }
+  return week > 3 ? week - 3 : week
+}
 
-  if(route.query?.t) {
-    let t = route.query.t as string    
-    if(/^\d+$/.test(t)) {
-      queryDate = new Date(Number(t))
-    } 
-    else {
-      queryDate = isValidDate(new Date(t)) ? new Date(t) : new Date()
-    }
-    queryWeek = getWeek(queryDate.getDay())
-    searchFlag = false
-    page.value.pageSize = 150
+if (route.query?.t) {
+  let t = route.query.t as string
+  if (/^\d+$/.test(t)) {
+    queryDate = new Date(Number(t))
   }
+  else {
+    queryDate = isValidDate(new Date(t)) ? new Date(t) : new Date()
+  }
+  queryWeek = getWeek(queryDate.getDay())
+  searchFlag = false
+  page.value.pageSize = 150
+}
 
 let searchShow = ref(searchFlag)
 let searchName = ref("");
@@ -183,10 +183,12 @@ const queryRoleList = async () => {
   } as any;
   let { code, data, msg } = await getHonkaiRoleInfo(params) as any;
   console.log(code, data, msg, '/');
-  
+
   if (code != 200) {
     message.error(msg);
-    loadingBar.finish()
+    setTimeout(() => {
+      loadingBar.finish()
+    }, 500)
     loading.value = false
     return;
   }
@@ -200,7 +202,9 @@ const queryRoleList = async () => {
     e.imgSrc = e.icon_url
     return e
   })
-  loadingBar.finish()
+  setTimeout(() => {
+    loadingBar.finish()
+  }, 500)
   loading.value = false
 }
 
@@ -219,5 +223,4 @@ onMounted(() => {
 })
 </script>
 
-<style lang="scss">
-</style>
+<style lang="scss"></style>

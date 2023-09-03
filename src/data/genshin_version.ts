@@ -1,4 +1,3 @@
-
 export const genshinVersion: any[] = [
   {
     "id": 1,
@@ -239,8 +238,17 @@ export const genshinVersion: any[] = [
     "version": "3.8",
     "name": "清夏！乐园？大秘境！",
     "version_start": "2023-07-05",
-    "version_end": "2023-08-16",
+    "version_end": "2023-08-15",
     "version_img": null,
     "remark": null
+  },
+  {
+    "id": 28,
+    "version": "4.0",
+    "name": "仿若无因飘落的轻雨",
+    "version_start": "2023-08-16",
+    "version_end": "2023-09-26",
+    "version_img": null,
+    "remark": "开启枫丹版本，开启水下探索"
   }
 ]

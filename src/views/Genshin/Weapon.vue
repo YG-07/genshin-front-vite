@@ -5,7 +5,7 @@
         <h2>武器</h2>
         <n-skeleton v-if="loading" :width="150" :sharp="false" size="medium" />
         <n-gradient-text v-else :gradient="{ from: 'rgb(85, 85, 85)', to: 'rgb(170, 170, 170)' }">
-          共{{total}}个，已展示{{weaponList.length}}个
+          共{{ total }}个，已展示{{ weaponList.length }}个
         </n-gradient-text>
       </div>
       <n-skeleton v-if="loading" :width="300" :sharp="false" size="medium" />
@@ -14,21 +14,25 @@
     <n-layout>
       <n-layout-header>
         <n-space v-show="searchShow" v-if="loading" :style="custStyle">
-          <n-skeleton v-for="(item, index) in new Array(6)" :key="index"
-            :width="260" :sharp="false" size="medium" />
+          <n-skeleton v-for="(item, index) in new Array(6)" :key="index" :width="260" :sharp="false" size="medium" />
         </n-space>
         <n-space v-show="searchShow" v-else class="space-main" :style="custStyle">
-          <n-select :value="star" @update:value="handleStar" :options="relationInfo?.star" :style="ua?'width: 200px':''" />
-          <n-select :value="week" @update:value="handleWeek" :options="relationInfo?.week" :style="ua?'width: 200px':''" />
-          <n-select :value="weapon" @update:value="handleWeapon" :options="relationInfo?.weapon" :style="ua?'width: 200px':''" />
-          <n-select :render-label="renderItemLabel" :value="item" @update:value="handleItem" :options="relationInfo?.item" :style="ua?'width: 200px':''" />
-          <n-input :value="searchName" @keyup.enter="handleNameChg" @update:value="handleName" type="text" placeholder="搜索武器名" :style="ua?'width: 200px':'min-width: 200px;'" />
-          <n-space :style="ua?`flex:1;`:`min-width: 200px;`">
+          <n-select :value="star" @update:value="handleStar" :options="relationInfo?.star"
+            :style="ua ? 'width: 200px' : ''" />
+          <n-select :value="week" @update:value="handleWeek" :options="relationInfo?.week"
+            :style="ua ? 'width: 200px' : ''" />
+          <n-select :value="weapon" @update:value="handleWeapon" :options="relationInfo?.weapon"
+            :style="ua ? 'width: 200px' : ''" />
+          <n-select :render-label="renderItemLabel" :value="item" @update:value="handleItem" :options="relationInfo?.item"
+            :style="ua ? 'width: 200px' : ''" />
+          <n-input :value="searchName" @keyup.enter="handleNameChg" @update:value="handleName" type="text"
+            placeholder="搜索武器名" :style="ua ? 'width: 200px' : 'min-width: 200px;'" />
+          <n-space :style="ua ? `flex:1;` : `min-width: 200px;`">
             <n-button type="success" style="width: 84px;" @click="searchWeaponList(1)">搜索</n-button>
             <n-button type="warning" @click="clickReset">重置条件</n-button>
           </n-space>
         </n-space>
-        <n-divider v-if="!ua" @click="searchShow=!searchShow">{{searchShow?"收起搜索":"展开搜索"}}</n-divider>
+        <n-divider v-if="!ua" @click="searchShow = !searchShow">{{ searchShow ? "收起搜索" : "展开搜索" }}</n-divider>
       </n-layout-header>
       <n-layout-content has-sider>
         <n-space v-if="loading" :style="custStyle">
@@ -38,12 +42,7 @@
         </n-space>
         <n-space v-else-if="!loading && weaponList.length > 0" :style="custStyle">
           <div v-for="(item, index) in weaponList" :key="index">
-            <PicCard
-              :src="item.imgSrc"
-              :item="item"
-              :mhy_url="item.mhy_URL"
-              :wiki_url="item.wiki_URL"
-            />
+            <PicCard :src="item.imgSrc" :item="item" :mhy_url="item.mhy_URL" :wiki_url="item.wiki_URL" />
           </div>
         </n-space>
         <n-space v-else style="width: 100%;" :style="custStyle">
@@ -61,15 +60,9 @@
           <n-skeleton :width="300" :sharp="false" size="medium" />
         </n-space>
         <n-space v-else :style="custStyle">
-          <n-pagination
-            :page="page.pageNum" 
-            :page-size="page.pageSize" 
-            :item-count="total"
-            :on-update:page="searchWeaponList"
-            show-size-picker
-            :page-sizes="[30, 50, 100, 150, 200, 300]"
-            :on-update:page-size="changePageSize"
-          />
+          <n-pagination :page="page.pageNum" :page-size="page.pageSize" :item-count="total"
+            :on-update:page="searchWeaponList" show-size-picker :page-sizes="[30, 50, 100, 150, 200, 300]"
+            :on-update:page-size="changePageSize" />
         </n-space>
       </n-layout>
     </n-layout>
@@ -90,171 +83,174 @@ import CommonIcon from "@/components/Icon/CommonIcon.vue";
 import { genshinSelectItem } from "@/data/genshin_select"
 import { useRoute } from "vue-router";
 
-  const ua = ref(checkUA())
-  const loading = ref(false)
-  const loadingBar = useLoadingBar()
-  const message = useMessage();
-  const route = useRoute()
-  let queryDate = new Date()
-  let queryWeek = -2
-  let searchFlag = true
-  let page = ref<Page>({
-    pageNum: 1,
-    pageSize: 100,
-  });
-  //  日期是否非法
-  const isValidDate = (date: any) => {
-    return date instanceof Date && !isNaN(date.getTime())
-  }
-  // 获取星期,如: 周5 => 2
-  const getWeek = (week: number) => {
-    console.log(week,'/');
-    
-    if(week == 0) {
-      return -2
-    }
-    return week > 3 ? week - 3 : week
-  }
+const ua = ref(checkUA())
+const loading = ref(false)
+const loadingBar = useLoadingBar()
+const message = useMessage();
+const route = useRoute()
+let queryDate = new Date()
+let queryWeek = -2
+let searchFlag = true
+let page = ref<Page>({
+  pageNum: 1,
+  pageSize: 100,
+});
+//  日期是否非法
+const isValidDate = (date: any) => {
+  return date instanceof Date && !isNaN(date.getTime())
+}
+// 获取星期,如: 周5 => 2
+const getWeek = (week: number) => {
+  console.log(week, '/');
 
-  if(route.query?.t) {
-    let t = route.query.t as string    
-    if(/^\d+$/.test(t)) {
-      queryDate = new Date(Number(t))
-    } 
-    else {
-      queryDate = isValidDate(new Date(t)) ? new Date(t) : new Date()
-    }
-    queryWeek = getWeek(queryDate.getDay())
-    searchFlag = false
-    page.value.pageSize = 300
+  if (week == 0) {
+    return -2
   }
+  return week > 3 ? week - 3 : week
+}
 
-  let searchShow = ref(searchFlag)
-  let searchName = ref("");
-  let weapon = ref<number>(-2);
-  let item = ref<number>(-2);
-  let week = ref<number>(queryWeek);
-  let star = ref<number>(-2);
+if (route.query?.t) {
+  let t = route.query.t as string
+  if (/^\d+$/.test(t)) {
+    queryDate = new Date(Number(t))
+  }
+  else {
+    queryDate = isValidDate(new Date(t)) ? new Date(t) : new Date()
+  }
+  queryWeek = getWeek(queryDate.getDay())
+  searchFlag = false
+  page.value.pageSize = 300
+}
 
-  let total = ref(0)
-  let weaponList = ref<Array<any>>([]);
-  let custStyle = ref<string>(`
-    ${ua.value?'margin: 20px;':'margin:2px;'}
+let searchShow = ref(searchFlag)
+let searchName = ref("");
+let weapon = ref<number>(-2);
+let item = ref<number>(-2);
+let week = ref<number>(queryWeek);
+let star = ref<number>(-2);
+
+let total = ref(0)
+let weaponList = ref<Array<any>>([]);
+let custStyle = ref<string>(`
+    ${ua.value ? 'margin: 20px;' : 'margin:2px;'}
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
   `)
 
 
-  const handleItem = (value: any) => {
-    item.value = value
-    searchWeaponList(1)
-  }
-  const handleWeapon = (value: any) => {
-    weapon.value = value
-    searchWeaponList(1)
-  }
-  const handleWeek = (value: any) => {
-    console.log(value, 'va');
-    
-    week.value = value
-    searchWeaponList(1)
-  }
-  const handleStar = (value: any) => {
-    star.value = value
-    searchWeaponList(1)
-  }
-  const handleName = (value: any) => {
-    searchName.value = value
-  }
-  const handleNameChg = (event: Event) => {
-    searchWeaponList(1)
-  }
-  const clickReset = () => {
-    searchName.value = ""
-    weapon.value = item.value = week.value = star.value = -2
-    searchWeaponList(1)
-  }
+const handleItem = (value: any) => {
+  item.value = value
+  searchWeaponList(1)
+}
+const handleWeapon = (value: any) => {
+  weapon.value = value
+  searchWeaponList(1)
+}
+const handleWeek = (value: any) => {
+  console.log(value, 'va');
 
-  const changePageSize = (size: number) => {
-    page.value.pageSize = size
-    searchWeaponList(1)
-  }
+  week.value = value
+  searchWeaponList(1)
+}
+const handleStar = (value: any) => {
+  star.value = value
+  searchWeaponList(1)
+}
+const handleName = (value: any) => {
+  searchName.value = value
+}
+const handleNameChg = (event: Event) => {
+  searchWeaponList(1)
+}
+const clickReset = () => {
+  searchName.value = ""
+  weapon.value = item.value = week.value = star.value = -2
+  searchWeaponList(1)
+}
 
-  const renderItemLabel = (option: any) => {
-    return [
-      h('div', {
-          style: {
-            display: 'flex',
-            alignItems: 'center'
-          }
-        }, {
-          default: () => {
-            return [
-              option.value > -1 ? h(
-                CommonIcon, {
-                  url: genshinSelectItem[option.value].icon_url,
-                  size: 30
-                }, { default: () => h('') }
-              ) : undefined,
-              h('span', {}, { default: ()=> option.label as string })
-            ]
-          }
-        }
-      )
-    ]
-  }
+const changePageSize = (size: number) => {
+  page.value.pageSize = size
+  searchWeaponList(1)
+}
 
-  const commonUrl = ref<any>({})
-  const relationInfo = ref<any>({})
-
-  const queryWeaponList = async () => {
-    loadingBar.start()
-    loading.value = true
-    let params = {
-      name: searchName.value,
-      item: item.value,
-      weapon: weapon.value,
-      week: week.value,
-      star: star.value,
-      page: page.value,
-    } as any;
-    let { code, data, msg } = await getWeaponInfo(params) as any;
-    if (code != 200) {
-      message.error(msg);
-      loadingBar.finish()
-      loading.value = false
-      return;
+const renderItemLabel = (option: any) => {
+  return [
+    h('div', {
+      style: {
+        display: 'flex',
+        alignItems: 'center'
+      }
+    }, {
+      default: () => {
+        return [
+          option.value > -1 ? h(
+            CommonIcon, {
+            url: genshinSelectItem[option.value].icon_url,
+            size: 30
+          }, { default: () => h('') }
+          ) : undefined,
+          h('span', {}, { default: () => option.label as string })
+        ]
+      }
     }
-    total.value = data.total
-    const { mhy_base, mhy_url, wiki_base, wiki_weapon } = await queryCommonUrl() as any
-    const mhyWeaponUrl = `${mhy_base}${mhy_url}`
-    const wikiWeaponUrl = `${wiki_base}${wiki_weapon}`
+    )
+  ]
+}
 
-    weaponList.value = data?.records.map((e: any) => {
-      e.mhy_URL = mhyWeaponUrl.replace('{id}', e.mhy_url)
-      e.wiki_URL = wikiWeaponUrl.replace('{id}', e.wiki_url)
-      e.imgSrc = e.icon_url
-      return e
-    }) 
-    loadingBar.finish()
+const commonUrl = ref<any>({})
+const relationInfo = ref<any>({})
+
+const queryWeaponList = async () => {
+  loadingBar.start()
+  loading.value = true
+  let params = {
+    name: searchName.value,
+    item: item.value,
+    weapon: weapon.value,
+    week: week.value,
+    star: star.value,
+    page: page.value,
+  } as any;
+  let { code, data, msg } = await getWeaponInfo(params) as any;
+  if (code != 200) {
+    message.error(msg);
+    setTimeout(() => {
+      loadingBar.finish()
+    }, 500)
     loading.value = false
+    return;
   }
+  total.value = data.total
+  const { mhy_base, mhy_url, wiki_base, wiki_weapon } = await queryCommonUrl() as any
+  const mhyWeaponUrl = `${mhy_base}${mhy_url}`
+  const wikiWeaponUrl = `${wiki_base}${wiki_weapon}`
 
-  const searchWeaponList = async (e: number) => {
-    page.value.pageNum = e
-    weaponList.value = []
-    total.value = 0
-    queryWeaponList()
-  }
+  weaponList.value = data?.records.map((e: any) => {
+    e.mhy_URL = mhyWeaponUrl.replace('{id}', e.mhy_url)
+    e.wiki_URL = wikiWeaponUrl.replace('{id}', e.wiki_url)
+    e.imgSrc = e.icon_url
+    return e
+  })
+  setTimeout(() => {
+    loadingBar.finish()
+  }, 500)
+  loading.value = false
+}
 
-  onBeforeMount(async () => {
-    relationInfo.value = await queryGenshinRelation() as any
-  })
-  onMounted(() => {
-    queryWeaponList()
-  })
+const searchWeaponList = async (e: number) => {
+  page.value.pageNum = e
+  weaponList.value = []
+  total.value = 0
+  queryWeaponList()
+}
+
+onBeforeMount(async () => {
+  relationInfo.value = await queryGenshinRelation() as any
+})
+onMounted(() => {
+  queryWeaponList()
+})
 </script>
 
-<style lang="scss">
-</style>
+<style lang="scss"></style>

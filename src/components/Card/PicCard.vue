@@ -1,8 +1,8 @@
 <template>
   <div class="PicCard" @click="handleUrl">
     <div class="pic-item">
-      <n-image :width="w" :height="h" :preview-disabled="true" lazy :src="src"> </n-image>
-      <n-ellipsis :style="ua?`max-width: 90px`:`max-width: 40px;transform: scale(0.9);font-size: 12px;`">
+      <n-image style="border-radius: 0.75rem;" :width="w" :height="h" :preview-disabled="true" lazy :src="src"> </n-image>
+      <n-ellipsis :style="ua ? `max-width: 90px` : `max-width: 40px;transform: scale(0.9);font-size: 12px;`">
         {{ item[nameType] || item.name }}
       </n-ellipsis>
     </div>
@@ -43,13 +43,13 @@ emitter.on('setNameLanguage', (data: any) => {
 const handleUrl = () => {
   let urlSelect = storage.get('genshinUrlSelect') || 'mhy'
   let url: any = ""
-  if(urlSelect == 'mhy') {
+  if (urlSelect == 'mhy') {
     url = props.mhy_url
   }
-  else if(urlSelect == 'wiki') {
+  else if (urlSelect == 'wiki') {
     url = props.wiki_url
   }
-  if(url.indexOf('-') != -1) {
+  if (url.indexOf('-') != -1) {
     message.warning('暂无有效链接，请尝试切换URL！')
     return
   }
