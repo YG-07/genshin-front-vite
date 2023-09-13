@@ -16,7 +16,7 @@ const IP = {
 // @ts-ignore
 const API_URL = IP[env]?.API_URL as any
 const dev = (env == 'development' || env == 'test')
-const version = 'V1.1.230904'
+const version = 'V1.1.230913'
 
 export {
   API_URL, env, dev, version

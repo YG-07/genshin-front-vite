@@ -1,17 +1,17 @@
 /*
  Navicat Premium Data Transfer
 
- Source Server         : 127.0.0.1
+ Source Server         : localhost
  Source Server Type    : MySQL
- Source Server Version : 80030
- Source Host           : 127.0.0.1:3306
+ Source Server Version : 50726
+ Source Host           : localhost:3306
  Source Schema         : data
 
  Target Server Type    : MySQL
- Target Server Version : 80030
+ Target Server Version : 50726
  File Encoding         : 65001
 
- Date: 04/09/2023 00:13:51
+ Date: 13/09/2023 17:48:47
 */
 
 SET NAMES utf8mb4;
@@ -22,90 +22,132 @@ SET FOREIGN_KEY_CHECKS = 0;
 -- ----------------------------
 DROP TABLE IF EXISTS `blue_archive_npc`;
 CREATE TABLE `blue_archive_npc`  (
-  `id` int NOT NULL,
+  `id` int(11) NOT NULL,
   `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `name_ja` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `img_urls` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL,
+  `icon_url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of blue_archive_npc
 -- ----------------------------
-INSERT INTO `blue_archive_npc` VALUES (1, '阿罗娜', 'アロナ', '161175', 'https://cdnimg.gamekee.com/wiki2.0/images/w_1728/h_972/829/43637/2022/6/2/952847.png');
-INSERT INTO `blue_archive_npc` VALUES (2, '白子（泳装）', '砂狼 シロコ（水着）', '161196', NULL);
-INSERT INTO `blue_archive_npc` VALUES (3, '贝阿朵莉切', 'ベアトリーチェ', '163400', NULL);
-INSERT INTO `blue_archive_npc` VALUES (4, '步美', '岩櫃（いわびつ）アユム', '161206', NULL);
-INSERT INTO `blue_archive_npc` VALUES (5, '柴田', '柴田', NULL, NULL);
-INSERT INTO `blue_archive_npc` VALUES (6, '春香（正月）', '伊草 春香（正月）', '161201', NULL);
-INSERT INTO `blue_archive_npc` VALUES (7, '风纪委员', '風紀委員', '161260', NULL);
-INSERT INTO `blue_archive_npc` VALUES (8, '钢盔团', '钢盔团', NULL, NULL);
-INSERT INTO `blue_archive_npc` VALUES (9, '钢盔团干部', '钢盔团干部', NULL, NULL);
-INSERT INTO `blue_archive_npc` VALUES (10, '戈尔康达', 'ゴルコンダ＆', '161347', NULL);
-INSERT INTO `blue_archive_npc` VALUES (11, '葛叶', '葛叶', '164611', NULL);
-INSERT INTO `blue_archive_npc` VALUES (12, '果穗', '桑上（くわかみ）カホ', '161223', NULL);
-INSERT INTO `blue_archive_npc` VALUES (13, '海香', 'ウミカ', '164188', NULL);
-INSERT INTO `blue_archive_npc` VALUES (14, '和沙', 'カズサ', '161221', NULL);
-INSERT INTO `blue_archive_npc` VALUES (15, '黑服', '黒服', '161261', NULL);
-INSERT INTO `blue_archive_npc` VALUES (16, '红叶', '秋泉（あきいずみ）モミジ', '161228', NULL);
-INSERT INTO `blue_archive_npc` VALUES (17, '绘梨香', '绘梨香', '161225', NULL);
-INSERT INTO `blue_archive_npc` VALUES (18, '惠', '下倉（しもくら）メグ', '161210', 'https://cdnimg.gamekee.com/wiki2.0/images/w_1210/h_1210/829/43637/2022/6/2/671872.jpg');
-INSERT INTO `blue_archive_npc` VALUES (19, '佳代子（正月）', '鬼形カヨコ（正月）', '161202', NULL);
-INSERT INTO `blue_archive_npc` VALUES (20, '巨匠', 'マエストロ', '161262', NULL);
-INSERT INTO `blue_archive_npc` VALUES (21, '卡娅', '不知火（しらぬい）カヤ', '161207', 'https://cdnimg.gamekee.com/wiki2.0/images/w_680/h_680/829/43637/2022/6/2/702760.jpg');
-INSERT INTO `blue_archive_npc` VALUES (22, '凯撒PMC 理事', 'カイザーPMC理事', '161253', NULL);
-INSERT INTO `blue_archive_npc` VALUES (23, '康娜', '尾刃（おがた）カンナ', '161231', NULL);
-INSERT INTO `blue_archive_npc` VALUES (24, '可可奈', '春原（すのはら）ココナ', '161224', NULL);
-INSERT INTO `blue_archive_npc` VALUES (25, '空', 'ソラ', '161177', 'https://cdnimg.gamekee.com/wiki2.0/images/w_709/h_1191/829/43637/2022/6/2/984760.jpg');
-INSERT INTO `blue_archive_npc` VALUES (26, '兰舞', 'ラブ', '161252', NULL);
-INSERT INTO `blue_archive_npc` VALUES (27, '凛', '七神（なながみ）リン', '161188', 'https://cdnimg.gamekee.com/wiki2.0/images/w_709/h_1191/829/43637/2022/6/2/29393.jpg');
-INSERT INTO `blue_archive_npc` VALUES (28, '瑠美', 'ルミ', '161226', NULL);
-INSERT INTO `blue_archive_npc` VALUES (29, '麦', 'マイ', '161250', NULL);
-INSERT INTO `blue_archive_npc` VALUES (30, '梅露', '姫木（ひめき）メル', '161230', NULL);
-INSERT INTO `blue_archive_npc` VALUES (31, '梅露（温泉）', '姫木 メル（温泉）', '161205', NULL);
-INSERT INTO `blue_archive_npc` VALUES (32, '美祢', 'ミネ', '161220', NULL);
-INSERT INTO `blue_archive_npc` VALUES (33, '萌绘', '風倉（かぜくら）モエ', '161246', NULL);
-INSERT INTO `blue_archive_npc` VALUES (34, '喵天丸', '喵天丸', NULL, NULL);
-INSERT INTO `blue_archive_npc` VALUES (35, '妮可', 'ニコ', '161248', NULL);
-INSERT INTO `blue_archive_npc` VALUES (36, '妮娅', '天地（あまち）ニヤ', '161222', NULL);
-INSERT INTO `blue_archive_npc` VALUES (37, '女番长（HMG）', '女番长（HMG）', '163404', NULL);
-INSERT INTO `blue_archive_npc` VALUES (38, '女番长（MG）', '女番长（MG）', NULL, NULL);
-INSERT INTO `blue_archive_npc` VALUES (39, '女番长（SMG）', '女番长（SMG）', '163406', NULL);
-INSERT INTO `blue_archive_npc` VALUES (40, '女番长（SMG）1', '女番长（SMG）1', NULL, NULL);
-INSERT INTO `blue_archive_npc` VALUES (41, '女番长（SR）', '女番长（SR）', '163408', NULL);
-INSERT INTO `blue_archive_npc` VALUES (42, '茜', '茜', NULL, NULL);
-INSERT INTO `blue_archive_npc` VALUES (43, '芹香（泳装）', '黒見（くろみ）セリカ（水着）', '161197', NULL);
-INSERT INTO `blue_archive_npc` VALUES (44, '日葵', 'ヒマリ', '161213', NULL);
-INSERT INTO `blue_archive_npc` VALUES (45, '日奈（睡衣）', '空崎日奈', '161199', NULL);
-INSERT INTO `blue_archive_npc` VALUES (46, '若藻（华服）', '狐坂ワカモ（晴れ着）', '161200', NULL);
-INSERT INTO `blue_archive_npc` VALUES (47, '三森（泳装）', '水羽 ミモリ（水着）', '164191', NULL);
-INSERT INTO `blue_archive_npc` VALUES (48, '圣娅', '百合園（ゆりぞの）セイア', '161214', NULL);
-INSERT INTO `blue_archive_npc` VALUES (49, '时雨', '間宵（まよい）シグレ', '161227', NULL);
-INSERT INTO `blue_archive_npc` VALUES (50, '时雨（温泉）', '間宵シグレ（温泉）', '161204', NULL);
-INSERT INTO `blue_archive_npc` VALUES (51, '实梨', '安守（やすもり）ミノリ', '161229', NULL);
-INSERT INTO `blue_archive_npc` VALUES (52, '寿司粉', 'カイテンピンク', '161257', NULL);
-INSERT INTO `blue_archive_npc` VALUES (53, '寿司黑', 'カイテンブラック', '161254', NULL);
-INSERT INTO `blue_archive_npc` VALUES (54, '寿司红', 'カイテンレッド', '161258', NULL);
-INSERT INTO `blue_archive_npc` VALUES (55, '寿司黄', 'カイテンイエロー', '161259', NULL);
-INSERT INTO `blue_archive_npc` VALUES (56, '寿司绿', 'カイテングリーン', '161256', NULL);
-INSERT INTO `blue_archive_npc` VALUES (57, '桃香', '由良木（ゆらぎ）モモカ', '161189', 'https://cdnimg.gamekee.com/wiki2.0/images/w_709/h_1191/829/43637/2022/6/2/380258.jpg');
-INSERT INTO `blue_archive_npc` VALUES (58, '未花', '聖園（みその）ミカ', '161217', NULL);
-INSERT INTO `blue_archive_npc` VALUES (59, '小雪', '黒崎（くろさき）コユキ', '161212', NULL);
-INSERT INTO `blue_archive_npc` VALUES (60, '雪乃', 'ユキノ', '161247', NULL);
-INSERT INTO `blue_archive_npc` VALUES (61, '一花', '一花', '164610', NULL);
-INSERT INTO `blue_archive_npc` VALUES (62, '伊吹', 'イブキ', '161209', NULL);
-INSERT INTO `blue_archive_npc` VALUES (63, '樱路', '歌住（うたずみ）サクラコ', '161219', NULL);
-INSERT INTO `blue_archive_npc` VALUES (64, '真琴', '羽沼（はぬま）マコト', '161208', NULL);
-INSERT INTO `blue_archive_npc` VALUES (65, '志乃', '川流（かわる）シノン', '161251', NULL);
-INSERT INTO `blue_archive_npc` VALUES (66, '渚', '桐藤（きりふじ）ナギサ', '161215', NULL);
+INSERT INTO `blue_archive_npc` VALUES (1, 'kei', 'ケイ', '591659', NULL, 'https://cdnimg.gamekee.com/wiki2.0/images/w_200/h_200/829/43637/2023/3/26/749329.png');
+INSERT INTO `blue_archive_npc` VALUES (2, 'フランシス', 'フランシス', '591661', NULL, 'https://cdnimg.gamekee.com/wiki2.0/images/w_200/h_200/829/43637/2023/3/26/798558.png');
+INSERT INTO `blue_archive_npc` VALUES (3, '阿里乌斯学生', '阿里乌斯学生', '597196', NULL, 'https://cdnimg.gamekee.com/wiki2.0/images/w_252/h_204/829/43637/2023/7/8/986530.png');
+INSERT INTO `blue_archive_npc` VALUES (4, '阿罗娜', 'アロナ', '161175', 'https://cdnimg.gamekee.com/wiki2.0/images/w_1728/h_972/829/43637/2022/6/2/952847.png,https://cdnimg.gamekee.com/wiki2.0/images/w_1200/h_1393/829/43637/2023/7/11/967597.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_3379/h_1357/829/43637/2022/11/23/189363.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_252/h_204/829/43637/2022/6/2/909433.png');
+INSERT INTO `blue_archive_npc` VALUES (5, '八云', '荒槇（あらまき）ヤクモ', '598110', NULL, 'https://cdnimg.gamekee.com/wiki2.0/images/w_252/h_204/829/43637/2023/7/24/174436.png');
+INSERT INTO `blue_archive_npc` VALUES (6, '芭芭拉', '芭芭拉', '597268', NULL, 'https://cdnimg.gamekee.com/wiki2.0/images/w_200/h_200/829/43637/2023/7/8/566556.png');
+INSERT INTO `blue_archive_npc` VALUES (7, '白子（色彩）', '砂狼 シロコ', '582843', NULL, 'https://cdnimg.gamekee.com/wiki2.0/images/w_252/h_204/829/43637/2023/0/29/608262.png');
+INSERT INTO `blue_archive_npc` VALUES (8, '贝阿朵莉切', 'ベアトリーチェ', '163400', NULL, 'https://cdnimg.gamekee.com/wiki2.0/images/w_252/h_204/829/43637/2022/6/2/865049.png');
+INSERT INTO `blue_archive_npc` VALUES (9, '步美', '岩櫃（いわびつ）アユム', '161206', NULL, 'https://cdnimg.gamekee.com/wiki2.0/images/w_252/h_204/829/43637/2022/6/2/605146.png');
+INSERT INTO `blue_archive_npc` VALUES (10, '茶会学生', '茶会学生', '597203', NULL, 'https://cdnimg.gamekee.com/wiki2.0/images/w_252/h_204/829/43637/2023/7/8/470787.png');
+INSERT INTO `blue_archive_npc` VALUES (11, '茶会学生', '茶会学生', '597250', NULL, 'https://cdnimg.gamekee.com/wiki2.0/images/w_252/h_204/829/43637/2023/7/8/936072.png');
+INSERT INTO `blue_archive_npc` VALUES (12, '柴田', '柴大将', '168821', NULL, 'https://cdnimg.gamekee.com/wiki2.0/images/w_252/h_204/829/43637/2022/6/2/724041.png');
+INSERT INTO `blue_archive_npc` VALUES (13, '魑魅一座', '魑魅一座', '597269', NULL, 'https://cdnimg.gamekee.com/wiki2.0/images/w_252/h_204/829/43637/2023/7/8/52113.png');
+INSERT INTO `blue_archive_npc` VALUES (14, '魑魅一座', '魑魅一座', '597270', NULL, 'https://cdnimg.gamekee.com/wiki2.0/images/w_252/h_204/829/43637/2023/7/8/539444.png');
+INSERT INTO `blue_archive_npc` VALUES (15, '笛卡尔', 'デカルト', '597253', NULL, 'https://cdnimg.gamekee.com/wiki2.0/images/w_252/h_204/829/43637/2023/7/8/736789.png');
+INSERT INTO `blue_archive_npc` VALUES (16, '妃咲', 'キサキ', '581921', NULL, 'https://cdnimg.gamekee.com/wiki2.0/images/w_200/h_200/829/43637/2023/0/27/508806.png');
+INSERT INTO `blue_archive_npc` VALUES (17, '风纪委员', '风纪委员', '597198', NULL, 'https://cdnimg.gamekee.com/wiki2.0/images/w_252/h_204/829/43637/2023/7/8/6851.png');
+INSERT INTO `blue_archive_npc` VALUES (18, '钢盔团成员', '钢盔团成员', '168820', NULL, 'https://cdnimg.gamekee.com/wiki2.0/images/w_252/h_204/829/43637/2022/6/2/101340.png');
+INSERT INTO `blue_archive_npc` VALUES (19, '钢盔团干部', '钢盔团干部', '168818', NULL, 'https://cdnimg.gamekee.com/wiki2.0/images/w_252/h_204/829/43637/2022/6/2/354264.png');
+INSERT INTO `blue_archive_npc` VALUES (20, '皐月', 'サツキ', '581919', NULL, 'https://cdnimg.gamekee.com/wiki2.0/images/w_200/h_200/829/43637/2023/0/29/24865.png');
+INSERT INTO `blue_archive_npc` VALUES (21, '戈尔孔达', 'ゴルコンダ＆', '161347', NULL, 'https://cdnimg.gamekee.com/wiki2.0/images/w_252/h_204/829/43637/2022/6/2/272146.png');
+INSERT INTO `blue_archive_npc` VALUES (22, '格黑娜学生', '格黑娜学生', '597248', NULL, 'https://cdnimg.gamekee.com/wiki2.0/images/w_252/h_204/829/43637/2023/7/8/602110.png');
+INSERT INTO `blue_archive_npc` VALUES (23, '葛叶', '葛叶', '164611', NULL, 'https://cdnimg.gamekee.com/wiki2.0/images/w_252/h_204/829/43637/2022/7/10/540843.png');
+INSERT INTO `blue_archive_npc` VALUES (24, '工务部员', '工务部员', '597272', NULL, 'https://cdnimg.gamekee.com/wiki2.0/images/w_252/h_204/829/43637/2023/7/9/409008.png');
+INSERT INTO `blue_archive_npc` VALUES (25, '贵音', '贵音', '598111', NULL, 'https://cdnimg.gamekee.com/wiki2.0/images/w_252/h_204/829/43637/2023/7/24/726103.png');
+INSERT INTO `blue_archive_npc` VALUES (26, '海香', 'ウミカ', '164188', NULL, 'https://cdnimg.gamekee.com/wiki2.0/images/w_252/h_204/829/43637/2022/7/6/304754.png');
+INSERT INTO `blue_archive_npc` VALUES (27, '黑服', '黒服', '161261', NULL, 'https://cdnimg.gamekee.com/wiki2.0/images/w_252/h_204/829/43637/2022/6/2/313925.png');
+INSERT INTO `blue_archive_npc` VALUES (28, '胡桃', '胡桃', '591006', NULL, 'https://cdnimg.gamekee.com/wiki2.0/images/w_252/h_204/829/43637/2023/3/26/914709.png');
+INSERT INTO `blue_archive_npc` VALUES (29, '花江（应援团）', '花江（应援团）', '578167', NULL, 'https://cdnimg.gamekee.com/wiki2.0/images/w_200/h_200/829/43637/2022/11/9/759464.png');
+INSERT INTO `blue_archive_npc` VALUES (30, '花凛（制服）', '花凛（制服）', '578169', NULL, 'https://cdnimg.gamekee.com/wiki2.0/images/w_200/h_200/829/43637/2022/11/9/981970.png');
+INSERT INTO `blue_archive_npc` VALUES (31, '灰音', 'ハイネ', '592498', NULL, 'https://cdnimg.gamekee.com/wiki2.0/images/w_200/h_200/829/43637/2023/5/27/681974.png');
+INSERT INTO `blue_archive_npc` VALUES (32, '廻', '廻', '591335', NULL, 'https://cdnimg.gamekee.com/wiki2.0/images/w_200/h_200/829/43637/2023/4/30/750626.png');
+INSERT INTO `blue_archive_npc` VALUES (33, '会长', '会长', '585544', NULL, 'https://cdnimg.gamekee.com/wiki2.0/images/w_265/h_229/829/43637/2023/2/9/353590.png');
+INSERT INTO `blue_archive_npc` VALUES (34, '绘梨香', '绘梨香', '161225', NULL, 'https://cdnimg.gamekee.com/wiki2.0/images/w_200/h_200/829/43637/2022/11/9/268566.png');
+INSERT INTO `blue_archive_npc` VALUES (35, '急救医学部部员', '急救医学部部员', '597208', NULL, 'https://cdnimg.gamekee.com/wiki2.0/images/w_252/h_204/829/43637/2023/7/8/374292.png');
+INSERT INTO `blue_archive_npc` VALUES (36, '晶', '清澄アキラ', '590369', NULL, 'https://cdnimg.gamekee.com/wiki2.0/images/w_200/h_200/829/43637/2023/4/8/84031.png');
+INSERT INTO `blue_archive_npc` VALUES (37, '巨匠', 'マエストロ', '161262', NULL, 'https://cdnimg.gamekee.com/wiki2.0/images/w_252/h_204/829/43637/2022/6/2/895056.png');
+INSERT INTO `blue_archive_npc` VALUES (38, '卡娅', '不知火（しらぬい）カヤ', '161207', 'https://cdnimg.gamekee.com/wiki2.0/images/w_680/h_680/829/43637/2022/6/2/702760.jpg', 'https://cdnimg.gamekee.com/wiki2.0/images/w_125/h_101/829/43637/2022/6/2/434902.png');
+INSERT INTO `blue_archive_npc` VALUES (39, '凯撒PMC 理事', 'カイザーPMC理事', '161253', NULL, 'https://cdnimg.gamekee.com/wiki2.0/images/w_252/h_204/829/43637/2022/6/2/195072.png');
+INSERT INTO `blue_archive_npc` VALUES (40, '空', 'ソラ', '161177', 'https://cdnimg.gamekee.com/wiki2.0/images/w_709/h_1191/829/43637/2022/6/2/984760.jpg', 'https://cdnimg.gamekee.com/wiki2.0/images/w_252/h_204/829/43637/2022/6/2/527182.png');
+INSERT INTO `blue_archive_npc` VALUES (41, '葵', 'アオイ', '585010', NULL, 'https://cdnimg.gamekee.com/wiki2.0/images/w_200/h_200/829/43637/2023/5/27/950257.png');
+INSERT INTO `blue_archive_npc` VALUES (42, '兰舞', 'ラブ', '161252', NULL, 'https://cdnimg.gamekee.com/wiki2.0/images/w_252/h_204/829/43637/2022/6/2/392703.png');
+INSERT INTO `blue_archive_npc` VALUES (43, '李', 'スモモ', '592496', NULL, 'https://cdnimg.gamekee.com/wiki2.0/images/w_200/h_200/829/43637/2023/5/27/580501.png');
+INSERT INTO `blue_archive_npc` VALUES (44, '丽情', '鹿山（かやま）レイジョ', '591658', NULL, 'https://cdnimg.gamekee.com/wiki2.0/images/w_200/h_200/829/43637/2023/4/29/805881.png');
+INSERT INTO `blue_archive_npc` VALUES (45, '莉音', 'リオ', '578171', NULL, 'https://cdnimg.gamekee.com/wiki2.0/images/w_200/h_200/829/43637/2022/11/9/972630.png');
+INSERT INTO `blue_archive_npc` VALUES (46, '凛', '七神（なながみ）リン', '161188', 'https://cdnimg.gamekee.com/wiki2.0/images/w_709/h_1191/829/43637/2022/6/2/29393.jpg', 'https://cdnimg.gamekee.com/wiki2.0/images/w_200/h_200/829/43637/2023/5/27/994184.png');
+INSERT INTO `blue_archive_npc` VALUES (47, '绿（女仆）', '绿（女仆）', '590231', NULL, 'https://cdnimg.gamekee.com/wiki2.0/images/w_200/h_200/829/43637/2023/4/5/824530.png');
+INSERT INTO `blue_archive_npc` VALUES (48, '麦', 'マイ', '161250', NULL, 'https://cdnimg.gamekee.com/wiki2.0/images/w_125/h_101/829/43637/2022/6/2/28271.webp');
+INSERT INTO `blue_archive_npc` VALUES (49, '梅露（温泉）', '梅露（温泉）', '161205', NULL, 'https://cdnimg.gamekee.com/wiki2.0/images/w_252/h_204/829/43637/2022/6/2/537334.png');
+INSERT INTO `blue_archive_npc` VALUES (50, '萌绘（泳装）', '萌绘（泳装）', '593714', NULL, 'https://cdnimg.gamekee.com/wiki2.0/images/w_200/h_200/829/43637/2023/5/27/712489.png');
+INSERT INTO `blue_archive_npc` VALUES (51, '喵天丸', '喵天丸', '168822', NULL, 'https://cdnimg.gamekee.com/wiki2.0/images/w_252/h_204/829/43637/2022/6/2/544764.png');
+INSERT INTO `blue_archive_npc` VALUES (52, '名草', '御稜 ナグサ', '584500', NULL, 'https://cdnimg.gamekee.com/wiki2.0/images/w_200/h_200/829/43637/2023/1/24/893433.png');
+INSERT INTO `blue_archive_npc` VALUES (53, '明里（正月）', 'アカリ（正月）', '580092', NULL, 'https://cdnimg.gamekee.com/wiki2.0/images/w_200/h_200/829/43637/2023/0/3/861354.png');
+INSERT INTO `blue_archive_npc` VALUES (54, '明日奈（制服）', '明日奈（制服）', '578170', NULL, 'https://cdnimg.gamekee.com/wiki2.0/images/w_200/h_200/829/43637/2022/11/9/785621.png');
+INSERT INTO `blue_archive_npc` VALUES (55, '妮可', 'ニコ', '161248', NULL, 'https://cdnimg.gamekee.com/wiki2.0/images/w_252/h_204/829/43637/2022/6/2/401616.png');
+INSERT INTO `blue_archive_npc` VALUES (56, '妮娅', '天地（あまち）ニヤ', '161222', NULL, 'https://cdnimg.gamekee.com/wiki2.0/images/w_252/h_204/829/43637/2022/6/2/946805.png');
+INSERT INTO `blue_archive_npc` VALUES (57, '女混混（HMG）', '女番长（HMG）', '163404', NULL, 'https://cdnimg.gamekee.com/wiki2.0/images/w_252/h_204/829/43637/2022/6/2/703523.png');
+INSERT INTO `blue_archive_npc` VALUES (58, '女混混（MG）', '女番长（MG）', '168816', NULL, 'https://cdnimg.gamekee.com/wiki2.0/images/w_252/h_204/829/43637/2022/6/2/518070.png');
+INSERT INTO `blue_archive_npc` VALUES (59, '女混混（SMG）', '女番长（SMG）', '163406', NULL, 'https://cdnimg.gamekee.com/wiki2.0/images/w_252/h_204/829/43637/2022/6/2/785318.png');
+INSERT INTO `blue_archive_npc` VALUES (60, '女混混（SMG）', '女番长（SMG）', '168817', NULL, 'https://cdnimg.gamekee.com/wiki2.0/images/w_252/h_204/829/43637/2022/6/2/285541.png');
+INSERT INTO `blue_archive_npc` VALUES (61, '女混混（SR）', '女番长（SR）', '163408', NULL, 'https://cdnimg.gamekee.com/wiki2.0/images/w_252/h_204/829/43637/2022/6/2/940419.png');
+INSERT INTO `blue_archive_npc` VALUES (62, '佩洛洛', '佩洛洛', '597251', NULL, 'https://cdnimg.gamekee.com/wiki2.0/images/w_200/h_200/829/43637/2023/7/9/636543.png');
+INSERT INTO `blue_archive_npc` VALUES (63, '普拉娜', 'プラナ', '584651', NULL, 'https://cdnimg.gamekee.com/wiki2.0/images/w_200/h_200/829/43637/2023/1/27/874146.png');
+INSERT INTO `blue_archive_npc` VALUES (64, '普雷纳帕特斯', '普雷纳帕特斯', '595232', NULL, 'https://cdnimg.gamekee.com/wiki2.0/images/w_200/h_200/829/43637/2023/1/27/807285.png');
+INSERT INTO `blue_archive_npc` VALUES (65, '绮良', 'キララ', '578163', NULL, 'https://cdnimg.gamekee.com/wiki2.0/images/w_200/h_200/829/43637/2022/11/9/568617.png');
+INSERT INTO `blue_archive_npc` VALUES (66, '千年学生', '千年学生', '597273', NULL, 'https://cdnimg.gamekee.com/wiki2.0/images/w_252/h_204/829/43637/2023/7/8/793158.png');
+INSERT INTO `blue_archive_npc` VALUES (67, '千年学生', '千年学生', '597257', NULL, 'https://cdnimg.gamekee.com/wiki2.0/images/w_252/h_204/829/43637/2023/7/8/52322.png');
+INSERT INTO `blue_archive_npc` VALUES (68, '亲卫队员', '亲卫队员', '597283', NULL, 'https://cdnimg.gamekee.com/wiki2.0/images/w_252/h_204/829/43637/2023/7/9/88211.png');
+INSERT INTO `blue_archive_npc` VALUES (69, '芹奈（护士）', '芹奈（护士）', '578168', NULL, 'https://cdnimg.gamekee.com/wiki2.0/images/w_200/h_200/829/43637/2022/11/9/191744.png');
+INSERT INTO `blue_archive_npc` VALUES (70, '芹香（泳装）', '黒見（くろみ）セリカ（水着）', '161197', NULL, 'https://cdnimg.gamekee.com/wiki2.0/images/w_252/h_204/829/43637/2022/6/2/813952.png');
+INSERT INTO `blue_archive_npc` VALUES (71, '晴奈（体操服）', '晴奈（体操服）', '578165', NULL, 'https://cdnimg.gamekee.com/wiki2.0/images/w_200/h_200/829/43637/2022/11/9/58446.png');
+INSERT INTO `blue_archive_npc` VALUES (72, '泉（正月）', 'イズミ（正月）', '580091', NULL, 'https://cdnimg.gamekee.com/wiki2.0/images/w_200/h_200/829/43637/2023/0/3/298253.png');
+INSERT INTO `blue_archive_npc` VALUES (73, '雀亭老板娘', '雀亭老板娘', '597254', NULL, 'https://cdnimg.gamekee.com/wiki2.0/images/w_200/h_200/829/43637/2023/7/8/113599.png');
+INSERT INTO `blue_archive_npc` VALUES (74, '日奈（睡衣）', '空崎日奈', '161199', NULL, 'https://cdnimg.gamekee.com/wiki2.0/images/w_252/h_204/829/43637/2022/6/2/989900.png');
+INSERT INTO `blue_archive_npc` VALUES (75, '若藻（华服）', '若藻（华服）', '161200', NULL, 'https://cdnimg.gamekee.com/wiki2.0/images/w_252/h_204/829/43637/2022/6/2/100370.png');
+INSERT INTO `blue_archive_npc` VALUES (76, '三一学生', '三一学生', '597246', NULL, 'https://cdnimg.gamekee.com/wiki2.0/images/w_252/h_204/829/43637/2023/7/8/961729.png');
+INSERT INTO `blue_archive_npc` VALUES (77, '圣娅', '百合園（ゆりぞの）セイア', '161214', NULL, 'https://cdnimg.gamekee.com/wiki2.0/images/w_252/h_204/829/43637/2022/6/2/424181.png');
+INSERT INTO `blue_archive_npc` VALUES (78, '时雨（温泉）', '时雨（温泉）', '161204', NULL, 'https://cdnimg.gamekee.com/wiki2.0/images/w_252/h_204/829/43637/2022/6/2/729598.png');
+INSERT INTO `blue_archive_npc` VALUES (79, '寿司粉', 'カイテンピンク', '161257', NULL, 'https://cdnimg.gamekee.com/wiki2.0/images/w_252/h_204/829/43637/2022/6/2/228429.png');
+INSERT INTO `blue_archive_npc` VALUES (80, '寿司黑', 'カイテンブラック', '161254', NULL, 'https://cdnimg.gamekee.com/wiki2.0/images/w_252/h_204/829/43637/2022/6/2/23158.png');
+INSERT INTO `blue_archive_npc` VALUES (81, '寿司红', 'カイテンレッド', '161258', NULL, 'https://cdnimg.gamekee.com/wiki2.0/images/w_252/h_204/829/43637/2022/6/2/31089.png');
+INSERT INTO `blue_archive_npc` VALUES (82, '寿司黄', 'カイテンイエロー', '161259', NULL, 'https://cdnimg.gamekee.com/wiki2.0/images/w_252/h_204/829/43637/2022/6/2/597851.png');
+INSERT INTO `blue_archive_npc` VALUES (83, '寿司绿', 'カイテングリーン', '161256', NULL, 'https://cdnimg.gamekee.com/wiki2.0/images/w_252/h_204/829/43637/2022/6/2/36893.png');
+INSERT INTO `blue_archive_npc` VALUES (84, '桃井（女仆）', '桃井（女仆）', '590230', NULL, 'https://cdnimg.gamekee.com/wiki2.0/images/w_200/h_200/829/43637/2023/4/5/261764.png');
+INSERT INTO `blue_archive_npc` VALUES (85, '桃香', '由良木（ゆらぎ）モモカ', '161189', 'https://cdnimg.gamekee.com/wiki2.0/images/w_709/h_1191/829/43637/2022/6/2/380258.jpg', 'https://cdnimg.gamekee.com/wiki2.0/images/w_300/h_300/829/43637/2023/5/27/862742.png');
+INSERT INTO `blue_archive_npc` VALUES (86, '兔女郎卡牌', '兔女郎卡牌', '597194', NULL, 'https://cdnimg.gamekee.com/wiki2.0/images/w_252/h_204/829/43637/2023/7/8/121389.png');
+INSERT INTO `blue_archive_npc` VALUES (87, '瓦尔基里海警', '瓦尔基里海警', '597256', NULL, 'https://cdnimg.gamekee.com/wiki2.0/images/w_252/h_204/829/43637/2023/7/8/384868.png');
+INSERT INTO `blue_archive_npc` VALUES (88, '瓦尔基里学生', '瓦尔基里学生', '597255', NULL, 'https://cdnimg.gamekee.com/wiki2.0/images/w_252/h_204/829/43637/2023/7/8/496653.png');
+INSERT INTO `blue_archive_npc` VALUES (89, '万魔殿学生', '万魔殿学生', '597247', NULL, 'https://cdnimg.gamekee.com/wiki2.0/images/w_252/h_204/829/43637/2023/7/8/856242.png');
+INSERT INTO `blue_archive_npc` VALUES (90, '温泉开发部部员', '温泉开发部部员', '597265', NULL, 'https://cdnimg.gamekee.com/wiki2.0/images/w_252/h_204/829/43637/2023/7/8/923176.png');
+INSERT INTO `blue_archive_npc` VALUES (91, '无名的祭司', '无名的祭司', '586156', NULL, 'https://cdnimg.gamekee.com/wiki2.0/images/w_184/h_184/829/43637/2023/2/17/264731.png');
+INSERT INTO `blue_archive_npc` VALUES (92, '霞', 'カスミ', '169361', NULL, 'https://cdnimg.gamekee.com/wiki2.0/images/w_200/h_200/829/43637/2022/9/9/582307.png');
+INSERT INTO `blue_archive_npc` VALUES (93, '信徒泳装', '信徒泳装', '597264', NULL, 'https://cdnimg.gamekee.com/wiki2.0/images/w_252/h_204/829/43637/2023/7/8/450339.png');
+INSERT INTO `blue_archive_npc` VALUES (94, '行政官', '行政官', '597259', NULL, 'https://cdnimg.gamekee.com/wiki2.0/images/w_200/h_200/829/43637/2023/7/8/144957.png');
+INSERT INTO `blue_archive_npc` VALUES (95, '行政官', '行政官', '597260', NULL, 'https://cdnimg.gamekee.com/wiki2.0/images/w_200/h_200/829/43637/2023/7/8/448379.png');
+INSERT INTO `blue_archive_npc` VALUES (96, '修女会成员', '修女会成员', '597249', NULL, 'https://cdnimg.gamekee.com/wiki2.0/images/w_252/h_204/829/43637/2023/7/8/694927.png');
+INSERT INTO `blue_archive_npc` VALUES (97, '玄龙门成员', '玄龙门成员', '597261', NULL, 'https://cdnimg.gamekee.com/wiki2.0/images/w_252/h_204/829/43637/2023/7/8/540339.png');
+INSERT INTO `blue_archive_npc` VALUES (98, '玄武商会成员', '玄武商会成员', '597195', NULL, 'https://cdnimg.gamekee.com/wiki2.0/images/w_200/h_200/829/43637/2023/7/8/924732.png');
+INSERT INTO `blue_archive_npc` VALUES (99, '雪乃', 'ユキノ', '161247', NULL, 'https://cdnimg.gamekee.com/wiki2.0/images/w_252/h_204/829/43637/2022/6/2/71727.png');
+INSERT INTO `blue_archive_npc` VALUES (100, '一花', '一花', '164610', NULL, 'https://cdnimg.gamekee.com/wiki2.0/images/w_252/h_204/829/43637/2022/7/10/309286.png');
+INSERT INTO `blue_archive_npc` VALUES (101, '伊吹', 'イブキ', '161209', NULL, 'https://cdnimg.gamekee.com/wiki2.0/images/w_252/h_204/829/43637/2022/6/2/450665.png');
+INSERT INTO `blue_archive_npc` VALUES (102, '音葵', '音葵', '591005', NULL, 'https://cdnimg.gamekee.com/wiki2.0/images/w_252/h_204/829/43637/2023/3/26/914075.png');
+INSERT INTO `blue_archive_npc` VALUES (103, '樱子（礼服）', '樱子（礼服）', '581924', NULL, 'https://cdnimg.gamekee.com/wiki2.0/images/w_200/h_200/829/43637/2023/0/27/312732.png');
+INSERT INTO `blue_archive_npc` VALUES (104, '优斯提那信徒', '优斯提那信徒', '597263', NULL, 'https://cdnimg.gamekee.com/wiki2.0/images/w_252/h_204/829/43637/2023/7/8/426766.png');
+INSERT INTO `blue_archive_npc` VALUES (105, '真琴', '羽沼（はぬま）マコト', '161208', NULL, 'https://cdnimg.gamekee.com/wiki2.0/images/w_252/h_204/829/43637/2022/6/2/643055.png');
+INSERT INTO `blue_archive_npc` VALUES (106, '正义实现委员会部员', '正义实现委员会部员', '597201', NULL, 'https://cdnimg.gamekee.com/wiki2.0/images/w_200/h_200/829/43637/2023/7/8/642465.png');
+INSERT INTO `blue_archive_npc` VALUES (107, '志乃', '川流（かわる）シノン', '161251', NULL, 'https://cdnimg.gamekee.com/wiki2.0/images/w_252/h_204/829/43637/2022/6/2/302615.png');
 
 -- ----------------------------
 -- Table structure for blue_archive_relation
 -- ----------------------------
 DROP TABLE IF EXISTS `blue_archive_relation`;
 CREATE TABLE `blue_archive_relation`  (
-  `id` int NOT NULL,
+  `id` int(11) NOT NULL,
   `position_type` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `weapon_type` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
@@ -130,135 +172,183 @@ INSERT INTO `blue_archive_relation` VALUES (9, NULL, 'MT');
 -- ----------------------------
 DROP TABLE IF EXISTS `blue_archive_student`;
 CREATE TABLE `blue_archive_student`  (
-  `id` int NOT NULL,
+  `id` int(11) NOT NULL,
   `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `name_ja` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
-  `star` int NULL DEFAULT NULL,
-  `position` int NULL DEFAULT NULL,
-  `weapon` int NULL DEFAULT NULL,
+  `star` int(11) NULL DEFAULT NULL,
+  `position` int(11) NULL DEFAULT NULL,
+  `weapon` int(11) NULL DEFAULT NULL,
   `url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `img_urls` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL,
+  `icon_url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of blue_archive_student
 -- ----------------------------
-INSERT INTO `blue_archive_student` VALUES (1, '阿露', '陸八魔 アル', 3, 0, 6, '57763', 'https://cdnimg.gamekee.com/images/www/1602299328632_48562585.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_1920/h_1080/829/43637/2022/6/11/111433.png');
-INSERT INTO `blue_archive_student` VALUES (2, '阿露（正月）', '陸八魔 アル', 3, 0, 6, '150220', 'https://cdnimg.gamekee.com/wiki2.0/images/829/90255/2021/11/29/230065.jpg,https://cdnimg.gamekee.com/wiki2.0/images/829/43637/2022/4/16/88054.jpg');
-INSERT INTO `blue_archive_student` VALUES (3, '艾米', '和泉元艾米', 3, 1, 0, '68820', 'https://cdnimg.gamekee.com/images/www/1611652182552_14165196.jpg,https://cdnimg.gamekee.com/wiki2.0/images/829/57/2021/10/4/53173.jpg');
-INSERT INTO `blue_archive_student` VALUES (4, '爱丽丝', '天童爱丽丝', 3, 0, 7, '72904', 'https://cdnimg.gamekee.com/wiki2.0/images/829/94828/2021/10/4/457765.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_1920/h_1080/829/190853/2022/6/16/845283.png,https://cdnimg.gamekee.com/wiki2.0/images/w_960/h_540/829/43637/2022/5/18/386280.gif');
-INSERT INTO `blue_archive_student` VALUES (5, '爱莉', '栗村 アイリ', 2, 3, 1, '66274', 'https://cdnimg.gamekee.com/wiki2.0/images/829/90255/2021/10/4/500755.jpg,https://cdnimg.gamekee.com/wiki2.0/images/829/90255/2021/10/4/205347.jpg');
-INSERT INTO `blue_archive_student` VALUES (6, '巴', '佐城 トモエ', 1, 3, 6, '161281', NULL);
-INSERT INTO `blue_archive_student` VALUES (7, '白子', '砂狼シロコ', 3, 0, 2, '46677', 'https://cdnimg.gamekee.com/images/mx/1596081023419_69242485.png,https://cdnimg.gamekee.com/wiki2.0/images/w_1920/h_1080/829/190853/2022/6/16/322891.png,https://cdnimg.gamekee.com/wiki2.0/images/w_960/h_540/829/43637/2022/5/15/326573.gif');
-INSERT INTO `blue_archive_student` VALUES (8, '白子（骑行）', '砂狼 シロコ', 3, 0, 2, '85351', 'https://cdnimg.gamekee.com/wiki2.0/images/829/94828/2021/10/4/422563.jpg,https://cdnimg.gamekee.com/wiki2.0/images/829/94828/2021/10/4/658885.png,https://cdnimg.gamekee.com/wiki2.0/images/w_960/h_540/829/43637/2022/5/15/709752.gif');
-INSERT INTO `blue_archive_student` VALUES (9, '初音未来（联动）', '初音ミク', 3, 3, 3, '90749', 'https://cdnimg.gamekee.com/wiki2.0/images/829/90255/2021/10/4/973585.jpg,https://cdnimg.gamekee.com/wiki2.0/images/829/90255/2021/10/4/559393.png');
-INSERT INTO `blue_archive_student` VALUES (10, '吹雪', '合歓垣（ねむがき）フブキ', 1, 0, 6, '150694', 'https://cdnimg.gamekee.com/wiki2.0/images/w_1920/h_1080/829/190853/2022/7/7/334633.png');
-INSERT INTO `blue_archive_student` VALUES (11, '春香', '伊草 春香', 1, 1, 0, '53921', 'https://cdnimg.gamekee.com/wiki2.0/images/829/72324/2021/10/4/842153.jpg,https://cdnimg.gamekee.com/wiki2.0/images/829/72324/2021/10/4/577998.png');
-INSERT INTO `blue_archive_student` VALUES (12, '椿', '春日ツバキ', 2, 1, 1, '68177', 'https://cdnimg.gamekee.com/wiki2.0/images/829/4408/2021/10/5/16821.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_960/h_540/829/43637/2022/5/15/954437.gif');
-INSERT INTO `blue_archive_student` VALUES (13, '淳子', '赤司ジュンコ', 2, 0, 2, '60879', 'https://cdnimg.gamekee.com/wiki2.0/images/829/90255/2021/10/4/100915.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_1920/h_1080/829/190853/2022/6/16/611892.png');
-INSERT INTO `blue_archive_student` VALUES (14, '菲娜', 'アサヒナ フィーナ', 1, 0, 8, '68176', 'https://cdnimg.gamekee.com/wiki2.0/images/829/94828/2021/10/4/37391.jpg,https://cdnimg.gamekee.com/wiki2.0/images/829/94828/2021/10/4/704504.png');
-INSERT INTO `blue_archive_student` VALUES (15, '枫', '勇美枫', 3, 3, 4, '155250', 'https://cdnimg.gamekee.com/wiki2.0/images/829/43637/2022/3/27/90593.jpg');
-INSERT INTO `blue_archive_student` VALUES (16, '枫香', '爱清 フウカ', 2, 2, 1, '64384', 'https://cdnimg.gamekee.com/images/www/1608522250796_38720527.jpg,https://cdnimg.gamekee.com/wiki2.0/images/829/57/2021/10/5/463626.jpg');
-INSERT INTO `blue_archive_student` VALUES (17, '歌原', '白石ウタハ', 2, 0, 1, '67656', 'https://cdnimg.gamekee.com/wiki2.0/images/829/90255/2021/10/4/419860.jpg,https://cdnimg.gamekee.com/wiki2.0/images/829/90255/2021/10/4/569529.jpg');
-INSERT INTO `blue_archive_student` VALUES (18, '宫子', '月雪宫子', 3, 1, 1, '153368', 'https://cdnimg.gamekee.com/wiki2.0/images/829/43637/2022/3/26/79670.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_1920/h_1080/829/190853/2022/6/16/868930.png');
-INSERT INTO `blue_archive_student` VALUES (19, '好美', '伊原木ヨシミ', 1, 0, 2, '66272', 'https://cdnimg.gamekee.com/wiki2.0/images/829/94828/2021/10/4/704500.jpg,https://cdnimg.gamekee.com/wiki2.0/images/829/94828/2021/10/4/82618.jpg');
-INSERT INTO `blue_archive_student` VALUES (20, '和香', '天见野香', 1, 3, 1, '75151', 'https://cdnimg.gamekee.com/wiki2.0/images/829/94828/2021/10/5/714499.jpg,https://cdnimg.gamekee.com/wiki2.0/images/829/94828/2021/10/5/222887.png');
-INSERT INTO `blue_archive_student` VALUES (21, '和香（温泉）', '天見 ノドカ', 3, 2, 1, '150174', 'https://cdnimg.gamekee.com/wiki2.0/images/829/94828/2021/11/15/438499.jpg,https://cdnimg.gamekee.com/wiki2.0/images/829/94828/2021/11/15/859882.png');
-INSERT INTO `blue_archive_student` VALUES (22, '鹤城', '剑崎鹤城', 3, 0, 0, '66645', 'https://cdnimg.gamekee.com/wiki2.0/images/829/4408/2021/10/4/857665.jpg,https://cdnimg.gamekee.com/wiki2.0/images/829/4408/2021/10/4/943874.gif');
-INSERT INTO `blue_archive_student` VALUES (23, '鹤城（泳装）', '剑崎鹤城', 1, 0, 0, '81813', 'https://cdnimg.gamekee.com/wiki2.0/images/829/94828/2021/10/5/760471.jpg,https://cdnimg.gamekee.com/wiki2.0/images/829/57/2021/10/5/815781.jpg');
-INSERT INTO `blue_archive_student` VALUES (24, '花江', '朝顔(あさがお) ハナエ', 2, 2, 2, '68915', 'https://cdnimg.gamekee.com/wiki2.0/images/829/90255/2021/10/4/328778.png,https://cdnimg.gamekee.com/wiki2.0/images/829/90255/2021/10/4/373874.png,https://cdnimg.gamekee.com/wiki2.0/images/w_960/h_540/829/43637/2022/5/15/773497.gif');
-INSERT INTO `blue_archive_student` VALUES (25, '花凛', '角楯カリン', 3, 0, 6, '67011', 'https://cdnimg.gamekee.com/wiki2.0/images/829/4408/2021/10/4/837670.jpg,https://cdnimg.gamekee.com/wiki2.0/images/829/4408/2021/10/4/112526.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_960/h_540/829/43637/2022/5/15/486434.gif');
-INSERT INTO `blue_archive_student` VALUES (26, '花凛（兔女郎）', '角楯 カリン', 3, 0, 6, '89275', 'https://cdnimg.gamekee.com/wiki2.0/images/829/94828/2021/10/4/188497.jpg,https://cdnimg.gamekee.com/wiki2.0/images/829/94828/2021/10/4/726927.jpg');
-INSERT INTO `blue_archive_student` VALUES (27, '花子', '浦和ハナコ', 2, 2, 2, '77113', 'https://cdnimg.gamekee.com/wiki2.0/images/829/72324/2021/10/4/548328.jpg,https://cdnimg.gamekee.com/wiki2.0/images/829/72324/2021/10/4/379473.jpg');
-INSERT INTO `blue_archive_student` VALUES (28, '佳代子', '鬼形カヨコ', 2, 3, 4, '56393', 'https://cdnimg.gamekee.com/images/www/1601013221014_77052853.jpg,https://cdnimg.gamekee.com/wiki2.0/images/829/57/2021/10/5/42921.jpg');
-INSERT INTO `blue_archive_student` VALUES (29, '菫', '乙花 スミレ', 3, 0, 0, '67664', 'https://cdnimg.gamekee.com/wiki2.0/images/829/4408/2021/10/4/441608.jpg,https://cdnimg.gamekee.com/wiki2.0/images/829/43637/2022/4/17/769702.jpg');
-INSERT INTO `blue_archive_student` VALUES (30, '静子', '河和（かわわ）シズコ', 2, 3, 0, '70511', 'https://cdnimg.gamekee.com/wiki2.0/images/829/72324/2021/10/4/140064.jpg,https://cdnimg.gamekee.com/wiki2.0/images/829/72324/2021/10/4/770333.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_960/h_540/829/43637/2022/5/15/417529.gif');
-INSERT INTO `blue_archive_student` VALUES (31, '静子（泳装）', '河和（かわわ）シズコ', 1, 3, 0, '162572', 'https://cdnimg.gamekee.com/wiki2.0/images/w_908/h_1210/829/43637/2022/6/20/694135.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_2793/h_1534/829/43637/2022/6/20/675872.png');
-INSERT INTO `blue_archive_student` VALUES (32, '柯托莉', '豊見コトリ', 1, 3, 8, '67655', 'https://cdnimg.gamekee.com/wiki2.0/images/829/94828/2021/10/4/231252.jpg,https://cdnimg.gamekee.com/wiki2.0/images/829/94828/2021/10/4/75799.png');
-INSERT INTO `blue_archive_student` VALUES (33, '濑名', '氷室セナ', 3, 4, 3, '150696', 'https://cdnimg.gamekee.com/wiki2.0/images/829/43637/2022/3/28/981173.jpg,https://cdnimg.gamekee.com/wiki2.0/images/829/43637/2022/4/16/665071.jpg');
-INSERT INTO `blue_archive_student` VALUES (34, '莲见', '羽川ハスミ', 2, 0, 6, '66394', 'https://cdnimg.gamekee.com/wiki2.0/images/829/4408/2021/10/5/937178.jpg,https://cdnimg.gamekee.com/wiki2.0/images/829/4408/2021/10/5/974411.jpg');
-INSERT INTO `blue_archive_student` VALUES (35, '铃美', '守月スズミ', 1, 3, 2, '66259', 'https://cdnimg.gamekee.com/wiki2.0/images/829/72324/2021/10/4/528423.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_960/h_540/829/43637/2022/5/27/398900.gif');
-INSERT INTO `blue_archive_student` VALUES (36, '绫音', ' 奥空アヤネ', 2, 2, 4, '46923', 'https://cdnimg.gamekee.com/wiki2.0/images/829/4408/2021/10/5/797752.png,https://cdnimg.gamekee.com/wiki2.0/images/829/4408/2021/10/5/271117.jpg');
-INSERT INTO `blue_archive_student` VALUES (37, '绫音（泳装）', '奥空 アヤネ', 1, 4, 4, '160191', 'https://cdnimg.gamekee.com/wiki2.0/images/w_908/h_1210/829/43637/2022/5/22/31820.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_1956/h_1444/829/43637/2022/6/3/79761.png');
-INSERT INTO `blue_archive_student` VALUES (38, '绿', '才羽 绿', 3, 0, 6, '68802', 'https://cdnimg.gamekee.com/wiki2.0/images/829/72324/2021/10/4/123634.jpg,https://cdnimg.gamekee.com/wiki2.0/images/829/43637/2022/4/17/132183.jpg');
-INSERT INTO `blue_archive_student` VALUES (39, '玛丽', '伊落マリー', 2, 3, 4, '90627', 'https://cdnimg.gamekee.com/wiki2.0/images/829/72324/2021/10/4/404313.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_960/h_540/829/43637/2022/5/15/4759.gif');
-INSERT INTO `blue_archive_student` VALUES (40, '玛利娜', '池仓玛利娜', 3, 1, 1, '151713', 'https://cdnimg.gamekee.com/wiki2.0/images/829/43637/2022/3/28/289117.jpg,https://cdnimg.gamekee.com/wiki2.0/images/829/43637/2022/4/16/920602.jpg');
-INSERT INTO `blue_archive_student` VALUES (41, '满', '千鸟满', 1, 0, 0, '155255', 'https://cdnimg.gamekee.com/wiki2.0/images/829/43637/2022/3/27/569947.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_1728/h_1080/829/43637/2022/5/18/741138.jpg');
-INSERT INTO `blue_archive_student` VALUES (42, '美咲', '戒野 ミサキ', 3, 0, 5, '156959', 'https://cdnimg.gamekee.com/wiki2.0/images/829/43637/2022/4/24/307929.jpg,https://cdnimg.gamekee.com/wiki2.0/images/829/43637/2022/5/9/244069.gif');
-INSERT INTO `blue_archive_student` VALUES (43, '美游', '霞泽美游', 3, 3, 6, '153606', 'https://cdnimg.gamekee.com/wiki2.0/images/829/43637/2022/3/22/910886.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_1920/h_1080/829/190853/2022/6/16/12524.png');
-INSERT INTO `blue_archive_student` VALUES (44, '明里', '鳄渕 アカリ', 2, 0, 2, '62126', 'https://cdnimg.gamekee.com/images/www/1606468113344_99064509.jpg,https://cdnimg.gamekee.com/wiki2.0/images/829/57/2021/10/4/475646.jpg');
-INSERT INTO `blue_archive_student` VALUES (45, '明日奈', '一之瀬 アスナ', 1, 0, 2, '66646', 'https://cdnimg.gamekee.com/wiki2.0/images/829/94828/2021/10/4/895360.jpg');
-INSERT INTO `blue_archive_student` VALUES (46, '明日奈（兔女郎）', '一之瀬明日奈', 3, 3, 2, '89742', 'https://cdnimg.gamekee.com/wiki2.0/images/829/94828/2021/10/4/102635.jpg,https://cdnimg.gamekee.com/wiki2.0/images/829/94828/2021/10/4/4674.jpg');
-INSERT INTO `blue_archive_student` VALUES (47, '睦月', '浅黄ムツキ', 2, 0, 8, '54505', 'https://cdnimg.gamekee.com/images/www/1600314278681_94813234.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_1920/h_1080/829/190853/2022/7/7/904312.png,https://cdnimg.gamekee.com/wiki2.0/images/w_940/h_540/829/43637/2022/5/15/772965.gif');
-INSERT INTO `blue_archive_student` VALUES (48, '睦月（正月）', '浅黄ムツキ', 3, 0, 8, '150223', 'https://cdnimg.gamekee.com/wiki2.0/images/829/43637/2022/3/29/528658.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_3450/h_2552/829/112486/2022/6/19/359892.png');
-INSERT INTO `blue_archive_student` VALUES (49, '尼禄', '美甘ネル', 3, 0, 1, '67012', 'https://cdnimg.gamekee.com/wiki2.0/images/829/4408/2021/10/4/57643.jpg,https://cdnimg.gamekee.com/wiki2.0/images/829/4408/2021/10/4/809222.jpg');
-INSERT INTO `blue_archive_student` VALUES (50, '尼禄（兔女郎）', '美甘ネル', 3, 1, 1, '89274', 'https://cdnimg.gamekee.com/wiki2.0/images/829/90255/2021/10/4/923203.jpg,https://cdnimg.gamekee.com/wiki2.0/images/829/90255/2021/10/4/55120.png');
-INSERT INTO `blue_archive_student` VALUES (51, '千世', '和楽チセ', 2, 0, 3, '68284', 'https://cdnimg.gamekee.com/wiki2.0/images/829/72324/2021/10/4/845238.jpg,https://cdnimg.gamekee.com/wiki2.0/images/829/72324/2021/10/4/181682.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_960/h_540/829/43637/2022/5/15/710318.gif');
-INSERT INTO `blue_archive_student` VALUES (52, '千世（泳装）', '和楽チセ', 3, 3, 3, '162817', 'https://cdnimg.gamekee.com/wiki2.0/images/w_908/h_1210/829/43637/2022/6/22/935821.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_3442/h_2558/829/43637/2022/6/22/613695.png');
-INSERT INTO `blue_archive_student` VALUES (53, '千夏', '火宫千夏', 1, 2, 4, '58280', 'https://cdnimg.gamekee.com/wiki2.0/images/829/94828/2021/10/5/843963.jpg,https://cdnimg.gamekee.com/wiki2.0/images/829/94828/2021/10/5/611143.png');
-INSERT INTO `blue_archive_student` VALUES (54, '千夏（温泉）', '火宫千夏', 3, 3, 4, '150145', 'https://cdnimg.gamekee.com/wiki2.0/images/829/43637/2022/3/29/379677.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_3453/h_2553/829/112486/2022/6/20/338896.png');
-INSERT INTO `blue_archive_student` VALUES (55, '千寻', '各务千寻', 3, 0, 2, '150698', 'https://cdnimg.gamekee.com/wiki2.0/images/829/43637/2022/3/28/326637.jpg,https://cdnimg.gamekee.com/wiki2.0/images/829/43637/2022/4/17/846809.jpg');
-INSERT INTO `blue_archive_student` VALUES (56, '茜', '室笠アカネ', 2, 3, 4, '66752', 'https://cdnimg.gamekee.com/wiki2.0/images/829/4408/2021/10/5/68758.jpg,https://cdnimg.gamekee.com/wiki2.0/images/829/4408/2021/10/5/7956.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_960/h_540/829/43637/2022/6/1/553049.gif');
-INSERT INTO `blue_archive_student` VALUES (57, '切里诺', '连河雪莉诺', 3, 0, 4, '75150', 'https://cdnimg.gamekee.com/wiki2.0/images/829/72324/2021/10/4/387368.jpg,https://cdnimg.gamekee.com/wiki2.0/images/829/43637/2022/4/17/891345.jpg');
-INSERT INTO `blue_archive_student` VALUES (58, '切里诺（温泉）', '连河切里诺', 3, 4, 4, '150144', 'https://cdnimg.gamekee.com/wiki2.0/images/829/94828/2021/11/1/497903.jpg,https://cdnimg.gamekee.com/wiki2.0/images/829/43637/2022/4/16/674739.jpg');
-INSERT INTO `blue_archive_student` VALUES (59, '芹娜', '鷲見セリナ', 1, 2, 2, '66275', 'https://cdnimg.gamekee.com/wiki2.0/images/829/94828/2021/10/4/437749.jpg,https://cdnimg.gamekee.com/wiki2.0/images/829/94828/2021/10/4/504406.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_960/h_540/829/43637/2022/5/15/93747.gif');
-INSERT INTO `blue_archive_student` VALUES (60, '芹香', '黒見（くろみ）セリカ', 2, 0, 2, '46678', 'https://cdnimg.gamekee.com/wiki2.0/images/829/90255/2021/10/4/638345.png,https://cdnimg.gamekee.com/wiki2.0/images/829/90255/2021/10/4/565986.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_960/h_540/829/43637/2022/5/15/914357.gif');
-INSERT INTO `blue_archive_student` VALUES (61, '芹香（正月）', '黒見（くろみ）セリカ', 3, 3, 2, '150380', 'https://cdnimg.gamekee.com/wiki2.0/images/829/43637/2022/3/29/320384.jpg,https://cdnimg.gamekee.com/wiki2.0/images/829/43637/2022/4/16/443205.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_960/h_540/829/43637/2022/5/15/575913.gif');
-INSERT INTO `blue_archive_student` VALUES (62, '晴', '小钩ハレ', 2, 3, 2, '67140', 'https://cdnimg.gamekee.com/images/www/1611040927695_29659513.jpg,https://cdnimg.gamekee.com/wiki2.0/images/829/57/2021/10/5/171164.jpg');
-INSERT INTO `blue_archive_student` VALUES (63, '晴奈', '黑馆ハルナ', 3, 0, 6, '62592', 'https://cdnimg.gamekee.com/wiki2.0/images/829/72324/2021/10/4/833491.jpg,https://cdnimg.gamekee.com/wiki2.0/images/829/72324/2021/10/4/764748.jpg');
-INSERT INTO `blue_archive_student` VALUES (64, '泉', '狮子堂イズミ', 3, 0, 8, '61498', 'https://cdnimg.gamekee.com/images/www/1605868403453_60312504.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_1920/h_1080/829/190853/2022/6/13/975746.png');
-INSERT INTO `blue_archive_student` VALUES (65, '泉（泳装）', '狮子堂和泉', 1, 3, 8, '83936', 'https://cdnimg.gamekee.com/wiki2.0/images/829/94828/2021/10/5/136673.jpg,https://cdnimg.gamekee.com/wiki2.0/images/829/94828/2021/10/5/966980.png');
-INSERT INTO `blue_archive_student` VALUES (66, '泉奈', '久田泉奈', 3, 0, 1, '70510', 'https://cdnimg.gamekee.com/wiki2.0/images/829/43637/2022/4/17/493004.jpg,https://cdnimg.gamekee.com/wiki2.0/images/829/43637/2022/5/7/151197.jpg');
-INSERT INTO `blue_archive_student` VALUES (67, '泉奈（泳装）', '久田泉奈', 3, 0, 1, '162985', 'https://cdnimg.gamekee.com/wiki2.0/images/w_908/h_1210/829/43637/2022/6/23/145413.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_1722/h_1861/829/43637/2022/6/23/445801.png,https://cdnimg.gamekee.com/wiki2.0/images/w_1724/h_1658/829/43637/2022/6/23/131233.png');
-INSERT INTO `blue_archive_student` VALUES (68, '日富美', '阿慈谷ヒフミ', 3, 3, 2, '66256', 'https://cdnimg.gamekee.com/wiki2.0/images/829/4408/2021/10/4/796693.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_1920/h_1080/829/190853/2022/6/16/61493.png');
-INSERT INTO `blue_archive_student` VALUES (69, '日富美（泳装）', '阿慈谷日富美', 3, 4, 2, '83596', 'https://cdnimg.gamekee.com/wiki2.0/images/829/72324/2021/10/4/927588.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_1920/h_1080/829/190853/2022/6/16/318218.png,https://cdnimg.gamekee.com/wiki2.0/images/w_960/h_540/829/43637/2022/5/15/760589.gif');
-INSERT INTO `blue_archive_student` VALUES (70, '日和', '槌永日和', 3, 3, 6, '156962', 'https://cdnimg.gamekee.com/wiki2.0/images/829/43637/2022/4/24/402597.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_1920/h_1080/829/190853/2022/7/7/289910.png');
-INSERT INTO `blue_archive_student` VALUES (71, '日奈', '空崎日奈', 3, 0, 8, '59934', 'https://cdnimg.gamekee.com/images/www/1635845255187_76586320.jpg');
-INSERT INTO `blue_archive_student` VALUES (72, '日奈（泳装）', '空崎日奈', 3, 0, 8, '83729', 'https://cdnimg.gamekee.com/wiki2.0/images/829/90255/2021/10/4/869573.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_1920/h_1080/829/190853/2022/6/16/6928.png');
-INSERT INTO `blue_archive_student` VALUES (73, '日向', '若叶日向', 3, 0, 4, '151348', 'https://cdnimg.gamekee.com/wiki2.0/images/829/43637/2022/3/28/431708.jpg');
-INSERT INTO `blue_archive_student` VALUES (74, '若藻', '狐坂ワカモ', 3, 0, 6, '150695', 'https://cdnimg.gamekee.com/wiki2.0/images/829/43637/2022/3/29/180056.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_3445/h_2557/829/112486/2022/6/19/678697.png,https://cdnimg.gamekee.com/wiki2.0/images/w_3416/h_3224/829/112486/2022/6/19/882786.png');
-INSERT INTO `blue_archive_student` VALUES (75, '若藻（泳装）', '狐坂ワカモ', 3, 0, 6, '159948', 'https://cdnimg.gamekee.com/wiki2.0/images/w_908/h_1210/829/43637/2022/5/20/772297.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_2866/h_2088/829/43637/2022/5/26/269755.png');
-INSERT INTO `blue_archive_student` VALUES (76, '三森', '水羽三森', 3, 3, 4, '151016', 'https://cdnimg.gamekee.com/wiki2.0/images/829/43637/2022/3/28/907575.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_3288/h_2445/829/112486/2022/6/19/413496.png');
-INSERT INTO `blue_archive_student` VALUES (77, '纱绫', '叶子サヤ', 3, 0, 4, '68521', 'https://cdnimg.gamekee.com/images/www/1612163176349_77274627.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_1920/h_1080/829/190853/2022/6/13/636239.png');
-INSERT INTO `blue_archive_student` VALUES (78, '纱绫（私服）', '药子纱绫', 3, 0, 4, '87912', 'https://cdnimg.gamekee.com/wiki2.0/images/829/72324/2021/10/4/958621.jpg,https://cdnimg.gamekee.com/wiki2.0/images/829/43637/2022/4/17/68171.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_960/h_540/829/43637/2022/5/15/426024.gif');
-INSERT INTO `blue_archive_student` VALUES (79, '纱织', '药子纱绫', 3, 0, 2, '164453', 'https://cdnimg.gamekee.com/wiki2.0/images/w_908/h_1210/829/43637/2022/7/9/571249.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_1920/h_1080/829/190853/2022/7/9/634490.png');
-INSERT INTO `blue_archive_student` VALUES (80, '瞬', '春原シュン', 3, 0, 6, '68522', 'https://cdnimg.gamekee.com/images/www/1612164059732_52834499.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_1920/h_1080/829/190853/2022/7/7/629151.png');
-INSERT INTO `blue_archive_student` VALUES (81, '瞬（幼女）', '春原瞬', 3, 0, 6, '86656', 'https://cdnimg.gamekee.com/wiki2.0/images/829/90255/2021/10/4/516586.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_1920/h_1080/829/190853/2022/6/16/318685.png');
-INSERT INTO `blue_archive_student` VALUES (82, '桃井', '才羽 桃井', 2, 0, 2, '68801', 'https://cdnimg.gamekee.com/wiki2.0/images/829/4408/2021/10/4/62340.png,https://cdnimg.gamekee.com/wiki2.0/images/w_960/h_540/829/43637/2022/5/15/878708.gif');
-INSERT INTO `blue_archive_student` VALUES (83, '桐乃', '中務キリノ', 2, 3, 4, '86655', 'https://cdnimg.gamekee.com/wiki2.0/images/829/90255/2021/10/4/411275.jpg,https://cdnimg.gamekee.com/wiki2.0/images/829/90255/2021/10/4/866281.png');
-INSERT INTO `blue_archive_student` VALUES (84, '夏', '柚鳥 ナツ', 3, 1, 1, '90626', 'https://cdnimg.gamekee.com/wiki2.0/images/829/94828/2021/10/4/138960.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_1920/h_1080/829/190853/2022/6/17/349264.png,https://cdnimg.gamekee.com/wiki2.0/images/w_960/h_540/829/43637/2022/5/15/874219.gif');
-INSERT INTO `blue_archive_student` VALUES (85, '响', '猫塚(ねこづか)ヒビキ', 3, 0, 9, '67657', 'https://cdnimg.gamekee.com/wiki2.0/images/829/90255/2021/10/4/741397.jpg,https://cdnimg.gamekee.com/wiki2.0/images/829/90255/2021/10/4/973417.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_940/h_540/829/43637/2022/5/15/240387.gif');
-INSERT INTO `blue_archive_student` VALUES (86, '小春', '下江小春', 3, 2, 6, '78300', 'https://cdnimg.gamekee.com/wiki2.0/images/829/90255/2021/10/4/305486.jpg,https://cdnimg.gamekee.com/wiki2.0/images/829/43637/2022/4/17/109473.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_960/h_540/829/43637/2022/5/15/918432.gif');
-INSERT INTO `blue_archive_student` VALUES (87, '小玉', '音瀬コタマ', 1, 3, 4, '67035', 'https://cdnimg.gamekee.com/wiki2.0/images/829/72324/2021/10/4/788766.jpg,https://cdnimg.gamekee.com/wiki2.0/images/829/72324/2021/10/4/760250.png');
-INSERT INTO `blue_archive_student` VALUES (88, '咲', '空井咲', 3, 0, 8, '153367', 'https://cdnimg.gamekee.com/wiki2.0/images/829/43637/2022/3/26/152587.jpg,https://cdnimg.gamekee.com/wiki2.0/images/829/43637/2022/4/16/712455.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_990/h_540/829/43637/2022/5/15/718276.gif');
-INSERT INTO `blue_archive_student` VALUES (89, '星野', '小鳥遊星野', 3, 1, 0, '46680', 'https://cdnimg.gamekee.com/wiki2.0/images/829/4408/2021/10/4/933348.png,https://cdnimg.gamekee.com/wiki2.0/images/829/43637/2022/4/17/9703.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_960/h_540/829/43637/2022/5/15/810415.gif');
-INSERT INTO `blue_archive_student` VALUES (90, '星野（泳装）', '小鳥遊星野', 3, 3, 0, '162560', 'https://cdnimg.gamekee.com/wiki2.0/images/w_908/h_1210/829/43637/2022/6/20/252882.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_1884/h_1225/829/43637/2022/6/20/513337.png');
-INSERT INTO `blue_archive_student` VALUES (91, '亚津子', '秤アツコ', 3, 1, 1, '158662', 'https://cdnimg.gamekee.com/wiki2.0/images/829/43637/2022/5/8/198803.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_1920/h_1080/829/190853/2022/6/16/894353.png,https://cdnimg.gamekee.com/wiki2.0/images/829/43637/2022/5/9/212207.gif');
-INSERT INTO `blue_archive_student` VALUES (92, '亚子', '天雨 アコ', 3, 3, 4, '150113', 'https://cdnimg.gamekee.com/wiki2.0/images/829/94828/2021/10/16/685933.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_1920/h_1080/829/190853/2022/6/16/89608.png,https://cdnimg.gamekee.com/wiki2.0/images/829/94828/2021/10/17/197459.gif');
-INSERT INTO `blue_archive_student` VALUES (93, '野宫', '十六夜 野宫', 2, 0, 8, '68803', 'https://cdnimg.gamekee.com/wiki2.0/images/829/4408/2021/10/5/588667.png,https://cdnimg.gamekee.com/wiki2.0/images/829/4408/2021/10/5/716313.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_960/h_540/829/43637/2022/5/15/656010.gif');
-INSERT INTO `blue_archive_student` VALUES (94, '野宫（泳装）', '十六夜 野宫', 3, 0, 8, '159935', 'https://cdnimg.gamekee.com/wiki2.0/images/w_908/h_1210/829/43637/2022/5/20/49493.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_2342/h_1746/829/43637/2022/5/27/884059.png');
-INSERT INTO `blue_archive_student` VALUES (95, '伊吕波', '枣伊吕波', 3, 4, 4, '155254', 'https://cdnimg.gamekee.com/wiki2.0/images/829/43637/2022/3/27/468697.jpg');
-INSERT INTO `blue_archive_student` VALUES (96, '伊织', '銀鏡イオリ', 3, 0, 6, '59300', 'https://cdnimg.gamekee.com/wiki2.0/images/829/4408/2021/10/4/582408.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_2911/h_1929/829/43637/2022/6/18/156194.png');
-INSERT INTO `blue_archive_student` VALUES (97, '伊织（泳装）', '银镜伊织', 3, 0, 6, '83867', 'https://cdnimg.gamekee.com/wiki2.0/images/829/90255/2021/10/4/431564.jpg,https://cdnimg.gamekee.com/wiki2.0/images/829/90255/2021/10/4/207643.png');
-INSERT INTO `blue_archive_student` VALUES (98, '优香', '早濑ユウカ', 2, 1, 1, '67658', 'https://cdnimg.gamekee.com/images/www/1611546956247_51333227.jpg,https://cdnimg.gamekee.com/wiki2.0/images/829/57/2021/10/5/706499.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_960/h_540/829/43637/2022/5/15/817150.gif');
-INSERT INTO `blue_archive_student` VALUES (99, '忧', '古関 ウイ', 3, 3, 6, '151345', 'https://cdnimg.gamekee.com/wiki2.0/images/829/43637/2022/3/28/672011.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_1920/h_1080/829/190853/2022/6/19/114550.png');
-INSERT INTO `blue_archive_student` VALUES (100, '柚子', '花岡 ユズ', 3, 0, 3, '77109', 'https://cdnimg.gamekee.com/wiki2.0/images/829/72324/2021/10/4/12581.jpg,https://cdnimg.gamekee.com/wiki2.0/images/829/72324/2021/10/4/359376.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_960/h_540/829/43637/2022/5/15/137437.gif');
-INSERT INTO `blue_archive_student` VALUES (101, '月咏', '大野月咏', 3, 1, 1, '155968', 'https://cdnimg.gamekee.com/wiki2.0/images/829/43637/2022/4/11/910183.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_2337/h_1247/829/43637/2022/6/3/503052.png');
-INSERT INTO `blue_archive_student` VALUES (102, '真白', '静山（しずやま）マシロ', 3, 0, 6, '69549', 'https://cdnimg.gamekee.com/wiki2.0/images/829/90255/2021/10/4/857558.jpg,https://cdnimg.gamekee.com/wiki2.0/images/829/90255/2021/10/4/398680.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_960/h_540/829/43637/2022/5/15/593818.gif');
-INSERT INTO `blue_archive_student` VALUES (103, '真白（泳装）', '静山 マシロ', 3, 0, 6, '81812', 'https://cdnimg.gamekee.com/wiki2.0/images/829/94828/2021/10/4/43303.jpg,https://cdnimg.gamekee.com/wiki2.0/images/829/94828/2021/10/4/717804.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_940/h_540/829/43637/2022/5/15/46144.gif');
-INSERT INTO `blue_archive_student` VALUES (104, '真希', ' 小塗マキ', 3, 0, 8, '67654', 'https://cdnimg.gamekee.com/wiki2.0/images/829/4408/2021/10/4/76305.jpg,https://cdnimg.gamekee.com/wiki2.0/images/829/4408/2021/10/4/209591.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_960/h_540/829/43637/2022/5/15/795150.gif');
-INSERT INTO `blue_archive_student` VALUES (105, '志美子', '円堂シミコ', 1, 3, 2, '66269', 'https://cdnimg.gamekee.com/wiki2.0/images/829/94828/2021/10/5/884770.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_940/h_540/829/43637/2022/5/14/594916.gif');
-INSERT INTO `blue_archive_student` VALUES (106, '朱莉', '牛牧ジュリ', 1, 3, 0, '63927', 'https://cdnimg.gamekee.com/wiki2.0/images/829/72324/2021/10/4/365700.jpg,https://cdnimg.gamekee.com/wiki2.0/images/829/72324/2021/10/4/450090.png');
-INSERT INTO `blue_archive_student` VALUES (107, '梓', '白洲アズサ（白洲梓）', 3, 0, 2, '77111', 'https://cdnimg.gamekee.com/wiki2.0/images/829/90255/2021/10/4/702536.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_1920/h_1080/829/190853/2022/6/16/765178.png');
-INSERT INTO `blue_archive_student` VALUES (108, '梓（泳装）', '白洲梓', 3, 0, 2, '81811', 'https://cdnimg.gamekee.com/wiki2.0/images/829/94828/2021/10/4/388490.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_1920/h_1080/829/190853/2022/6/16/189457.png,https://cdnimg.gamekee.com/wiki2.0/images/829/43637/2022/5/9/983515.gif');
+INSERT INTO `blue_archive_student` VALUES (1, '阿露', '陸八魔 アル', 3, 3, 3, '57763', 'https://cdnimg.gamekee.com/images/www/1602299328632_48562585.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_1920/h_1080/829/43637/2022/6/11/111433.png,https://cdnimg.gamekee.com/wiki2.0/images/w_753/h_1357/829/43637/2023/3/10/409521.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/3/766165.png');
+INSERT INTO `blue_archive_student` VALUES (2, '阿露（正月）', '陸八魔 アル', 3, 3, 3, '150220', 'https://cdnimg.gamekee.com/wiki2.0/images/829/90255/2021/11/29/230065.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_3450/h_2563/829/43637/2022/7/25/382410.png,https://cdnimg.gamekee.com/wiki2.0/images/w_3440/h_2555/829/43637/2022/7/25/269866.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/3/941279.png');
+INSERT INTO `blue_archive_student` VALUES (3, '艾米', '和泉元艾米', 3, 3, 3, '68820', 'https://cdnimg.gamekee.com/images/www/1611652182552_14165196.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_1581/h_1112/829/43637/2022/7/19/525610.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/3/632003.png');
+INSERT INTO `blue_archive_student` VALUES (4, '爱丽丝', '天童（てんどう）アリス', 3, 3, 3, '72904', 'https://cdnimg.gamekee.com/wiki2.0/images/829/94828/2021/10/4/457765.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_1920/h_1080/829/190853/2022/6/16/845283.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/3/822037.png');
+INSERT INTO `blue_archive_student` VALUES (5, '爱丽丝（女仆）', '天童アリス', 3, 3, 3, '589642', 'https://cdnimg.gamekee.com/wiki2.0/images/w_908/h_1210/829/43637/2023/3/26/225668.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_3464/h_2569/829/43637/2023/3/26/845977.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2023/3/26/572489.png');
+INSERT INTO `blue_archive_student` VALUES (6, '爱莉', '栗村（くりむら） アイリ', 3, 3, 3, '66274', 'https://cdnimg.gamekee.com/wiki2.0/images/829/90255/2021/10/4/500755.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_3461/h_2569/829/43637/2022/7/19/802747.png,https://cdnimg.gamekee.com/wiki2.0/images/w_1492/h_1281/829/43637/2022/11/23/556131.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/3/42208.png');
+INSERT INTO `blue_archive_student` VALUES (7, '巴', '佐城 トモエ', 3, 3, 3, '161281', NULL, 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/3/281047.png');
+INSERT INTO `blue_archive_student` VALUES (8, '白子', '砂狼シロコ', 3, 3, 3, '46677', 'https://cdnimg.gamekee.com/images/mx/1596081023419_69242485.png,https://cdnimg.gamekee.com/wiki2.0/images/w_1920/h_1080/829/190853/2022/6/16/322891.png,https://cdnimg.gamekee.com/wiki2.0/images/w_1052/h_1209/829/43637/2022/11/23/102978.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/3/223702.png');
+INSERT INTO `blue_archive_student` VALUES (9, '白子（骑行）', '砂狼 シロコ', 3, 3, 3, '85351', 'https://cdnimg.gamekee.com/wiki2.0/images/829/94828/2021/10/4/422563.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_3461/h_2563/829/210034/2022/8/27/443535.png,https://cdnimg.gamekee.com/wiki2.0/images/w_960/h_540/829/43637/2022/5/15/709752.gif', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/3/195275.png');
+INSERT INTO `blue_archive_student` VALUES (10, '白子（泳装）', '砂狼シロコ', 3, 3, 3, '161196', 'https://cdnimg.gamekee.com/wiki2.0/images/w_908/h_1210/829/43637/2023/6/17/135771.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_3465/h_2582/829/43637/2023/6/17/74091.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2023/6/17/541543.png');
+INSERT INTO `blue_archive_student` VALUES (11, '初音未来（联动）', '初音ミク', 3, 3, 3, '90749', 'https://cdnimg.gamekee.com/wiki2.0/images/829/90255/2021/10/4/973585.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_1746/h_1298/829/43637/2022/7/19/68996.png,https://cdnimg.gamekee.com/wiki2.0/images/w_1702/h_1266/829/43637/2022/7/19/341928.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/3/48639.png');
+INSERT INTO `blue_archive_student` VALUES (12, '吹雪', '合歓垣（ねむがき）フブキ', 3, 3, 3, '150694', 'https://cdnimg.gamekee.com/wiki2.0/images/w_1920/h_1080/829/190853/2022/7/7/334633.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/3/214547.png');
+INSERT INTO `blue_archive_student` VALUES (13, '椿', '春日ツバキ', 3, 3, 3, '68177', 'https://cdnimg.gamekee.com/wiki2.0/images/829/4408/2021/10/5/16821.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_3165/h_2225/829/210034/2022/11/20/117771.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/3/752332.png');
+INSERT INTO `blue_archive_student` VALUES (14, '淳子', '赤司ジュンコ', 3, 3, 3, '60879', 'https://cdnimg.gamekee.com/wiki2.0/images/829/90255/2021/10/4/100915.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_3161/h_2218/829/210034/2022/8/18/223196.png,https://cdnimg.gamekee.com/wiki2.0/images/w_1252/h_665/829/43637/2022/11/23/736837.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/3/667715.png');
+INSERT INTO `blue_archive_student` VALUES (15, '淳子（正月）', '赤司 ジュンコ', 3, 3, 3, '579691', 'https://cdnimg.gamekee.com/wiki2.0/images/w_1306/h_1740/829/43637/2022/11/28/492114.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_3624/h_3072/829/43637/2022/11/28/544138.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/11/28/543850.png');
+INSERT INTO `blue_archive_student` VALUES (16, '菲娜', '朝比奈（アサヒナ） フィーナ', 3, 3, 3, '68176', 'https://cdnimg.gamekee.com/wiki2.0/images/829/94828/2021/10/4/37391.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_1920/h_1080/829/190853/2022/10/3/697252.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/3/782603.png');
+INSERT INTO `blue_archive_student` VALUES (17, '枫', '勇美枫', 3, 3, 3, '155250', 'https://cdnimg.gamekee.com/wiki2.0/images/829/43637/2022/3/27/90593.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_3349/h_2431/829/210034/2022/8/18/282580.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/3/351656.png');
+INSERT INTO `blue_archive_student` VALUES (18, '枫香', '爱清 フウカ', 3, 3, 3, '64384', 'https://cdnimg.gamekee.com/images/www/1608522250796_38720527.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_3154/h_2215/829/43637/2022/7/19/189361.png,https://cdnimg.gamekee.com/wiki2.0/images/w_1771/h_801/829/43637/2022/11/23/260908.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/3/164172.png');
+INSERT INTO `blue_archive_student` VALUES (19, '枫香（正月）', '愛清 フウカ', 3, 3, 3, '579686', 'https://cdnimg.gamekee.com/wiki2.0/images/w_1175/h_1565/829/43637/2022/11/28/436868.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_3447/h_2556/829/43637/2022/11/28/738839.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/11/28/515509.png');
+INSERT INTO `blue_archive_student` VALUES (20, '歌原', '白石（しらいし）ウタハ', 3, 3, 3, '67656', 'https://cdnimg.gamekee.com/wiki2.0/images/829/90255/2021/10/4/419860.jpg,https://cdnimg.gamekee.com/wiki2.0/images/829/90255/2021/10/4/569529.jpg', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/3/272659.png');
+INSERT INTO `blue_archive_student` VALUES (21, '歌原（应援团）', '白石（しらいし）ウタハ', 3, 3, 3, '168189', 'https://cdnimg.gamekee.com/wiki2.0/images/w_908/h_1210/829/43637/2022/8/28/447997.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_3299/h_2557/829/43637/2022/8/28/923683.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/8/28/321075.png');
+INSERT INTO `blue_archive_student` VALUES (22, '宫子', '月雪ミヤコ', 3, 3, 3, '153368', 'https://cdnimg.gamekee.com/wiki2.0/images/829/43637/2022/3/26/79670.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_3386/h_2305/829/210034/2022/9/8/263625.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/6/974231.png');
+INSERT INTO `blue_archive_student` VALUES (23, '宫子（泳装）', '月雪ミヤコ', 3, 3, 3, '593095', 'https://cdnimg.gamekee.com/wiki2.0/images/w_908/h_1210/829/43637/2023/5/21/178875.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_3475/h_4049/829/43637/2023/5/21/931181.png,https://cdnimg.gamekee.com/wiki2.0/images/w_3475/h_4049/829/43637/2023/5/21/891150.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2023/5/21/916214.png');
+INSERT INTO `blue_archive_student` VALUES (24, '果穗', '桑上カホ', 3, 3, 3, '588062', 'https://cdnimg.gamekee.com/wiki2.0/images/w_908/h_1210/829/43637/2023/3/11/781806.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_3796/h_2872/829/43637/2023/3/12/337517.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2023/3/11/174214.png');
+INSERT INTO `blue_archive_student` VALUES (25, '好美', '伊原木（いばらぎ）ヨシミ', 3, 3, 3, '66272', 'https://cdnimg.gamekee.com/wiki2.0/images/829/94828/2021/10/4/704500.jpg,https://cdnimg.gamekee.com/wiki2.0/images/829/94828/2021/10/4/82618.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_1134/h_701/829/43637/2022/11/23/112384.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/3/553517.png');
+INSERT INTO `blue_archive_student` VALUES (26, '和纱', '杏山 カズサ', 3, 3, 3, '165671', 'https://cdnimg.gamekee.com/wiki2.0/images/w_908/h_1210/829/43637/2022/7/24/418029.jfif,https://cdnimg.gamekee.com/wiki2.0/images/w_3663/h_3297/829/43637/2022/7/24/140616.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/24/468044.png');
+INSERT INTO `blue_archive_student` VALUES (27, '和香', '天见ノドカ', 3, 3, 3, '75151', 'https://cdnimg.gamekee.com/wiki2.0/images/829/94828/2021/10/5/714499.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_3155/h_2458/829/43637/2022/7/19/283427.png,https://cdnimg.gamekee.com/wiki2.0/images/w_1920/h_1357/829/43637/2022/11/23/688.jpeg', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/4/659843.png');
+INSERT INTO `blue_archive_student` VALUES (28, '和香（温泉）', '天見 ノドカ', 3, 3, 3, '150174', 'https://cdnimg.gamekee.com/wiki2.0/images/829/94828/2021/11/15/438499.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_3778/h_2421/829/43637/2022/7/19/587228.png,https://cdnimg.gamekee.com/wiki2.0/images/w_1920/h_652/829/43637/2022/11/23/169838.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/3/859013.png');
+INSERT INTO `blue_archive_student` VALUES (29, '鹤城', '剑先（けんざき）ツルギ', 3, 3, 3, '66645', 'https://cdnimg.gamekee.com/wiki2.0/images/829/4408/2021/10/4/857665.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_3161/h_2221/829/43637/2022/7/25/687304.png,https://cdnimg.gamekee.com/wiki2.0/images/w_688/h_1245/829/43637/2022/11/23/199446.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/3/385474.png');
+INSERT INTO `blue_archive_student` VALUES (30, '鹤城（泳装）', '剑崎（けんざき）ツルギ', 3, 3, 3, '81813', 'https://cdnimg.gamekee.com/wiki2.0/images/829/94828/2021/10/5/760471.jpg,https://cdnimg.gamekee.com/wiki2.0/images/829/57/2021/10/5/815781.jpg', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/3/372483.png');
+INSERT INTO `blue_archive_student` VALUES (31, '红叶', '秋泉モミジ', 3, 3, 3, '161228', 'https://cdnimg.gamekee.com/wiki2.0/images/w_908/h_1210/829/43637/2023/7/23/941538.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_3843/h_2437/829/43637/2023/7/23/512627.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2023/7/25/140055.png');
+INSERT INTO `blue_archive_student` VALUES (32, '花绘', '朝顔(あさがお) ハナエ', 3, 3, 3, '68915', 'https://cdnimg.gamekee.com/wiki2.0/images/829/90255/2021/10/4/328778.png,https://cdnimg.gamekee.com/wiki2.0/images/w_5533/h_4105/829/43637/2022/7/19/373002.png,https://cdnimg.gamekee.com/wiki2.0/images/w_960/h_540/829/43637/2022/5/15/773497.gif,https://cdnimg.gamekee.com/wiki2.0/images/w_1920/h_1357/829/43637/2023/0/17/859023.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/3/424714.png');
+INSERT INTO `blue_archive_student` VALUES (33, '花绘（圣诞）', '朝顔 ハナエ', 3, 3, 3, '578738', 'https://cdnimg.gamekee.com/wiki2.0/images/w_908/h_1210/829/43637/2022/11/14/898771.jfif,https://cdnimg.gamekee.com/wiki2.0/images/w_3450/h_2559/829/43637/2022/11/14/740809.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/11/14/881583.png');
+INSERT INTO `blue_archive_student` VALUES (34, '花凛', '角楯カリン', 3, 3, 3, '67011', 'https://cdnimg.gamekee.com/wiki2.0/images/829/4408/2021/10/4/837670.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_3160/h_2221/829/43637/2022/7/19/475301.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/3/596406.png');
+INSERT INTO `blue_archive_student` VALUES (35, '花凛（兔女郎）', '角楯 カリン', 3, 3, 3, '89275', 'https://cdnimg.gamekee.com/wiki2.0/images/829/94828/2021/10/4/188497.jpg,https://cdnimg.gamekee.com/wiki2.0/images/829/94828/2021/10/4/726927.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_1920/h_1357/829/43637/2022/11/23/756965.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/3/288582.png');
+INSERT INTO `blue_archive_student` VALUES (36, '花子', '浦和ハナコ', 3, 3, 3, '77113', 'https://cdnimg.gamekee.com/wiki2.0/images/829/72324/2021/10/4/548328.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_3317/h_2555/829/210034/2022/8/21/762461.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/3/456073.png');
+INSERT INTO `blue_archive_student` VALUES (37, '花子（泳装）', '浦和 ハナコ', 3, 3, 3, '596034', 'https://cdnimg.gamekee.com/wiki2.0/images/w_908/h_1210/829/43637/2023/7/1/932884.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_3465/h_2573/829/43637/2023/6/25/239871.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2023/6/27/476562.png');
+INSERT INTO `blue_archive_student` VALUES (38, '惠', '下倉 メグ', 3, 3, 3, '582116', 'https://cdnimg.gamekee.com/wiki2.0/images/w_908/h_1210/829/43637/2023/0/31/372158.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_3825/h_3569/829/43637/2023/0/31/627120.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2023/0/31/253710.png');
+INSERT INTO `blue_archive_student` VALUES (39, '佳代子', '鬼形カヨコ', 3, 3, 3, '56393', 'https://cdnimg.gamekee.com/images/www/1601013221014_77052853.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_3186/h_2246/829/210034/2022/9/9/731796.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/3/226314.png');
+INSERT INTO `blue_archive_student` VALUES (40, '佳代子（正月）', '鬼方カヨコ', 3, 3, 3, '586470', 'https://cdnimg.gamekee.com/wiki2.0/images/w_908/h_1210/829/43637/2023/2/22/766762.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_3442/h_2553/829/43637/2023/2/22/903406.png,https://cdnimg.gamekee.com/wiki2.0/images/w_3398/h_2647/829/43637/2023/2/22/207125.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2023/2/22/889149.png');
+INSERT INTO `blue_archive_student` VALUES (41, '菫', '乙花 スミレ', 3, 3, 3, '67664', 'https://cdnimg.gamekee.com/wiki2.0/images/829/4408/2021/10/4/441608.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_3160/h_2222/829/43637/2022/7/19/670959.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/3/317223.png');
+INSERT INTO `blue_archive_student` VALUES (42, '静子', '河和（かわわ）シズコ', 3, 3, 3, '70511', 'https://cdnimg.gamekee.com/wiki2.0/images/829/72324/2021/10/4/140064.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_3461/h_2569/829/210034/2022/9/5/545169.png,https://cdnimg.gamekee.com/wiki2.0/images/w_960/h_540/829/43637/2022/5/15/417529.gif', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/6/166658.png');
+INSERT INTO `blue_archive_student` VALUES (43, '静子（泳装）', '河和（かわわ）シズコ', 3, 3, 3, '162572', 'https://cdnimg.gamekee.com/wiki2.0/images/w_908/h_1210/829/43637/2022/6/20/694135.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_2793/h_1534/829/43637/2022/6/20/675872.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/3/483653.png');
+INSERT INTO `blue_archive_student` VALUES (44, '康娜', '尾刃 カンナ', 3, 3, 3, '582123', 'https://cdnimg.gamekee.com/wiki2.0/images/w_908/h_1210/829/43637/2023/0/31/481180.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_3442/h_2559/829/43637/2023/0/31/626037.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2023/0/31/786152.png');
+INSERT INTO `blue_archive_student` VALUES (45, '柯托莉', '豊見（とよみ）コトリ', 3, 3, 3, '67655', 'https://cdnimg.gamekee.com/wiki2.0/images/829/94828/2021/10/4/231252.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_1920/h_1080/829/190853/2022/9/29/158256.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/3/95047.png');
+INSERT INTO `blue_archive_student` VALUES (46, '柯托莉（应援团）', '豊見（とよみ）コトリ', 3, 3, 3, '168823', 'https://cdnimg.gamekee.com/wiki2.0/images/w_908/h_1210/829/43637/2023/8/6/158428.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_3451/h_2559/829/43637/2023/8/6/452001.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2023/8/6/480564.png');
+INSERT INTO `blue_archive_student` VALUES (47, '濑名', '氷室セナ', 3, 3, 3, '150696', 'https://cdnimg.gamekee.com/wiki2.0/images/829/43637/2022/3/28/981173.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_1172/h_1281/829/43637/2022/11/23/516255.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/3/227343.png');
+INSERT INTO `blue_archive_student` VALUES (48, '莲见', '羽川ハスミ', 3, 3, 3, '66394', 'https://cdnimg.gamekee.com/wiki2.0/images/829/4408/2021/10/5/937178.jpg,https://cdnimg.gamekee.com/wiki2.0/images/829/4408/2021/10/5/974411.jpg', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/3/705140.png');
+INSERT INTO `blue_archive_student` VALUES (49, '莲见（体操服）', '羽川 ハスミ', 3, 3, 3, '170322', 'https://cdnimg.gamekee.com/wiki2.0/images/w_908/h_1210/829/43637/2022/9/27/75723.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_3964/h_2892/829/43637/2022/9/27/130070.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/9/27/883815.png');
+INSERT INTO `blue_archive_student` VALUES (50, '玲纱', '宇沢レイサ', 3, 3, 3, '165751', 'https://cdnimg.gamekee.com/wiki2.0/images/w_908/h_1210/829/43637/2023/4/10/619910.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_3376/h_2505/829/43637/2023/4/10/781517.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2023/4/10/658375.png');
+INSERT INTO `blue_archive_student` VALUES (51, '铃美', '守月スズミ', 3, 3, 3, '66259', 'https://cdnimg.gamekee.com/wiki2.0/images/829/72324/2021/10/4/528423.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_3216/h_2432/829/43637/2022/7/19/473635.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/4/46969.png');
+INSERT INTO `blue_archive_student` VALUES (52, '绫音', ' 奥空アヤネ', 3, 3, 3, '46923', 'https://cdnimg.gamekee.com/wiki2.0/images/829/4408/2021/10/5/797752.png,https://cdnimg.gamekee.com/wiki2.0/images/w_1920/h_1080/829/190853/2022/7/17/643577.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/3/608215.png');
+INSERT INTO `blue_archive_student` VALUES (53, '绫音（泳装）', '奥空 アヤネ', 3, 3, 3, '160191', 'https://cdnimg.gamekee.com/wiki2.0/images/w_908/h_1210/829/43637/2022/5/22/31820.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_1956/h_1444/829/43637/2022/6/3/79761.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/3/119087.png');
+INSERT INTO `blue_archive_student` VALUES (54, '瑠美', '朱城ルミ', 3, 3, 3, '591327', 'https://cdnimg.gamekee.com/wiki2.0/images/w_908/h_1210/829/43637/2023/4/24/998768.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_3332/h_2487/829/43637/2023/4/24/754295.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2023/4/24/472083.png');
+INSERT INTO `blue_archive_student` VALUES (55, '绿', '才羽 ミドリ', 3, 3, 3, '68802', 'https://cdnimg.gamekee.com/wiki2.0/images/829/72324/2021/10/4/123634.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_1920/h_1080/829/190853/2022/7/21/195693.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/3/468759.png');
+INSERT INTO `blue_archive_student` VALUES (56, '玛丽', '伊落マリー', 3, 3, 3, '90627', 'https://cdnimg.gamekee.com/wiki2.0/images/829/72324/2021/10/4/404313.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_1920/h_1080/829/190853/2022/7/17/446270.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/6/602376.png');
+INSERT INTO `blue_archive_student` VALUES (57, '玛丽（体操服）', '伊落マリー', 3, 3, 3, '170297', 'https://cdnimg.gamekee.com/wiki2.0/images/w_908/h_1210/829/43637/2022/9/26/767310.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_3399/h_2671/829/43637/2022/9/27/835792.png,https://cdnimg.gamekee.com/wiki2.0/images/w_5039/h_4414/829/43637/2022/9/26/78020.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/9/26/506968.png');
+INSERT INTO `blue_archive_student` VALUES (58, '玛丽娜', '池仓 マリナ', 3, 3, 3, '151713', 'https://cdnimg.gamekee.com/wiki2.0/images/829/43637/2022/3/28/289117.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_3461/h_2568/829/43637/2022/7/25/511800.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/6/161082.png');
+INSERT INTO `blue_archive_student` VALUES (59, '满', '千鸟满', 3, 3, 3, '155255', 'https://cdnimg.gamekee.com/wiki2.0/images/829/43637/2022/3/27/569947.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_780/h_557/829/43637/2022/10/28/897393.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/3/293982.png');
+INSERT INTO `blue_archive_student` VALUES (60, '梅露', '姫木メル', 3, 3, 3, '161230', 'https://cdnimg.gamekee.com/wiki2.0/images/w_908/h_1210/829/43637/2023/7/23/725235.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_3432/h_2525/829/43637/2023/7/23/469502.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2023/7/25/320875.png');
+INSERT INTO `blue_archive_student` VALUES (61, '美祢', '蒼森 ミネ', 3, 3, 3, '580732', 'https://cdnimg.gamekee.com/wiki2.0/images/w_908/h_1210/829/43637/2023/0/11/247903.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_3471/h_2698/829/43637/2023/0/11/584917.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2023/0/11/313331.png');
+INSERT INTO `blue_archive_student` VALUES (62, '美咲', '戒野 ミサキ', 3, 3, 3, '156959', 'https://cdnimg.gamekee.com/wiki2.0/images/829/43637/2022/4/24/307929.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_1920/h_1080/829/190853/2022/7/17/172372.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/3/422171.png');
+INSERT INTO `blue_archive_student` VALUES (63, '美游', '霞沢ミユ', 3, 3, 3, '153606', 'https://cdnimg.gamekee.com/wiki2.0/images/829/43637/2022/3/22/910886.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_3609/h_2648/829/210034/2022/9/7/782196.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/3/3098.png');
+INSERT INTO `blue_archive_student` VALUES (64, '美游（泳装）', '霞沢ミユ', 3, 3, 3, '593097', 'https://cdnimg.gamekee.com/wiki2.0/images/w_908/h_1210/829/43637/2023/5/21/340502.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_3448/h_2556/829/43637/2023/5/21/475318.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2023/5/21/710168.png');
+INSERT INTO `blue_archive_student` VALUES (65, '萌绘', '風倉 モエ', 3, 3, 3, '165669', 'https://cdnimg.gamekee.com/wiki2.0/images/w_908/h_1210/829/43637/2022/7/24/161922.jfif,https://cdnimg.gamekee.com/wiki2.0/images/w_3538/h_3314/829/43637/2022/7/24/269480.png,https://cdnimg.gamekee.com/wiki2.0/images/w_3446/h_2555/829/43637/2022/7/24/562258.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/24/404961.png');
+INSERT INTO `blue_archive_student` VALUES (66, '明里', '鳄渕 アカリ', 3, 3, 3, '62126', 'https://cdnimg.gamekee.com/images/www/1606468113344_99064509.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_3458/h_2445/829/43637/2022/7/19/575670.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/3/614121.png');
+INSERT INTO `blue_archive_student` VALUES (67, '明日奈', '一之瀬 アスナ', 3, 3, 3, '66646', 'https://cdnimg.gamekee.com/wiki2.0/images/829/94828/2021/10/4/895360.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_3158/h_2258/829/43637/2022/9/12/976362.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/3/923645.png');
+INSERT INTO `blue_archive_student` VALUES (68, '明日奈（兔女郎）', '一之瀬明日奈', 3, 3, 3, '89742', 'https://cdnimg.gamekee.com/wiki2.0/images/829/94828/2021/10/4/102635.jpg,https://cdnimg.gamekee.com/wiki2.0/images/829/94828/2021/10/4/4674.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_726/h_710/829/43637/2022/11/23/361179.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/3/796528.png');
+INSERT INTO `blue_archive_student` VALUES (69, '睦月', '浅黄ムツキ', 3, 3, 3, '54505', 'https://cdnimg.gamekee.com/images/www/1600314278681_94813234.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_1920/h_1080/829/190853/2022/7/7/904312.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/4/908234.png');
+INSERT INTO `blue_archive_student` VALUES (70, '睦月（正月）', '浅黄ムツキ', 3, 3, 3, '150223', 'https://cdnimg.gamekee.com/wiki2.0/images/829/43637/2022/3/29/528658.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_3450/h_2552/829/112486/2022/6/19/359892.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/3/537935.png');
+INSERT INTO `blue_archive_student` VALUES (71, '南', '近衛ミナ', 3, 3, 3, '591329', 'https://cdnimg.gamekee.com/wiki2.0/images/w_908/h_1210/829/43637/2023/4/24/267446.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_3633/h_2570/829/43637/2023/4/24/866404.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2023/4/24/333468.png');
+INSERT INTO `blue_archive_student` VALUES (72, '尼禄', '美甘ネル', 3, 3, 3, '67012', 'https://cdnimg.gamekee.com/wiki2.0/images/829/4408/2021/10/4/57643.jpg,https://cdnimg.gamekee.com/wiki2.0/images/829/4408/2021/10/4/809222.jpg', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/3/412742.png');
+INSERT INTO `blue_archive_student` VALUES (73, '尼禄（兔女郎）', '美甘ネル', 3, 3, 3, '89274', 'https://cdnimg.gamekee.com/wiki2.0/images/829/90255/2021/10/4/923203.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_3452/h_2554/829/43637/2022/7/19/316134.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/3/781013.png');
+INSERT INTO `blue_archive_student` VALUES (74, '诺亚', '生塩 ノア', 3, 3, 3, '168193', 'https://cdnimg.gamekee.com/wiki2.0/images/w_908/h_1210/829/43637/2022/8/28/577440.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_3406/h_2354/829/43637/2022/8/28/106465.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/8/28/620658.png');
+INSERT INTO `blue_archive_student` VALUES (75, '千世', '和楽チセ', 3, 3, 3, '68284', 'https://cdnimg.gamekee.com/wiki2.0/images/829/72324/2021/10/4/845238.jpg,https://cdnimg.gamekee.com/wiki2.0/images/829/72324/2021/10/4/181682.jpg', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/3/695074.png');
+INSERT INTO `blue_archive_student` VALUES (76, '千世（泳装）', '和楽チセ', 3, 3, 3, '162817', 'https://cdnimg.gamekee.com/wiki2.0/images/w_908/h_1210/829/43637/2022/6/22/935821.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_3442/h_2558/829/43637/2022/6/22/613695.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/3/159396.png');
+INSERT INTO `blue_archive_student` VALUES (77, '千夏', '火宫千夏', 3, 3, 3, '58280', 'https://cdnimg.gamekee.com/wiki2.0/images/829/94828/2021/10/5/843963.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_3355/h_2456/829/43637/2022/7/25/106903.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/3/216839.png');
+INSERT INTO `blue_archive_student` VALUES (78, '千夏（温泉）', '火宫千夏', 3, 3, 3, '150145', 'https://cdnimg.gamekee.com/wiki2.0/images/829/43637/2022/3/29/379677.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_3453/h_2553/829/112486/2022/6/20/338896.png,https://cdnimg.gamekee.com/wiki2.0/images/w_1920/h_652/829/43637/2022/11/23/534253.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/3/686252.png');
+INSERT INTO `blue_archive_student` VALUES (79, '千寻', '各务（かがみ）チヒロ', 3, 3, 3, '150698', 'https://cdnimg.gamekee.com/wiki2.0/images/829/43637/2022/3/28/326637.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_3450/h_2559/829/43637/2022/7/25/788015.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/3/747208.png');
+INSERT INTO `blue_archive_student` VALUES (80, '切里诺', '连河（れんかわ）チェリノ', 3, 3, 3, '75150', 'https://cdnimg.gamekee.com/wiki2.0/images/829/72324/2021/10/4/387368.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_3157/h_2221/829/210034/2022/9/19/260798.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/3/184520.png');
+INSERT INTO `blue_archive_student` VALUES (81, '切里诺（温泉）', '连河切里诺', 3, 3, 3, '150144', 'https://cdnimg.gamekee.com/wiki2.0/images/829/94828/2021/11/1/497903.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_3450/h_2556/829/43637/2022/7/19/194076.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/3/204917.png');
+INSERT INTO `blue_archive_student` VALUES (82, '芹娜', '鷲見（すみ）セリナ', 3, 3, 3, '66275', 'https://cdnimg.gamekee.com/wiki2.0/images/829/94828/2021/10/4/437749.jpg,https://cdnimg.gamekee.com/wiki2.0/images/829/94828/2021/10/4/504406.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_1828/h_1209/829/43637/2023/0/17/259519.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/3/121619.png');
+INSERT INTO `blue_archive_student` VALUES (83, '芹娜（圣诞）', '鷲見 セリナ', 3, 3, 3, '578734', 'https://cdnimg.gamekee.com/wiki2.0/images/w_908/h_1210/829/43637/2022/11/14/344777.jfif,https://cdnimg.gamekee.com/wiki2.0/images/w_3648/h_2753/829/43637/2022/11/14/817958.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/11/14/401608.png');
+INSERT INTO `blue_archive_student` VALUES (84, '芹香', '黒見（くろみ）セリカ', 3, 3, 3, '46678', 'https://cdnimg.gamekee.com/wiki2.0/images/829/90255/2021/10/4/638345.png,https://cdnimg.gamekee.com/wiki2.0/images/w_1920/h_1080/829/190853/2022/7/17/446200.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/3/11444.png');
+INSERT INTO `blue_archive_student` VALUES (85, '芹香（正月）', '黒見（くろみ）セリカ', 3, 3, 3, '150380', 'https://cdnimg.gamekee.com/wiki2.0/images/829/43637/2022/3/29/320384.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_3475/h_2583/829/43637/2022/7/25/428958.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/3/358596.png');
+INSERT INTO `blue_archive_student` VALUES (86, '晴', '小钩 ハレ', 3, 3, 3, '67140', 'https://cdnimg.gamekee.com/images/www/1611040927695_29659513.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_1920/h_1080/829/190853/2022/7/21/773078.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/3/330527.png');
+INSERT INTO `blue_archive_student` VALUES (87, '晴奈', '黑馆ハルナ', 3, 3, 3, '62592', 'https://cdnimg.gamekee.com/wiki2.0/images/829/72324/2021/10/4/833491.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_3160/h_2220/829/210034/2022/8/27/514080.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/3/165799.png');
+INSERT INTO `blue_archive_student` VALUES (88, '晴奈（正月）', '黒舘 ハルナ', 3, 3, 3, '579682', 'https://cdnimg.gamekee.com/wiki2.0/images/w_1028/h_1370/829/43637/2022/11/28/330710.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_3451/h_2560/829/43637/2022/11/28/593041.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/11/28/561698.png');
+INSERT INTO `blue_archive_student` VALUES (89, '泉', '狮子堂イズミ', 3, 3, 3, '61498', 'https://cdnimg.gamekee.com/images/www/1605868403453_60312504.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_1920/h_1080/829/190853/2022/6/13/975746.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/3/877200.png');
+INSERT INTO `blue_archive_student` VALUES (90, '泉（泳装）', '狮子堂泉', 3, 3, 3, '83936', 'https://cdnimg.gamekee.com/wiki2.0/images/829/94828/2021/10/5/136673.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_1920/h_1080/829/190853/2022/7/17/921991.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/4/534478.png');
+INSERT INTO `blue_archive_student` VALUES (91, '泉奈', '久田イズナ', 3, 3, 3, '70510', 'https://cdnimg.gamekee.com/wiki2.0/images/829/43637/2022/4/17/493004.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_3118/h_2232/829/210034/2022/8/23/766261.png,https://cdnimg.gamekee.com/wiki2.0/images/w_2556/h_1357/829/43637/2022/11/23/989818.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/3/526048.png');
+INSERT INTO `blue_archive_student` VALUES (92, '泉奈（泳装）', '久田イズナ', 3, 3, 3, '162985', 'https://cdnimg.gamekee.com/wiki2.0/images/w_908/h_1210/829/43637/2022/6/23/145413.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_1722/h_1861/829/43637/2022/6/23/445801.png,https://cdnimg.gamekee.com/wiki2.0/images/w_1724/h_1658/829/43637/2022/6/23/131233.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/3/677832.png');
+INSERT INTO `blue_archive_student` VALUES (93, '日富美', '阿慈谷ヒフミ', 3, 3, 3, '66256', 'https://cdnimg.gamekee.com/wiki2.0/images/829/4408/2021/10/4/796693.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_3048/h_1973/829/210034/2022/8/18/393175.png,https://cdnimg.gamekee.com/wiki2.0/images/w_1080/h_1193/829/43637/2022/11/23/196281.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/3/928524.png');
+INSERT INTO `blue_archive_student` VALUES (94, '日富美（泳装）', '阿慈谷ヒフミ', 3, 3, 3, '83596', 'https://cdnimg.gamekee.com/wiki2.0/images/829/72324/2021/10/4/927588.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_1920/h_1080/829/190853/2022/6/16/318218.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/3/334502.png');
+INSERT INTO `blue_archive_student` VALUES (95, '日和', '槌永日和', 3, 3, 3, '156962', 'https://cdnimg.gamekee.com/wiki2.0/images/829/43637/2022/4/24/402597.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_1920/h_1080/829/190853/2022/7/7/289910.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/3/527992.png');
+INSERT INTO `blue_archive_student` VALUES (96, '日鞠', '明星 ヒマリ', 3, 3, 3, '575949', 'https://cdnimg.gamekee.com/wiki2.0/images/w_908/h_1210/829/43637/2022/10/16/998303.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_2982/h_2500/829/43637/2022/10/16/30105.png,https://cdnimg.gamekee.com/wiki2.0/images/w_3371/h_2496/829/43637/2022/10/16/911816.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/10/16/202173.png');
+INSERT INTO `blue_archive_student` VALUES (97, '日奈', '空崎ヒナ（空崎日奈）', 3, 3, 3, '59934', 'https://cdnimg.gamekee.com/images/www/1635845255187_76586320.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_3156/h_2214/829/43637/2022/7/19/823498.png,https://cdnimg.gamekee.com/wiki2.0/images/w_2493/h_1357/829/43637/2023/3/10/17521.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/3/204293.png');
+INSERT INTO `blue_archive_student` VALUES (98, '日奈（泳装）', '空崎日奈', 3, 3, 3, '83729', 'https://cdnimg.gamekee.com/wiki2.0/images/829/90255/2021/10/4/869573.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_3456/h_2569/829/210034/2022/8/28/385319.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/3/662430.png');
+INSERT INTO `blue_archive_student` VALUES (99, '日向', '若叶ヒナタ', 3, 3, 3, '151348', 'https://cdnimg.gamekee.com/wiki2.0/images/829/43637/2022/3/28/431708.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_1920/h_1080/829/190853/2022/7/17/399785.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/3/252656.png');
+INSERT INTO `blue_archive_student` VALUES (100, '日向（泳装）', '若叶ヒナタ', 3, 3, 3, '595935', 'https://cdnimg.gamekee.com/wiki2.0/images/w_908/h_1210/829/43637/2023/6/26/177359.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_3450/h_2565/829/43637/2023/6/24/671241.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2023/6/27/807555.png');
+INSERT INTO `blue_archive_student` VALUES (101, '若藻', '狐坂ワカモ', 3, 3, 3, '150695', 'https://cdnimg.gamekee.com/wiki2.0/images/829/43637/2022/3/29/180056.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_3445/h_2557/829/112486/2022/6/19/678697.png,https://cdnimg.gamekee.com/wiki2.0/images/w_3416/h_3224/829/112486/2022/6/19/882786.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/3/4658.png');
+INSERT INTO `blue_archive_student` VALUES (102, '若藻（泳装）', '狐坂ワカモ', 3, 3, 3, '159948', 'https://cdnimg.gamekee.com/wiki2.0/images/w_908/h_1210/829/43637/2022/5/20/772297.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_2866/h_2088/829/43637/2022/5/26/269755.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/3/765951.png');
+INSERT INTO `blue_archive_student` VALUES (103, '三森', '水羽三森', 3, 3, 3, '151016', 'https://cdnimg.gamekee.com/wiki2.0/images/829/43637/2022/3/28/907575.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_3288/h_2445/829/112486/2022/6/19/413496.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/3/197264.png');
+INSERT INTO `blue_archive_student` VALUES (104, '三森（泳装）', '水羽 ミモリ', 3, 3, 3, '164191', 'https://cdnimg.gamekee.com/wiki2.0/images/w_908/h_1210/829/43637/2023/7/16/623760.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_3448/h_2412/829/43637/2023/7/17/556804.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2023/7/16/449579.png');
+INSERT INTO `blue_archive_student` VALUES (105, '纱绫', '薬子サヤ', 3, 3, 3, '68521', 'https://cdnimg.gamekee.com/images/www/1612163176349_77274627.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_1920/h_1080/829/190853/2022/6/13/636239.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/3/207032.png');
+INSERT INTO `blue_archive_student` VALUES (106, '纱绫（私服）', '药子纱绫', 3, 3, 3, '87912', 'https://cdnimg.gamekee.com/wiki2.0/images/829/72324/2021/10/4/958621.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_3452/h_2559/829/43637/2022/7/25/709417.png,https://cdnimg.gamekee.com/wiki2.0/images/w_960/h_540/829/43637/2022/5/15/426024.gif', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/3/539159.png');
+INSERT INTO `blue_archive_student` VALUES (107, '纱织', '纱织', 3, 3, 3, '164453', 'https://cdnimg.gamekee.com/wiki2.0/images/w_908/h_1210/829/43637/2022/7/9/571249.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_3608/h_2679/829/210034/2022/8/26/176008.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/9/529315.png');
+INSERT INTO `blue_archive_student` VALUES (108, '时', '飛鳥馬（あすま）トキ', 3, 3, 3, '584417', 'https://cdnimg.gamekee.com/wiki2.0/images/w_908/h_1210/829/43637/2023/1/22/770506.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_1920/h_1080/829/190853/2023/1/22/884121.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2023/1/22/722771.png');
+INSERT INTO `blue_archive_student` VALUES (109, '时（兔女郎）', '飛鳥馬（あすま）トキ', 3, 3, 3, '589647', 'https://cdnimg.gamekee.com/wiki2.0/images/w_908/h_1210/829/43637/2023/3/26/870905.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_3450/h_2558/829/43637/2023/3/26/166893.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2023/3/26/533102.png');
+INSERT INTO `blue_archive_student` VALUES (110, '时雨', '間宵 シグレ', 3, 3, 3, '577249', 'https://cdnimg.gamekee.com/wiki2.0/images/w_908/h_1210/829/43637/2022/10/30/822034.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_3574/h_2707/829/43637/2022/11/1/44603.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/10/30/466142.png');
+INSERT INTO `blue_archive_student` VALUES (111, '实梨', '安守ミノリ', 3, 3, 3, '592325', 'https://cdnimg.gamekee.com/wiki2.0/images/w_908/h_1210/829/43637/2023/5/7/414583.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_4046/h_2556/829/43637/2023/5/7/615154.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2023/5/7/160578.png');
+INSERT INTO `blue_archive_student` VALUES (112, '瞬', '春原 シュン', 3, 3, 3, '68522', 'https://cdnimg.gamekee.com/images/www/1612164059732_52834499.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_1920/h_1080/829/190853/2022/7/7/629151.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/3/399797.png');
+INSERT INTO `blue_archive_student` VALUES (113, '瞬（幼女）', '春原瞬', 3, 3, 3, '86656', 'https://cdnimg.gamekee.com/wiki2.0/images/829/90255/2021/10/4/516586.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_3949/h_2986/829/210034/2022/8/25/591085.png,https://cdnimg.gamekee.com/wiki2.0/images/w_1488/h_1233/829/43637/2022/11/23/336950.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/3/754942.png');
+INSERT INTO `blue_archive_student` VALUES (114, '桃井', '才羽 桃井', 3, 3, 3, '68801', 'https://cdnimg.gamekee.com/wiki2.0/images/829/4408/2021/10/4/62340.png,https://cdnimg.gamekee.com/wiki2.0/images/w_1920/h_1080/829/190853/2022/7/21/144535.png,https://cdnimg.gamekee.com/wiki2.0/images/w_1460/h_1357/829/43637/2023/0/17/729176.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/3/526223.png');
+INSERT INTO `blue_archive_student` VALUES (115, '桐乃', '中務キリノ', 3, 3, 3, '86655', 'https://cdnimg.gamekee.com/wiki2.0/images/829/90255/2021/10/4/411275.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_3462/h_3203/829/43637/2022/7/19/931230.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/3/63988.png');
+INSERT INTO `blue_archive_student` VALUES (116, '未花', '聖園（みその）ミカ', 3, 3, 3, '581679', 'https://cdnimg.gamekee.com/wiki2.0/images/w_908/h_1210/829/43637/2023/0/24/714776.jfif,https://cdnimg.gamekee.com/wiki2.0/images/w_3450/h_2500/829/190853/2023/1/2/833602.png,https://cdnimg.gamekee.com/wiki2.0/images/w_784/h_1312/829/43637/2023/0/30/222453.png,https://cdnimg.gamekee.com/wiki2.0/images/w_784/h_1305/829/43637/2023/0/30/575854.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_266/h_300/829/43637/2023/0/24/942651.png');
+INSERT INTO `blue_archive_student` VALUES (117, '夏', '柚鳥 ナツ', 3, 3, 3, '90626', 'https://cdnimg.gamekee.com/wiki2.0/images/829/94828/2021/10/4/138960.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_1920/h_1080/829/190853/2022/6/17/349264.png,https://cdnimg.gamekee.com/wiki2.0/images/w_960/h_540/829/43637/2022/5/15/874219.gif,https://cdnimg.gamekee.com/wiki2.0/images/w_948/h_614/829/43637/2022/11/23/200294.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/3/937838.png');
+INSERT INTO `blue_archive_student` VALUES (118, '响', '猫塚(ねこづか)ヒビキ', 3, 3, 3, '67657', 'https://cdnimg.gamekee.com/wiki2.0/images/829/90255/2021/10/4/741397.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_3144/h_2216/829/43637/2022/7/19/790672.png,https://cdnimg.gamekee.com/wiki2.0/images/w_940/h_540/829/43637/2022/5/15/240387.gif', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/3/184736.png');
+INSERT INTO `blue_archive_student` VALUES (119, '响（应援团）', '猫塚 ヒビキ', 3, 3, 3, '168196', 'https://cdnimg.gamekee.com/wiki2.0/images/w_908/h_1210/829/43637/2022/8/28/444915.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_3659/h_2583/829/190853/2022/8/28/728997.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/8/28/906652.png');
+INSERT INTO `blue_archive_student` VALUES (120, '小春', '下江小春', 3, 3, 3, '78300', 'https://cdnimg.gamekee.com/wiki2.0/images/829/90255/2021/10/4/305486.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_3451/h_2479/829/43637/2022/7/19/644246.png,https://cdnimg.gamekee.com/wiki2.0/images/w_1276/h_1357/829/43637/2022/10/22/975520.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/3/264521.png');
+INSERT INTO `blue_archive_student` VALUES (121, '小春（泳装）', '下江コハル', 3, 3, 3, '595927', 'https://cdnimg.gamekee.com/wiki2.0/images/w_908/h_1210/829/43637/2023/6/28/57892.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_3443/h_2551/829/43637/2023/6/24/11967.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2023/6/28/123691.png');
+INSERT INTO `blue_archive_student` VALUES (122, '小雪', '黒崎 コユキ', 3, 3, 3, '585462', 'https://cdnimg.gamekee.com/wiki2.0/images/w_908/h_1210/829/43637/2023/2/8/31567.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_1920/h_1080/829/190853/2023/2/8/233664.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2023/2/9/423437.png');
+INSERT INTO `blue_archive_student` VALUES (123, '小玉', '音瀬コタマ', 3, 3, 3, '67035', 'https://cdnimg.gamekee.com/wiki2.0/images/829/72324/2021/10/4/788766.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_3272/h_2590/829/210034/2022/10/2/907178.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/4/819618.png');
+INSERT INTO `blue_archive_student` VALUES (124, '咲', '空井咲', 3, 3, 3, '153367', 'https://cdnimg.gamekee.com/wiki2.0/images/829/43637/2022/3/26/152587.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_3461/h_3117/829/210034/2022/8/20/120035.png,https://cdnimg.gamekee.com/wiki2.0/images/w_990/h_540/829/43637/2022/5/15/718276.gif', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/3/498168.png');
+INSERT INTO `blue_archive_student` VALUES (125, '咲（泳装）', '空井サキ', 3, 3, 3, '593096', 'https://cdnimg.gamekee.com/wiki2.0/images/w_908/h_1210/829/43637/2023/5/21/114498.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_3444/h_2482/829/43637/2023/5/21/496177.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2023/5/21/430489.png');
+INSERT INTO `blue_archive_student` VALUES (126, '心奈', '春原（すのはら）ココナ', 3, 3, 3, '167809', 'https://cdnimg.gamekee.com/wiki2.0/images/w_908/h_1210/829/43637/2022/8/21/872053.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_4113/h_2321/829/43637/2022/8/21/299044.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/8/21/281206.png');
+INSERT INTO `blue_archive_student` VALUES (127, '星野', '小鳥遊（たかなし）ホシノ', 3, 3, 3, '46680', 'https://cdnimg.gamekee.com/wiki2.0/images/829/4408/2021/10/4/933348.png,https://cdnimg.gamekee.com/wiki2.0/images/w_3155/h_2219/829/43637/2022/7/19/720615.png,https://cdnimg.gamekee.com/wiki2.0/images/w_1112/h_1203/829/43637/2023/0/17/341435.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/6/723621.png');
+INSERT INTO `blue_archive_student` VALUES (128, '星野（泳装）', '小鳥遊（たかなし）ホシノ', 3, 3, 3, '162560', 'https://cdnimg.gamekee.com/wiki2.0/images/w_908/h_1210/829/43637/2022/6/20/252882.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_3517/h_2202/829/210034/2022/10/27/778190.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/3/599950.png');
+INSERT INTO `blue_archive_student` VALUES (129, '亚津子', '秤アツコ', 3, 3, 3, '158662', 'https://cdnimg.gamekee.com/wiki2.0/images/829/43637/2022/5/8/198803.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_1920/h_1080/829/190853/2022/6/16/894353.png,https://cdnimg.gamekee.com/wiki2.0/images/829/43637/2022/5/9/212207.gif', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/3/852553.png');
+INSERT INTO `blue_archive_student` VALUES (130, '亚子', '亚子', 3, 3, 3, '150113', 'https://cdnimg.gamekee.com/wiki2.0/images/829/94828/2021/10/16/685933.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_1920/h_1080/829/190853/2022/6/16/89608.png,https://cdnimg.gamekee.com/wiki2.0/images/829/94828/2021/10/17/197459.gif', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/3/984890.png');
+INSERT INTO `blue_archive_student` VALUES (131, '遥香', '伊草 ハルカ', 3, 3, 3, '53921', 'https://cdnimg.gamekee.com/wiki2.0/images/829/72324/2021/10/4/842153.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_3451/h_2558/829/43637/2022/7/19/309286.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/4/469229.png');
+INSERT INTO `blue_archive_student` VALUES (132, '遥香（正月）', '伊草ハルカ', 3, 3, 3, '586545', 'https://cdnimg.gamekee.com/wiki2.0/images/w_908/h_1210/829/43637/2023/2/22/512618.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_3280/h_2571/829/43637/2023/2/22/427911.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2023/2/22/237659.png');
+INSERT INTO `blue_archive_student` VALUES (133, '野宫', '十六夜 野宫', 3, 3, 3, '68803', 'https://cdnimg.gamekee.com/wiki2.0/images/829/4408/2021/10/5/588667.png,https://cdnimg.gamekee.com/wiki2.0/images/829/4408/2021/10/5/716313.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_1920/h_1357/829/43637/2023/3/10/357344.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/3/974653.png');
+INSERT INTO `blue_archive_student` VALUES (134, '野宫（泳装）', '十六夜 野宫', 3, 3, 3, '159935', 'https://cdnimg.gamekee.com/wiki2.0/images/w_908/h_1210/829/43637/2022/5/20/49493.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_1920/h_1080/829/190853/2022/7/17/227651.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/3/123694.png');
+INSERT INTO `blue_archive_student` VALUES (135, '伊吕波', '枣イロハ', 3, 3, 3, '155254', 'https://cdnimg.gamekee.com/wiki2.0/images/829/43637/2022/3/27/468697.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_3461/h_2569/829/210034/2022/8/7/579432.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/3/706470.png');
+INSERT INTO `blue_archive_student` VALUES (136, '伊织', '銀鏡イオリ', 3, 3, 3, '59300', 'https://cdnimg.gamekee.com/wiki2.0/images/829/4408/2021/10/4/582408.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_3160/h_2219/829/210034/2022/8/18/276426.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/3/371282.jpg');
+INSERT INTO `blue_archive_student` VALUES (137, '伊织（泳装）', '银镜伊织', 3, 3, 3, '83867', 'https://cdnimg.gamekee.com/wiki2.0/images/829/90255/2021/10/4/431564.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_3450/h_2564/829/43637/2022/7/19/294326.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/3/719425.png');
+INSERT INTO `blue_archive_student` VALUES (138, '樱子', '歌住サクラコ', 3, 3, 3, '583291', 'https://cdnimg.gamekee.com/wiki2.0/images/w_817/h_1089/829/43637/2023/1/10/523676.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_3310/h_2643/829/43637/2023/1/10/891169.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2023/1/10/73693.png');
+INSERT INTO `blue_archive_student` VALUES (139, '优香', '早濑ユウカ', 3, 3, 3, '67658', 'https://cdnimg.gamekee.com/images/www/1611546956247_51333227.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_3155/h_2356/829/43637/2022/7/19/177336.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/3/10534.png');
+INSERT INTO `blue_archive_student` VALUES (140, '优香（体操服）', '早瀬 ユウカ', 3, 3, 3, '170295', 'https://cdnimg.gamekee.com/wiki2.0/images/w_908/h_1210/829/43637/2022/9/26/465972.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_3451/h_2562/829/43637/2022/9/26/120802.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/9/26/165423.png');
+INSERT INTO `blue_archive_student` VALUES (141, '忧', '古関 ウイ', 3, 3, 3, '151345', 'https://cdnimg.gamekee.com/wiki2.0/images/829/43637/2022/3/28/672011.jpg', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/3/35653.png');
+INSERT INTO `blue_archive_student` VALUES (142, '忧（泳装）', '古関 ウイ', 3, 3, 3, '595933', 'https://cdnimg.gamekee.com/wiki2.0/images/w_908/h_1210/829/43637/2023/6/25/943708.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_3670/h_2677/829/43637/2023/6/24/87991.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2023/6/27/301023.png');
+INSERT INTO `blue_archive_student` VALUES (143, '柚子', '花岡（はなおか）ユズ', 3, 3, 3, '77109', 'https://cdnimg.gamekee.com/wiki2.0/images/829/72324/2021/10/4/12581.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_1788/h_1005/829/190853/2022/7/21/577376.jpeg,https://cdnimg.gamekee.com/wiki2.0/images/w_960/h_540/829/43637/2022/5/15/137437.gif', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/3/954070.png');
+INSERT INTO `blue_archive_student` VALUES (144, '柚子（女仆）', '花岡（はなおか）ユズ', 3, 3, 3, '589650', 'https://cdnimg.gamekee.com/wiki2.0/images/w_908/h_1210/829/43637/2023/3/26/712333.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_3451/h_2555/829/43637/2023/3/26/903751.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2023/3/26/565494.png');
+INSERT INTO `blue_archive_student` VALUES (145, '月咏', '大野月咏', 3, 3, 3, '155968', 'https://cdnimg.gamekee.com/wiki2.0/images/829/43637/2022/4/11/910183.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_2337/h_1247/829/43637/2022/6/3/503052.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/3/984847.png');
+INSERT INTO `blue_archive_student` VALUES (146, '真白', '静山（しずやま）マシロ', 3, 3, 3, '69549', 'https://cdnimg.gamekee.com/wiki2.0/images/829/90255/2021/10/4/857558.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_3157/h_2217/829/43637/2022/7/19/917283.png,https://cdnimg.gamekee.com/wiki2.0/images/w_960/h_540/829/43637/2022/5/15/593818.gif,https://cdnimg.gamekee.com/wiki2.0/images/w_1920/h_1357/829/43637/2022/11/23/522796.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/3/635526.png');
+INSERT INTO `blue_archive_student` VALUES (147, '真白（泳装）', '静山 マシロ', 3, 3, 3, '81812', 'https://cdnimg.gamekee.com/wiki2.0/images/829/94828/2021/10/4/43303.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_1920/h_1080/829/190853/2022/7/21/629770.png,https://cdnimg.gamekee.com/wiki2.0/images/w_940/h_540/829/43637/2022/5/15/46144.gif', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/3/936291.png');
+INSERT INTO `blue_archive_student` VALUES (148, '真纪', ' 小塗（こぬり）マキ', 3, 3, 3, '67654', 'https://cdnimg.gamekee.com/wiki2.0/images/829/4408/2021/10/4/76305.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_3158/h_2218/829/43637/2022/7/25/879310.png,https://cdnimg.gamekee.com/wiki2.0/images/w_960/h_540/829/43637/2022/5/15/795150.gif', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/3/23870.png');
+INSERT INTO `blue_archive_student` VALUES (149, '志美子', '円堂シミコ', 3, 3, 3, '66269', 'https://cdnimg.gamekee.com/wiki2.0/images/829/94828/2021/10/5/884770.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_3446/h_2674/829/43637/2022/7/19/515029.png,https://cdnimg.gamekee.com/wiki2.0/images/w_3572/h_2505/829/43637/2022/7/19/834696.png,https://cdnimg.gamekee.com/wiki2.0/images/w_940/h_540/829/43637/2022/5/14/594916.gif', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/4/542016.png');
+INSERT INTO `blue_archive_student` VALUES (150, '朱莉', '牛牧ジュリ', 3, 3, 3, '63927', 'https://cdnimg.gamekee.com/wiki2.0/images/829/72324/2021/10/4/365700.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_3452/h_2546/829/43637/2022/11/29/444996.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/4/595701.png');
+INSERT INTO `blue_archive_student` VALUES (151, '朱音', '室笠（むろかさ）アカネ', 3, 3, 3, '66752', 'https://cdnimg.gamekee.com/wiki2.0/images/829/4408/2021/10/5/68758.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_1920/h_1080/829/190853/2022/7/21/196381.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/3/660745.png');
+INSERT INTO `blue_archive_student` VALUES (152, '朱音（兔女郎）', '室笠（むろかさ）アカネ', 3, 3, 3, '168947', 'https://cdnimg.gamekee.com/wiki2.0/images/w_908/h_1210/829/43637/2022/9/12/928649.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_3443/h_2552/829/43637/2022/9/12/213069.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/9/12/364951.png');
+INSERT INTO `blue_archive_student` VALUES (153, '渚', '桐藤 ナギサ', 3, 3, 3, '584418', 'https://cdnimg.gamekee.com/wiki2.0/images/w_908/h_1210/829/43637/2023/1/22/831693.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_2163/h_1080/829/190853/2023/1/22/223226.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2023/1/22/748541.png');
+INSERT INTO `blue_archive_student` VALUES (154, '梓', '白洲アズサ（白洲梓）', 3, 3, 3, '77111', 'https://cdnimg.gamekee.com/wiki2.0/images/829/90255/2021/10/4/702536.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_3156/h_2134/829/210034/2022/10/27/676768.png,https://cdnimg.gamekee.com/wiki2.0/images/w_1701/h_1243/829/43637/2023/0/17/463437.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/3/864632.png');
+INSERT INTO `blue_archive_student` VALUES (155, '梓（泳装）', '白洲アズサ（白洲梓）', 3, 3, 3, '81811', 'https://cdnimg.gamekee.com/wiki2.0/images/829/94828/2021/10/4/388490.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_3451/h_2559/829/43637/2023/4/16/180831.png,https://cdnimg.gamekee.com/wiki2.0/images/w_2720/h_1357/829/43637/2023/0/17/60502.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/3/705704.png');
 
 -- ----------------------------
 -- Table structure for chat_menu
 -- ----------------------------
 DROP TABLE IF EXISTS `chat_menu`;
 CREATE TABLE `chat_menu`  (
-  `id` int NOT NULL,
+  `id` int(11) NOT NULL,
   `up` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `s` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `src` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
@@ -514,7 +604,7 @@ INSERT INTO `chat_menu` VALUES (240, '2023/02/05/00:06', '[SLG佳作/官中/PC+�
 -- ----------------------------
 DROP TABLE IF EXISTS `common_const`;
 CREATE TABLE `common_const`  (
-  `id` int NOT NULL,
+  `id` int(11) NOT NULL,
   `key` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `value` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `type` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -542,13 +632,13 @@ INSERT INTO `common_const` VALUES (12, 'mys_bh3_url', '/bh3/wiki/content/{id}/de
 -- ----------------------------
 DROP TABLE IF EXISTS `genshin_book`;
 CREATE TABLE `genshin_book`  (
-  `id` int NOT NULL,
+  `id` int(11) NOT NULL,
   `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `name_en` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `name_ja` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
-  `book` int NULL DEFAULT NULL,
-  `star` int NULL DEFAULT NULL,
-  `week` int NULL DEFAULT NULL,
+  `book` int(11) NULL DEFAULT NULL,
+  `star` int(11) NULL DEFAULT NULL,
+  `week` int(11) NULL DEFAULT NULL,
   `mhy_url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `wiki_url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `icon_url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
@@ -609,7 +699,7 @@ INSERT INTO `genshin_book` VALUES (45, '「秩序」的指引', 'Guide to Order'
 -- ----------------------------
 DROP TABLE IF EXISTS `genshin_card`;
 CREATE TABLE `genshin_card`  (
-  `id` int NOT NULL,
+  `id` int(11) NOT NULL,
   `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `icon_url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
@@ -803,13 +893,13 @@ INSERT INTO `genshin_card` VALUES (177, '月桂的宝冠', 'n331033', '/img/i_n3
 -- ----------------------------
 DROP TABLE IF EXISTS `genshin_item`;
 CREATE TABLE `genshin_item`  (
-  `id` int NOT NULL,
+  `id` int(11) NOT NULL,
   `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `name_en` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `name_ja` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
-  `item` int NULL DEFAULT NULL,
-  `star` int NULL DEFAULT NULL,
-  `week` int NULL DEFAULT NULL,
+  `item` int(11) NULL DEFAULT NULL,
+  `star` int(11) NULL DEFAULT NULL,
+  `week` int(11) NULL DEFAULT NULL,
   `mhy_url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `wiki_url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `icon_url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
@@ -885,7 +975,7 @@ INSERT INTO `genshin_item` VALUES (60, '无垢之海的银杯', 'Silver Goblet o
 -- ----------------------------
 DROP TABLE IF EXISTS `genshin_map`;
 CREATE TABLE `genshin_map`  (
-  `id` int NOT NULL,
+  `id` int(11) NOT NULL,
   `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `icon` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
@@ -981,9 +1071,9 @@ INSERT INTO `genshin_map` VALUES (450, '柽木', 'https://uploadstatic.mihoyo.co
 -- ----------------------------
 DROP TABLE IF EXISTS `genshin_pool`;
 CREATE TABLE `genshin_pool`  (
-  `id` int NOT NULL COMMENT '主键',
+  `id` int(11) NOT NULL COMMENT '主键',
   `version` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '版本号',
-  `stage` tinyint NULL DEFAULT NULL COMMENT '卡池阶段(1, 2, 3期)',
+  `stage` tinyint(4) NULL DEFAULT NULL COMMENT '卡池阶段(1, 2, 3期)',
   `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL COMMENT '卡池名称',
   `pool_start` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL COMMENT '卡池开始日期',
   `pool_end` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL COMMENT '卡池结束日期',
@@ -1136,7 +1226,7 @@ INSERT INTO `genshin_pool` VALUES (133, '4.0', 2, NULL, '2023.09.05', '2023.09.2
 -- ----------------------------
 DROP TABLE IF EXISTS `genshin_relation`;
 CREATE TABLE `genshin_relation`  (
-  `id` int NOT NULL,
+  `id` int(11) NOT NULL,
   `element_type` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `weapon_type` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `area_type` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
@@ -1171,15 +1261,15 @@ INSERT INTO `genshin_relation` VALUES (14, NULL, NULL, NULL, '「秩序」', '�
 -- ----------------------------
 DROP TABLE IF EXISTS `genshin_role`;
 CREATE TABLE `genshin_role`  (
-  `id` int NOT NULL,
+  `id` int(11) NOT NULL,
   `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `name_en` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `name_ja` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
-  `star` int NULL DEFAULT NULL,
-  `element` int NULL DEFAULT NULL,
-  `weapon` int NULL DEFAULT NULL,
-  `book` int NULL DEFAULT NULL,
-  `area` int NULL DEFAULT NULL,
+  `star` int(11) NULL DEFAULT NULL,
+  `element` int(11) NULL DEFAULT NULL,
+  `weapon` int(11) NULL DEFAULT NULL,
+  `book` int(11) NULL DEFAULT NULL,
+  `area` int(11) NULL DEFAULT NULL,
   `mhy_url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `wiki_url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `icon_url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
@@ -1269,7 +1359,7 @@ INSERT INTO `genshin_role` VALUES (74, '重云', 'Chongyun', '重雲', 4, 3, 1, 
 -- ----------------------------
 DROP TABLE IF EXISTS `genshin_version`;
 CREATE TABLE `genshin_version`  (
-  `id` int NOT NULL COMMENT '主键',
+  `id` int(11) NOT NULL COMMENT '主键',
   `version` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '版本号',
   `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL COMMENT '版本名称',
   `version_start` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL COMMENT '版本开始日期',
@@ -1316,13 +1406,13 @@ INSERT INTO `genshin_version` VALUES (28, '4.0', '仿若无因飘落的轻雨', 
 -- ----------------------------
 DROP TABLE IF EXISTS `genshin_weapon`;
 CREATE TABLE `genshin_weapon`  (
-  `id` int NOT NULL,
+  `id` int(11) NOT NULL,
   `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `name_en` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `name_ja` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
-  `weapon` int NULL DEFAULT NULL,
-  `star` int NULL DEFAULT NULL,
-  `item` int NULL DEFAULT NULL,
+  `weapon` int(11) NULL DEFAULT NULL,
+  `star` int(11) NULL DEFAULT NULL,
+  `item` int(11) NULL DEFAULT NULL,
   `mhy_url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `wiki_url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `icon_url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
@@ -1512,7 +1602,7 @@ INSERT INTO `genshin_weapon` VALUES (174, '最初的大魔术', 'The First Great
 -- ----------------------------
 DROP TABLE IF EXISTS `honkai_relation`;
 CREATE TABLE `honkai_relation`  (
-  `id` int NOT NULL,
+  `id` int(11) NOT NULL,
   `element` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL COMMENT '基本属性',
   `role` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL COMMENT '人物类型',
   `star` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL COMMENT '品质阶级',
@@ -1560,7 +1650,7 @@ INSERT INTO `honkai_relation` VALUES (29, NULL, '西琳', NULL, NULL);
 -- ----------------------------
 DROP TABLE IF EXISTS `honkai_role`;
 CREATE TABLE `honkai_role`  (
-  `id` int NOT NULL,
+  `id` int(11) NOT NULL,
   `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `element` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `role` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
@@ -1669,9 +1759,9 @@ INSERT INTO `honkai_role` VALUES (89, '终焉之律者', '4', '0', '0', '0', '20
 -- ----------------------------
 DROP TABLE IF EXISTS `person_spring`;
 CREATE TABLE `person_spring`  (
-  `id` int NOT NULL AUTO_INCREMENT,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
-  `age` int NULL DEFAULT NULL,
+  `age` int(11) NULL DEFAULT NULL,
   `city` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `note` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
@@ -1690,7 +1780,7 @@ INSERT INTO `person_spring` VALUES (5, '小倍', 21, '北京', '');
 -- ----------------------------
 DROP TABLE IF EXISTS `qq_chat`;
 CREATE TABLE `qq_chat`  (
-  `id` int NOT NULL,
+  `id` int(11) NOT NULL,
   `type` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL COMMENT 'word/img/mp4/file',
   `msg` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `class` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
@@ -1711,9 +1801,9 @@ INSERT INTO `qq_chat` VALUES (3, 'img', 'assets\\img\\page1\\002.jpg', NULL, NUL
 -- ----------------------------
 DROP TABLE IF EXISTS `upload_dir`;
 CREATE TABLE `upload_dir`  (
-  `id` int NOT NULL AUTO_INCREMENT,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `dir_name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `create_start` bigint NULL DEFAULT NULL,
+  `create_start` bigint(20) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 11 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = DYNAMIC;
 
@@ -1726,16 +1816,16 @@ CREATE TABLE `upload_dir`  (
 -- ----------------------------
 DROP TABLE IF EXISTS `upload_files`;
 CREATE TABLE `upload_files`  (
-  `id` int NOT NULL AUTO_INCREMENT,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `dir_name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `tags` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
-  `size` bigint NULL DEFAULT NULL,
+  `size` bigint(20) NULL DEFAULT NULL,
   `type` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `file_type` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `extension` varchar(16) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `note` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
-  `create_time` bigint NULL DEFAULT NULL,
+  `create_time` bigint(20) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 27 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = DYNAMIC;
 
@@ -1748,9 +1838,9 @@ CREATE TABLE `upload_files`  (
 -- ----------------------------
 DROP TABLE IF EXISTS `upload_tags`;
 CREATE TABLE `upload_tags`  (
-  `id` int NOT NULL AUTO_INCREMENT,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `tag` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `create_start` bigint NULL DEFAULT NULL,
+  `create_start` bigint(20) NULL DEFAULT NULL,
   PRIMARY KEY (`id`, `tag`) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 10 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = DYNAMIC;
 
