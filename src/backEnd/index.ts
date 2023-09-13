@@ -50,13 +50,13 @@ const GetPage = (len: number, page: Page) => {
 
 // 通过规则判断是否匹配
 const checkDataByRule = (data1: any, data2: any, rule?: string) => {
-  if(!rule) { rule = '=' }
-  if(rule == '=') {
+  if (!rule) { rule = '=' }
+  if (rule == '=') {
     return (data1 == data2)
   }
-  else if(rule == '包含') {
-    if(!data1) { return false }
-    if(!data2) { return true }
+  else if (rule == '包含') {
+    if (!data1) { return false }
+    if (!data2) { return true }
     return data1.includes(data2)
   }
 }
@@ -71,18 +71,18 @@ const checkDataByRule = (data1: any, data2: any, rule?: string) => {
  *    rule: 原字段和关联字段关联条件 = != > >= <= < 包含 不包含
  * }]
  */
-const LeftJoin = (dataArr: any[], joinOptionArr: { joinArr: any[], key: [string, string], keyArr: {key: string, res: string}[], rule?: string}[]) => {
+const LeftJoin = (dataArr: any[], joinOptionArr: { joinArr: any[], key: [string, string], keyArr: { key: string, res: string }[], rule?: string }[]) => {
   let res: any[] = []
-  for(let a = 0; a < dataArr.length; ++a) {
+  for (let a = 0; a < dataArr.length; ++a) {
     let tmpData = dataArr[a]
     let resData = { ...tmpData }
-    for(let i = 0; i < joinOptionArr.length; ++i) {
+    for (let i = 0; i < joinOptionArr.length; ++i) {
       let { joinArr, key, rule, keyArr } = joinOptionArr[i]
-      for(let b = 0; b < joinArr.length; ++b) {
+      for (let b = 0; b < joinArr.length; ++b) {
         let tmpJoin = joinArr[b]
-        if(checkDataByRule(tmpData[key[0]], tmpJoin[key[1]], rule)) {
+        if (checkDataByRule(tmpData[key[0]], tmpJoin[key[1]], rule)) {
           let tmpJoinData = {} as any
-          for(let j = 0; j < keyArr.length; ++j) {
+          for (let j = 0; j < keyArr.length; ++j) {
             let k = keyArr[j]
             tmpJoinData[k.res] = tmpJoin[k.key]
           }
@@ -97,7 +97,7 @@ const LeftJoin = (dataArr: any[], joinOptionArr: { joinArr: any[], key: [string,
     res.push(resData)
   }
   return res
-} 
+}
 
 
 /**
@@ -337,7 +337,7 @@ export const _getHonkaiRoleInfo = (params = {} as any) => {
         let e = f_honkaiRole[i] as any
         let flag: boolean = true
         // 关键字包括 正式名字或人物类型
-        if (e.name.indexOf(name) > -1 || honkaiRelation[Number(e.role)+1].role.indexOf(name) > -1) {
+        if (e.name.indexOf(name) > -1 || honkaiRelation[Number(e.role) + 1].role.indexOf(name) > -1) {
           flag = Chk([
             [element, e.element],
             [role, e.role],
@@ -367,19 +367,19 @@ export const _getHonkaiRoleInfo = (params = {} as any) => {
 const checkPoolInfoData = () => {
   let msg = ''
   let msgArr = []
-  if(!genshinPool) {
+  if (!genshinPool) {
     msgArr.push('卡池数据')
   }
-  else if(!genshinVersion) {
+  else if (!genshinVersion) {
     msgArr.push('版本信息')
   }
-  else if(!genshinRole) {
+  else if (!genshinRole) {
     msgArr.push('角色数据')
   }
-  else if(!genshinWeapon) {
+  else if (!genshinWeapon) {
     msgArr.push('武器数据')
   }
-  if(msgArr.length == 0) { return false }
+  if (msgArr.length == 0) { return false }
   msg = `${msgArr.join('、')}获取失败！`
   return Res({}, 500, msg)
 }
@@ -389,7 +389,7 @@ const calcPoolData = () => {
   let roleNumOjb = {} as any
   let weaponNumObj = {} as any
   // 记录数量
-  for(let i = 0; i < genshinRole.length; ++i) {
+  for (let i = 0; i < genshinRole.length; ++i) {
     let role = genshinRole[i]
     roleNumOjb[role.name] = {
       count: 0,   // up次数
@@ -400,7 +400,7 @@ const calcPoolData = () => {
       now_up: {},     // 当前up时间信息
     }
   }
-  for(let i = 0; i < genshinWeapon.length; ++i) {
+  for (let i = 0; i < genshinWeapon.length; ++i) {
     let weapon = genshinWeapon[i]
     weaponNumObj[weapon.name] = {
       count: 0,
@@ -414,23 +414,23 @@ const calcPoolData = () => {
   // 处理up次数
   // 返回次数字符串和对象数组
   const dealUpCount = (poolItem: any, nameStr: string, star: any, type: any): [any, any] => {
-    if(!nameStr) { return ['', []] }
+    if (!nameStr) { return ['', []] }
     let tmpCount = [] as any
     let countStr = ''
     let objArr = nameStr.split(' ').map((name: any) => {
       let upContext = {} as any  // 卡池up的前后信息
       let rObj = roleNumOjb[name]
       let wObj = weaponNumObj[name]
-      if(type == 1 && rObj && rObj.count != undefined) {
+      if (type == 1 && rObj && rObj.count != undefined) {
         ++roleNumOjb[name].count;
         roleNumOjb[name].star = star
         roleNumOjb[name].type = type
 
         // 存在当期则先把now_up作为last_up，并且版本号不同，然后都把当期作为now_up
-        if(rObj.now_up && rObj.now_up.id && poolItem.version != rObj.now_up.version) {
+        if (rObj.now_up && rObj.now_up.id && poolItem.version != rObj.now_up.version) {
           roleNumOjb[name].last_up = { ...rObj.now_up }
         }
-        roleNumOjb[name].now_up = { 
+        roleNumOjb[name].now_up = {
           id: poolItem.id,
           version: poolItem.version,
           name: poolItem.name,
@@ -438,16 +438,16 @@ const calcPoolData = () => {
           pool_end: poolItem.pool_end
         }
         upContext = { ...roleNumOjb[name] }
-      } 
-      else if(type == 2 && wObj && wObj.count != undefined) {
+      }
+      else if (type == 2 && wObj && wObj.count != undefined) {
         ++weaponNumObj[name].count;
         weaponNumObj[name].star = star
         weaponNumObj[name].type = type
 
-        if(wObj.now_up && wObj.now_up.id) {
+        if (wObj.now_up && wObj.now_up.id) {
           weaponNumObj[name].last_up = { ...wObj.now_up }
         }
-        weaponNumObj[name].now_up = { 
+        weaponNumObj[name].now_up = {
           id: poolItem.id,
           version: poolItem.version,
           name: poolItem.name,
@@ -471,7 +471,7 @@ const calcPoolData = () => {
     rp.day2now = Math.ceil((new Date().getTime() - new Date(p.pool_start).getTime()) / DAY)
     // 卡池天数
     rp.pool_day = Math.ceil((new Date(p.pool_end).getTime() - new Date(p.pool_start).getTime()) / DAY)
-    if(rp.name) {
+    if (rp.name) {
       rp.type = 1;
       rp.up5 = dealUpCount(rp, rp.up_5, 5, 1); // 5星up次数
       rp.up4 = dealUpCount(rp, rp.up_4, 4, 1); // 4星up次数
@@ -494,15 +494,15 @@ const calcPoolData = () => {
 export const _getPoolInfo = (params = {} as any) => {
   return new Promise((resolve, reject) => {
     let resp = checkPoolInfoData()
-    if(!resp) {
+    if (!resp) {
       let { search, type, page } = params
       let calcPool = storage.get('genshinPool')
-      if(!calcPool) {
+      if (!calcPool) {
         calcPool = calcPoolData()
         storage.set('genshinPool', calcPool)
       }
       let { pool, roleNumOjb, weaponNumObj } = calcPool
-      
+
       // 先整理和计算数据和 连表
       let f_genshinPool = LeftJoin(pool, [
         {
@@ -524,7 +524,7 @@ export const _getPoolInfo = (params = {} as any) => {
         let e = f_genshinPool[i] as any
         let { version, version_name, name, up_5, up_4 } = e
         let flag: boolean = true
-        
+
         if (
           !search || (
             search &&
@@ -559,7 +559,7 @@ export const _getPoolInfo = (params = {} as any) => {
 export const _getStudentInfo = (params = {} as any) => {
   return new Promise((resolve, reject) => {
     if (blueArchiveStudent) {
-      let { name, position, weapon, star, page } = params
+      let { name, position, weapon, star, school, club, attack, defense, map_get, banner, page } = params
       name = name || ''
       let _blueArchiveStudent: any[] = []
       for (let i = 0; i < blueArchiveStudent.length; ++i) {
@@ -570,6 +570,12 @@ export const _getStudentInfo = (params = {} as any) => {
             [star, e.star],
             [weapon, e.weapon],
             [position, e.position],
+            [school, e.school],
+            [club, e.club],
+            [attack, e.attack],
+            [defense, e.defense],
+            [map_get, e.map_get],
+            [banner, e.banner]
           ])
           if (flag) {
             _blueArchiveStudent.push(e)
@@ -621,7 +627,7 @@ export const _getNPCInfo = (params = {} as any) => {
   })
 }
 
-export const _getBlueAchiveRelationInfo = (params = {} as any) => {
+export const _getBlueAchiveRelationInfo = () => {
   return new Promise((resolve, reject) => {
     if (blueArchiveRelation) {
       return resolve(Res(blueArchiveRelation))

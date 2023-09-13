@@ -16,6 +16,6 @@ export const getNPCInfo = (params: any) => {
 }
 
 // 获取关系列表
-export const getBlueAchiveRelationInfo = (params: any) => {
-  return _getBlueAchiveRelationInfo(params)
+export const getBlueAchiveRelationInfo = () => {
+  return _getBlueAchiveRelationInfo()
 }

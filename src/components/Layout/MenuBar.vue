@@ -31,7 +31,7 @@ const renderRoute = (name: string, text: string) => {
 };
 
 const normalIcon = (url: string) => {
-  return h(CommonIcon, {url, size: 20}, { default: () => h('') })
+  return h(CommonIcon, { url, size: 20 }, { default: () => h('') })
 }
 
 let activeKey = ref<string | undefined | null>(route.name as string || null);
@@ -96,22 +96,21 @@ const menuOptions: MenuOption[] = [
   {
     label: "碧蓝档案",
     key: "blue_archive",
-    icon: renderIcon(BookIcon),
+    icon: renderIcon(normalIcon('https://cdnimg.gamekee.com/wiki2.0/images/w_240/h_237/829/43637/2023/6/31/862156.png')),
     children: [
       {
-        label: renderRoute("student", "学员"),
+        label: renderRoute("student", "学生"),
         key: "student",
-        icon: renderIcon(BookIcon),
+        icon: renderIcon(normalIcon('https://cdnimg.gamekee.com/wiki2.0/images/w_310/h_310/829/43637/2023/7/1/200433.png')),
       },
       {
         label: renderRoute("npc", "NPC和卫星"),
         key: "npc",
-        icon: renderIcon(BookIcon),
+        icon: renderIcon(normalIcon('https://cdnimg.gamekee.com/wiki2.0/images/w_200/h_200/829/43637/2023/6/24/530011.jpg')),
       },
     ]
   }
 ];
 </script>
 
-<style lang="scss">
-</style>
+<style lang="scss"></style>

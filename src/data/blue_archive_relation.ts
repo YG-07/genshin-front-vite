@@ -2,51 +2,452 @@ export const blueArchiveRelation: any[] = [
   {
     "id": 0,
     "position_type": "输出",
-    "weapon_type": "SG"
+    "weapon_type": "FT",
+    "school_type": "阿拜多斯",
+    "club_type": "对策委员会",
+    "attack_type": "爆发",
+    "defense_type": "爆发",
+    "map_get_type": "不可刷取",
+    "banner_type": "常驻"
   },
   {
     "id": 1,
     "position_type": "坦克",
-    "weapon_type": "SMG"
+    "weapon_type": "SG",
+    "school_type": "格黑娜",
+    "club_type": "生活安全局",
+    "attack_type": "贯通",
+    "defense_type": "贯通",
+    "map_get_type": "可刷取",
+    "banner_type": "限定"
   },
   {
     "id": 2,
     "position_type": "治疗",
-    "weapon_type": "AR"
+    "weapon_type": "SMG",
+    "school_type": "三一",
+    "club_type": "阿里乌斯小队",
+    "attack_type": "神秘",
+    "defense_type": "神秘",
+    "map_get_type": null,
+    "banner_type": "活动"
   },
   {
     "id": 3,
     "position_type": "辅助",
-    "weapon_type": "GL"
+    "weapon_type": "AR",
+    "school_type": "千年科学",
+    "club_type": "万魔殿",
+    "attack_type": "弹力",
+    "defense_type": "弹力",
+    "map_get_type": null,
+    "banner_type": null
   },
   {
     "id": 4,
     "position_type": "T.S",
-    "weapon_type": "HG"
+    "weapon_type": "GL",
+    "school_type": "百鬼夜行",
+    "club_type": "风纪委员会",
+    "attack_type": null,
+    "defense_type": null,
+    "map_get_type": null,
+    "banner_type": null
   },
   {
     "id": 5,
     "position_type": null,
-    "weapon_type": "RL"
+    "weapon_type": "HG",
+    "school_type": "山海经",
+    "club_type": "便利屋68",
+    "attack_type": null,
+    "defense_type": null,
+    "map_get_type": null,
+    "banner_type": null
   },
   {
     "id": 6,
     "position_type": null,
-    "weapon_type": "SR"
+    "weapon_type": "RL",
+    "school_type": "阿里乌斯",
+    "club_type": "美食研究会",
+    "attack_type": null,
+    "defense_type": null,
+    "map_get_type": null,
+    "banner_type": null
   },
   {
     "id": 7,
     "position_type": null,
-    "weapon_type": "RG"
+    "weapon_type": "SR",
+    "school_type": "赤冬",
+    "club_type": "料理部",
+    "attack_type": null,
+    "defense_type": null,
+    "map_get_type": null,
+    "banner_type": null
   },
   {
     "id": 8,
     "position_type": null,
-    "weapon_type": "MG"
+    "weapon_type": "RG",
+    "school_type": "SRT",
+    "club_type": "急救医学部",
+    "attack_type": null,
+    "defense_type": null,
+    "map_get_type": null,
+    "banner_type": null
   },
   {
     "id": 9,
     "position_type": null,
-    "weapon_type": "MT"
+    "weapon_type": "MG",
+    "school_type": "瓦尔基里",
+    "club_type": "温泉开发部",
+    "attack_type": null,
+    "defense_type": null,
+    "map_get_type": null,
+    "banner_type": null
+  },
+  {
+    "id": 10,
+    "position_type": null,
+    "weapon_type": "MT",
+    "school_type": "其他",
+    "club_type": "正义实现委员会",
+    "attack_type": null,
+    "defense_type": null,
+    "map_get_type": null,
+    "banner_type": null
+  },
+  {
+    "id": 11,
+    "position_type": null,
+    "weapon_type": null,
+    "school_type": null,
+    "club_type": "修女会",
+    "attack_type": null,
+    "defense_type": null,
+    "map_get_type": null,
+    "banner_type": null
+  },
+  {
+    "id": 12,
+    "position_type": null,
+    "weapon_type": null,
+    "school_type": null,
+    "club_type": "图书委员会",
+    "attack_type": null,
+    "defense_type": null,
+    "map_get_type": null,
+    "banner_type": null
+  },
+  {
+    "id": 13,
+    "position_type": null,
+    "weapon_type": null,
+    "school_type": null,
+    "club_type": "补习授课部",
+    "attack_type": null,
+    "defense_type": null,
+    "map_get_type": null,
+    "banner_type": null
+  },
+  {
+    "id": 14,
+    "position_type": null,
+    "weapon_type": null,
+    "school_type": null,
+    "club_type": "放学后甜点部",
+    "attack_type": null,
+    "defense_type": null,
+    "map_get_type": null,
+    "banner_type": null
+  },
+  {
+    "id": 15,
+    "position_type": null,
+    "weapon_type": null,
+    "school_type": null,
+    "club_type": "救护骑士团",
+    "attack_type": null,
+    "defense_type": null,
+    "map_get_type": null,
+    "banner_type": null
+  },
+  {
+    "id": 16,
+    "position_type": null,
+    "weapon_type": null,
+    "school_type": null,
+    "club_type": "三一自卫团",
+    "attack_type": null,
+    "defense_type": null,
+    "map_get_type": null,
+    "banner_type": null
+  },
+  {
+    "id": 17,
+    "position_type": null,
+    "weapon_type": null,
+    "school_type": null,
+    "club_type": "茶会",
+    "attack_type": null,
+    "defense_type": null,
+    "map_get_type": null,
+    "banner_type": null
+  },
+  {
+    "id": 18,
+    "position_type": null,
+    "weapon_type": null,
+    "school_type": null,
+    "club_type": "研讨会",
+    "attack_type": null,
+    "defense_type": null,
+    "map_get_type": null,
+    "banner_type": null
+  },
+  {
+    "id": 19,
+    "position_type": null,
+    "weapon_type": null,
+    "school_type": null,
+    "club_type": "游戏开发部",
+    "attack_type": null,
+    "defense_type": null,
+    "map_get_type": null,
+    "banner_type": null
+  },
+  {
+    "id": 20,
+    "position_type": null,
+    "weapon_type": null,
+    "school_type": null,
+    "club_type": "C&C",
+    "attack_type": null,
+    "defense_type": null,
+    "map_get_type": null,
+    "banner_type": null
+  },
+  {
+    "id": 21,
+    "position_type": null,
+    "weapon_type": null,
+    "school_type": null,
+    "club_type": "工程部",
+    "attack_type": null,
+    "defense_type": null,
+    "map_get_type": null,
+    "banner_type": null
+  },
+  {
+    "id": 22,
+    "position_type": null,
+    "weapon_type": null,
+    "school_type": null,
+    "club_type": "维利塔斯",
+    "attack_type": null,
+    "defense_type": null,
+    "map_get_type": null,
+    "banner_type": null
+  },
+  {
+    "id": 23,
+    "position_type": null,
+    "weapon_type": null,
+    "school_type": null,
+    "club_type": "训练部",
+    "attack_type": null,
+    "defense_type": null,
+    "map_get_type": null,
+    "banner_type": null
+  },
+  {
+    "id": 24,
+    "position_type": null,
+    "weapon_type": null,
+    "school_type": null,
+    "club_type": "特异现象搜查部",
+    "attack_type": null,
+    "defense_type": null,
+    "map_get_type": null,
+    "banner_type": null
+  },
+  {
+    "id": 25,
+    "position_type": null,
+    "weapon_type": null,
+    "school_type": null,
+    "club_type": "红冬事务局",
+    "attack_type": null,
+    "defense_type": null,
+    "map_get_type": null,
+    "banner_type": null
+  },
+  {
+    "id": 26,
+    "position_type": null,
+    "weapon_type": null,
+    "school_type": null,
+    "club_type": "227号特别班",
+    "attack_type": null,
+    "defense_type": null,
+    "map_get_type": null,
+    "banner_type": null
+  },
+  {
+    "id": 27,
+    "position_type": null,
+    "weapon_type": null,
+    "school_type": null,
+    "club_type": "工务部",
+    "attack_type": null,
+    "defense_type": null,
+    "map_get_type": null,
+    "banner_type": null
+  },
+  {
+    "id": 28,
+    "position_type": null,
+    "weapon_type": null,
+    "school_type": null,
+    "club_type": "知识解放战线",
+    "attack_type": null,
+    "defense_type": null,
+    "map_get_type": null,
+    "banner_type": null
+  },
+  {
+    "id": 29,
+    "position_type": null,
+    "weapon_type": null,
+    "school_type": null,
+    "club_type": "炼丹术研究会",
+    "attack_type": null,
+    "defense_type": null,
+    "map_get_type": null,
+    "banner_type": null
+  },
+  {
+    "id": 30,
+    "position_type": null,
+    "weapon_type": null,
+    "school_type": null,
+    "club_type": "梅花园",
+    "attack_type": null,
+    "defense_type": null,
+    "map_get_type": null,
+    "banner_type": null
+  },
+  {
+    "id": 31,
+    "position_type": null,
+    "weapon_type": null,
+    "school_type": null,
+    "club_type": "玄龙门",
+    "attack_type": null,
+    "defense_type": null,
+    "map_get_type": null,
+    "banner_type": null
+  },
+  {
+    "id": 32,
+    "position_type": null,
+    "weapon_type": null,
+    "school_type": null,
+    "club_type": "玄武商会",
+    "attack_type": null,
+    "defense_type": null,
+    "map_get_type": null,
+    "banner_type": null
+  },
+  {
+    "id": 33,
+    "position_type": null,
+    "weapon_type": null,
+    "school_type": null,
+    "club_type": "阴阳部",
+    "attack_type": null,
+    "defense_type": null,
+    "map_get_type": null,
+    "banner_type": null
+  },
+  {
+    "id": 34,
+    "position_type": null,
+    "weapon_type": null,
+    "school_type": null,
+    "club_type": "节日运营委员会",
+    "attack_type": null,
+    "defense_type": null,
+    "map_get_type": null,
+    "banner_type": null
+  },
+  {
+    "id": 35,
+    "position_type": null,
+    "weapon_type": null,
+    "school_type": null,
+    "club_type": "忍术研究部",
+    "attack_type": null,
+    "defense_type": null,
+    "map_get_type": null,
+    "banner_type": null
+  },
+  {
+    "id": 36,
+    "position_type": null,
+    "weapon_type": null,
+    "school_type": null,
+    "club_type": "修行部",
+    "attack_type": null,
+    "defense_type": null,
+    "map_get_type": null,
+    "banner_type": null
+  },
+  {
+    "id": 37,
+    "position_type": null,
+    "weapon_type": null,
+    "school_type": null,
+    "club_type": "无社团（停学）",
+    "attack_type": null,
+    "defense_type": null,
+    "map_get_type": null,
+    "banner_type": null
+  },
+  {
+    "id": 38,
+    "position_type": null,
+    "weapon_type": null,
+    "school_type": null,
+    "club_type": "RABBIT小队",
+    "attack_type": null,
+    "defense_type": null,
+    "map_get_type": null,
+    "banner_type": null
+  },
+  {
+    "id": 39,
+    "position_type": null,
+    "weapon_type": null,
+    "school_type": null,
+    "club_type": "公安局",
+    "attack_type": null,
+    "defense_type": null,
+    "map_get_type": null,
+    "banner_type": null
+  },
+  {
+    "id": 40,
+    "position_type": null,
+    "weapon_type": null,
+    "school_type": null,
+    "club_type": "其他",
+    "attack_type": null,
+    "defense_type": null,
+    "map_get_type": null,
+    "banner_type": null
   }
 ]

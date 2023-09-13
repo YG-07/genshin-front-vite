@@ -112,7 +112,7 @@ const routes: Readonly<RouteRecordRaw[]> = [
         name: 'student',
         component: () => import(/* webpackChunkName: "student" */ '@/views/BlueArchive/student.vue'),
         meta: {
-          title: '学员',
+          title: '学生',
           keepAlive: true
         }
       },

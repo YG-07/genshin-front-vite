@@ -1,7 +1,7 @@
 <template>
   <n-space class="UrlSelect" size="large">
-    <span v-show="ua">切换Url</span>
-    <n-select :value="select" @update:value="handleSelect" :options="options" :style="ua?`width: 200px`:''" />
+    <span v-show="ua">切换点击事件</span>
+    <n-select :value="select" @update:value="handleSelect" :options="options" :style="ua ? `width: 200px` : ''" />
   </n-space>
 </template>
 
@@ -28,7 +28,7 @@ const options: Option[] = [
 ]
 
 const handleSelect = (value: any, option: any) => {
-  if(select.value != value) {
+  if (select.value != value) {
     select.value = value
     storage.set('blueArchiveUrlSelect', value)
     emitter.emit('blueArchiveUrlSelect', value)
