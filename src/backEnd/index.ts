@@ -1,4 +1,5 @@
 import { storage } from './../utils/storage';
+import { DAY, Page } from "@/utils";
 import { honkaiRelation } from './../data/honkai_relation';
 import { honkaiRole } from '@/data/honkai_role';
 import { commonConst } from "@/data/common_const.js"
@@ -10,7 +11,9 @@ import { genshinWeapon } from '@/data/genshin_weapon';
 import { genshinCard } from '@/data/genshin_card';
 import { genshinPool } from '@/data/genshin_pool';
 import { genshinVersion } from '@/data/genshin_version';
-import { DAY, Page } from "@/utils";
+import { blueArchiveRelation } from '@/data/blue_archive_relation';
+import { blueArchiveNPC } from '@/data/blue_archive_npc';
+import { blueArchiveStudent } from '@/data/blue_archive_student';
 
 // 武器池名称
 const WEAPON_POOL = '神铸赋形'
@@ -549,6 +552,81 @@ export const _getPoolInfo = (params = {} as any) => {
       }))
     } else {
       return reject(resp)
+    }
+  })
+}
+
+export const _getStudentInfo = (params = {} as any) => {
+  return new Promise((resolve, reject) => {
+    if (blueArchiveStudent) {
+      let { name, position, weapon, star, page } = params
+      name = name || ''
+      let _blueArchiveStudent: any[] = []
+      for (let i = 0; i < blueArchiveStudent.length; ++i) {
+        let e = blueArchiveStudent[i] as any
+        let flag: boolean = true
+        if (e.name.indexOf(name) > -1) {
+          flag = Chk([
+            [star, e.star],
+            [weapon, e.weapon],
+            [position, e.position],
+          ])
+          if (flag) {
+            _blueArchiveStudent.push(e)
+          }
+        }
+      }
+      let { m, n } = GetPage(_blueArchiveStudent.length, page)
+      return resolve(Res({
+        records: _blueArchiveStudent.slice(m, n),
+        total: _blueArchiveStudent.length
+      }))
+    } else {
+      return reject(Res({
+        records: [],
+        total: 0
+      }, 500, '获取失败'))
+    }
+  })
+}
+
+export const _getNPCInfo = (params = {} as any) => {
+  return new Promise((resolve, reject) => {
+    if (blueArchiveNPC) {
+      let { name, position, weapon, star, page } = params
+      name = name || ''
+      let _blueArchiveNPC: any[] = []
+      for (let i = 0; i < blueArchiveNPC.length; ++i) {
+        let e = blueArchiveNPC[i] as any
+        let flag: boolean = true
+        if (e.name.indexOf(name) > -1) {
+          // 其他搜索字段
+          flag = true
+          if (flag) {
+            _blueArchiveNPC.push(e)
+          }
+        }
+      }
+      let { m, n } = GetPage(_blueArchiveNPC.length, page)
+      return resolve(Res({
+        records: _blueArchiveNPC.slice(m, n),
+        total: _blueArchiveNPC.length
+      }))
+    } else {
+      return reject(Res({
+        records: [],
+        total: 0
+      }, 500, '获取失败'))
+    }
+  })
+}
+
+export const _getBlueAchiveRelationInfo = (params = {} as any) => {
+  return new Promise((resolve, reject) => {
+    if (blueArchiveRelation) {
+      return resolve(Res(blueArchiveRelation))
+    } else {
+      return reject(Res([], 500, '获取失败'))
     }
   })
 }

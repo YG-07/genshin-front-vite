@@ -97,7 +97,36 @@ const routes: Readonly<RouteRecordRaw[]> = [
         }
       },
     ]
-  }
+  },
+  {
+    path: '/blue_archive',
+    name: 'blue_archive',
+    component: () => import(/* webpackChunkName: "home" */ '@/views/Home.vue'),
+    meta: {
+      title: '碧蓝档案',
+      keepAlive: true
+    },
+    children: [
+      {
+        path: 'student',
+        name: 'student',
+        component: () => import(/* webpackChunkName: "student" */ '@/views/BlueArchive/student.vue'),
+        meta: {
+          title: '学员',
+          keepAlive: true
+        }
+      },
+      {
+        path: 'npc',
+        name: 'npc',
+        component: () => import(/* webpackChunkName: "npc" */ '@/views/BlueArchive/npc.vue'),
+        meta: {
+          title: 'NPC和卫星',
+          keepAlive: true
+        }
+      },
+    ]
+  },
 ]
 
 export default routes as any

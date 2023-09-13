@@ -92,6 +92,23 @@ const menuOptions: MenuOption[] = [
         icon: renderIcon(normalIcon('https://uploadstatic.mihoyo.com/bh3-wiki/2021/10/21/6100274/e81e5f299d84ca0e8ec6b36f85328529_7664417501365594823.png')),
       },
     ]
+  },
+  {
+    label: "碧蓝档案",
+    key: "blue_archive",
+    icon: renderIcon(BookIcon),
+    children: [
+      {
+        label: renderRoute("student", "学员"),
+        key: "student",
+        icon: renderIcon(BookIcon),
+      },
+      {
+        label: renderRoute("npc", "NPC和卫星"),
+        key: "npc",
+        icon: renderIcon(BookIcon),
+      },
+    ]
   }
 ];
 </script>
