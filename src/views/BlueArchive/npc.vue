@@ -37,7 +37,7 @@
             <BluePicCard
               :src="item.imgSrc"
               :item="item"
-              :url="item.url"
+              :url="item.wiki_URL"
               :img-list="item.imgList"
             />
           </div>
@@ -140,7 +140,7 @@ import BlueUrlSelect from "@/components/content/BlueUrlSelect.vue";
     const detailUrl = `${blue_archive_base}${blue_archive_detail}`
     
     npcList.value = data?.records.map((e: any) => {
-      e.url = e.url ? detailUrl.replace('{id}', e.url) : ""
+      e.wiki_URL = detailUrl.replace('{id}', e.url)
       e.imgSrc = e.icon_url
       e.imgList = []
       if(e.img_urls) {

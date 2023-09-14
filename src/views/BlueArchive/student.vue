@@ -52,7 +52,7 @@
         </n-space>
         <n-space v-else-if="!loading && studentList.length > 0" :style="custStyle">
           <div v-for="(item, index) in studentList" :key="index">
-            <BluePicCard :src="item.imgSrc" :item="item" :url="item.url" :img-list="item.imgList" />
+            <BluePicCard :src="item.imgSrc" :item="item" :url="item.wiki_URL" :img-list="item.imgList" />
           </div>
         </n-space>
         <n-space v-else style="width: 100%;" :style="custStyle">
@@ -230,7 +230,7 @@ const queryStudentList = async () => {
   const detailUrl = `${blue_archive_base}${blue_archive_detail}`
 
   studentList.value = data?.records.map((e: any) => {
-    e.url = e.url ? detailUrl.replace('{id}', e.url) : ""
+    e.wiki_URL = detailUrl.replace('{id}', e.url)
     e.imgSrc = e.icon_url
     e.imgList = []
     if (e.img_urls) {
