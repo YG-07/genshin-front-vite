@@ -96,17 +96,17 @@ const menuOptions: MenuOption[] = [
   {
     label: "星穹铁道",
     key: "starrail",
-    icon: renderIcon(normalIcon('/public/role.png')),
+    icon: renderIcon(normalIcon('/role.png')),
     children: [
       {
         label: renderRoute("starrail_role", "角色"),
         key: "starrail_role",
-        icon: renderIcon(normalIcon('/public/role.png')),
+        icon: renderIcon(normalIcon('/role.png')),
       },
       {
         label: renderRoute("starrail_weapon", "光锥"),
         key: "starrail_weapon",
-        icon: renderIcon(normalIcon('/public/weapon.png')),
+        icon: renderIcon(normalIcon('/weapon.png')),
       },
     ]
   },

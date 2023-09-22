@@ -1,4 +1,4 @@
-export const StarRailWeapon: any[] = [
+export const starRailWeapon: any[] = [
   {
     "id": 1,
     "name": "「我」的诞生",

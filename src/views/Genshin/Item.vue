@@ -40,7 +40,7 @@
         </n-space>
         <n-space v-else-if="!loading && itemList.length > 0" :style="custStyle">
           <div v-for="(item, index) in itemList" :key="index">
-            <PicCard :src="item.imgSrc" :item="item" :mhy_url="item.mhy_url" :wiki_url="item.wiki_url" />
+            <PicCard round="0.75rem" :src="item.imgSrc" :item="item" :mhy_url="item.mhy_url" :wiki_url="item.wiki_url" />
           </div>
         </n-space>
         <n-space v-else style="width: 100%;" :style="custStyle">

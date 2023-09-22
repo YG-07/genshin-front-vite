@@ -11,7 +11,7 @@
  Target Server Version : 50726
  File Encoding         : 65001
 
- Date: 22/09/2023 14:39:17
+ Date: 22/09/2023 15:51:44
 */
 
 SET NAMES utf8mb4;
@@ -1854,7 +1854,6 @@ CREATE TABLE `star_rail_relation`  (
 -- ----------------------------
 -- Records of star_rail_relation
 -- ----------------------------
-INSERT INTO `star_rail_relation` VALUES (-1, '全部', '全部');
 INSERT INTO `star_rail_relation` VALUES (0, '物理', '毁灭');
 INSERT INTO `star_rail_relation` VALUES (1, '火', '智识');
 INSERT INTO `star_rail_relation` VALUES (2, '风', '巡猎');

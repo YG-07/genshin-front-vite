@@ -11,6 +11,9 @@ import { genshinWeapon } from '@/data/genshin_weapon';
 import { genshinCard } from '@/data/genshin_card';
 import { genshinPool } from '@/data/genshin_pool';
 import { genshinVersion } from '@/data/genshin_version';
+import { starRailRelation } from '@/data/star_rail_relation';
+import { starRailRole } from '@/data/star_rail_role';
+import { starRailWeapon } from '@/data/star_rail_weapon';
 import { blueArchiveRelation } from '@/data/blue_archive_relation';
 import { blueArchiveNPC } from '@/data/blue_archive_npc';
 import { blueArchiveStudent } from '@/data/blue_archive_student';
@@ -359,6 +362,83 @@ export const _getHonkaiRoleInfo = (params = {} as any) => {
         records: [],
         total: 0
       }, 500, '获取失败'))
+    }
+  })
+}
+
+export const _getStarRoleInfo = (params = {} as any) => {
+  return new Promise((resolve, reject) => {
+    if (starRailRole) {
+      let { name, element, weapon, star, page } = params
+      name = name || ''
+      let _starRailRole: any[] = []
+      for (let i = 0; i < starRailRole.length; ++i) {
+        let e = starRailRole[i] as any
+        let flag: boolean = true
+        if (e.name.indexOf(name) > -1) {
+          flag = Chk([
+            [star, e.star],
+            [weapon, e.weapon],
+            [element, e.element],
+          ])
+          if (flag) {
+            _starRailRole.push(e)
+          }
+        }
+      }
+      let { m, n } = GetPage(_starRailRole.length, page)
+      return resolve(Res({
+        records: _starRailRole.slice(m, n),
+        total: _starRailRole.length
+      }))
+    } else {
+      return reject(Res({
+        records: [],
+        total: 0
+      }, 500, '获取失败'))
+    }
+  })
+}
+
+export const _getStarWeaponInfo = (params = {} as any) => {
+  return new Promise((resolve, reject) => {
+    if (starRailWeapon) {
+      let { name, star, weapon, page } = params
+      name = name || ''
+      let _starRailWeapon: any[] = []
+      for (let i = 0; i < starRailWeapon.length; ++i) {
+        let e = starRailWeapon[i] as any
+        let flag: boolean = true
+        if (e.name.indexOf(name) > -1) {
+          flag = Chk([
+            [star, e.star],
+            [weapon, e.weapon]
+          ])
+          if (flag) {
+            _starRailWeapon.push(e);
+          }
+        }
+      }
+      let { m, n } = GetPage(_starRailWeapon.length, page)
+      return resolve(Res({
+        records: _starRailWeapon.slice(m, n),
+        total: _starRailWeapon.length
+      }))
+    } else {
+      return reject(Res({
+        records: [],
+        total: 0
+      }, 500, '获取失败'))
+    }
+  })
+}
+
+export const _getStarRelationInfo = (params = {} as any) => {
+  return new Promise((resolve, reject) => {
+    if (starRailRelation) {
+      return resolve(Res(starRailRelation))
+    } else {
+      return reject(Res([], 500, '获取失败'))
     }
   })
 }

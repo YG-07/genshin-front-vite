@@ -1,9 +1,4 @@
-export const StarRailRelation: any[] = [
-  {
-    "id": -1,
-    "element_type": "全部",
-    "weapon_type": "全部"
-  },
+export const starRailRelation: any[] = [
   {
     "id": 0,
     "element_type": "物理",

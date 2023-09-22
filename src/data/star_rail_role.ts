@@ -1,4 +1,4 @@
-export const StarRailRole: any[] = [
+export const starRailRole: any[] = [
   {
     "id": 1,
     "name": "阿兰",

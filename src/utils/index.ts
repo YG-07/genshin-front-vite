@@ -4,6 +4,7 @@ import { commonMethod, checkUA, queryCommonUrl, emitter } from './common';
 import { queryGenshinRelation } from './genshin';
 import { queryHonkaiRelation } from './honkai';
 import { queryBlueArchiveRelation } from './blueArchive';
+import { queryStarRailRelation } from './starRail';
 
 const {
   cloneDeep, debounce, throttle, moment, DAY
@@ -18,5 +19,6 @@ export {
   queryCommonUrl,
   queryGenshinRelation,
   queryHonkaiRelation,
-  queryBlueArchiveRelation
+  queryBlueArchiveRelation,
+  queryStarRailRelation
 }
