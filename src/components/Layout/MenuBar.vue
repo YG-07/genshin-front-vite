@@ -94,6 +94,23 @@ const menuOptions: MenuOption[] = [
     ]
   },
   {
+    label: "星穹铁道",
+    key: "starrail",
+    icon: renderIcon(normalIcon('/public/role.png')),
+    children: [
+      {
+        label: renderRoute("starrail_role", "角色"),
+        key: "starrail_role",
+        icon: renderIcon(normalIcon('/public/role.png')),
+      },
+      {
+        label: renderRoute("starrail_weapon", "光锥"),
+        key: "starrail_weapon",
+        icon: renderIcon(normalIcon('/public/weapon.png')),
+      },
+    ]
+  },
+  {
     label: "碧蓝档案",
     key: "blue_archive",
     icon: renderIcon(normalIcon('https://cdnimg.gamekee.com/wiki2.0/images/w_240/h_237/829/43637/2023/6/31/862156.png')),

@@ -99,6 +99,35 @@ const routes: Readonly<RouteRecordRaw[]> = [
     ]
   },
   {
+    path: '/starrail',
+    name: 'starrail',
+    component: () => import(/* webpackChunkName: "starrail" */ '@/views/Home.vue'),
+    meta: {
+      title: '星穹铁道',
+      keepAlive: true
+    },
+    children: [
+      {
+        path: 'role',
+        name: 'starrail_role',
+        component: () => import(/* webpackChunkName: "starrail_role" */ '@/views/StarRail/Role.vue'),
+        meta: {
+          title: '角色',
+          keepAlive: true
+        }
+      },
+      {
+        path: 'weapon',
+        name: 'starrail_weapon',
+        component: () => import(/* webpackChunkName: "starrail_weapon" */ '@/views/StarRail/Weapon.vue'),
+        meta: {
+          title: '武器',
+          keepAlive: true
+        }
+      },
+    ]
+  },
+  {
     path: '/blue_archive',
     name: 'blue_archive',
     component: () => import(/* webpackChunkName: "home" */ '@/views/Home.vue'),

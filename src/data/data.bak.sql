@@ -1,28 +1,54 @@
 /*
  Navicat Premium Data Transfer
 
- Source Server         : localhost
+ Source Server         : 127.0.0.1
  Source Server Type    : MySQL
- Source Server Version : 50726
- Source Host           : localhost:3306
+ Source Server Version : 80030
+ Source Host           : 127.0.0.1:3306
  Source Schema         : data
 
  Target Server Type    : MySQL
- Target Server Version : 50726
+ Target Server Version : 80030
  File Encoding         : 65001
 
- Date: 22/09/2023 14:39:17
+ Date: 13/09/2023 22:58:01
 */
 
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
 
 -- ----------------------------
+-- Table structure for blue_achive_school_select
+-- ----------------------------
+DROP TABLE IF EXISTS `blue_achive_school_select`;
+CREATE TABLE `blue_achive_school_select`  (
+  `id` int NOT NULL,
+  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
+  `icon_url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of blue_achive_school_select
+-- ----------------------------
+INSERT INTO `blue_achive_school_select` VALUES (0, '阿拜多斯', 'https://cdnimg.gamekee.com/wiki2.0/images/w_413/h_374/829/43637/2023/7/4/169570.png');
+INSERT INTO `blue_achive_school_select` VALUES (1, '格黑娜', 'https://cdnimg.gamekee.com/wiki2.0/images/w_413/h_374/829/43637/2023/7/4/824731.png');
+INSERT INTO `blue_achive_school_select` VALUES (2, '三一', 'https://cdnimg.gamekee.com/wiki2.0/images/w_413/h_374/829/43637/2023/7/4/869881.png');
+INSERT INTO `blue_achive_school_select` VALUES (3, '千年科学', 'https://cdnimg.gamekee.com/wiki2.0/images/w_413/h_374/829/43637/2023/7/4/873884.png');
+INSERT INTO `blue_achive_school_select` VALUES (4, '百鬼夜行', 'https://cdnimg.gamekee.com/wiki2.0/images/w_413/h_374/829/43637/2023/7/4/342619.png');
+INSERT INTO `blue_achive_school_select` VALUES (5, '山海经', 'https://cdnimg.gamekee.com/wiki2.0/images/w_413/h_374/829/43637/2023/7/4/394261.png');
+INSERT INTO `blue_achive_school_select` VALUES (6, '阿里乌斯', 'https://cdnimg.gamekee.com/wiki2.0/images/w_413/h_374/829/43637/2023/7/4/302051.png');
+INSERT INTO `blue_achive_school_select` VALUES (7, '赤冬', 'https://cdnimg.gamekee.com/wiki2.0/images/w_688/h_624/829/43637/2023/7/4/747305.png');
+INSERT INTO `blue_achive_school_select` VALUES (8, 'SRT', 'https://cdnimg.gamekee.com/wiki2.0/images/w_688/h_624/829/43637/2023/7/4/529744.png');
+INSERT INTO `blue_achive_school_select` VALUES (9, '瓦尔基里', 'https://cdnimg.gamekee.com/wiki2.0/images/w_688/h_624/829/43637/2023/7/4/401437.png');
+INSERT INTO `blue_achive_school_select` VALUES (10, '其他', 'https://cdnimg.gamekee.com/wiki2.0/images/w_688/h_624/829/43637/2023/7/4/120452.png');
+
+-- ----------------------------
 -- Table structure for blue_archive_npc
 -- ----------------------------
 DROP TABLE IF EXISTS `blue_archive_npc`;
 CREATE TABLE `blue_archive_npc`  (
-  `id` int(11) NOT NULL,
+  `id` int NOT NULL,
   `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `name_ja` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
@@ -147,7 +173,7 @@ INSERT INTO `blue_archive_npc` VALUES (107, '志乃', '川流（かわる）シ�
 -- ----------------------------
 DROP TABLE IF EXISTS `blue_archive_relation`;
 CREATE TABLE `blue_archive_relation`  (
-  `id` int(11) NOT NULL,
+  `id` int NOT NULL,
   `position_type` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `weapon_type` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `school_type` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
@@ -209,21 +235,21 @@ INSERT INTO `blue_archive_relation` VALUES (40, NULL, NULL, NULL, '其他', NULL
 -- ----------------------------
 DROP TABLE IF EXISTS `blue_archive_student`;
 CREATE TABLE `blue_archive_student`  (
-  `id` int(11) NOT NULL,
+  `id` int NOT NULL,
   `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `name_ja` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
-  `star` int(11) NULL DEFAULT NULL,
-  `position` int(11) NULL DEFAULT NULL,
-  `weapon` int(11) NULL DEFAULT NULL,
+  `star` int NULL DEFAULT NULL,
+  `position` int NULL DEFAULT NULL,
+  `weapon` int NULL DEFAULT NULL,
   `url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `img_urls` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL,
   `icon_url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
-  `banner` int(11) NULL DEFAULT NULL,
-  `attack` int(11) NULL DEFAULT NULL,
-  `defense` int(11) NULL DEFAULT NULL,
-  `school` int(11) NULL DEFAULT NULL,
-  `club` int(11) NULL DEFAULT NULL,
-  `map_get` int(11) NULL DEFAULT NULL,
+  `banner` int NULL DEFAULT NULL,
+  `attack` int NULL DEFAULT NULL,
+  `defense` int NULL DEFAULT NULL,
+  `school` int NULL DEFAULT NULL,
+  `club` int NULL DEFAULT NULL,
+  `map_get` int NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = DYNAMIC;
 
@@ -391,7 +417,7 @@ INSERT INTO `blue_archive_student` VALUES (155, '梓（泳装）', '白洲アズ
 -- ----------------------------
 DROP TABLE IF EXISTS `chat_menu`;
 CREATE TABLE `chat_menu`  (
-  `id` int(11) NOT NULL,
+  `id` int NOT NULL,
   `up` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `s` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `src` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
@@ -647,7 +673,7 @@ INSERT INTO `chat_menu` VALUES (240, '2023/02/05/00:06', '[SLG佳作/官中/PC+�
 -- ----------------------------
 DROP TABLE IF EXISTS `common_const`;
 CREATE TABLE `common_const`  (
-  `id` int(11) NOT NULL,
+  `id` int NOT NULL,
   `key` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `value` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `type` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -669,20 +695,19 @@ INSERT INTO `common_const` VALUES (9, 'azur_line_base', 'https://wiki.biligame.c
 INSERT INTO `common_const` VALUES (10, 'azur_line_icon_base', 'https://patchwiki\\.biligame\\.com/images/blhx', 'azurLine');
 INSERT INTO `common_const` VALUES (11, 'map_base', 'https://webstatic.mihoyo.com/ys/app/interactive-map/#/map/2', 'genshin');
 INSERT INTO `common_const` VALUES (12, 'mys_bh3_url', '/bh3/wiki/content/{id}/detail', 'honkai');
-INSERT INTO `common_const` VALUES (13, 'star_rail_base', '/sr/wiki/content/{id}/detail', 'starRail');
 
 -- ----------------------------
 -- Table structure for genshin_book
 -- ----------------------------
 DROP TABLE IF EXISTS `genshin_book`;
 CREATE TABLE `genshin_book`  (
-  `id` int(11) NOT NULL,
+  `id` int NOT NULL,
   `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `name_en` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `name_ja` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
-  `book` int(11) NULL DEFAULT NULL,
-  `star` int(11) NULL DEFAULT NULL,
-  `week` int(11) NULL DEFAULT NULL,
+  `book` int NULL DEFAULT NULL,
+  `star` int NULL DEFAULT NULL,
+  `week` int NULL DEFAULT NULL,
   `mhy_url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `wiki_url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `icon_url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
@@ -743,7 +768,7 @@ INSERT INTO `genshin_book` VALUES (45, '「秩序」的指引', 'Guide to Order'
 -- ----------------------------
 DROP TABLE IF EXISTS `genshin_card`;
 CREATE TABLE `genshin_card`  (
-  `id` int(11) NOT NULL,
+  `id` int NOT NULL,
   `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `icon_url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
@@ -937,13 +962,13 @@ INSERT INTO `genshin_card` VALUES (177, '月桂的宝冠', 'n331033', '/img/i_n3
 -- ----------------------------
 DROP TABLE IF EXISTS `genshin_item`;
 CREATE TABLE `genshin_item`  (
-  `id` int(11) NOT NULL,
+  `id` int NOT NULL,
   `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `name_en` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `name_ja` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
-  `item` int(11) NULL DEFAULT NULL,
-  `star` int(11) NULL DEFAULT NULL,
-  `week` int(11) NULL DEFAULT NULL,
+  `item` int NULL DEFAULT NULL,
+  `star` int NULL DEFAULT NULL,
+  `week` int NULL DEFAULT NULL,
   `mhy_url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `wiki_url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `icon_url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
@@ -1019,7 +1044,7 @@ INSERT INTO `genshin_item` VALUES (60, '无垢之海的银杯', 'Silver Goblet o
 -- ----------------------------
 DROP TABLE IF EXISTS `genshin_map`;
 CREATE TABLE `genshin_map`  (
-  `id` int(11) NOT NULL,
+  `id` int NOT NULL,
   `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `icon` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
@@ -1115,9 +1140,9 @@ INSERT INTO `genshin_map` VALUES (450, '柽木', 'https://uploadstatic.mihoyo.co
 -- ----------------------------
 DROP TABLE IF EXISTS `genshin_pool`;
 CREATE TABLE `genshin_pool`  (
-  `id` int(11) NOT NULL COMMENT '主键',
+  `id` int NOT NULL COMMENT '主键',
   `version` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '版本号',
-  `stage` tinyint(4) NULL DEFAULT NULL COMMENT '卡池阶段(1, 2, 3期)',
+  `stage` tinyint NULL DEFAULT NULL COMMENT '卡池阶段(1, 2, 3期)',
   `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL COMMENT '卡池名称',
   `pool_start` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL COMMENT '卡池开始日期',
   `pool_end` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL COMMENT '卡池结束日期',
@@ -1270,7 +1295,7 @@ INSERT INTO `genshin_pool` VALUES (133, '4.0', 2, NULL, '2023.09.05', '2023.09.2
 -- ----------------------------
 DROP TABLE IF EXISTS `genshin_relation`;
 CREATE TABLE `genshin_relation`  (
-  `id` int(11) NOT NULL,
+  `id` int NOT NULL,
   `element_type` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `weapon_type` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `area_type` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
@@ -1305,15 +1330,15 @@ INSERT INTO `genshin_relation` VALUES (14, NULL, NULL, NULL, '「秩序」', '�
 -- ----------------------------
 DROP TABLE IF EXISTS `genshin_role`;
 CREATE TABLE `genshin_role`  (
-  `id` int(11) NOT NULL,
+  `id` int NOT NULL,
   `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `name_en` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `name_ja` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
-  `star` int(11) NULL DEFAULT NULL,
-  `element` int(11) NULL DEFAULT NULL,
-  `weapon` int(11) NULL DEFAULT NULL,
-  `book` int(11) NULL DEFAULT NULL,
-  `area` int(11) NULL DEFAULT NULL,
+  `star` int NULL DEFAULT NULL,
+  `element` int NULL DEFAULT NULL,
+  `weapon` int NULL DEFAULT NULL,
+  `book` int NULL DEFAULT NULL,
+  `area` int NULL DEFAULT NULL,
   `mhy_url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `wiki_url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `icon_url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
@@ -1403,7 +1428,7 @@ INSERT INTO `genshin_role` VALUES (74, '重云', 'Chongyun', '重雲', 4, 3, 1, 
 -- ----------------------------
 DROP TABLE IF EXISTS `genshin_version`;
 CREATE TABLE `genshin_version`  (
-  `id` int(11) NOT NULL COMMENT '主键',
+  `id` int NOT NULL COMMENT '主键',
   `version` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '版本号',
   `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL COMMENT '版本名称',
   `version_start` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL COMMENT '版本开始日期',
@@ -1450,13 +1475,13 @@ INSERT INTO `genshin_version` VALUES (28, '4.0', '仿若无因飘落的轻雨', 
 -- ----------------------------
 DROP TABLE IF EXISTS `genshin_weapon`;
 CREATE TABLE `genshin_weapon`  (
-  `id` int(11) NOT NULL,
+  `id` int NOT NULL,
   `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `name_en` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `name_ja` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
-  `weapon` int(11) NULL DEFAULT NULL,
-  `star` int(11) NULL DEFAULT NULL,
-  `item` int(11) NULL DEFAULT NULL,
+  `weapon` int NULL DEFAULT NULL,
+  `star` int NULL DEFAULT NULL,
+  `item` int NULL DEFAULT NULL,
   `mhy_url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `wiki_url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `icon_url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
@@ -1646,7 +1671,7 @@ INSERT INTO `genshin_weapon` VALUES (174, '最初的大魔术', 'The First Great
 -- ----------------------------
 DROP TABLE IF EXISTS `honkai_relation`;
 CREATE TABLE `honkai_relation`  (
-  `id` int(11) NOT NULL,
+  `id` int NOT NULL,
   `element` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL COMMENT '基本属性',
   `role` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL COMMENT '人物类型',
   `star` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL COMMENT '品质阶级',
@@ -1694,7 +1719,7 @@ INSERT INTO `honkai_relation` VALUES (29, NULL, '西琳', NULL, NULL);
 -- ----------------------------
 DROP TABLE IF EXISTS `honkai_role`;
 CREATE TABLE `honkai_role`  (
-  `id` int(11) NOT NULL,
+  `id` int NOT NULL,
   `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `element` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `role` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
@@ -1803,9 +1828,9 @@ INSERT INTO `honkai_role` VALUES (89, '终焉之律者', '4', '0', '0', '0', '20
 -- ----------------------------
 DROP TABLE IF EXISTS `person_spring`;
 CREATE TABLE `person_spring`  (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int NOT NULL AUTO_INCREMENT,
   `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
-  `age` int(11) NULL DEFAULT NULL,
+  `age` int NULL DEFAULT NULL,
   `city` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `note` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
@@ -1824,7 +1849,7 @@ INSERT INTO `person_spring` VALUES (5, '小倍', 21, '北京', '');
 -- ----------------------------
 DROP TABLE IF EXISTS `qq_chat`;
 CREATE TABLE `qq_chat`  (
-  `id` int(11) NOT NULL,
+  `id` int NOT NULL,
   `type` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL COMMENT 'word/img/mp4/file',
   `msg` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `class` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
@@ -1841,184 +1866,15 @@ INSERT INTO `qq_chat` VALUES (2, 'img', 'assets\\img\\page1\\001.jpg', NULL, NUL
 INSERT INTO `qq_chat` VALUES (3, 'img', 'assets\\img\\page1\\002.jpg', NULL, NULL, 'assets\\img\\page1\\002.jpg');
 
 -- ----------------------------
--- Table structure for star_rail_relation
--- ----------------------------
-DROP TABLE IF EXISTS `star_rail_relation`;
-CREATE TABLE `star_rail_relation`  (
-  `id` int(11) NOT NULL,
-  `element_type` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
-  `weapon_type` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
-  PRIMARY KEY (`id`) USING BTREE
-) ENGINE = MyISAM CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
-
--- ----------------------------
--- Records of star_rail_relation
--- ----------------------------
-INSERT INTO `star_rail_relation` VALUES (-1, '全部', '全部');
-INSERT INTO `star_rail_relation` VALUES (0, '物理', '毁灭');
-INSERT INTO `star_rail_relation` VALUES (1, '火', '智识');
-INSERT INTO `star_rail_relation` VALUES (2, '风', '巡猎');
-INSERT INTO `star_rail_relation` VALUES (3, '冰', '存护');
-INSERT INTO `star_rail_relation` VALUES (4, '雷', '丰饶');
-INSERT INTO `star_rail_relation` VALUES (5, '虚数', '同谐');
-INSERT INTO `star_rail_relation` VALUES (6, '量子', '虚无');
-
--- ----------------------------
--- Table structure for star_rail_role
--- ----------------------------
-DROP TABLE IF EXISTS `star_rail_role`;
-CREATE TABLE `star_rail_role`  (
-  `id` int(11) NOT NULL,
-  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
-  `star` int(11) NULL DEFAULT NULL,
-  `element` int(11) NULL DEFAULT NULL,
-  `weapon` int(11) NULL DEFAULT NULL,
-  `mhy_url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
-  `icon_url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
-  PRIMARY KEY (`id`) USING BTREE
-) ENGINE = MyISAM CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
-
--- ----------------------------
--- Records of star_rail_role
--- ----------------------------
-INSERT INTO `star_rail_role` VALUES (1, '阿兰', 4, 4, 0, '380', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/24/159305577/d17025f2f6c52f10ccbcc93a0acd1b70_8940478888129430393.png');
-INSERT INTO `star_rail_role` VALUES (2, '艾丝妲', 4, 1, 5, '52', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/24/159305577/4022a164be9404b271a965ec786cbf26_7272957779066061269.png');
-INSERT INTO `star_rail_role` VALUES (3, '白露', 5, 4, 4, '564', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/24/159305577/c684357d96e8098e898e4ee6665fd01c_7826766061944986617.png');
-INSERT INTO `star_rail_role` VALUES (4, '布洛妮娅', 5, 2, 5, '453', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/24/288909604/b6419ce18c6fbfbbbaffa7dd68d676f5_767729707412690608.png');
-INSERT INTO `star_rail_role` VALUES (5, '丹恒', 4, 2, 2, '406', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/24/159305577/e4a8703a06b4c42d692133c17b2cdc27_5408538855331042463.png');
-INSERT INTO `star_rail_role` VALUES (6, '丹恒•饮月', 5, 5, 0, '1472', 'https://act-upload.mihoyo.com/sr-wiki/2023/08/30/75216984/b4ce779a97f89e5a9c527b8f2a149d1f_8461686478390387922.png');
-INSERT INTO `star_rail_role` VALUES (7, '符玄', 5, 6, 3, '1646', 'https://act-upload.mihoyo.com/sr-wiki/2023/09/14/279865110/e4436a038b70cc69882fc9add94e70f7_7081735167856849522.png');
-INSERT INTO `star_rail_role` VALUES (8, '黑塔', 4, 3, 1, '49', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/24/159305577/2f3693ba8a48e4a81832dac8344a2d14_1221820779792422378.png');
-INSERT INTO `star_rail_role` VALUES (9, '虎克', 4, 1, 0, '76', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/24/159305577/ced28df529eadd5d3a65a74d7cd0f1ee_1327794469495696321.png');
-INSERT INTO `star_rail_role` VALUES (10, '姬子', 5, 1, 1, '407', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/24/288909604/4d5ac247ca1460b34b3f73244afbb0f6_8390343856757982675.png');
-INSERT INTO `star_rail_role` VALUES (11, '杰帕德', 5, 3, 3, '424', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/25/288909604/7d7ebb840d47c8f6cdf121ae0ddf5ada_7197802014505535697.png');
-INSERT INTO `star_rail_role` VALUES (12, '景元', 5, 4, 1, '389', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/24/288909604/95a06162f7df44a2b068e66939268b10_2067278512630665501.png');
-INSERT INTO `star_rail_role` VALUES (13, '卡芙卡', 5, 4, 6, '1298', 'https://act-upload.mihoyo.com/sr-wiki/2023/08/24/75216984/41b9106baff2aece4fd70fa8e8091e82_3804568336317547539.png');
-INSERT INTO `star_rail_role` VALUES (14, '开拓者·男', 5, 0, 0, '411', 'https://act-upload.mihoyo.com/sr-wiki/2023/09/15/75216984/9e264185ba9bda49576b96a4187e2798_1038569771573329881.png');
-INSERT INTO `star_rail_role` VALUES (15, '开拓者·女', 5, 1, 3, '872', 'https://act-upload.mihoyo.com/sr-wiki/2023/09/15/75216984/8026f2a5697d4c4c6605b5522a4f24da_944755470784967096.png');
-INSERT INTO `star_rail_role` VALUES (16, '克拉拉', 5, 0, 0, '414', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/24/288909604/827cb6eecdd28086ce68a1f39a9a0e09_6530506214724480230.png');
-INSERT INTO `star_rail_role` VALUES (17, '玲可', 4, 6, 4, '1543', 'https://act-upload.mihoyo.com/sr-wiki/2023/09/14/279865110/e02e6ad60e4cea0d8582803058bf9b70_8453316196841959392.png');
-INSERT INTO `star_rail_role` VALUES (18, '卢卡', 4, 0, 6, '1325', 'https://act-upload.mihoyo.com/sr-wiki/2023/07/17/75216984/0d7f1c9f746e1d4ad98b2a3360d9a27b_2137170666945226982.png');
-INSERT INTO `star_rail_role` VALUES (19, '罗刹', 5, 5, 4, '1188', 'https://act-upload.mihoyo.com/sr-wiki/2023/06/27/288909604/4aad9e7c7505854cd1de96aaf45887b8_4230062706052486537.png');
-INSERT INTO `star_rail_role` VALUES (20, '娜塔莎', 4, 0, 4, '46', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/22/288909604/98045ee394641ca42188a9c6b5ae186e_7769781659310285488.png');
-INSERT INTO `star_rail_role` VALUES (21, '佩拉', 4, 3, 6, '422', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/24/289862258/7099a63b46954eedc038bffc991a0437_5445770148856337075.png');
-INSERT INTO `star_rail_role` VALUES (22, '青雀', 4, 6, 1, '497', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/25/289862258/2b3abc5a3dbed9d233e61c11f659473c_3453594130231722833.png');
-INSERT INTO `star_rail_role` VALUES (23, '刃', 5, 2, 0, '1214', 'https://act-upload.mihoyo.com/sr-wiki/2023/07/19/75216984/7a2bbf147653d45cf77c1533e4e2ab6d_8453365043186544213.png');
-INSERT INTO `star_rail_role` VALUES (24, '三月七', 4, 3, 3, '48', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/24/288909604/6a4bd3468e9dbd577f26dbf8757f0b03_924968634176225322.png');
-INSERT INTO `star_rail_role` VALUES (25, '桑博', 4, 2, 6, '386', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/24/159305577/4021500c08db5dd7600373963a8fd7ae_2164524026920543792.png');
-INSERT INTO `star_rail_role` VALUES (26, '素裳', 4, 0, 2, '412', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/24/289862258/0f662b3c3a7f76bb8bab25dc48f3bef4_6922898942843883883.png');
-INSERT INTO `star_rail_role` VALUES (27, '停云', 4, 4, 5, '561', 'https://act-upload.mihoyo.com/sr-wiki/2023/09/19/75216984/70be4fa90ea6bb367e0c9b5d792a71bb_4095597624428699941.png');
-INSERT INTO `star_rail_role` VALUES (28, '瓦尔特', 5, 5, 6, '560', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/24/288909604/d5a01ddc0494595417fee74fa3285b56_8110023215605946848.png');
-INSERT INTO `star_rail_role` VALUES (29, '希儿', 5, 6, 2, '317', 'https://act-upload.mihoyo.com/sr-wiki/2023/09/19/75216984/f851fc1166a8ae10df9913a001cf3747_8690872658789789737.png');
-INSERT INTO `star_rail_role` VALUES (30, '希露瓦', 4, 4, 1, '423', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/24/159305577/e996982958ab237d46fd813099afbada_1034866961853716191.png');
-INSERT INTO `star_rail_role` VALUES (31, '彦卿', 5, 3, 2, '565', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/24/288909604/cc600801af1f864cfb32bbfb01d9d867_5952117643253221767.png');
-INSERT INTO `star_rail_role` VALUES (32, '银狼', 5, 6, 6, '1085', 'https://act-upload.mihoyo.com/sr-wiki/2023/06/06/75216984/f46d36d98046af1f1826281157a2c03a_112340971313076076.png');
-INSERT INTO `star_rail_role` VALUES (33, '驭空', 4, 5, 5, '1187', 'https://act-upload.mihoyo.com/sr-wiki/2023/06/25/75216984/2205802801c837ef1248a1f63dc49f83_9084284062801988345.png');
-
--- ----------------------------
--- Table structure for star_rail_weapon
--- ----------------------------
-DROP TABLE IF EXISTS `star_rail_weapon`;
-CREATE TABLE `star_rail_weapon`  (
-  `id` int(11) NOT NULL,
-  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
-  `weapon` int(11) NULL DEFAULT NULL,
-  `star` int(11) NULL DEFAULT NULL,
-  `mhy_url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
-  `icon_url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
-  PRIMARY KEY (`id`) USING BTREE
-) ENGINE = MyISAM CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
-
--- ----------------------------
--- Records of star_rail_weapon
--- ----------------------------
-INSERT INTO `star_rail_weapon` VALUES (1, '「我」的诞生', 1, 4, '196', 'https://uploadstatic.mihoyo.com/sr-wiki/2023/04/21/288909602/3ff519a5181824f854811e6ca77e208c_509101673108415116.png');
-INSERT INTO `star_rail_weapon` VALUES (2, '比阳光更明亮的', 0, 5, '1475', 'https://act-upload.mihoyo.com/sr-wiki/2023/08/29/299598919/a499022633e750c898fd3e006b8c385e_4808927037301415220.png');
-INSERT INTO `star_rail_weapon` VALUES (3, '别让世界静下来', 1, 4, '200', 'https://act-upload.mihoyo.com/sr-wiki/2023/05/06/288909604/556f94c66963b491c52f32323a51a841_6777260343113685386.png');
-INSERT INTO `star_rail_weapon` VALUES (4, '春水初生', 2, 4, '855', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/21/190590294/66a5f01dda8f0a7da58fb89abb7aef6f_1142572140416843653.png');
-INSERT INTO `star_rail_weapon` VALUES (5, '此时恰好', 4, 4, '846', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/21/190590294/2747312b548540c7a54233ce4d28ec93_1891498790757437734.png');
-INSERT INTO `star_rail_weapon` VALUES (6, '但战斗还未结束', 5, 5, '362', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/eb12f0678e96a9264c8b67d38e95f0d8_3498440638007475874.png');
-INSERT INTO `star_rail_weapon` VALUES (7, '到不了的彼岸', 0, 5, '1215', 'https://act-upload.mihoyo.com/sr-wiki/2023/07/13/289862258/c7fa978a7a73609c01e9627bd88ac27e_5735992228692577071.png');
-INSERT INTO `star_rail_weapon` VALUES (8, '等价交换', 4, 4, '847', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/21/190590294/10f8e4b3fe4a9819a59cb2537ea8cf78_5953019562556435160.png');
-INSERT INTO `star_rail_weapon` VALUES (9, '点个关注吧！', 2, 4, '854', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/21/190590294/e77c0b0db54799d6bd5e0496886a1c3a_3192066082147055344.png');
-INSERT INTO `star_rail_weapon` VALUES (10, '调和', 5, 3, '550', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/22/103492603/0526f6f02fb22d4f89e672f42b5080d2_7025757600934747848.png');
-INSERT INTO `star_rail_weapon` VALUES (11, '蕃息', 4, 3, '553', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/22/103492603/0a70d8b3db45dbd1ef7d725df4fc6c63_7009915096429872669.png');
-INSERT INTO `star_rail_weapon` VALUES (12, '锋镝', 2, 3, '326', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/cef0df677c17b578cb7643759a52a5ee_4307166806168746030.png');
-INSERT INTO `star_rail_weapon` VALUES (13, '拂晓之前', 1, 5, '361', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/a1f733dd784fbc6ecffc2a09b0b11104_7972399684465006295.png');
-INSERT INTO `star_rail_weapon` VALUES (14, '孤独的疗愈', 6, 5, '1477', 'https://act-upload.mihoyo.com/sr-wiki/2023/08/30/299598919/eced27ebe7faab9c25fa1cf82738ca5d_7438526283868577651.png');
-INSERT INTO `star_rail_weapon` VALUES (15, '棺的回响', 4, 5, '1186', 'https://act-upload.mihoyo.com/sr-wiki/2023/06/25/75216984/75e4640004acfe27c3a7450adbc220ae_72761699833139366.png');
-INSERT INTO `star_rail_weapon` VALUES (16, '过往未来', 5, 4, '852', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/21/190590294/80a0f12ef4c0e5f1695405b45d64253f_7149236409595209371.png');
-INSERT INTO `star_rail_weapon` VALUES (17, '后会有期', 6, 4, '543', 'https://uploadstatic.mihoyo.com/sr-wiki/2023/04/21/288909602/0255c9eadff1083f7ce7b3fc958f8c0d_289765888772424889.png');
-INSERT INTO `star_rail_weapon` VALUES (18, '琥珀', 3, 3, '331', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/957d8d26619f747b71850143c32ee1a9_6419055775139402596.png');
-INSERT INTO `star_rail_weapon` VALUES (19, '记一位星神的陨落', 0, 5, '844', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/26/288909604/5de6ade884bf419dc2adc1815bd5a109_1893890981000298645.png');
-INSERT INTO `star_rail_weapon` VALUES (20, '记忆的质料', 3, 5, '871', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/23/109341043/0ef2f92a4ee6f5bf8b848e6b2555ffa9_4868302018570081407.png');
-INSERT INTO `star_rail_weapon` VALUES (21, '记忆中的模样', 5, 4, '242', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/db37e0f07974f38f2482584d3ea1343c_5398624370127048356.png');
-INSERT INTO `star_rail_weapon` VALUES (22, '嘉果', 4, 3, '336', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/f97ca99cf03bfa210945ad220891302b_876506868934440869.png');
-INSERT INTO `star_rail_weapon` VALUES (23, '今日亦是和平的一日', 1, 4, '546', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/21/288909604/17f059bf3a7b77c184bf7e7571c29365_4959888878352010800.png');
-INSERT INTO `star_rail_weapon` VALUES (24, '俱殁', 0, 3, '556', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/22/103492603/5d68684855c1e6356991ec106160bb15_7665516313130129576.png');
-INSERT INTO `star_rail_weapon` VALUES (25, '决心如汗珠般闪耀', 6, 4, '853', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/21/190590294/d20eb92c6e6b45e01a74a3eae3236a0c_8544948651264708528.png');
-INSERT INTO `star_rail_weapon` VALUES (26, '开疆', 3, 3, '552', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/22/103492603/2a13e4c462242f585d1a359534f08207_804645297709649387.png');
-INSERT INTO `star_rail_weapon` VALUES (27, '朗道的选择', 3, 4, '419', 'https://uploadstatic.mihoyo.com/sr-wiki/2023/04/21/288909602/4fc10608f7f63460220af99661eff9eb_2173462361556697626.png');
-INSERT INTO `star_rail_weapon` VALUES (28, '乐圮', 0, 3, '324', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/3ce71ad24bb9b5239a0d251cf6a78b7c_8652755492929625822.png');
-INSERT INTO `star_rail_weapon` VALUES (29, '离弦', 2, 3, '327', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/fc4dac32f3a90eb614eb8852b4944c0a_339074751134485637.png');
-INSERT INTO `star_rail_weapon` VALUES (30, '猎物的视线', 6, 4, '225', 'https://uploadstatic.mihoyo.com/sr-wiki/2023/04/21/288909602/38142aab2e325f056fb903192712cd94_8435381312479183931.png');
-INSERT INTO `star_rail_weapon` VALUES (31, '灵钥', 1, 3, '325', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/09aec132b62a41a787a7a89ebfb9ba7f_4056017462349383335.png');
-INSERT INTO `star_rail_weapon` VALUES (32, '镂月裁云之意', 5, 4, '544', 'https://uploadstatic.mihoyo.com/sr-wiki/2023/04/21/288909602/93de9d798632df0c9ea660ac33926ba2_2747835853468939355.png');
-INSERT INTO `star_rail_weapon` VALUES (33, '轮契', 5, 3, '329', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/2d5a26a86d6401a3826b029a9cfeebfb_615755650846272907.png');
-INSERT INTO `star_rail_weapon` VALUES (34, '论剑', 2, 4, '316', 'https://uploadstatic.mihoyo.com/sr-wiki/2023/04/21/288909602/8ea6e08e213f1463dd592913057591b7_1597110980342981033.png');
-INSERT INTO `star_rail_weapon` VALUES (35, '秘密誓心', 0, 4, '222', 'https://act-upload.mihoyo.com/sr-wiki/2023/05/06/288909604/4058e6a3ca810444e16303d8f99e3cbf_3848396585828889644.png');
-INSERT INTO `star_rail_weapon` VALUES (36, '匿影', 6, 3, '551', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/22/103492603/52a5dc8b7e0aa01f070cbb207ebd3012_5303839694063749956.png');
-INSERT INTO `star_rail_weapon` VALUES (37, '暖夜不会漫长', 4, 4, '541', 'https://uploadstatic.mihoyo.com/sr-wiki/2023/04/21/288909602/31696161875bfbfef1396f8fb68f5be6_2865781185367897767.png');
-INSERT INTO `star_rail_weapon` VALUES (38, '齐颂', 5, 3, '330', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/75eb0b7c88042f1bce8766da913d1eeb_4996861006675453708.png');
-INSERT INTO `star_rail_weapon` VALUES (39, '如泥酣眠', 2, 5, '566', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/165b709388e973ac51e3bc790a0cfeff_5625680177342760428.png');
-INSERT INTO `star_rail_weapon` VALUES (40, '睿见', 1, 3, '554', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/22/103492603/c75dcb67628de9898cf56d8cf3da31b0_5106499027839641089.png');
-INSERT INTO `star_rail_weapon` VALUES (41, '时节不居', 4, 5, '567', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/22/214441058/e1f40839f00bd80e1060f00f4cba61b2_8158676828966241566.png');
-INSERT INTO `star_rail_weapon` VALUES (42, '戍御', 3, 3, '334', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/7bcda699ff0fbe7e55643c541c426a42_30081035558284699.png');
-INSERT INTO `star_rail_weapon` VALUES (43, '她已闭上双眼', 3, 5, '1677', 'https://act-upload.mihoyo.com/sr-wiki/2023/09/14/299598919/7788a275edacfbe671fca19b45d0c426_1574508016723203981.png');
-INSERT INTO `star_rail_weapon` VALUES (44, '天才们的休憩', 1, 4, '856', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/21/190590294/e751871e7cda9a1c3a0004866db887b4_4470314258641119676.png');
-INSERT INTO `star_rail_weapon` VALUES (45, '天倾', 0, 3, '323', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/7deb06a9a24d66e5f5ea4202d611d3bf_5037156115374524018.png');
-INSERT INTO `star_rail_weapon` VALUES (46, '同一种心情', 4, 4, '360', 'https://uploadstatic.mihoyo.com/sr-wiki/2023/04/21/288909602/97c0debc944e304c0054c136d18c50f1_6722877704474086839.png');
-INSERT INTO `star_rail_weapon` VALUES (47, '晚安与睡颜', 6, 4, '224', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/6af2613ab53f384442122bfd27720f92_1559406493845442336.png');
-INSERT INTO `star_rail_weapon` VALUES (48, '汪！散步时间！', 0, 4, '548', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/8374260f67cc5344eb48ad7f9e38eccc_3079203861207027155.png');
-INSERT INTO `star_rail_weapon` VALUES (49, '唯有沉默', 2, 4, '66', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/ccecfa65e89a767692c3d6b198e67375_8116761189465044541.png');
-INSERT INTO `star_rail_weapon` VALUES (50, '我们是地火', 3, 4, '849', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/21/190590294/0e829ea93e161cc0245dae46c2d18149_4486331441913943344.png');
-INSERT INTO `star_rail_weapon` VALUES (51, '无处可逃', 0, 4, '549', 'https://uploadstatic.mihoyo.com/sr-wiki/2023/04/21/288909602/b1e02ca609100c2893a81df73b3bd579_6100932689589816632.png');
-INSERT INTO `star_rail_weapon` VALUES (52, '无可取代的东西', 0, 5, '384', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/bf0c26e434d9ab68ac5380f3e3d68846_3240303378927572941.png');
-INSERT INTO `star_rail_weapon` VALUES (53, '舞！舞！舞！', 5, 4, '851', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/21/190590294/65b8f2e9cb7397b6c45e5f1c217c9619_945859113093771003.png');
-INSERT INTO `star_rail_weapon` VALUES (54, '物穰', 4, 3, '335', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/b93d356f7286d3d6ddd184dabbcab5bd_7272163511585222070.png');
-INSERT INTO `star_rail_weapon` VALUES (55, '相抗', 2, 3, '555', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/22/103492603/3c0cbb7b550046e3decd11f36f474d53_6579811914373072860.png');
-INSERT INTO `star_rail_weapon` VALUES (56, '新手任务开始前', 6, 4, '1087', 'https://act-upload.mihoyo.com/sr-wiki/2023/06/06/75216984/a8e614c788f29055767faa62095d8b77_4626089794247082485.png');
-INSERT INTO `star_rail_weapon` VALUES (57, '星海巡航', 2, 5, '870', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/23/288909604/a2b3f93e2efa2a18941ea6eef3c8367e_6303407602832083418.png');
-INSERT INTO `star_rail_weapon` VALUES (58, '延长记号', 6, 4, '850', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/21/190590294/46d03cb796c707c47eafc4be4d7a6429_239093705735527333.png');
-INSERT INTO `star_rail_weapon` VALUES (59, '鼹鼠党欢迎你', 0, 4, '241', 'https://uploadstatic.mihoyo.com/sr-wiki/2023/04/21/288909602/7fc99a0d879716aca211a681ff410c89_692449159536190412.png');
-INSERT INTO `star_rail_weapon` VALUES (60, '一场术后对话', 4, 4, '221', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/8b5deffd89904c55ac8d1fccc57a47af_7384354830209959343.png');
-INSERT INTO `star_rail_weapon` VALUES (61, '以世界之名', 6, 5, '273', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/21886feabacbc0b5a4410a8da110317f_602268217580203504.png');
-INSERT INTO `star_rail_weapon` VALUES (62, '银河铁道之夜', 1, 5, '390', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/6c099fbdcd488fdb7408e4132e562403_4528940612834658072.png');
-INSERT INTO `star_rail_weapon` VALUES (63, '幽邃', 6, 3, '333', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/49f73c7aac0155c42b68e3e839112487_5366746539759678931.png');
-INSERT INTO `star_rail_weapon` VALUES (64, '于夜色中', 2, 5, '268', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/fc882563a44b54e78d5e5f9a1e8c4399_4525887876546013963.png');
-INSERT INTO `star_rail_weapon` VALUES (65, '余生的第一天', 3, 4, '271', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/97235128d3abb0e6227653256a7a9b59_7891226001801475234.png');
-INSERT INTO `star_rail_weapon` VALUES (66, '与行星相会', 5, 4, '244', 'https://uploadstatic.mihoyo.com/sr-wiki/2023/04/21/288909602/e3481c397c1b6ecbe31d72091519f1b9_5419696652493888402.png');
-INSERT INTO `star_rail_weapon` VALUES (67, '宇宙市场趋势', 3, 4, '848', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/21/190590294/48204f8db9e77016a30146a81a5fbf83_6906827343452491493.png');
-INSERT INTO `star_rail_weapon` VALUES (68, '雨一直下', 6, 5, '1086', 'https://act-upload.mihoyo.com/sr-wiki/2023/06/06/75216984/3d151f458b578b51bbba714f357dd83f_8237289304680955596.png');
-INSERT INTO `star_rail_weapon` VALUES (69, '渊环', 6, 3, '332', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/5516b364c118b5f59699df8926fc9af9_5293043332629217911.png');
-INSERT INTO `star_rail_weapon` VALUES (70, '在蓝天下', 0, 4, '845', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/22/190590294/ae08a1fb40c821ab314dfb833713a762_5172986260277745251.png');
-INSERT INTO `star_rail_weapon` VALUES (71, '早餐的仪式感', 1, 4, '545', 'https://uploadstatic.mihoyo.com/sr-wiki/2023/04/21/288909602/2b4508ad5bce4db860214f0ce20813ca_3972556125864564980.png');
-INSERT INTO `star_rail_weapon` VALUES (72, '这就是我啦！', 3, 4, '542', 'https://uploadstatic.mihoyo.com/sr-wiki/2023/04/21/288909602/a6ba39da97774add5a33f21e3301310e_2372315290004238322.png');
-INSERT INTO `star_rail_weapon` VALUES (73, '只需等待', 6, 5, '1324', 'https://act-upload.mihoyo.com/sr-wiki/2023/07/17/75216984/7e6dbd865dda4072a15b1195cd5e0d00_3614059528685389289.png');
-INSERT INTO `star_rail_weapon` VALUES (74, '制胜的瞬间', 3, 5, '388', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/779152d00007614b68c5bf6c7e5ac1b4_7130725355751336176.png');
-INSERT INTO `star_rail_weapon` VALUES (75, '智库', 1, 3, '328', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/4486e863f260f041f33f97853888417a_3420723413949371482.png');
-INSERT INTO `star_rail_weapon` VALUES (76, '重返幽冥', 2, 4, '547', 'https://uploadstatic.mihoyo.com/sr-wiki/2023/04/21/288909602/da687b7cd5565c4886047ecc8dcc7035_8168745811377466824.png');
-
--- ----------------------------
 -- Table structure for upload_dir
 -- ----------------------------
 DROP TABLE IF EXISTS `upload_dir`;
 CREATE TABLE `upload_dir`  (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int NOT NULL AUTO_INCREMENT,
   `dir_name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `create_start` bigint(20) NULL DEFAULT NULL,
+  `create_start` bigint NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 11 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of upload_dir
@@ -2029,18 +1885,18 @@ CREATE TABLE `upload_dir`  (
 -- ----------------------------
 DROP TABLE IF EXISTS `upload_files`;
 CREATE TABLE `upload_files`  (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int NOT NULL AUTO_INCREMENT,
   `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `dir_name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `tags` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
-  `size` bigint(20) NULL DEFAULT NULL,
+  `size` bigint NULL DEFAULT NULL,
   `type` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `file_type` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `extension` varchar(16) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `note` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
-  `create_time` bigint(20) NULL DEFAULT NULL,
+  `create_time` bigint NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 27 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of upload_files
@@ -2051,11 +1907,11 @@ CREATE TABLE `upload_files`  (
 -- ----------------------------
 DROP TABLE IF EXISTS `upload_tags`;
 CREATE TABLE `upload_tags`  (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int NOT NULL AUTO_INCREMENT,
   `tag` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `create_start` bigint(20) NULL DEFAULT NULL,
+  `create_start` bigint NULL DEFAULT NULL,
   PRIMARY KEY (`id`, `tag`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 10 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of upload_tags
