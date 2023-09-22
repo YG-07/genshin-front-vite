@@ -14,11 +14,8 @@ import { HomeOutline as HomeIcon } from "@vicons/ionicons5";
 import { useRoute } from "vue-router";
 import { RouterLink } from "vue-router";
 import { checkUA } from "@/utils";
-import RoleIcon from "@/components/Icon/RoleIcon.vue";
-import WeaponIcon from "@/components/Icon/WeaponIcon.vue";
-import BookIcon from "@/components/Icon/BookIcon.vue";
-import ItemIcon from "@/components/Icon/ItemIcon.vue";
 import CommonIcon from "@/components/Icon/CommonIcon.vue";
+import { FILE_BASE } from "@/config"
 
 const route = useRoute();
 
@@ -96,17 +93,17 @@ const menuOptions: MenuOption[] = [
   {
     label: "星穹铁道",
     key: "starrail",
-    icon: renderIcon(normalIcon('/role.png')),
+    icon: renderIcon(normalIcon(FILE_BASE + 'img/role.png')),
     children: [
       {
         label: renderRoute("starrail_role", "角色"),
         key: "starrail_role",
-        icon: renderIcon(normalIcon('/role.png')),
+        icon: renderIcon(normalIcon(FILE_BASE + 'img/role.png')),
       },
       {
         label: renderRoute("starrail_weapon", "光锥"),
         key: "starrail_weapon",
-        icon: renderIcon(normalIcon('/weapon.png')),
+        icon: renderIcon(normalIcon(FILE_BASE + 'img/weapon.png')),
       },
     ]
   },
