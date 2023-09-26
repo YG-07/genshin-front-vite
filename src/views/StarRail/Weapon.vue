@@ -19,8 +19,8 @@
         <n-space v-show="searchShow" v-else class="space-main" :style="custStyle">
           <n-select :value="star" @update:value="handleStar" :options="relationInfo?.star"
             :style="ua ? 'width: 200px' : ''" />
-          <n-select :value="weapon" @update:value="handleWeapon" :options="relationInfo?.weapon"
-            :style="ua ? 'width: 200px' : ''" />
+          <n-select :render-label="renderWeaponLabel" :value="weapon" @update:value="handleWeapon"
+            :options="relationInfo?.weapon" :style="ua ? 'width: 200px' : ''" />
           <n-input :value="searchName" @keyup.enter="handleNameChg" @update:value="handleName" type="text"
             placeholder="搜索武器名" :style="ua ? 'width: 200px' : 'min-width: 200px;'" />
           <n-space :style="ua ? `flex:1;` : `min-width: 200px;`">
@@ -38,7 +38,8 @@
         </n-space>
         <n-space v-else-if="!loading && weaponList.length > 0" :style="custStyle">
           <div v-for="(item, index) in weaponList" :key="index">
-            <PicCard :width="w" :height="h" :src="item.imgSrc" :item="item" :mhy_url="item.mhy_URL" :wiki_url="item.wiki_URL" />
+            <PicCard :width="w" :height="H" :src="item.imgSrc" :item="item" :mhy_url="item.mhy_URL"
+              :wiki_url="item.wiki_URL" objectFit="contain" />
           </div>
         </n-space>
         <n-space v-else style="width: 100%;" :style="custStyle">
@@ -77,16 +78,17 @@ import UrlSelect from "@/components/content/UrlSelect.vue";
 import { checkUA } from "@/utils";
 import CommonIcon from "@/components/Icon/CommonIcon.vue";
 import { useRoute } from "vue-router";
+import { starRailSelectWeapon } from "@/data/star_rail_select";
 
 const ua = ref(checkUA())
 let w = ref(100)  // 45 100
-let h = ref(169)  // 76 169
+let H = ref(169)  // 76 169
 if (ua.value) {
   w.value = 100
-  h.value = 169
+  H.value = 169
 } else {
   w.value = 45
-  h.value = 76
+  H.value = 76
 }
 
 const loading = ref(false)
@@ -137,7 +139,27 @@ const changePageSize = (size: number) => {
   searchWeaponList(1)
 }
 
-const commonUrl = ref<any>({})
+const renderWeaponLabel = (option: any) => {
+  return [
+    h('div', {
+      className: 'render-star-rail-weapon-label'
+    }, {
+      default: () => {
+        return [
+          option.value > -1 ? h(
+            CommonIcon, {
+            url: starRailSelectWeapon[option.value].icon_url,
+            size: 30,
+          }, { default: () => h('') }
+          ) : undefined,
+          h('span', {}, { default: () => option.label as string })
+        ]
+      }
+    }
+    )
+  ]
+}
+
 const relationInfo = ref<any>({})
 
 const queryWeaponList = async () => {
@@ -159,14 +181,13 @@ const queryWeaponList = async () => {
     return;
   }
   total.value = data.total
-  const { mhy_base, star_rail_base } = await queryCommonUrl() as any
-  const mhyWeaponUrl = `${mhy_base}${star_rail_base}`
-  // const wikiWeaponUrl = `${wiki_base}${wiki_weapon}`
+  const { star_rail_base, star_rail_wiki_base, star_rail_mhy_url, star_rail_weapon } = await queryCommonUrl() as any
+  const mhyWeaponUrl = `${star_rail_base}${star_rail_mhy_url}`
+  const wikiWeaponUrl = `${star_rail_wiki_base}${star_rail_weapon}`
 
   weaponList.value = data?.records.map((e: any) => {
     e.mhy_URL = mhyWeaponUrl.replace('{id}', e.mhy_url)
-    e.wiki_URL = '-'
-    // e.wiki_URL = wikiWeaponUrl.replace('{id}', e.wiki_url)
+    e.wiki_URL = wikiWeaponUrl.replace('{id}', e.wiki_url)
     e.imgSrc = e.icon_url
     return e
   })

@@ -74,7 +74,31 @@ export const commonConst: any[] = [
   {
     "id": 13,
     "key": "star_rail_base",
+    "value": "https://bbs.mihoyo.com",
+    "type": "starRail"
+  },
+  {
+    "id": 14,
+    "key": "star_rail_role",
+    "value": "/{id}-character/?lang=CN",
+    "type": "starRail"
+  },
+  {
+    "id": 15,
+    "key": "star_rail_weapon",
+    "value": "/{id}-item/?lang=CN",
+    "type": "starRail"
+  },
+  {
+    "id": 16,
+    "key": "star_rail_mhy_url",
     "value": "/sr/wiki/content/{id}/detail",
+    "type": "starRail"
+  },
+  {
+    "id": 17,
+    "key": "star_rail_wiki_base",
+    "value": "https://hsr.honeyhunterworld.com",
     "type": "starRail"
   }
 ]

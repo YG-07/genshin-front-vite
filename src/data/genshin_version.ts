@@ -250,5 +250,14 @@ export const genshinVersion: any[] = [
     "version_end": "2023-09-26",
     "version_img": null,
     "remark": "开启枫丹版本，开启水下探索"
+  },
+  {
+    "id": 29,
+    "version": "4.1",
+    "name": "向深水中的晨星",
+    "version_start": "2023-09-27",
+    "version_end": "2023-11-07",
+    "version_img": null,
+    "remark": null
   }
 ]

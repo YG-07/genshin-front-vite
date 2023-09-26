@@ -198,7 +198,6 @@ const renderItemLabel = (option: any) => {
   ]
 }
 
-const commonUrl = ref<any>({})
 const relationInfo = ref<any>({})
 
 const queryWeaponList = async () => {

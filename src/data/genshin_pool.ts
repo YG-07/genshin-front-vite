@@ -1594,5 +1594,77 @@ export const genshinPool: any[] = [
     "up_4": null,
     "pool_img": null,
     "remark": null
+  },
+  {
+    "id": 134,
+    "version": "4.1",
+    "stage": 1,
+    "name": "渊海界令",
+    "pool_start": "2023.09.27",
+    "pool_end": "2023.10.17",
+    "up_5": "那维莱特",
+    "up_4": "菲谢尔 行秋 迪奥娜",
+    "pool_img": null,
+    "remark": null
+  },
+  {
+    "id": 135,
+    "version": "4.1",
+    "stage": 1,
+    "name": "赤团开时",
+    "pool_start": "2023.09.27",
+    "pool_end": "2023.10.17",
+    "up_5": "胡桃",
+    "up_4": "菲谢尔 行秋 迪奥娜",
+    "pool_img": null,
+    "remark": null
+  },
+  {
+    "id": 136,
+    "version": "4.1",
+    "stage": 1,
+    "name": null,
+    "pool_start": "2023.09.27",
+    "pool_end": "2023.10.17",
+    "up_5": "万世流涌大典 护摩之杖",
+    "up_4": null,
+    "pool_img": null,
+    "remark": null
+  },
+  {
+    "id": 137,
+    "version": "4.1",
+    "stage": 2,
+    "name": "?",
+    "pool_start": "2023.10.17",
+    "pool_end": "2023.11.07",
+    "up_5": "莱欧斯利",
+    "up_4": null,
+    "pool_img": null,
+    "remark": null
+  },
+  {
+    "id": 138,
+    "version": "4.1",
+    "stage": 2,
+    "name": "杯装之诗",
+    "pool_start": "2023.10.17",
+    "pool_end": "2023.11.07",
+    "up_5": "温迪",
+    "up_4": null,
+    "pool_img": null,
+    "remark": null
+  },
+  {
+    "id": 139,
+    "version": "4.1",
+    "stage": 2,
+    "name": null,
+    "pool_start": "2023.10.17",
+    "pool_end": "2023.11.07",
+    "up_5": "金流监督 终末嗟叹之诗",
+    "up_4": null,
+    "pool_img": null,
+    "remark": null
   }
 ]
