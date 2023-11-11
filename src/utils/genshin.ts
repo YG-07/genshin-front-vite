@@ -36,7 +36,7 @@ const cardList = [
   },
 ]
 
-export const poolTableCol: {key: string, label: string}[] = [
+export const poolTableCol: { key: string, label: string }[] = [
   { key: 'id', label: '序号' },
   { key: 'version', label: '版本' },
   { key: 'pool_stage', label: '卡池阶段' },
@@ -50,22 +50,24 @@ export const poolTableCol: {key: string, label: string}[] = [
   { key: 'version_info', label: '版本信息' },
   { key: 'pool_info', label: '卡池信息' },
   { key: 'pool_day', label: '卡池天数' },
-  { key: 'remark', label: '备注' },
+  { key: 'remark', label: '卡池详情' },
+  { key: 'link', label: '前瞻总结' },
+  { key: 'preview', label: '先行页' },
 ]
 
-export const poolCalcTableCol : {key: string, label: string}[] = [
+export const poolCalcTableCol: { key: string, label: string }[] = [
   { key: 'id', label: '序号' },
-  { key: 'item_img', label: '祈愿物品'},
+  { key: 'item_img', label: '祈愿物品' },
   { key: 'itemInfo', label: '物品信息' },
-  { key: 'day2now', label: '距今天数'},
-  { key: 'day2last', label: '距上次Up天数'},
-  { key: 'count', label: 'Up次数'},
+  { key: 'day2now', label: '距今天数' },
+  { key: 'day2last', label: '距上次Up天数' },
+  { key: 'count', label: 'Up次数' },
   { key: 'version', label: '版本号' },
   { key: 'pool_info', label: '卡池信息' }
 ]
 
 // 过滤物品类型条件
-export const calcTableCheckTypeCol: { label: string, value: any}[] = [
+export const calcTableCheckTypeCol: { label: string, value: any }[] = [
   { label: '武器', value: 0 },
   // { label: '4星武器', value: 1 },
   // { label: '5星武器', value: 2 },
@@ -73,7 +75,7 @@ export const calcTableCheckTypeCol: { label: string, value: any}[] = [
   { label: '4星角色', value: 2 },
   { label: '5星角色', value: 3 },
 ]
-export const tableTypeCol: { label: string, value: any}[] = [
+export const tableTypeCol: { label: string, value: any }[] = [
   { label: '全部', value: -2 },
   { label: '角色', value: 1 },
   { label: '武器', value: 2 },
@@ -81,65 +83,65 @@ export const tableTypeCol: { label: string, value: any}[] = [
 
 export const queryGenshinRelation = async () => {
   let genshinRelation = storage.get('genshinRelation')
-  if(genshinRelation) {
+  if (genshinRelation) {
     return genshinRelation
   }
   let { code, data, msg } = await getRelationInfo() as any
-  if(code != 200) {
+  if (code != 200) {
     message.error(msg)
   }
   const all: Option = {
     label: "所有类型",
     value: -2
   }
-  let area: Option[] = [{...all, label: '所有地区'}],
-      book: Option[] = [{...all, label: '所有天赋书'}],
-      element: Option[] = [{...all, label: '所有元素'}],
-      item: Option[] = [{...all, label: '所有武器突破材料'}],
-      weapon: Option[] = [{...all, label: '所有武器类型'}],
-      week: Option[] = [{...all, label: '所有星期'}],
-      star: Option[] = [{...all, label: '所有星级'}];
+  let area: Option[] = [{ ...all, label: '所有地区' }],
+    book: Option[] = [{ ...all, label: '所有天赋书' }],
+    element: Option[] = [{ ...all, label: '所有元素' }],
+    item: Option[] = [{ ...all, label: '所有武器突破材料' }],
+    weapon: Option[] = [{ ...all, label: '所有武器类型' }],
+    week: Option[] = [{ ...all, label: '所有星期' }],
+    star: Option[] = [{ ...all, label: '所有星级' }];
   data.map((e: any) => {
-    if(e.area_type != null) {
+    if (e.area_type != null) {
       area.push({
         label: e.area_type,
         value: e.id
       })
     }
-    if(e.book_type != null) {
+    if (e.book_type != null) {
       book.push({
         label: e.book_type,
         value: e.id
       })
     }
-    if(e.element_type != null) {
+    if (e.element_type != null) {
       element.push({
         label: e.element_type,
         value: e.id
       })
     }
-    if(e.item_type != null) {
+    if (e.item_type != null) {
       item.push({
         label: e.item_type,
         value: e.id
       })
     }
-    if(e.weapon_type != null) {
+    if (e.weapon_type != null) {
       weapon.push({
         label: e.weapon_type,
         value: e.id
       })
     }
-    if(e.week_name != null) {
+    if (e.week_name != null) {
       week.push({
         label: e.week_name,
         value: e.id
       })
     }
   })
-  for(let i = 1; i < 6; ++i) {
+  for (let i = 1; i < 6; ++i) {
     star.push({
-      label: `${zh[i-1]}星`,
+      label: `${zh[i - 1]}星`,
       value: i
     })
   }

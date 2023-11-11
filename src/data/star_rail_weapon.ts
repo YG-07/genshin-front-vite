@@ -1,6 +1,259 @@
 export const starRailWeapon: any[] = [
   {
-    "id": 51,
+    "id": 76,
+    "name": "早餐的仪式感",
+    "name_en": "The Seriousness of Breakfast",
+    "name_ja": "朝食の儀式感",
+    "weapon": 1,
+    "star": 4,
+    "mhy_url": "545",
+    "wiki_url": "the-seriousness-of-breakfast",
+    "icon_url": "https://uploadstatic.mihoyo.com/sr-wiki/2023/04/21/288909602/2b4508ad5bce4db860214f0ce20813ca_3972556125864564980.png"
+  },
+  {
+    "id": 77,
+    "name": "这就是我啦！",
+    "name_en": "This Is Me!",
+    "name_ja": "これがウチだよ！",
+    "weapon": 3,
+    "star": 4,
+    "mhy_url": "542",
+    "wiki_url": "this-is-me",
+    "icon_url": "https://uploadstatic.mihoyo.com/sr-wiki/2023/04/21/288909602/a6ba39da97774add5a33f21e3301310e_2372315290004238322.png"
+  },
+  {
+    "id": 75,
+    "name": "在蓝天下",
+    "name_en": "Under the Blue Sky",
+    "name_ja": "青空の下で",
+    "weapon": 0,
+    "star": 4,
+    "mhy_url": "845",
+    "wiki_url": "under-the-blue-sky",
+    "icon_url": "https://act-upload.mihoyo.com/sr-wiki/2023/04/22/190590294/ae08a1fb40c821ab314dfb833713a762_5172986260277745251.png"
+  },
+  {
+    "id": 74,
+    "name": "渊环",
+    "name_en": "Loop",
+    "name_ja": "淵環",
+    "weapon": 6,
+    "star": 3,
+    "mhy_url": "332",
+    "wiki_url": "loop",
+    "icon_url": "https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/5516b364c118b5f59699df8926fc9af9_5293043332629217911.png"
+  },
+  {
+    "id": 73,
+    "name": "雨一直下",
+    "name_en": "Incessant Rain",
+    "name_ja": "降りやまぬ雨",
+    "weapon": 6,
+    "star": 5,
+    "mhy_url": "1086",
+    "wiki_url": "incessant-rain",
+    "icon_url": "https://act-upload.mihoyo.com/sr-wiki/2023/06/06/75216984/3d151f458b578b51bbba714f357dd83f_8237289304680955596.png"
+  },
+  {
+    "id": 72,
+    "name": "宇宙市场趋势",
+    "name_en": "Trend of the Universal Market",
+    "name_ja": "星間市場のトレンド",
+    "weapon": 3,
+    "star": 4,
+    "mhy_url": "848",
+    "wiki_url": "trend-of-the-universal-market",
+    "icon_url": "https://act-upload.mihoyo.com/sr-wiki/2023/04/21/190590294/48204f8db9e77016a30146a81a5fbf83_6906827343452491493.png"
+  },
+  {
+    "id": 71,
+    "name": "与行星相会",
+    "name_en": "Planetary Rendezvous",
+    "name_ja": "惑星との出会い",
+    "weapon": 5,
+    "star": 4,
+    "mhy_url": "244",
+    "wiki_url": "planetary-rendezvous",
+    "icon_url": "https://uploadstatic.mihoyo.com/sr-wiki/2023/04/21/288909602/e3481c397c1b6ecbe31d72091519f1b9_5419696652493888402.png"
+  },
+  {
+    "id": 70,
+    "name": "余生的第一天",
+    "name_en": "Day One of My New Life",
+    "name_ja": "余生の初日",
+    "weapon": 3,
+    "star": 4,
+    "mhy_url": "271",
+    "wiki_url": "day-one-of-my-new-life",
+    "icon_url": "https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/97235128d3abb0e6227653256a7a9b59_7891226001801475234.png"
+  },
+  {
+    "id": 69,
+    "name": "于夜色中",
+    "name_en": "In the Night",
+    "name_ja": "夜の帳の中で",
+    "weapon": 2,
+    "star": 5,
+    "mhy_url": "268",
+    "wiki_url": "in-the-night",
+    "icon_url": "https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/fc882563a44b54e78d5e5f9a1e8c4399_4525887876546013963.png"
+  },
+  {
+    "id": 68,
+    "name": "幽邃",
+    "name_en": "Void",
+    "name_ja": "幽邃",
+    "weapon": 6,
+    "star": 3,
+    "mhy_url": "333",
+    "wiki_url": "void",
+    "icon_url": "https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/49f73c7aac0155c42b68e3e839112487_5366746539759678931.png"
+  },
+  {
+    "id": 66,
+    "name": "以世界之名",
+    "name_en": "In the Name of the World",
+    "name_ja": "世界の名を以て",
+    "weapon": 6,
+    "star": 5,
+    "mhy_url": "273",
+    "wiki_url": "in-the-name-of-the-world",
+    "icon_url": "https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/21886feabacbc0b5a4410a8da110317f_602268217580203504.png"
+  },
+  {
+    "id": 67,
+    "name": "银河铁道之夜",
+    "name_en": "Night on the Milky Way",
+    "name_ja": "銀河鉄道の夜",
+    "weapon": 1,
+    "star": 5,
+    "mhy_url": "390",
+    "wiki_url": "night-on-the-milky-way",
+    "icon_url": "https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/6c099fbdcd488fdb7408e4132e562403_4528940612834658072.png"
+  },
+  {
+    "id": 64,
+    "name": "鼹鼠党欢迎你",
+    "name_en": "The Moles Welcome You",
+    "name_ja": "モグラ党へようこそ",
+    "weapon": 0,
+    "star": 4,
+    "mhy_url": "241",
+    "wiki_url": "the-moles-welcome-you",
+    "icon_url": "https://uploadstatic.mihoyo.com/sr-wiki/2023/04/21/288909602/7fc99a0d879716aca211a681ff410c89_692449159536190412.png"
+  },
+  {
+    "id": 65,
+    "name": "一场术后对话",
+    "name_en": "Post-Op Conversation",
+    "name_ja": "手術後の会話",
+    "weapon": 4,
+    "star": 4,
+    "mhy_url": "221",
+    "wiki_url": "post-op-conversation",
+    "icon_url": "https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/8b5deffd89904c55ac8d1fccc57a47af_7384354830209959343.png"
+  },
+  {
+    "id": 63,
+    "name": "延长记号",
+    "name_en": "Fermata",
+    "name_ja": "フェルマータ",
+    "weapon": 6,
+    "star": 4,
+    "mhy_url": "850",
+    "wiki_url": "fermata",
+    "icon_url": "https://act-upload.mihoyo.com/sr-wiki/2023/04/21/190590294/46d03cb796c707c47eafc4be4d7a6429_239093705735527333.png"
+  },
+  {
+    "id": 62,
+    "name": "星海巡航",
+    "name_en": "Cruising in the Stellar Sea",
+    "name_ja": "星海巡航",
+    "weapon": 2,
+    "star": 5,
+    "mhy_url": "870",
+    "wiki_url": "cruising-in-the-stellar-sea",
+    "icon_url": "https://act-upload.mihoyo.com/sr-wiki/2023/04/23/288909604/a2b3f93e2efa2a18941ea6eef3c8367e_6303407602832083418.png"
+  },
+  {
+    "id": 61,
+    "name": "新手任务开始前",
+    "name_en": "Before the Tutorial Mission Starts",
+    "name_ja": "初めてのクエストの前に",
+    "weapon": 6,
+    "star": 4,
+    "mhy_url": "1087",
+    "wiki_url": "before-the-tutorial-mission-starts",
+    "icon_url": "https://act-upload.mihoyo.com/sr-wiki/2023/06/06/75216984/a8e614c788f29055767faa62095d8b77_4626089794247082485.png"
+  },
+  {
+    "id": 60,
+    "name": "相抗",
+    "name_en": "Adversarial",
+    "name_ja": "相抗",
+    "weapon": 2,
+    "star": 3,
+    "mhy_url": "555",
+    "wiki_url": "adversarial",
+    "icon_url": "https://act-upload.mihoyo.com/sr-wiki/2023/04/22/103492603/3c0cbb7b550046e3decd11f36f474d53_6579811914373072860.png"
+  },
+  {
+    "id": 59,
+    "name": "物穰",
+    "name_en": "Cornucopia",
+    "name_ja": "物穣",
+    "weapon": 4,
+    "star": 3,
+    "mhy_url": "335",
+    "wiki_url": "cornucopia",
+    "icon_url": "https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/b93d356f7286d3d6ddd184dabbcab5bd_7272163511585222070.png"
+  },
+  {
+    "id": 58,
+    "name": "舞！舞！舞！",
+    "name_en": "Dance! Dance! Dance!",
+    "name_ja": "ダンス！ダンス！ダンス！",
+    "weapon": 5,
+    "star": 4,
+    "mhy_url": "851",
+    "wiki_url": "dance-dance-dance",
+    "icon_url": "https://act-upload.mihoyo.com/sr-wiki/2023/04/21/190590294/65b8f2e9cb7397b6c45e5f1c217c9619_945859113093771003.png"
+  },
+  {
+    "id": 57,
+    "name": "无可取代的东西",
+    "name_en": "Something Irreplaceable",
+    "name_ja": "かけがえのないもの",
+    "weapon": 0,
+    "star": 5,
+    "mhy_url": "384",
+    "wiki_url": "something-irreplaceable",
+    "icon_url": "https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/bf0c26e434d9ab68ac5380f3e3d68846_3240303378927572941.png"
+  },
+  {
+    "id": 56,
+    "name": "无处可逃",
+    "name_en": "Nowhere to Run",
+    "name_ja": "逃げ場なし",
+    "weapon": 0,
+    "star": 4,
+    "mhy_url": "549",
+    "wiki_url": "nowhere-to-run",
+    "icon_url": "https://uploadstatic.mihoyo.com/sr-wiki/2023/04/21/288909602/b1e02ca609100c2893a81df73b3bd579_6100932689589816632.png"
+  },
+  {
+    "id": 55,
+    "name": "我们是地火",
+    "name_en": "We Are Wildfire",
+    "name_ja": "我ら地炎",
+    "weapon": 3,
+    "star": 4,
+    "mhy_url": "849",
+    "wiki_url": "we-are-wildfire",
+    "icon_url": "https://act-upload.mihoyo.com/sr-wiki/2023/04/21/190590294/0e829ea93e161cc0245dae46c2d18149_4486331441913943344.png"
+  },
+  {
+    "id": 54,
     "name": "唯有沉默",
     "name_en": "Only Silence Remains",
     "name_ja": "沈黙のみ",
@@ -11,7 +264,7 @@ export const starRailWeapon: any[] = [
     "icon_url": "https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/ccecfa65e89a767692c3d6b198e67375_8116761189465044541.png"
   },
   {
-    "id": 50,
+    "id": 53,
     "name": "汪！散步时间！",
     "name_en": "Woof! Walk Time!",
     "name_ja": "ワン！散歩の時間！",
@@ -22,7 +275,7 @@ export const starRailWeapon: any[] = [
     "icon_url": "https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/8374260f67cc5344eb48ad7f9e38eccc_3079203861207027155.png"
   },
   {
-    "id": 49,
+    "id": 52,
     "name": "晚安与睡颜",
     "name_en": "Good Night and Sleep Well",
     "name_ja": "おやすみなさいと寝顔",
@@ -33,7 +286,7 @@ export const starRailWeapon: any[] = [
     "icon_url": "https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/6af2613ab53f384442122bfd27720f92_1559406493845442336.png"
   },
   {
-    "id": 48,
+    "id": 51,
     "name": "同一种心情",
     "name_en": "Shared Feeling",
     "name_ja": "同じ気持ち",
@@ -44,7 +297,7 @@ export const starRailWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/sr-wiki/2023/04/21/288909602/97c0debc944e304c0054c136d18c50f1_6722877704474086839.png"
   },
   {
-    "id": 47,
+    "id": 50,
     "name": "天倾",
     "name_en": "Collapsing Sky",
     "name_ja": "天傾",
@@ -55,7 +308,7 @@ export const starRailWeapon: any[] = [
     "icon_url": "https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/7deb06a9a24d66e5f5ea4202d611d3bf_5037156115374524018.png"
   },
   {
-    "id": 46,
+    "id": 49,
     "name": "天才们的休憩",
     "name_en": "Geniuses' Repose",
     "name_ja": "天才たちの休息",
@@ -66,18 +319,7 @@ export const starRailWeapon: any[] = [
     "icon_url": "https://act-upload.mihoyo.com/sr-wiki/2023/04/21/190590294/e751871e7cda9a1c3a0004866db887b4_4470314258641119676.png"
   },
   {
-    "id": 45,
-    "name": "她已闭上双眼",
-    "name_en": "She Already Shut Her Eyes",
-    "name_ja": "閉ざした瞳",
-    "weapon": 3,
-    "star": 5,
-    "mhy_url": "1677",
-    "wiki_url": "she-already-shut-her-eyes",
-    "icon_url": "https://act-upload.mihoyo.com/sr-wiki/2023/09/14/299598919/7788a275edacfbe671fca19b45d0c426_1574508016723203981.png"
-  },
-  {
-    "id": 44,
+    "id": 47,
     "name": "戍御",
     "name_en": "Defense",
     "name_ja": "防衛",
@@ -88,18 +330,18 @@ export const starRailWeapon: any[] = [
     "icon_url": "https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/7bcda699ff0fbe7e55643c541c426a42_30081035558284699.png"
   },
   {
-    "id": 43,
-    "name": "时节不居",
-    "name_en": "Time Waits for No One",
-    "name_ja": "時節は居らず",
-    "weapon": 4,
+    "id": 48,
+    "name": "她已闭上双眼",
+    "name_en": "She Already Shut Her Eyes",
+    "name_ja": "閉ざした瞳",
+    "weapon": 3,
     "star": 5,
-    "mhy_url": "567",
-    "wiki_url": "time-waits-for-no-one",
-    "icon_url": "https://act-upload.mihoyo.com/sr-wiki/2023/04/22/214441058/e1f40839f00bd80e1060f00f4cba61b2_8158676828966241566.png"
+    "mhy_url": "1677",
+    "wiki_url": "she-already-shut-her-eyes",
+    "icon_url": "https://act-upload.mihoyo.com/sr-wiki/2023/09/14/299598919/7788a275edacfbe671fca19b45d0c426_1574508016723203981.png"
   },
   {
-    "id": 42,
+    "id": 45,
     "name": "睿见",
     "name_en": "Sagacity",
     "name_ja": "見識",
@@ -110,18 +352,18 @@ export const starRailWeapon: any[] = [
     "icon_url": "https://act-upload.mihoyo.com/sr-wiki/2023/04/22/103492603/c75dcb67628de9898cf56d8cf3da31b0_5106499027839641089.png"
   },
   {
-    "id": 41,
-    "name": "如泥酣眠",
-    "name_en": "Sleep Like the Dead",
-    "name_ja": "泥の如き眠り",
-    "weapon": 2,
+    "id": 46,
+    "name": "时节不居",
+    "name_en": "Time Waits for No One",
+    "name_ja": "時節は居らず",
+    "weapon": 4,
     "star": 5,
-    "mhy_url": "566",
-    "wiki_url": "sleep-like-the-dead",
-    "icon_url": "https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/165b709388e973ac51e3bc790a0cfeff_5625680177342760428.png"
+    "mhy_url": "567",
+    "wiki_url": "time-waits-for-no-one",
+    "icon_url": "https://act-upload.mihoyo.com/sr-wiki/2023/04/22/214441058/e1f40839f00bd80e1060f00f4cba61b2_8158676828966241566.png"
   },
   {
-    "id": 40,
+    "id": 43,
     "name": "齐颂",
     "name_en": "Chorus",
     "name_ja": "斉頌",
@@ -132,7 +374,29 @@ export const starRailWeapon: any[] = [
     "icon_url": "https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/75eb0b7c88042f1bce8766da913d1eeb_4996861006675453708.png"
   },
   {
-    "id": 39,
+    "id": 44,
+    "name": "如泥酣眠",
+    "name_en": "Sleep Like the Dead",
+    "name_ja": "泥の如き眠り",
+    "weapon": 2,
+    "star": 5,
+    "mhy_url": "566",
+    "wiki_url": "sleep-like-the-dead",
+    "icon_url": "https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/165b709388e973ac51e3bc790a0cfeff_5625680177342760428.png"
+  },
+  {
+    "id": 42,
+    "name": "片刻，留在眼底",
+    "name_en": "An Instant Before A Gaze",
+    "name_ja": "その一刻、目に焼き付けて",
+    "weapon": 1,
+    "star": 5,
+    "mhy_url": "-",
+    "wiki_url": "an-instant-before-a-gaze",
+    "icon_url": "https://hsr.honeyhunterworld.com/img/item/an-instant-before-a-gaze-item_icon.webp"
+  },
+  {
+    "id": 41,
     "name": "暖夜不会漫长",
     "name_en": "Warmth Shortens Cold Nights",
     "name_ja": "暖かい夜は長くない",
@@ -143,7 +407,7 @@ export const starRailWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/sr-wiki/2023/04/21/288909602/31696161875bfbfef1396f8fb68f5be6_2865781185367897767.png"
   },
   {
-    "id": 38,
+    "id": 40,
     "name": "匿影",
     "name_en": "Hidden Shadow",
     "name_ja": "匿影",
@@ -154,18 +418,7 @@ export const starRailWeapon: any[] = [
     "icon_url": "https://act-upload.mihoyo.com/sr-wiki/2023/04/22/103492603/52a5dc8b7e0aa01f070cbb207ebd3012_5303839694063749956.png"
   },
   {
-    "id": 37,
-    "name": "秘密誓心",
-    "name_en": "A Secret Vow",
-    "name_ja": "秘密の誓い",
-    "weapon": 0,
-    "star": 4,
-    "mhy_url": "222",
-    "wiki_url": "a-secret-vow",
-    "icon_url": "https://act-upload.mihoyo.com/sr-wiki/2023/05/06/288909604/4058e6a3ca810444e16303d8f99e3cbf_3848396585828889644.png"
-  },
-  {
-    "id": 36,
+    "id": 38,
     "name": "论剑",
     "name_en": "Swordplay",
     "name_ja": "論剣",
@@ -176,7 +429,18 @@ export const starRailWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/sr-wiki/2023/04/21/288909602/8ea6e08e213f1463dd592913057591b7_1597110980342981033.png"
   },
   {
-    "id": 35,
+    "id": 39,
+    "name": "秘密誓心",
+    "name_en": "A Secret Vow",
+    "name_ja": "秘密の誓い",
+    "weapon": 0,
+    "star": 4,
+    "mhy_url": "222",
+    "wiki_url": "a-secret-vow",
+    "icon_url": "https://act-upload.mihoyo.com/sr-wiki/2023/05/06/288909604/4058e6a3ca810444e16303d8f99e3cbf_3848396585828889644.png"
+  },
+  {
+    "id": 37,
     "name": "轮契",
     "name_en": "Meshing Cogs",
     "name_ja": "輪契",
@@ -187,7 +451,7 @@ export const starRailWeapon: any[] = [
     "icon_url": "https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/2d5a26a86d6401a3826b029a9cfeebfb_615755650846272907.png"
   },
   {
-    "id": 34,
+    "id": 36,
     "name": "镂月裁云之意",
     "name_en": "Carve the Moon, Weave the Clouds",
     "name_ja": "彫月裁雲の意",
@@ -198,7 +462,7 @@ export const starRailWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/sr-wiki/2023/04/21/288909602/93de9d798632df0c9ea660ac33926ba2_2747835853468939355.png"
   },
   {
-    "id": 33,
+    "id": 35,
     "name": "灵钥",
     "name_en": "Passkey",
     "name_ja": "霊鍵",
@@ -209,7 +473,7 @@ export const starRailWeapon: any[] = [
     "icon_url": "https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/09aec132b62a41a787a7a89ebfb9ba7f_4056017462349383335.png"
   },
   {
-    "id": 32,
+    "id": 34,
     "name": "猎物的视线",
     "name_en": "Eyes of the Prey",
     "name_ja": "獲物の視線",
@@ -220,7 +484,7 @@ export const starRailWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/sr-wiki/2023/04/21/288909602/38142aab2e325f056fb903192712cd94_8435381312479183931.png"
   },
   {
-    "id": 31,
+    "id": 33,
     "name": "离弦",
     "name_en": "Darting Arrow",
     "name_ja": "離弦",
@@ -231,7 +495,7 @@ export const starRailWeapon: any[] = [
     "icon_url": "https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/fc4dac32f3a90eb614eb8852b4944c0a_339074751134485637.png"
   },
   {
-    "id": 30,
+    "id": 32,
     "name": "乐圮",
     "name_en": "Shattered Home",
     "name_ja": "楽壊",
@@ -242,7 +506,7 @@ export const starRailWeapon: any[] = [
     "icon_url": "https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/3ce71ad24bb9b5239a0d251cf6a78b7c_8652755492929625822.png"
   },
   {
-    "id": 29,
+    "id": 31,
     "name": "朗道的选择",
     "name_en": "Landau's Choice",
     "name_ja": "ランドゥーの選択",
@@ -253,7 +517,7 @@ export const starRailWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/sr-wiki/2023/04/21/288909602/4fc10608f7f63460220af99661eff9eb_2173462361556697626.png"
   },
   {
-    "id": 28,
+    "id": 30,
     "name": "开疆",
     "name_en": "Pioneering",
     "name_ja": "新天地",
@@ -264,7 +528,7 @@ export const starRailWeapon: any[] = [
     "icon_url": "https://act-upload.mihoyo.com/sr-wiki/2023/04/22/103492603/2a13e4c462242f585d1a359534f08207_804645297709649387.png"
   },
   {
-    "id": 27,
+    "id": 29,
     "name": "决心如汗珠般闪耀",
     "name_en": "Resolution Shines As Pearls of Sweat",
     "name_ja": "決意は汗のように輝く",
@@ -275,7 +539,7 @@ export const starRailWeapon: any[] = [
     "icon_url": "https://act-upload.mihoyo.com/sr-wiki/2023/04/21/190590294/d20eb92c6e6b45e01a74a3eae3236a0c_8544948651264708528.png"
   },
   {
-    "id": 26,
+    "id": 28,
     "name": "俱殁",
     "name_en": "Mutual Demise",
     "name_ja": "倶歿",
@@ -286,7 +550,7 @@ export const starRailWeapon: any[] = [
     "icon_url": "https://act-upload.mihoyo.com/sr-wiki/2023/04/22/103492603/5d68684855c1e6356991ec106160bb15_7665516313130129576.png"
   },
   {
-    "id": 25,
+    "id": 26,
     "name": "今日亦是和平的一日",
     "name_en": "Today Is Another Peaceful Day",
     "name_ja": "今日も平和な一日",
@@ -297,7 +561,18 @@ export const starRailWeapon: any[] = [
     "icon_url": "https://act-upload.mihoyo.com/sr-wiki/2023/04/21/288909604/17f059bf3a7b77c184bf7e7571c29365_4959888878352010800.png"
   },
   {
-    "id": 24,
+    "id": 27,
+    "name": "惊魂夜",
+    "name_en": "Night of Fright",
+    "name_ja": "驚魂の夜",
+    "weapon": 4,
+    "star": 5,
+    "mhy_url": "1943",
+    "wiki_url": "night-of-fright",
+    "icon_url": "https://act-upload.mihoyo.com/sr-wiki/2023/11/11/279865110/0d5c005b2f1c6f94f4d25ec2c492799f_7050966315907275273.png"
+  },
+  {
+    "id": 25,
     "name": "嘉果",
     "name_en": "Fine Fruit",
     "name_ja": "嘉果",
@@ -308,7 +583,7 @@ export const starRailWeapon: any[] = [
     "icon_url": "https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/f97ca99cf03bfa210945ad220891302b_876506868934440869.png"
   },
   {
-    "id": 23,
+    "id": 24,
     "name": "记忆中的模样",
     "name_en": "Memories of the Past",
     "name_ja": "記憶の中の姿",
@@ -319,7 +594,7 @@ export const starRailWeapon: any[] = [
     "icon_url": "https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/db37e0f07974f38f2482584d3ea1343c_5398624370127048356.png"
   },
   {
-    "id": 22,
+    "id": 23,
     "name": "记忆的质料",
     "name_en": "Texture of Memories",
     "name_ja": "記憶の素材",
@@ -330,7 +605,7 @@ export const starRailWeapon: any[] = [
     "icon_url": "https://act-upload.mihoyo.com/sr-wiki/2023/04/23/109341043/0ef2f92a4ee6f5bf8b848e6b2555ffa9_4868302018570081407.png"
   },
   {
-    "id": 21,
+    "id": 22,
     "name": "记一位星神的陨落",
     "name_en": "On the Fall of an Aeon",
     "name_ja": "とある星神の殞落を記す",
@@ -341,7 +616,7 @@ export const starRailWeapon: any[] = [
     "icon_url": "https://act-upload.mihoyo.com/sr-wiki/2023/04/26/288909604/5de6ade884bf419dc2adc1815bd5a109_1893890981000298645.png"
   },
   {
-    "id": 20,
+    "id": 21,
     "name": "琥珀",
     "name_en": "Amber",
     "name_ja": "琥珀",
@@ -353,6 +628,17 @@ export const starRailWeapon: any[] = [
   },
   {
     "id": 19,
+    "name": "嘿，我在这儿",
+    "name_en": "Hey, Over Here",
+    "name_ja": "よぉ、ここにいるぜ",
+    "weapon": 4,
+    "star": 4,
+    "mhy_url": "-",
+    "wiki_url": "hey-over-here",
+    "icon_url": "https://hsr.honeyhunterworld.com/img/item/hey-over-here-item_icon.webp"
+  },
+  {
+    "id": 20,
     "name": "后会有期",
     "name_en": "We Will Meet Again",
     "name_ja": "またお会いしましょう",
@@ -396,17 +682,6 @@ export const starRailWeapon: any[] = [
     "icon_url": "https://act-upload.mihoyo.com/sr-wiki/2023/08/30/299598919/eced27ebe7faab9c25fa1cf82738ca5d_7438526283868577651.png"
   },
   {
-    "id": 15,
-    "name": "拂晓之前",
-    "name_en": "Before Dawn",
-    "name_ja": "夜明け前",
-    "weapon": 1,
-    "star": 5,
-    "mhy_url": "361",
-    "wiki_url": "before-dawn",
-    "icon_url": "https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/a1f733dd784fbc6ecffc2a09b0b11104_7972399684465006295.png"
-  },
-  {
     "id": 14,
     "name": "锋镝",
     "name_en": "Arrows",
@@ -418,15 +693,26 @@ export const starRailWeapon: any[] = [
     "icon_url": "https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/cef0df677c17b578cb7643759a52a5ee_4307166806168746030.png"
   },
   {
+    "id": 15,
+    "name": "拂晓之前",
+    "name_en": "Before Dawn",
+    "name_ja": "夜明け前",
+    "weapon": 1,
+    "star": 5,
+    "mhy_url": "361",
+    "wiki_url": "before-dawn",
+    "icon_url": "https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/a1f733dd784fbc6ecffc2a09b0b11104_7972399684465006295.png"
+  },
+  {
     "id": 13,
     "name": "烦恼着，幸福着",
     "name_en": "Worrisome, Blissful",
     "name_ja": "悩んで笑って",
     "weapon": 2,
     "star": 5,
-    "mhy_url": "-",
+    "mhy_url": "1719",
     "wiki_url": "worrisome-blissful",
-    "icon_url": "https://hsr.honeyhunterworld.com/img/item/worrisome-blissful-item_icon.webp"
+    "icon_url": "https://act-upload.mihoyo.com/sr-wiki/2023/09/28/279865110/737c94ce555209035ee36d1a8441ed09_1645954088853485308.png"
   },
   {
     "id": 12,
@@ -512,9 +798,9 @@ export const starRailWeapon: any[] = [
     "name_ja": "この身は剣なり",
     "weapon": 0,
     "star": 5,
-    "mhy_url": "-",
+    "mhy_url": "1718",
     "wiki_url": "i-shall-be-my-own-sword",
-    "icon_url": "https://hsr.honeyhunterworld.com/img/item/i-shall-be-my-own-sword-item_icon.webp"
+    "icon_url": "https://act-upload.mihoyo.com/sr-wiki/2023/09/28/279865110/671aee5d265242e2cc4f4cac0e2d6360_7921106895277409851.png"
   },
   {
     "id": 4,
@@ -561,260 +847,7 @@ export const starRailWeapon: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/sr-wiki/2023/04/21/288909602/3ff519a5181824f854811e6ca77e208c_509101673108415116.png"
   },
   {
-    "id": 52,
-    "name": "我们是地火",
-    "name_en": "We Are Wildfire",
-    "name_ja": "我ら地炎",
-    "weapon": 3,
-    "star": 4,
-    "mhy_url": "849",
-    "wiki_url": "we-are-wildfire",
-    "icon_url": "https://act-upload.mihoyo.com/sr-wiki/2023/04/21/190590294/0e829ea93e161cc0245dae46c2d18149_4486331441913943344.png"
-  },
-  {
-    "id": 53,
-    "name": "无处可逃",
-    "name_en": "Nowhere to Run",
-    "name_ja": "逃げ場なし",
-    "weapon": 0,
-    "star": 4,
-    "mhy_url": "549",
-    "wiki_url": "nowhere-to-run",
-    "icon_url": "https://uploadstatic.mihoyo.com/sr-wiki/2023/04/21/288909602/b1e02ca609100c2893a81df73b3bd579_6100932689589816632.png"
-  },
-  {
-    "id": 54,
-    "name": "无可取代的东西",
-    "name_en": "Something Irreplaceable",
-    "name_ja": "かけがえのないもの",
-    "weapon": 0,
-    "star": 5,
-    "mhy_url": "384",
-    "wiki_url": "something-irreplaceable",
-    "icon_url": "https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/bf0c26e434d9ab68ac5380f3e3d68846_3240303378927572941.png"
-  },
-  {
-    "id": 55,
-    "name": "舞！舞！舞！",
-    "name_en": "Dance! Dance! Dance!",
-    "name_ja": "ダンス！ダンス！ダンス！",
-    "weapon": 5,
-    "star": 4,
-    "mhy_url": "851",
-    "wiki_url": "dance-dance-dance",
-    "icon_url": "https://act-upload.mihoyo.com/sr-wiki/2023/04/21/190590294/65b8f2e9cb7397b6c45e5f1c217c9619_945859113093771003.png"
-  },
-  {
-    "id": 56,
-    "name": "物穰",
-    "name_en": "Cornucopia",
-    "name_ja": "物穣",
-    "weapon": 4,
-    "star": 3,
-    "mhy_url": "335",
-    "wiki_url": "cornucopia",
-    "icon_url": "https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/b93d356f7286d3d6ddd184dabbcab5bd_7272163511585222070.png"
-  },
-  {
-    "id": 57,
-    "name": "相抗",
-    "name_en": "Adversarial",
-    "name_ja": "相抗",
-    "weapon": 2,
-    "star": 3,
-    "mhy_url": "555",
-    "wiki_url": "adversarial",
-    "icon_url": "https://act-upload.mihoyo.com/sr-wiki/2023/04/22/103492603/3c0cbb7b550046e3decd11f36f474d53_6579811914373072860.png"
-  },
-  {
-    "id": 58,
-    "name": "新手任务开始前",
-    "name_en": "Before the Tutorial Mission Starts",
-    "name_ja": "初めてのクエストの前に",
-    "weapon": 6,
-    "star": 4,
-    "mhy_url": "1087",
-    "wiki_url": "before-the-tutorial-mission-starts",
-    "icon_url": "https://act-upload.mihoyo.com/sr-wiki/2023/06/06/75216984/a8e614c788f29055767faa62095d8b77_4626089794247082485.png"
-  },
-  {
-    "id": 59,
-    "name": "星海巡航",
-    "name_en": "Cruising in the Stellar Sea",
-    "name_ja": "星海巡航",
-    "weapon": 2,
-    "star": 5,
-    "mhy_url": "870",
-    "wiki_url": "cruising-in-the-stellar-sea",
-    "icon_url": "https://act-upload.mihoyo.com/sr-wiki/2023/04/23/288909604/a2b3f93e2efa2a18941ea6eef3c8367e_6303407602832083418.png"
-  },
-  {
-    "id": 60,
-    "name": "延长记号",
-    "name_en": "Fermata",
-    "name_ja": "フェルマータ",
-    "weapon": 6,
-    "star": 4,
-    "mhy_url": "850",
-    "wiki_url": "fermata",
-    "icon_url": "https://act-upload.mihoyo.com/sr-wiki/2023/04/21/190590294/46d03cb796c707c47eafc4be4d7a6429_239093705735527333.png"
-  },
-  {
-    "id": 61,
-    "name": "鼹鼠党欢迎你",
-    "name_en": "The Moles Welcome You",
-    "name_ja": "モグラ党へようこそ",
-    "weapon": 0,
-    "star": 4,
-    "mhy_url": "241",
-    "wiki_url": "the-moles-welcome-you",
-    "icon_url": "https://uploadstatic.mihoyo.com/sr-wiki/2023/04/21/288909602/7fc99a0d879716aca211a681ff410c89_692449159536190412.png"
-  },
-  {
-    "id": 62,
-    "name": "一场术后对话",
-    "name_en": "Post-Op Conversation",
-    "name_ja": "手術後の会話",
-    "weapon": 4,
-    "star": 4,
-    "mhy_url": "221",
-    "wiki_url": "post-op-conversation",
-    "icon_url": "https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/8b5deffd89904c55ac8d1fccc57a47af_7384354830209959343.png"
-  },
-  {
-    "id": 63,
-    "name": "以世界之名",
-    "name_en": "In the Name of the World",
-    "name_ja": "世界の名を以て",
-    "weapon": 6,
-    "star": 5,
-    "mhy_url": "273",
-    "wiki_url": "in-the-name-of-the-world",
-    "icon_url": "https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/21886feabacbc0b5a4410a8da110317f_602268217580203504.png"
-  },
-  {
-    "id": 64,
-    "name": "银河铁道之夜",
-    "name_en": "Night on the Milky Way",
-    "name_ja": "銀河鉄道の夜",
-    "weapon": 1,
-    "star": 5,
-    "mhy_url": "390",
-    "wiki_url": "night-on-the-milky-way",
-    "icon_url": "https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/6c099fbdcd488fdb7408e4132e562403_4528940612834658072.png"
-  },
-  {
-    "id": 65,
-    "name": "幽邃",
-    "name_en": "Void",
-    "name_ja": "幽邃",
-    "weapon": 6,
-    "star": 3,
-    "mhy_url": "333",
-    "wiki_url": "void",
-    "icon_url": "https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/49f73c7aac0155c42b68e3e839112487_5366746539759678931.png"
-  },
-  {
-    "id": 66,
-    "name": "于夜色中",
-    "name_en": "In the Night",
-    "name_ja": "夜の帳の中で",
-    "weapon": 2,
-    "star": 5,
-    "mhy_url": "268",
-    "wiki_url": "in-the-night",
-    "icon_url": "https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/fc882563a44b54e78d5e5f9a1e8c4399_4525887876546013963.png"
-  },
-  {
-    "id": 67,
-    "name": "余生的第一天",
-    "name_en": "Day One of My New Life",
-    "name_ja": "余生の初日",
-    "weapon": 3,
-    "star": 4,
-    "mhy_url": "271",
-    "wiki_url": "day-one-of-my-new-life",
-    "icon_url": "https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/97235128d3abb0e6227653256a7a9b59_7891226001801475234.png"
-  },
-  {
-    "id": 68,
-    "name": "与行星相会",
-    "name_en": "Planetary Rendezvous",
-    "name_ja": "惑星との出会い",
-    "weapon": 5,
-    "star": 4,
-    "mhy_url": "244",
-    "wiki_url": "planetary-rendezvous",
-    "icon_url": "https://uploadstatic.mihoyo.com/sr-wiki/2023/04/21/288909602/e3481c397c1b6ecbe31d72091519f1b9_5419696652493888402.png"
-  },
-  {
-    "id": 69,
-    "name": "宇宙市场趋势",
-    "name_en": "Trend of the Universal Market",
-    "name_ja": "星間市場のトレンド",
-    "weapon": 3,
-    "star": 4,
-    "mhy_url": "848",
-    "wiki_url": "trend-of-the-universal-market",
-    "icon_url": "https://act-upload.mihoyo.com/sr-wiki/2023/04/21/190590294/48204f8db9e77016a30146a81a5fbf83_6906827343452491493.png"
-  },
-  {
-    "id": 70,
-    "name": "雨一直下",
-    "name_en": "Incessant Rain",
-    "name_ja": "降りやまぬ雨",
-    "weapon": 6,
-    "star": 5,
-    "mhy_url": "1086",
-    "wiki_url": "incessant-rain",
-    "icon_url": "https://act-upload.mihoyo.com/sr-wiki/2023/06/06/75216984/3d151f458b578b51bbba714f357dd83f_8237289304680955596.png"
-  },
-  {
-    "id": 71,
-    "name": "渊环",
-    "name_en": "Loop",
-    "name_ja": "淵環",
-    "weapon": 6,
-    "star": 3,
-    "mhy_url": "332",
-    "wiki_url": "loop",
-    "icon_url": "https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/5516b364c118b5f59699df8926fc9af9_5293043332629217911.png"
-  },
-  {
-    "id": 72,
-    "name": "在蓝天下",
-    "name_en": "Under the Blue Sky",
-    "name_ja": "青空の下で",
-    "weapon": 0,
-    "star": 4,
-    "mhy_url": "845",
-    "wiki_url": "under-the-blue-sky",
-    "icon_url": "https://act-upload.mihoyo.com/sr-wiki/2023/04/22/190590294/ae08a1fb40c821ab314dfb833713a762_5172986260277745251.png"
-  },
-  {
-    "id": 73,
-    "name": "早餐的仪式感",
-    "name_en": "The Seriousness of Breakfast",
-    "name_ja": "朝食の儀式感",
-    "weapon": 1,
-    "star": 4,
-    "mhy_url": "545",
-    "wiki_url": "the-seriousness-of-breakfast",
-    "icon_url": "https://uploadstatic.mihoyo.com/sr-wiki/2023/04/21/288909602/2b4508ad5bce4db860214f0ce20813ca_3972556125864564980.png"
-  },
-  {
-    "id": 74,
-    "name": "这就是我啦！",
-    "name_en": "This Is Me!",
-    "name_ja": "これがウチだよ！",
-    "weapon": 3,
-    "star": 4,
-    "mhy_url": "542",
-    "wiki_url": "this-is-me",
-    "icon_url": "https://uploadstatic.mihoyo.com/sr-wiki/2023/04/21/288909602/a6ba39da97774add5a33f21e3301310e_2372315290004238322.png"
-  },
-  {
-    "id": 75,
+    "id": 78,
     "name": "只需等待",
     "name_en": "Patience Is All You Need",
     "name_ja": "待つのみ",
@@ -825,7 +858,7 @@ export const starRailWeapon: any[] = [
     "icon_url": "https://act-upload.mihoyo.com/sr-wiki/2023/07/17/75216984/7e6dbd865dda4072a15b1195cd5e0d00_3614059528685389289.png"
   },
   {
-    "id": 76,
+    "id": 79,
     "name": "制胜的瞬间",
     "name_en": "Moment of Victory",
     "name_ja": "勝利の刹那",
@@ -836,7 +869,7 @@ export const starRailWeapon: any[] = [
     "icon_url": "https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/779152d00007614b68c5bf6c7e5ac1b4_7130725355751336176.png"
   },
   {
-    "id": 77,
+    "id": 80,
     "name": "智库",
     "name_en": "Data Bank",
     "name_ja": "アーカイブ",
@@ -847,7 +880,7 @@ export const starRailWeapon: any[] = [
     "icon_url": "https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/4486e863f260f041f33f97853888417a_3420723413949371482.png"
   },
   {
-    "id": 78,
+    "id": 81,
     "name": "重返幽冥",
     "name_en": "Return to Darkness",
     "name_ja": "幽冥に帰す",

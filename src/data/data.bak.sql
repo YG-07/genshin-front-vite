@@ -1,28 +1,54 @@
 /*
  Navicat Premium Data Transfer
 
- Source Server         : localhost
+ Source Server         : 127.0.0.1
  Source Server Type    : MySQL
- Source Server Version : 50726
- Source Host           : localhost:3306
+ Source Server Version : 80030
+ Source Host           : 127.0.0.1:3306
  Source Schema         : data
 
  Target Server Type    : MySQL
- Target Server Version : 50726
+ Target Server Version : 80030
  File Encoding         : 65001
 
- Date: 22/09/2023 15:51:44
+ Date: 27/09/2023 00:39:29
 */
 
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
 
 -- ----------------------------
+-- Table structure for blue_achive_school_select
+-- ----------------------------
+DROP TABLE IF EXISTS `blue_achive_school_select`;
+CREATE TABLE `blue_achive_school_select`  (
+  `id` int NOT NULL,
+  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
+  `icon_url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of blue_achive_school_select
+-- ----------------------------
+INSERT INTO `blue_achive_school_select` VALUES (0, '阿拜多斯', 'https://cdnimg.gamekee.com/wiki2.0/images/w_413/h_374/829/43637/2023/7/4/169570.png');
+INSERT INTO `blue_achive_school_select` VALUES (1, '格黑娜', 'https://cdnimg.gamekee.com/wiki2.0/images/w_413/h_374/829/43637/2023/7/4/824731.png');
+INSERT INTO `blue_achive_school_select` VALUES (2, '三一', 'https://cdnimg.gamekee.com/wiki2.0/images/w_413/h_374/829/43637/2023/7/4/869881.png');
+INSERT INTO `blue_achive_school_select` VALUES (3, '千年科学', 'https://cdnimg.gamekee.com/wiki2.0/images/w_413/h_374/829/43637/2023/7/4/873884.png');
+INSERT INTO `blue_achive_school_select` VALUES (4, '百鬼夜行', 'https://cdnimg.gamekee.com/wiki2.0/images/w_413/h_374/829/43637/2023/7/4/342619.png');
+INSERT INTO `blue_achive_school_select` VALUES (5, '山海经', 'https://cdnimg.gamekee.com/wiki2.0/images/w_413/h_374/829/43637/2023/7/4/394261.png');
+INSERT INTO `blue_achive_school_select` VALUES (6, '阿里乌斯', 'https://cdnimg.gamekee.com/wiki2.0/images/w_413/h_374/829/43637/2023/7/4/302051.png');
+INSERT INTO `blue_achive_school_select` VALUES (7, '赤冬', 'https://cdnimg.gamekee.com/wiki2.0/images/w_688/h_624/829/43637/2023/7/4/747305.png');
+INSERT INTO `blue_achive_school_select` VALUES (8, 'SRT', 'https://cdnimg.gamekee.com/wiki2.0/images/w_688/h_624/829/43637/2023/7/4/529744.png');
+INSERT INTO `blue_achive_school_select` VALUES (9, '瓦尔基里', 'https://cdnimg.gamekee.com/wiki2.0/images/w_688/h_624/829/43637/2023/7/4/401437.png');
+INSERT INTO `blue_achive_school_select` VALUES (10, '其他', 'https://cdnimg.gamekee.com/wiki2.0/images/w_688/h_624/829/43637/2023/7/4/120452.png');
+
+-- ----------------------------
 -- Table structure for blue_archive_npc
 -- ----------------------------
 DROP TABLE IF EXISTS `blue_archive_npc`;
 CREATE TABLE `blue_archive_npc`  (
-  `id` int(11) NOT NULL,
+  `id` int NOT NULL,
   `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `name_ja` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
@@ -147,7 +173,7 @@ INSERT INTO `blue_archive_npc` VALUES (107, '志乃', '川流（かわる）シ�
 -- ----------------------------
 DROP TABLE IF EXISTS `blue_archive_relation`;
 CREATE TABLE `blue_archive_relation`  (
-  `id` int(11) NOT NULL,
+  `id` int NOT NULL,
   `position_type` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `weapon_type` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `school_type` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
@@ -209,21 +235,21 @@ INSERT INTO `blue_archive_relation` VALUES (40, NULL, NULL, NULL, '其他', NULL
 -- ----------------------------
 DROP TABLE IF EXISTS `blue_archive_student`;
 CREATE TABLE `blue_archive_student`  (
-  `id` int(11) NOT NULL,
+  `id` int NOT NULL,
   `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `name_ja` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
-  `star` int(11) NULL DEFAULT NULL,
-  `position` int(11) NULL DEFAULT NULL,
-  `weapon` int(11) NULL DEFAULT NULL,
+  `star` int NULL DEFAULT NULL,
+  `position` int NULL DEFAULT NULL,
+  `weapon` int NULL DEFAULT NULL,
   `url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `img_urls` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL,
   `icon_url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
-  `banner` int(11) NULL DEFAULT NULL,
-  `attack` int(11) NULL DEFAULT NULL,
-  `defense` int(11) NULL DEFAULT NULL,
-  `school` int(11) NULL DEFAULT NULL,
-  `club` int(11) NULL DEFAULT NULL,
-  `map_get` int(11) NULL DEFAULT NULL,
+  `banner` int NULL DEFAULT NULL,
+  `attack` int NULL DEFAULT NULL,
+  `defense` int NULL DEFAULT NULL,
+  `school` int NULL DEFAULT NULL,
+  `club` int NULL DEFAULT NULL,
+  `map_get` int NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = DYNAMIC;
 
@@ -387,267 +413,11 @@ INSERT INTO `blue_archive_student` VALUES (154, '梓', '白洲アズサ（白洲
 INSERT INTO `blue_archive_student` VALUES (155, '梓（泳装）', '白洲アズサ（白洲梓）', 3, 0, 3, '81811', 'https://cdnimg.gamekee.com/wiki2.0/images/829/94828/2021/10/4/388490.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_3451/h_2559/829/43637/2023/4/16/180831.png,https://cdnimg.gamekee.com/wiki2.0/images/w_2720/h_1357/829/43637/2023/0/17/60502.png', 'https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/3/705704.png', 1, 2, 0, 2, 13, 0);
 
 -- ----------------------------
--- Table structure for chat_menu
--- ----------------------------
-DROP TABLE IF EXISTS `chat_menu`;
-CREATE TABLE `chat_menu`  (
-  `id` int(11) NOT NULL,
-  `up` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
-  `s` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
-  `src` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
-  PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = DYNAMIC;
-
--- ----------------------------
--- Records of chat_menu
--- ----------------------------
-INSERT INTO `chat_menu` VALUES (1, '2023-01-19 20:20:00.000', '[3D同人/无修正]Pantsushi大佬2022九月-2023一月作品合集  ', '/1/1.19/Pantsushi/download.png');
-INSERT INTO `chat_menu` VALUES (2, '补档', '2022-12-23 每日涩涩 精品女菩萨福利姬/二次元涩图 106P', '/1/每日/12.23/download.png');
-INSERT INTO `chat_menu` VALUES (3, '补档', '2022-12-24 每日涩涩 精品女菩萨福利姬/二次元涩图 126P', '/1/每日/12.24/download.png');
-INSERT INTO `chat_menu` VALUES (4, '补档', '2022-12-26 每日涩涩 精品女菩萨福利姬/二次元涩图 159P', '/1/每日/12.26/download.png');
-INSERT INTO `chat_menu` VALUES (5, '补档', '2022-12-27 每日涩涩 精品女菩萨福利姬/二次元涩图 133P', '/1/每日/12.27/download.png');
-INSERT INTO `chat_menu` VALUES (6, '补档', '2022-12-28 每日涩涩 精品女菩萨福利姬/二次元涩图 177P', '/1/每日/12.28/download.png');
-INSERT INTO `chat_menu` VALUES (7, '补档', '2022-12-29 每日涩涩 精品女菩萨福利姬/二次元涩图 228P', '/1/每日/12.29/download.png');
-INSERT INTO `chat_menu` VALUES (8, '补档', '2022-12-30 每日涩涩 精品女菩萨福利姬/二次元涩图 168P', '/1/每日/12.30/download.png');
-INSERT INTO `chat_menu` VALUES (9, '2023-01-20 13:36:00.000', '2[l2d/同人动画/无修正]laomeng大佬23年1月奖励作品', '/1/1.20/laomeng/download.png');
-INSERT INTO `chat_menu` VALUES (10, '2023-01-20 15:25:00.000', 'HongKongDoll玩偶姐姐-情侣游戏 套图x17', '/1/1.20/玩偶/download图.png');
-INSERT INTO `chat_menu` VALUES (11, '2023-01-20 15:25:00.000', 'HongKongDoll玩偶姐姐-情侣游戏 视频x2', '/1/1.20/玩偶/download视频.png');
-INSERT INTO `chat_menu` VALUES (12, '补档', '2023-01-01 每日涩涩 精品女菩萨福利姬/二次元涩图 223P', '/1/每日/1.1/download.png');
-INSERT INTO `chat_menu` VALUES (13, '补档', '2023-01-06 每日涩涩 精品女菩萨福利姬/二次元涩图 109P', '/1/每日/1.6/download.png');
-INSERT INTO `chat_menu` VALUES (14, '补档', '2023-01-07 每日涩涩 精品女菩萨福利姬/二次元涩图 94P', '/1/每日/1.7/download.png');
-INSERT INTO `chat_menu` VALUES (15, '补档', '2023-01-08 每日涩涩 精品女菩萨福利姬/二次元涩图 117P', '/1/每日/1.8/download.png');
-INSERT INTO `chat_menu` VALUES (16, '补档', '2023-01-10 每日涩涩 精品女菩萨福利姬/二次元涩图 88P', '/1/每日/1.10/download.png');
-INSERT INTO `chat_menu` VALUES (17, '补档', '2023-01-11 每日涩涩 精品女菩萨福利姬/二次元涩图 157P', '/1/每日/1.11/download.png');
-INSERT INTO `chat_menu` VALUES (18, '补档', '2023-01-13 每日涩涩 精品女菩萨福利姬/二次元涩图 205P', '/1/每日/1.13/download.png');
-INSERT INTO `chat_menu` VALUES (19, '补档', '2023-01-14 每日涩涩 精品女菩萨福利姬/二次元涩图 174P', '/1/每日/1.14/download.png');
-INSERT INTO `chat_menu` VALUES (20, '补档', '2023-01-16 每日涩涩 精品女菩萨福利姬/二次元涩图 114P', '/1/每日/1.16/download.png');
-INSERT INTO `chat_menu` VALUES (21, '补档', '2023-01-17 每日涩涩 精品女菩萨福利姬/二次元涩图 128P', '/1/每日/1.17/download.png');
-INSERT INTO `chat_menu` VALUES (22, '补档', '2023-01-18 每日涩涩 精品女菩萨福利姬/二次元涩图 151P', '/1/每日/1.18/download.png');
-INSERT INTO `chat_menu` VALUES (23, '补档', '2023-01-19 每日涩涩 精品女菩萨福利姬/二次元涩图 148P', '/1/每日/1.19/download.png');
-INSERT INTO `chat_menu` VALUES (24, '2023-01-21 17:08:00.000', '[MMD/无修正]shantianxiaozhi大佬23年1月作品', '/1/1.21/shantian/download.png');
-INSERT INTO `chat_menu` VALUES (25, '(补档)2023/1/21 19:52', '与神里的难忘时刻（涩图+小文章）', '/1/11.28/shenli/download.png');
-INSERT INTO `chat_menu` VALUES (26, '2023-01-23 15:50:00.000', 'Redcomet大佬 为美好的世界献上祝福 阿库娅', '/1/1.23/Redcomet/download.png');
-INSERT INTO `chat_menu` VALUES (27, '补档', '浮力合集', '/1/fuli/download.png');
-INSERT INTO `chat_menu` VALUES (28, '补档', '2021年1月里番作品合集', '/1/fuli/lifan/21-01/download.png');
-INSERT INTO `chat_menu` VALUES (29, '补档', '福利姬-柚子猫', '/1/11.26/youzimao/download.png');
-INSERT INTO `chat_menu` VALUES (30, '补档', '画师jndfh作品合集', '/1/11.26/jndfh/download.png');
-INSERT INTO `chat_menu` VALUES (31, '补档', '河北彩花写真', '/1/11.27/EXC-095/download.png');
-INSERT INTO `chat_menu` VALUES (32, '补档', '画师dikk0作品合集', '/1/11.27/dikk0/download.png');
-INSERT INTO `chat_menu` VALUES (33, '补档', '喵小吉-黑呆', '/1/11.27/maoxiaoji/download.png');
-INSERT INTO `chat_menu` VALUES (34, '补档', 'av极品踩点混剪-tm的燃起来了', '/1/11.25/hunjian/download.png');
-INSERT INTO `chat_menu` VALUES (35, '补档', '[冬野みかん] 巨大なお姉ちゃんのunbirth漫画 [中国翻訳]', '/1/11.25/juren/download.png');
-INSERT INTO `chat_menu` VALUES (36, '补档', '[打个胶先] 第一期 FC2PPV-1035997', '/1/11.25/pian/download.png');
-INSERT INTO `chat_menu` VALUES (37, '补档', '偷玩手机的惩罚～（futa德x能', '/1/11.25/mingri/download.png');
-INSERT INTO `chat_menu` VALUES (38, '补档', '画师DIO作品合集', '/1/11.25/DIO/download.png');
-INSERT INTO `chat_menu` VALUES (39, '补档', '电锯人-玛奇玛', '/1/11.25/m7m/download.png');
-INSERT INTO `chat_menu` VALUES (40, '2023/01/24/14:02', '画师Camonome作品合集（推特）', '/1/11.24/camonome/download.png');
-INSERT INTO `chat_menu` VALUES (41, '2023/01/24/14:25', 'NaNa-修女幻想1', '/1/11.24/nana/download.png');
-INSERT INTO `chat_menu` VALUES (42, '2023/01/24/14:43', '画师bbolalus作品合集 全是大大大大欧派', '/1/11.23/bbolalus/download.png');
-INSERT INTO `chat_menu` VALUES (43, '2023/01/24/15:00', '妮蔻×奈德丽', '/1/11.23/nikou/download.png');
-INSERT INTO `chat_menu` VALUES (44, '2023/01/24/15:17', '[毛玉牛乳 (玉之けだま)] 甘リリス [中国翻訳] [無修正] [DL版]', '/1/11.22/maoyu/download.png');
-INSERT INTO `chat_menu` VALUES (45, '2023/01/24/15:34', '『兔子先生』特别节目《直击日本AV拍摄现场》近距离接触摄影组如何工作', '/1/11.21/tuzi/download.png');
-INSERT INTO `chat_menu` VALUES (46, '2023/01/24/15:34', '『兔子先生』特别节目《直击日本AV拍摄现场》近距离接触摄影组如何工作', '/1/11.21/tuzi/download.png');
-INSERT INTO `chat_menu` VALUES (47, '2023/01/24/16:45', '坚贞不屈的清纯人妻大小姐，移情别恋的全部经过1', '/1/11.21/daxiaojie1/download.png');
-INSERT INTO `chat_menu` VALUES (48, '2023/01/24/18:20', '坚贞不屈的清纯人妻大小姐，移情别恋的全部经过2', '/1/11.21/daxiaojie2/download.png');
-INSERT INTO `chat_menu` VALUES (49, '2023/01/24/19:04', '毛玉牛乳-我是娇小魅魔的忠实仆人[无修正] 总集篇', '/1/11.20/puren/download.png');
-INSERT INTO `chat_menu` VALUES (50, '2023/01/24/19:20', '福利姬', '/1/11.19/fuliji/download.png');
-INSERT INTO `chat_menu` VALUES (51, '2023/01/24/21:03', '羞耻1+2', '/1/11.18/xiuchi/download.png');
-INSERT INTO `chat_menu` VALUES (52, '2023/01/24/21:38', '沖田凛花 巧克力草莓兔兔', '/1/11.18/tutu/download.png');
-INSERT INTO `chat_menu` VALUES (53, '2023/01/24/22:00', '土下座で頼んでみた', '/1/11.18/tuxiazuo/download.png');
-INSERT INTO `chat_menu` VALUES (54, '2023/01/24/22:03', '冰宫Asylum 2022.08.16 - 2022.11.07 [無修正]', '/1/11.17/binggong/download.png');
-INSERT INTO `chat_menu` VALUES (55, '2023/01/24/22:36', 'JVID 取精快递服务员 婕咪 我的身体就是存精容器', '/1/11.17/jiemi/download.png');
-INSERT INTO `chat_menu` VALUES (56, '2023/01/25/00:30', '[福利姬]MNS_Dame – Girlfriend', '/1/11.17/mns/download.png');
-INSERT INTO `chat_menu` VALUES (57, '2023/01/25/16:12', '我的肚子才不是虫子的繁育场 (明日方舟) [中国語] [無修正]', '/1/11.16/fanzhi/download.png');
-INSERT INTO `chat_menu` VALUES (58, '2023/01/25/16:41', 'JVID 紫欣 – 野外全露出', '/1/11.16/zixin/download.png');
-INSERT INTO `chat_menu` VALUES (59, '2023/01/25/17:16', '[打个胶先]第二期', '/1/11.15/dajiao/download.png');
-INSERT INTO `chat_menu` VALUES (60, '2023/01/25/17:37', 'N位浮力姬 掰批特辑  136P大合集', '/1/11.15/pi/download.png');
-INSERT INTO `chat_menu` VALUES (61, '2023/01/25/17:54', '[福利姬]萌量守恒 – 牛奶', '/1/11.15/niunai/download.png');
-INSERT INTO `chat_menu` VALUES (62, '2023/01/25/23:39', '[福利姬]Rina [JVID] The Best Inflatable Doll (P)', '/1/11.11/rina/download.png');
-INSERT INTO `chat_menu` VALUES (63, '2023/01/25/23:57', '[福利姬][MIKELY] Ye-Eun – Pure', '/1/11.8/yeeun/download.png');
-INSERT INTO `chat_menu` VALUES (64, '2023/01/26/00:25', '[あよ] バーバラズリ (原神)', '/1/11.8/babala/download.png');
-INSERT INTO `chat_menu` VALUES (65, '2023/01/26/00:40', '[あよ] 刻晴とえっち (原神)', '/1/11.8/keqing/download.png');
-INSERT INTO `chat_menu` VALUES (66, '2023/01/26/01:04', 'eloise软软 – OL', '/1/11.8/ruan/download.png');
-INSERT INTO `chat_menu` VALUES (67, '2023/01/26/14:11', '[だにまるstudio (だにまる)] 酔った後輩が素直になるまで [中国翻訳]', '/1/11.8/houbei/download.png');
-INSERT INTO `chat_menu` VALUES (68, '2023/01/26/14:37', '[diletta, だにまる] 満たされて目覚める朝に、地味な朝食を [中国翻訳]', '/1/11.8/diwei/download.png');
-INSERT INTO `chat_menu` VALUES (69, '2023/01/26/15:12', '[Loozy] Sonson (손손) – Smer + S.Ver', '/1/11.7/smer/download.png');
-INSERT INTO `chat_menu` VALUES (70, '2023/01/26/15:38', '人妻与OL赤裸的性生活告白 无套性爱直播', '/1/11.7/xingai/download.png');
-INSERT INTO `chat_menu` VALUES (71, '2023/01/26/15:57', '画师TAKASHIA作品合集', '/1/11.7/takashia/download.png');
-INSERT INTO `chat_menu` VALUES (72, '2023/01/26/17:35', 'eloise软软 乖乖的白丝', '/1/11.7/ruanruan/download.png');
-INSERT INTO `chat_menu` VALUES (73, '2023/01/26/19:01', 'G-cup Yuanyuan -a charming busty racing girl (P)', '/1/11.7/gcup/download.png');
-INSERT INTO `chat_menu` VALUES (74, '2023/01/26/19:47', '[Eonsang]M16[中国翻訳]', '/1/11.6/m16/download.png');
-INSERT INTO `chat_menu` VALUES (75, '2023/01/26/20:07', '[LEEHEE EXPRESS] LEDB Vol.031 – Son Ye-Eun', '/1/11.6/son/download.png');
-INSERT INTO `chat_menu` VALUES (76, '2023/01/26/20:37', '[実々みみず] 乳とりどり [中国翻訳] [DL版]', '/1/11.5/benzi/download.png');
-INSERT INTO `chat_menu` VALUES (77, '2023/01/26/21:38', '[ARTGRAVIA] VOL438 Leesnoww', '/1/11.5/438/download.png');
-INSERT INTO `chat_menu` VALUES (78, '2023/01/26/22:27', '小鸟酱足交', '/1/11.4/xiaoniao/download.png');
-INSERT INTO `chat_menu` VALUES (79, '2023/01/26/23:01', '喵小吉 – 临江仙', '/1/11.4/miaoxiaoji/download.png');
-INSERT INTO `chat_menu` VALUES (80, '2023/01/26/00:06', '[Eonsang] 용돈낭비금지', '/1/11.4/sang1/download.png');
-INSERT INTO `chat_menu` VALUES (81, '2023/01/27/16:39', '[Eonsang]RO635[中国翻訳]', '/1/11.4/sang2/download.png');
-INSERT INTO `chat_menu` VALUES (82, '2023/01/27/17:11', '肉肉 – (Nikumikyo)', '/1/11.4/rourou/download.png');
-INSERT INTO `chat_menu` VALUES (83, '2023/01/27/17:34', '3D-蒂法', '/1/11.4/difa/download.png');
-INSERT INTO `chat_menu` VALUES (84, '2023/01/27/19:07', '原神甘雨涩图特辑260P', '/1/11.3/ganyu/download.png');
-INSERT INTO `chat_menu` VALUES (85, '2023/01/27/19:30', '[小鸟酱]星奈奈cos系列 霞之丘诗羽', '/1/11.3/xiaoniao/download.png');
-INSERT INTO `chat_menu` VALUES (86, '2023/01/27/19:51', '[にぎりうさぎ] ２人のお仕事1~4[中国翻訳]', '/1/11.3/2ren/download.png');
-INSERT INTO `chat_menu` VALUES (87, '2023/01/27/20:39', '[PureMedia] VOL193 Jia', '/1/11.3/jia/download.png');
-INSERT INTO `chat_menu` VALUES (88, '2023/01/27/21:09', '蕾姆涩图特辑184p', '/1/11.2/leimu/download.png');
-INSERT INTO `chat_menu` VALUES (89, '2023/01/27/21:36', '[ARTGRAVIA] VOL428 혠둥이', '/1/11.1/428/download.png');
-INSERT INTO `chat_menu` VALUES (90, '2023/01/27/22:05', '[ほるもんカレー (鳶村)] 反逆溫泉1 (少女前線) [中国翻訳]', '/1/11.1/nifan1/download.png');
-INSERT INTO `chat_menu` VALUES (91, '2023/01/27/23:36', '[ほるもんカレー (鳶村)] 反逆溫泉2 (少女前線) [中国翻訳]', '/1/11.1/nifan2/download.png');
-INSERT INTO `chat_menu` VALUES (92, '2023/01/27/23:54', '[ほるもんカレー (鳶村)] 反逆溫泉3 (少女前線) [中国翻訳]', '/1/11.1/nifan3/download.png');
-INSERT INTO `chat_menu` VALUES (93, '2023/01/28/00:25', '[JVID] SOD Sister Salon Plan (P)', '/1/11.1/sis/download.png');
-INSERT INTO `chat_menu` VALUES (94, '2023/01/28/15:23', '[DJAWA] Mozzi 모찌 – Azur Lane HMS Cheshire', '/1/11.1/lane/download.png');
-INSERT INTO `chat_menu` VALUES (95, '2023/01/28/16:12', '一之瀬 アスナの宅配便', '/1/11.1/nitian/download.png');
-INSERT INTO `chat_menu` VALUES (96, '2023/01/28/16:37', '画师s16雪作品合集  [無修正]', '/1/11.1/s16/download.png');
-INSERT INTO `chat_menu` VALUES (97, '2023/01/28/19:11', '画师iumu作品合集', '/1/10.30/iumu/download.png');
-INSERT INTO `chat_menu` VALUES (98, '2023/01/28/19:55', 'eloise软软 – 河边JK', '/1/10.30/ruanruan/download.png');
-INSERT INTO `chat_menu` VALUES (99, '2023/01/28/20:43', '喵小吉 – 小吉的暑期补习班', '/1/10.29/miaoxiaoji/download.png');
-INSERT INTO `chat_menu` VALUES (100, '2023/01/28/21:11', '画师タブヘッド（Pixiv Fanbox）', '/1/10.29/sese/download.png');
-INSERT INTO `chat_menu` VALUES (101, '2023/01/28/21:33', '有 能 狂 喜', '/1/10.26/neng/download.png');
-INSERT INTO `chat_menu` VALUES (102, '2023/01/28/22:06', '喵小吉 – 小吉的小镇生活', '/1/10.26/maoxiaoji/download.png');
-INSERT INTO `chat_menu` VALUES (103, '2023/01/28/22:26', '[虎助遥人]臀臀臀部[中国翻訳]', '/1/10.26/tunbu/download.png');
-INSERT INTO `chat_menu` VALUES (104, '2023/01/28/22:48', '橙子喵酱合集', '/1/10.25/chenzimiao/download.png');
-INSERT INTO `chat_menu` VALUES (105, '2023/01/28/23:22', '有料少女【高額支援版】～お金を払うと〇〇してくれる 1', '/1/10.24/youliao1/download.png');
-INSERT INTO `chat_menu` VALUES (106, '2023/01/28/23:38', '有料少女【高額支援版】～お金を払うと〇〇してくれる 2', '/1/10.24/youliao2/download.png');
-INSERT INTO `chat_menu` VALUES (107, '2023/01/28/23:55', '有料少女【高額支援版】～お金を払うと〇〇してくれる 3', '/1/10.24/youliao3/download.png');
-INSERT INTO `chat_menu` VALUES (108, '2023/01/29/00:13', '金鱼kinngyo – 花音栗子5套', '/1/10.24/jinyu/download.png');
-INSERT INTO `chat_menu` VALUES (109, '2023/01/29/00:51', 'YunaTamago onlyfans', '/1/10.24/yuna/download.png');
-INSERT INTO `chat_menu` VALUES (110, '2023/01/29/15:56', '村上西瓜 – 刹那', '/1/10.24/chana/download.png');
-INSERT INTO `chat_menu` VALUES (111, '2023/01/29/16:34', '画师Msk12003作品合集', '/1/10.24/12003/download.png');
-INSERT INTO `chat_menu` VALUES (112, '2023/01/29/16:59', '画师Shengtian作品+GIF动图', '/1/10.23/shengtian/download.png');
-INSERT INTO `chat_menu` VALUES (113, '2023/01/29/17:33', '喵小吉 – 小魅魔', '/1/10.23/miaoxiaoji/download.png');
-INSERT INTO `chat_menu` VALUES (114, '2023/01/29/18:22', '小鸟酱 – 情侣系列', '/1/10.23/xiaoniao/download.png');
-INSERT INTO `chat_menu` VALUES (115, '2023/01/29/18:49', '[ぽち小屋。 (ぽち。)]姉なるもの 1-7 [無修正]', '/1/10.23/xiaowu/download.png');
-INSERT INTO `chat_menu` VALUES (116, '2023/01/29/19:19', '[pixiv]ユヨウ(附带pixiv文案，已整理阅读顺序）', '/1/10.21/sese/download.png');
-INSERT INTO `chat_menu` VALUES (117, '2023/01/29/19:43', '诺艾尔小姐无法拒绝！ [无修正]', '/1/10.21/jujue/download.png');
-INSERT INTO `chat_menu` VALUES (118, '2023/01/29/20:22', '画师Monobe作品合集', '/1/10.21/monobe/download.png');
-INSERT INTO `chat_menu` VALUES (119, '2023/01/29/20:59', '[Kataokasan] Futa德狗x阿能 (Arknights) [Chinese]', '/1/10.20/futa/download.png');
-INSERT INTO `chat_menu` VALUES (120, '2023/01/29/21:40', '【大罕见】注入爱国基因，東雪莲！', '/1/10.19/hanjian/download.png');
-INSERT INTO `chat_menu` VALUES (121, '2023/01/29/22:06', 'あい（I_cup_JD）- 白T恤', '/1/10.19/cup/download.png');
-INSERT INTO `chat_menu` VALUES (122, '2023/01/29/23:12', '喵小吉 – 风铃公主', '/1/10.19/miaoxiaoji/download.png');
-INSERT INTO `chat_menu` VALUES (123, '2023/01/29/23:32', '赛高萝莉 蓝色', '/1/10.19/luoli/download.png');
-INSERT INTO `chat_menu` VALUES (124, '2023/01/29/23:55', '夫妻同居一个月与一年的区别', '/1/10.18/fuqi/download.png');
-INSERT INTO `chat_menu` VALUES (125, '2023/01/30/00:25', '少女秩序', '/1/10.18/shaonv/download.png');
-INSERT INTO `chat_menu` VALUES (126, '2023/01/30/00:57', '[雨] Fanbox', '/1/10.17/yu/download.png');
-INSERT INTO `chat_menu` VALUES (127, '2023/01/30/01:24', '齋齋 Itsukichan いつき', '/1/10.17/zhai/download.png');
-INSERT INTO `chat_menu` VALUES (128, '2023/01/30/01:44', '[TAKK] Mori Patrol Tighnari (原神) [中国翻訳]', '/1/10.15/ti/download.png');
-INSERT INTO `chat_menu` VALUES (129, '2023/01/30/02:05', '橙子喵酱 – 甘雨刻晴', '/1/10.15/chenzi/download.png');
-INSERT INTO `chat_menu` VALUES (130, '2023/01/30/02:41', 'JVID 阿黎 – 暗黑空姐', '/1/10.14/ali/download.png');
-INSERT INTO `chat_menu` VALUES (131, '2023/01/30/02:59', 'I_cup_JD – 紫内衣', '/1/10.14/cup/download.png');
-INSERT INTO `chat_menu` VALUES (132, '2023/01/30/19:11', 'ナツメと性愛対決 (喫茶ステラと死神の蝶) [中国語] [無修正]', '/1/10.13/duijue/download.png');
-INSERT INTO `chat_menu` VALUES (133, '2023/01/30/19:30', '[Son Ye-Eun 손예은] 2B [BLUECAKE]', '/1/10.11/2b/download.png');
-INSERT INTO `chat_menu` VALUES (134, '2023/01/30/19:52', '[Club3] Bathroom', '/1/10.10/club/download.png');
-INSERT INTO `chat_menu` VALUES (135, '2023/01/30/20:12', '喵小吉 – Re：从零开始的女体盛宴', '/1/10.10/miaoxiaoji/download.png');
-INSERT INTO `chat_menu` VALUES (136, '2023/01/30/20:32', '[Loozy] Sonson – Reading room', '/1/10.10/loozy/download.png');
-INSERT INTO `chat_menu` VALUES (137, '2023/01/30/20:52', '小志乃酱 – 凛凛蝶 常服', '/1/10.8/xiaozhinai/download.png');
-INSERT INTO `chat_menu` VALUES (138, '2023/01/30/21:11', '落落raku 3套', '/1/10.8/luoluo/download.png');
-INSERT INTO `chat_menu` VALUES (139, '2023/01/30/22:06', '村上西瓜 – 多莉', '/1/10.7/duoli/download.png');
-INSERT INTO `chat_menu` VALUES (140, '2023/01/30/22:27', 'あい（I_cup_JD）- 奶咖啡', '/1/10.5/kafei/download.png');
-INSERT INTO `chat_menu` VALUES (141, '2023/01/30/22:59', '画师houk1se1作品合集', '/1/10.2/houk1se1/download.png');
-INSERT INTO `chat_menu` VALUES (142, '2023/01/30/23:22', '小志乃酱 – 猫咪圆舞曲', '/1/10.2/xiaozhinai/download.png');
-INSERT INTO `chat_menu` VALUES (143, '2023/01/31/14:18', 'Son Ye-Eun私教 Rrivate tutor', '/1/10.1/sijiao/download.png');
-INSERT INTO `chat_menu` VALUES (144, '2023/01/31/15:15', '[Pixiv] 小柴胡', '/1/11.12/xiaochaihu/download.png');
-INSERT INTO `chat_menu` VALUES (145, '2023/01/31/15:34', '里菜と穴', '/1/11.29/licai/download.png');
-INSERT INTO `chat_menu` VALUES (146, '2023/01/31/15:50', '[海凪コウ] 挑発JK [中国翻訳]', '/1/11.29/jk/download.png');
-INSERT INTO `chat_menu` VALUES (147, '2023/01/31/16:10', '[ICECAKE] 飞行的训练', '/1/11.29/feixing/download.png');
-INSERT INTO `chat_menu` VALUES (148, '2023/01/31/16:46', '小鸟酱一小时足交合集', '/1/11.29/xiaoniao/download.png');
-INSERT INTO `chat_menu` VALUES (149, '2023/01/31/17:06', '落落Raku SunSeeker', '/1/11.29/luoluo/download.png');
-INSERT INTO `chat_menu` VALUES (150, '2023/01/31/18:34', '[ARTGRAVIA] VOL453 leesnoww', '/1/11.30/453/download.png');
-INSERT INTO `chat_menu` VALUES (151, '2023/01/31/18:57', 'HongKongDoll-玩偶姐姐-粉色吊带睡裙', '/1/11.30/wanou/download.png');
-INSERT INTO `chat_menu` VALUES (152, '2023/01/31/19:20', '酒儿酱', '/1/11.30/jiu/download.png');
-INSERT INTO `chat_menu` VALUES (153, '2023/01/31/19:56', '落落Raku Love Atago', '/1/11.30/luoluo/download.png');
-INSERT INTO `chat_menu` VALUES (154, '2023/01/31/20:27', '只想交欢的年纪1', '/1/12.1/jiaohuan1/download.png');
-INSERT INTO `chat_menu` VALUES (155, '2023/01/31/20:45', '只想交欢的年纪2', '/1/12.1/jiaohuan2/download.png');
-INSERT INTO `chat_menu` VALUES (156, '2023/01/31/21:22', '只想交欢的年纪3', '/1/12.1/jiaohuan3/download.png');
-INSERT INTO `chat_menu` VALUES (157, '2023/01/31/21:55', '[打个胶先]第三期 STARS-140', '/1/12.1/STARS140/download.png');
-INSERT INTO `chat_menu` VALUES (158, '2023/01/31/22:18', '小酒酱-浴室自嗨', '/1/12.1/xiaojiu/download.png');
-INSERT INTO `chat_menu` VALUES (159, '2023/01/31/22:38', '喵小吉-罪恶王冠 套图x51', '/1/12.2/miaoxiaoji/downloadtb.png');
-INSERT INTO `chat_menu` VALUES (160, '2023/01/31/22:38', '喵小吉-罪恶王冠 视频花絮x6', '/1/12.2/miaoxiaoji/downloadsp.png');
-INSERT INTO `chat_menu` VALUES (161, '2023/01/31/23:08', '柚子猫-边看世界杯边...', '/1/12.2/youzi/download.png');
-INSERT INTO `chat_menu` VALUES (162, '2023/02/01/12:26', '关于涩涩的服装对射精的时间会有多少影响的实验', '/1/12.3/shiyan/download.png');
-INSERT INTO `chat_menu` VALUES (163, '2023/02/01/13:05', '地雷系游戏少女', '/1/12.3/youxi/download.png');
-INSERT INTO `chat_menu` VALUES (164, '2023/02/01/14:07', '原神-刻晴甘雨', '/1/12.3/a22/download1.png');
-INSERT INTO `chat_menu` VALUES (165, '2023/02/01/15:00', '原神-刻晴黑丝+裸足', '/1/12.3/a22/download2.png');
-INSERT INTO `chat_menu` VALUES (166, '2023/02/01/15:18', '原神-空vs妮露', '/1/12.3/a22/download3.png');
-INSERT INTO `chat_menu` VALUES (167, '2023/02/01/15:55', '原神-旅行者第一人称独享', '/1/12.4/mmd/download1.png');
-INSERT INTO `chat_menu` VALUES (168, '2023/02/01/16:14', '原神-旅行者纯啪混剪', '/1/12.4/mmd/download2.png');
-INSERT INTO `chat_menu` VALUES (169, '2023/02/01/16:33', '原神-旅行者异世后入篇', '/1/12.4/mmd/download3.png');
-INSERT INTO `chat_menu` VALUES (170, '2023/02/01/17:11', 'HongKongDoll玩偶姐姐-闲暇时刻', '/1/12.5/wanou/download.png');
-INSERT INTO `chat_menu` VALUES (171, '2023/02/01/17:29', '[海凪コウ] フリーハグやってます', '/1/12.5/hai/download.png');
-INSERT INTO `chat_menu` VALUES (172, '2023/02/01/18:24', '画师zzp2作品合集', '/1/12.5/zzp2/download.png');
-INSERT INTO `chat_menu` VALUES (173, '2023/02/01/19:00', '原神会員制餐厅[中国翻訳]', '/1/12.11/huiyuan/download.png');
-INSERT INTO `chat_menu` VALUES (174, '2023/02/01/19:29', '粉色情人陪玩の情人', '/1/12.11/peiwan/download.png');
-INSERT INTO `chat_menu` VALUES (175, '2023/02/01/20:20', '[空色工房] 黒いウワサのあるうちの学校の先生たち', '/1/12.12/gongfang/download.png');
-INSERT INTO `chat_menu` VALUES (176, '2023/02/01/20:50', '(原神)空—妮露 无修正 [中国翻訳]', '/1/12.12/kong/download.png');
-INSERT INTO `chat_menu` VALUES (177, '2023/02/01/21:12', '[同人动画]电锯人-玛奇玛', '/1/12.12/dianju/download.png');
-INSERT INTO `chat_menu` VALUES (178, '2023/02/01/22:30', '相位土豆大佬12月作品 开淫趴', '/1/12.13/tudou/download.png');
-INSERT INTO `chat_menu` VALUES (179, '2023/02/02/16:23', '少女观察日记', '/1/12.14/balla/download.png');
-INSERT INTO `chat_menu` VALUES (180, '2023/02/02/17:01', '奶牛超级白丝大奶子夹住大鸡巴疯狂乳交', '/1/12.14/rujiao/download.png');
-INSERT INTO `chat_menu` VALUES (181, '2023/02/02/17:30', '小鹿酱-尺度全开①', '/1/12.15/xiaolu/download1.png');
-INSERT INTO `chat_menu` VALUES (182, '2023/02/02/17:45', '小鹿酱-尺度全开②', '/1/12.15/xiaolu/download2.png');
-INSERT INTO `chat_menu` VALUES (183, '2023/02/02/17:55', '小鹿酱-尺度全开③', '/1/12.15/xiaolu/download3.png');
-INSERT INTO `chat_menu` VALUES (184, '2023/02/02/19:01', '小鹿酱-尺度全开④', '/1/12.15/xiaolu/download4.png');
-INSERT INTO `chat_menu` VALUES (185, '2023/02/02/21:00', '[3D同人无修正]Puuguy大佬 原神-妮露', '/1/12.15/puuguy/download1.png');
-INSERT INTO `chat_menu` VALUES (186, '2023/02/02/21:13', '[3D同人无修正]Puuguy大佬 圣诞蒂法', '/1/12.15/puuguy/download2.png');
-INSERT INTO `chat_menu` VALUES (187, '2023/02/02/21:50', '画师remora作品合集', '/1/12.15/remora/download.png');
-INSERT INTO `chat_menu` VALUES (188, '2023/02/02/23:08', '[ASMR-耳舐め] 保健の先生との性授業♡耳舐め密着え●ち♡【恋人アーカイブ公開1ヵ月-ニコニコより高音質＆高画質-KU100】', '/1/12.15/asmr/download.png');
-INSERT INTO `chat_menu` VALUES (189, '2023/02/03/00:12', '巨乳女友爱上NTR', '/1/12.16/nvyou/download.png');
-INSERT INTO `chat_menu` VALUES (190, '2023/02/03/00:44', 'pi-haruka与小草神的甜蜜性爱', '/1/12.16/pi/download.png');
-INSERT INTO `chat_menu` VALUES (191, '2023/02/03/01:11', '【SLG/动态/2D】九条裟罗NejiSimSara2 Ver1.03【安卓直装/PC】', '/1/12.17/jiutiao/download.png');
-INSERT INTO `chat_menu` VALUES (192, '2023/02/03/14:59', '寻宝的暑假たからさがしのなつやすみ【前篇】', '/1/12.17/xunbao/download.png');
-INSERT INTO `chat_menu` VALUES (193, '2023/02/03/15:54', '寻宝的暑假たからさがしのなつやすみ【中篇】', '/1/12.17/xunbao2/download.png');
-INSERT INTO `chat_menu` VALUES (194, '2023/02/03/18:32', '我认为的丝袜神作之藤环奈JUQ-162、给老公戴绿帽的秘书和自己的社长沉沦在性爱的海洋、口水湿吻、吊带黑丝、白虎无毛荡妇、NTR、绿帽奴、场面火爆震撼十足', '/1/12.18/siwa/download.png');
-INSERT INTO `chat_menu` VALUES (195, '2023/02/03/19:20', 'Nana-洗衣机の花式玩法', '/1/12.18/nana/download.png');
-INSERT INTO `chat_menu` VALUES (196, '2023/02/03/20:03', '【MMD/无修正】xiaodidi09', '/1/12.18/xiaodidi/download.png');
-INSERT INTO `chat_menu` VALUES (197, '2023/02/03/21:52', 'Rinhee大佬12月新作', '/1/12.19/lianjian/download.png');
-INSERT INTO `chat_menu` VALUES (198, '2023/02/03/22:14', 'bengugu大佬作品', '/1/12.19/bengugu/download.png');
-INSERT INTO `chat_menu` VALUES (199, '2023/02/03/22:31', 'bengugu大佬作品-原神莫娜', '/1/12.19/bengugu2/download.png');
-INSERT INTO `chat_menu` VALUES (200, '2023/02/03/23:07', '0721masterPAISEN大佬12月新作', '/1/12.20/master/download.png');
-INSERT INTO `chat_menu` VALUES (201, '2023/02/03/23:41', 'Naimi奶咪-OnlyFans小合集 共21视频', '/1/12.20/naimi/download.png');
-INSERT INTO `chat_menu` VALUES (202, '2023/02/04/00:25', '【ASMR-耳舐め】【真琴/Macoto/まこと 】公主连接 (プリコネ）Jカップ騎士メイドが耳元で吐息たっぷり耳舐め♡', '/1/12.20/asmr/download.png');
-INSERT INTO `chat_menu` VALUES (203, '2023/02/04/15:36', 'Naimi奶咪-OnlyFans小合集 共114图片', '/1/12.20/naimi2/download.png');
-INSERT INTO `chat_menu` VALUES (204, '2023/02/04/16:19', '【2d动画】lapin gris灰葉作品①', '/1/12.20/hui/download.png');
-INSERT INTO `chat_menu` VALUES (205, '2023/02/04/16:42', '【2d动画】lapin gris灰葉作品②', '/1/12.20/hui2/download.png');
-INSERT INTO `chat_menu` VALUES (206, '2023/02/04/17:13', '【Motion Anime】エロい願いが叶います!現実設定が変えれちゃう御守りでクラスの爆乳も担任のケツ穴もギャルも学園中の女子を全員オ〇ホ化っ(モーションアニメ版)', '/1/12.20/donghua/download.png');
-INSERT INTO `chat_menu` VALUES (207, '2023/02/04/17:54', '画师 大猫板蓝根 作品合集', '/1/12.20/damao/download.png');
-INSERT INTO `chat_menu` VALUES (208, '2023/02/04/18:50', '爆机少女喵小吉-双休日', '/1/12.21/miaoxiaoji/download.png');
-INSERT INTO `chat_menu` VALUES (209, '2023/02/04/19:30', '[Candy Club (スカイ)] お姉ちゃんととろける気持ち [中国翻訳][无修正]', '/1/12.21/kaidache/download.png');
-INSERT INTO `chat_menu` VALUES (210, '2023/02/04/20:53', '[打个胶先]第四期 adn-142-C', '/1/12.21/adn/download.png');
-INSERT INTO `chat_menu` VALUES (211, '2023/02/04/21:25', '八月未央-黑丝胸带', '/1/12.22/bayue/download.png');
-INSERT INTO `chat_menu` VALUES (212, '2023/02/04/21:26', '柚子喵-美女上司线下陪玩', '/1/12.23/youzi/download.png');
-INSERT INTO `chat_menu` VALUES (213, '2023/02/04/21:49', 'ww-蓝色JK裙', '/1/12.23/lanse/download.png');
-INSERT INTO `chat_menu` VALUES (214, '2023/02/04/22:33', 'Lewd Froggo动画作品1', '/1/12.23/lewd/download.png');
-INSERT INTO `chat_menu` VALUES (215, '2023/02/04/22:48', 'Lewd Froggo动画作品2', '/1/12.23/lewd2/download.png');
-INSERT INTO `chat_menu` VALUES (216, '2023/02/04/23:16', '推特MMD大神作品合集 视频x14', '/1/12.23/mmd1/download.png');
-INSERT INTO `chat_menu` VALUES (217, '2023/02/04/23:41', '推特MMD大神作品合集 CGx148', '/1/12.23/mmd2/download.png');
-INSERT INTO `chat_menu` VALUES (218, '2023/02/05/00:07', 'topu作品 原神-少女', '/1/12.23/topu1/download.png');
-INSERT INTO `chat_menu` VALUES (219, '2023/02/05/00:30', 'topu作品 原神-甘雨', '/1/12.23/topu2/download.png');
-INSERT INTO `chat_menu` VALUES (220, '2023/02/05/15:50', 'topu作品 原神-心海', '/1/12.23/topu3/download.png');
-INSERT INTO `chat_menu` VALUES (221, '2023/02/05/16:07', 'topu作品 原神-旅行者荧', '/1/12.23/topu4/download.png');
-INSERT INTO `chat_menu` VALUES (222, '2023/02/05/16:21', 'topu作品 碧蓝档案-亚子', '/1/12.23/topu5/download.png');
-INSERT INTO `chat_menu` VALUES (223, '2023/02/05/16:21', 'topu作品 碧蓝档案-亚子', '/1/12.23/topu5/download.png');
-INSERT INTO `chat_menu` VALUES (224, '2023/02/05/16:39', 'topu作品 原神-甘雨2', '/1/12.23/topu6/download.png');
-INSERT INTO `chat_menu` VALUES (225, '2023/02/05/17:43', '陽夜作品-原神申鹤', '/1/12.24/yangye1/download.png');
-INSERT INTO `chat_menu` VALUES (226, '2023/02/05/18:00', '陽夜作品-原神夜兰', '/1/12.24/yangye2/download.png');
-INSERT INTO `chat_menu` VALUES (227, '2023/02/05/18:31', '柚木-家庭VR游戏机', '/1/12.24/youmu/download.png');
-INSERT INTO `chat_menu` VALUES (228, '2023/02/05/19:13', '[打个胶先]第五期 未步奈奈_FC2PPV-2589532', '/1/12.25/bushu/download.png');
-INSERT INTO `chat_menu` VALUES (229, '2023/02/05/19:46', '香草少女-圣诞服', '/1/12.25/xiangcao/download.png');
-INSERT INTO `chat_menu` VALUES (230, '2023/02/05/20:02', '小菜头喵喵喵-圣诞主题', '/1/12.25/xiaocai/download.png');
-INSERT INTO `chat_menu` VALUES (231, '2023/02/05/20:34', '押尾猫-cos圣诞雷姆', '/1/12.25/yawei/download.png');
-INSERT INTO `chat_menu` VALUES (232, '2023/02/05/20:49', '芋圆呀呀-HAPPY！圣诞', '/1/12.25/yuyuan/download.png');
-INSERT INTO `chat_menu` VALUES (233, '2023/02/05/21:15', 'maloxx大佬作品-爆炒雌小鬼', '/1/12.26/maloxx/download.png');
-INSERT INTO `chat_menu` VALUES (234, '2023/02/05/21:35', '[3D同人/无修正]exprational大佬作品 死眠少女菲雅', '/1/12.27/ex/download.png');
-INSERT INTO `chat_menu` VALUES (235, '2023/02/05/21:54', '来点波奇酱小孤独图集(涩图美图 雅 俗 共 赏)', '/1/12.27/boqi/download.png');
-INSERT INTO `chat_menu` VALUES (236, '2023/02/05/22:25', '[MMD/无修正]相位土豆大佬 凌华+珐露珊分差', '/1/12.27/tudou/download.png');
-INSERT INTO `chat_menu` VALUES (237, '2023/02/05/23:11', 'Nana-老师の私教课', '/1/12.28/nana/download.png');
-INSERT INTO `chat_menu` VALUES (238, '2023/02/05/23:33', 'cuteli-真空圣诞装', '/1/12.29/zhenkong/download.png');
-INSERT INTO `chat_menu` VALUES (239, '2023/02/05/23:58', '三无皮卡喵 – 初音酱', '/1/12.29/chuyin/download.png');
-INSERT INTO `chat_menu` VALUES (240, '2023/02/05/00:06', '[SLG佳作/官中/PC+安卓] 妹生活～单色～ 官方中文版 v2.03 +修改存档', '/1/12.29/game/download.png');
-
--- ----------------------------
 -- Table structure for common_const
 -- ----------------------------
 DROP TABLE IF EXISTS `common_const`;
 CREATE TABLE `common_const`  (
-  `id` int(11) NOT NULL,
+  `id` int NOT NULL,
   `key` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `value` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `type` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -669,20 +439,24 @@ INSERT INTO `common_const` VALUES (9, 'azur_line_base', 'https://wiki.biligame.c
 INSERT INTO `common_const` VALUES (10, 'azur_line_icon_base', 'https://patchwiki\\.biligame\\.com/images/blhx', 'azurLine');
 INSERT INTO `common_const` VALUES (11, 'map_base', 'https://webstatic.mihoyo.com/ys/app/interactive-map/#/map/2', 'genshin');
 INSERT INTO `common_const` VALUES (12, 'mys_bh3_url', '/bh3/wiki/content/{id}/detail', 'honkai');
-INSERT INTO `common_const` VALUES (13, 'star_rail_base', '/sr/wiki/content/{id}/detail', 'starRail');
+INSERT INTO `common_const` VALUES (13, 'star_rail_base', 'https://bbs.mihoyo.com', 'starRail');
+INSERT INTO `common_const` VALUES (14, 'star_rail_role', '/{id}-character/?lang=CN', 'starRail');
+INSERT INTO `common_const` VALUES (15, 'star_rail_weapon', '/{id}-item/?lang=CN', 'starRail');
+INSERT INTO `common_const` VALUES (16, 'star_rail_mhy_url', '/sr/wiki/content/{id}/detail', 'starRail');
+INSERT INTO `common_const` VALUES (17, 'star_rail_wiki_base', 'https://hsr.honeyhunterworld.com', 'starRail');
 
 -- ----------------------------
 -- Table structure for genshin_book
 -- ----------------------------
 DROP TABLE IF EXISTS `genshin_book`;
 CREATE TABLE `genshin_book`  (
-  `id` int(11) NOT NULL,
+  `id` int NOT NULL,
   `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `name_en` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `name_ja` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
-  `book` int(11) NULL DEFAULT NULL,
-  `star` int(11) NULL DEFAULT NULL,
-  `week` int(11) NULL DEFAULT NULL,
+  `book` int NULL DEFAULT NULL,
+  `star` int NULL DEFAULT NULL,
+  `week` int NULL DEFAULT NULL,
   `mhy_url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `wiki_url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `icon_url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
@@ -743,7 +517,7 @@ INSERT INTO `genshin_book` VALUES (45, '「秩序」的指引', 'Guide to Order'
 -- ----------------------------
 DROP TABLE IF EXISTS `genshin_card`;
 CREATE TABLE `genshin_card`  (
-  `id` int(11) NOT NULL,
+  `id` int NOT NULL,
   `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `icon_url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
@@ -937,13 +711,13 @@ INSERT INTO `genshin_card` VALUES (177, '月桂的宝冠', 'n331033', '/img/i_n3
 -- ----------------------------
 DROP TABLE IF EXISTS `genshin_item`;
 CREATE TABLE `genshin_item`  (
-  `id` int(11) NOT NULL,
+  `id` int NOT NULL,
   `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `name_en` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `name_ja` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
-  `item` int(11) NULL DEFAULT NULL,
-  `star` int(11) NULL DEFAULT NULL,
-  `week` int(11) NULL DEFAULT NULL,
+  `item` int NULL DEFAULT NULL,
+  `star` int NULL DEFAULT NULL,
+  `week` int NULL DEFAULT NULL,
   `mhy_url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `wiki_url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `icon_url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
@@ -1019,7 +793,7 @@ INSERT INTO `genshin_item` VALUES (60, '无垢之海的银杯', 'Silver Goblet o
 -- ----------------------------
 DROP TABLE IF EXISTS `genshin_map`;
 CREATE TABLE `genshin_map`  (
-  `id` int(11) NOT NULL,
+  `id` int NOT NULL,
   `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `icon` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
@@ -1115,9 +889,9 @@ INSERT INTO `genshin_map` VALUES (450, '柽木', 'https://uploadstatic.mihoyo.co
 -- ----------------------------
 DROP TABLE IF EXISTS `genshin_pool`;
 CREATE TABLE `genshin_pool`  (
-  `id` int(11) NOT NULL COMMENT '主键',
+  `id` int NOT NULL COMMENT '主键',
   `version` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '版本号',
-  `stage` tinyint(4) NULL DEFAULT NULL COMMENT '卡池阶段(1, 2, 3期)',
+  `stage` tinyint NULL DEFAULT NULL COMMENT '卡池阶段(1, 2, 3期)',
   `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL COMMENT '卡池名称',
   `pool_start` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL COMMENT '卡池开始日期',
   `pool_end` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL COMMENT '卡池结束日期',
@@ -1264,13 +1038,19 @@ INSERT INTO `genshin_pool` VALUES (130, '4.0', 1, NULL, '2023.08.16', '2023.09.0
 INSERT INTO `genshin_pool` VALUES (131, '4.0', 2, '陵薮市朝', '2023.09.05', '2023.09.26', '钟离', '菲米尼 早柚 诺艾尔', NULL, NULL);
 INSERT INTO `genshin_pool` VALUES (132, '4.0', 2, '暂别冬都', '2023.09.05', '2023.09.26', '达达利亚', '菲米尼 早柚 诺艾尔', NULL, NULL);
 INSERT INTO `genshin_pool` VALUES (133, '4.0', 2, NULL, '2023.09.05', '2023.09.26', '贯虹之槊 冬极白星', NULL, NULL, NULL);
+INSERT INTO `genshin_pool` VALUES (134, '4.1', 1, '渊海界令', '2023.09.27', '2023.10.17', '那维莱特', '菲谢尔 行秋 迪奥娜', NULL, NULL);
+INSERT INTO `genshin_pool` VALUES (135, '4.1', 1, '赤团开时', '2023.09.27', '2023.10.17', '胡桃', '菲谢尔 行秋 迪奥娜', NULL, NULL);
+INSERT INTO `genshin_pool` VALUES (136, '4.1', 1, NULL, '2023.09.27', '2023.10.17', '万世流涌大典 护摩之杖', NULL, NULL, NULL);
+INSERT INTO `genshin_pool` VALUES (137, '4.1', 2, '?', '2023.10.17', '2023.11.07', '莱欧斯利', NULL, NULL, NULL);
+INSERT INTO `genshin_pool` VALUES (138, '4.1', 2, '杯装之诗', '2023.10.17', '2023.11.07', '温迪', NULL, NULL, NULL);
+INSERT INTO `genshin_pool` VALUES (139, '4.1', 2, NULL, '2023.10.17', '2023.11.07', '金流监督 终末嗟叹之诗', NULL, NULL, NULL);
 
 -- ----------------------------
 -- Table structure for genshin_relation
 -- ----------------------------
 DROP TABLE IF EXISTS `genshin_relation`;
 CREATE TABLE `genshin_relation`  (
-  `id` int(11) NOT NULL,
+  `id` int NOT NULL,
   `element_type` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `weapon_type` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `area_type` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
@@ -1305,15 +1085,15 @@ INSERT INTO `genshin_relation` VALUES (14, NULL, NULL, NULL, '「秩序」', '�
 -- ----------------------------
 DROP TABLE IF EXISTS `genshin_role`;
 CREATE TABLE `genshin_role`  (
-  `id` int(11) NOT NULL,
+  `id` int NOT NULL,
   `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `name_en` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `name_ja` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
-  `star` int(11) NULL DEFAULT NULL,
-  `element` int(11) NULL DEFAULT NULL,
-  `weapon` int(11) NULL DEFAULT NULL,
-  `book` int(11) NULL DEFAULT NULL,
-  `area` int(11) NULL DEFAULT NULL,
+  `star` int NULL DEFAULT NULL,
+  `element` int NULL DEFAULT NULL,
+  `weapon` int NULL DEFAULT NULL,
+  `book` int NULL DEFAULT NULL,
+  `area` int NULL DEFAULT NULL,
   `mhy_url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `wiki_url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `icon_url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
@@ -1338,72 +1118,74 @@ INSERT INTO `genshin_role` VALUES (12, '迪卢克', 'Diluc', 'ディルック', 
 INSERT INTO `genshin_role` VALUES (13, '迪希雅', 'Dehya', 'ディシア', 5, 0, 1, 9, 4, '6180', 'dehya_079', 'https://uploadstatic.mihoyo.com/ys-obc/2023/03/21/195563531/3499be9a309249e2ddf1a0533af1f4c7_958475410876966785.png');
 INSERT INTO `genshin_role` VALUES (14, '多莉', 'Dori', 'ドリー', 4, 2, 1, 0, 4, '4736', 'dori_068', 'https://uploadstatic.mihoyo.com/ys-obc/2022/09/07/195563531/844969ce9b8bc5ebf9d1be69d7b6d7b2_4659886404719657655.png');
 INSERT INTO `genshin_role` VALUES (15, '珐露珊', 'Faruzan', 'ファルザン', 4, 4, 2, 11, 4, '5493', 'faruzan_076', 'https://uploadstatic.mihoyo.com/ys-obc/2022/12/06/4328207/38a192da1174b705cc6648e854162ab0_6403431489397028121.png');
-INSERT INTO `genshin_role` VALUES (16, '菲米尼', 'Freminet', 'フレミネ', 4, 1, 3, 13, 5, '-', 'freminet_085', 'https://genshin.honeyhunterworld.com/img/freminet_085_100.webp');
+INSERT INTO `genshin_role` VALUES (16, '菲米尼', 'Freminet', 'フレミネ', 4, 1, 3, 13, 5, '7257', 'freminet_085', 'https://act-upload.mihoyo.com/ys-obc/2023/08/25/183046623/89f7db6b71496415c3ddab8d5d2c049c_963653190890281567.png');
 INSERT INTO `genshin_role` VALUES (17, '菲谢尔', 'Fischl', 'フィッシュル', 4, 2, 2, 2, 0, '382', 'fischl_031', 'https://uploadstatic.mihoyo.com/ys-obc/2021/08/23/75276545/18a67c8802d7184db1449693908fe6cf_7858478886557060389.png');
 INSERT INTO `genshin_role` VALUES (18, '枫原万叶', 'Kaedehara Kazuha', '楓原万葉', 5, 4, 0, 4, 2, '2142', 'kazuha_047', 'https://uploadstatic.mihoyo.com/ys-obc/2021/08/23/75276545/2566b97ea262980d9bcd7db6a116bfd4_6795571745044574054.png');
-INSERT INTO `genshin_role` VALUES (19, '甘雨', 'Ganyu', '甘雨', 5, 3, 2, 4, 1, '1433', 'ganyu_037', 'https://uploadstatic.mihoyo.com/ys-obc/2021/08/23/75276545/8b9946e573bf7aff9801c580707a23e1_3026364173026253689.png');
-INSERT INTO `genshin_role` VALUES (20, '胡桃', 'Hu Tao', '胡桃', 5, 0, 3, 4, 1, '1627', 'hutao_046', 'https://uploadstatic.mihoyo.com/ys-obc/2021/08/23/75276545/8980427ee3cecce2a46400d2c0af6d20_4290442929626456243.png');
-INSERT INTO `genshin_role` VALUES (21, '荒泷一斗', 'Arataki Itto', '荒瀧一斗', 5, 5, 1, 7, 2, '3276', 'itto_057', 'https://uploadstatic.mihoyo.com/ys-obc/2021/12/14/16314655/567d0cf114a7f799d650df6e4c7cc0e2_8422200515118882596.jpg');
-INSERT INTO `genshin_role` VALUES (22, '九条裟罗', 'Kujou Sara', '九条裟羅', 4, 2, 2, 7, 2, '2402', 'sara_056', 'https://uploadstatic.mihoyo.com/ys-obc/2021/09/01/16314655/5284b4f47bf6d9e9451d79ad5066d744_9148992125502860596.png');
-INSERT INTO `genshin_role` VALUES (23, '久岐忍', 'Kuki Shinobu', '久岐忍', 4, 2, 0, 7, 2, '4148', 'shinobu_065', 'https://uploadstatic.mihoyo.com/ys-obc/2022/05/10/4328207/33c41932d1b5531ac73bca243c761816_9206912725698153960.png');
-INSERT INTO `genshin_role` VALUES (24, '卡维', 'Kaveh', 'カーヴェ', 4, 6, 1, 10, 4, '6490', 'kaveh_081', 'https://uploadstatic.mihoyo.com/ys-obc/2023/04/11/4328207/27f90730a0c5c4d6ff4d29ebfb1c5d60_7616208328714055928.png');
-INSERT INTO `genshin_role` VALUES (25, '凯亚', 'Kaeya', 'ガイア', 4, 3, 0, 2, 0, '76', 'kaeya_015', 'https://uploadstatic.mihoyo.com/ys-obc/2021/08/23/75276545/60d8b985eef1e6e0e959410893a75dc0_6659933186171988912.png');
-INSERT INTO `genshin_role` VALUES (26, '坎蒂丝', 'Candace', 'キャンディス', 4, 1, 3, 11, 4, '4781', 'candace_072', 'https://uploadstatic.mihoyo.com/ys-obc/2022/09/20/4328207/0587df6ac5144c9dd023b0f73ceaf8be_7837788427682725710.png');
-INSERT INTO `genshin_role` VALUES (27, '柯莱', 'Collei', 'コレイ', 4, 6, 2, 0, 4, '4333', 'collei_067', 'https://uploadstatic.mihoyo.com/ys-obc/2022/08/23/75379475/a0150a8489abc5011a44b4f6419ccec7_2812696932246907984.png');
-INSERT INTO `genshin_role` VALUES (28, '可莉', 'Klee', 'クレー', 5, 0, 4, 0, 0, '55', 'klee_029', 'https://uploadstatic.mihoyo.com/ys-obc/2021/06/21/283462834/d2972c634d9d81979774b22b49d1ab01_887661176891008491.png');
-INSERT INTO `genshin_role` VALUES (29, '刻晴', 'Keqing', '刻晴', 5, 2, 0, 3, 1, '1058', 'keqing_042', 'https://uploadstatic.mihoyo.com/ys-obc/2021/08/23/75276545/666155bbd60391341253e4b1daace9d4_2687379046030308520.png');
-INSERT INTO `genshin_role` VALUES (30, '莱欧斯利', 'Wriothesley', 'リオセスリ', 5, 3, 4, 14, 5, '-', 'wriothesley_086', 'https://genshin.honeyhunterworld.com/img/wriothesley_086_100.webp');
-INSERT INTO `genshin_role` VALUES (31, '莱依拉', 'Layla', 'レイラ', 4, 1, 0, 10, 4, '5297', 'layla_074', 'https://uploadstatic.mihoyo.com/ys-obc/2022/10/24/4328207/f7f5c758e157cc6d6ca7b7a378d665e6_8346107013175588314.png');
-INSERT INTO `genshin_role` VALUES (32, '雷电将军', 'Raiden Shogun', '雷電将軍', 5, 2, 3, 8, 2, '2404', 'shougun_052', 'https://uploadstatic.mihoyo.com/ys-obc/2021/09/01/16314655/4f2125e44d2b9e15611877eda1794ec7_7083452076426995696.png');
-INSERT INTO `genshin_role` VALUES (33, '雷泽', 'Razor', 'レザー', 4, 2, 1, 1, 0, '56', 'razor_020', 'https://uploadstatic.mihoyo.com/ys-obc/2021/08/23/75276545/24edfa5586de73329a2b2c5c5d4262a3_3505783202009716970.png');
-INSERT INTO `genshin_role` VALUES (34, '丽莎', 'Lisa', 'リサ', 4, 2, 4, 2, 0, '92', 'lisa_006', 'https://uploadstatic.mihoyo.com/ys-obc/2021/08/23/75276545/014d59ec5b78c3499b90f45fc80c00a4_5392359609224242061.png');
-INSERT INTO `genshin_role` VALUES (35, '林尼', 'Lyney', 'リネ', 5, 2, 4, 12, 5, '6937', 'liney_084', 'https://act-upload.mihoyo.com/ys-obc/2023/08/17/24077343/04309f44cfd43ecaad1c6b17504e842b_4501929243289411018.png');
-INSERT INTO `genshin_role` VALUES (36, '琳妮特', 'Lynette', 'リネット', 4, 0, 0, 14, 5, '6938', 'linette_083', 'https://act-upload.mihoyo.com/ys-obc/2023/08/17/24077343/74feea88c304c86a33be3fd191d055dc_2469184593388252358.png');
-INSERT INTO `genshin_role` VALUES (37, '流浪者', 'The Wanderer', '放浪者', 5, 4, 4, 9, 4, '5494', 'wanderer_075', 'https://uploadstatic.mihoyo.com/ys-obc/2022/12/06/4328207/fb1713aa667884c5552452170b5931fa_2453175231688862665.png');
-INSERT INTO `genshin_role` VALUES (38, '鹿野院平藏', 'Shikanoin Heizou', '鹿野院平蔵', 4, 4, 4, 6, 2, '4197', 'heizo_059', 'https://uploadstatic.mihoyo.com/ys-obc/2022/07/09/4328207/cc145e6cd2f0dacb39ce36f7ebf257fc_7138351098291917226.png');
-INSERT INTO `genshin_role` VALUES (39, '罗莎莉亚', 'Rosaria', 'ロサリア', 4, 3, 3, 2, 0, '1744', 'rosaria_045', 'https://uploadstatic.mihoyo.com/ys-obc/2022/02/16/6276411/bdec34acae15315368017c1dbc29e106_1767613545250694082.png');
-INSERT INTO `genshin_role` VALUES (40, '旅行者（空）', 'Traveler', '旅人（空）', 5, -1, 0, -1, -1, '4074', 'playerboy_005', 'https://uploadstatic.mihoyo.com/ys-obc/2022/05/24/4328207/cb560b65a2880d2fa03d1d25faa50805_8382943334706958229.png');
-INSERT INTO `genshin_role` VALUES (41, '旅行者（荧）', 'Traveler', '旅人（荧）', 5, -1, 0, -1, -1, '4073', 'playergirl_007', 'https://uploadstatic.mihoyo.com/ys-obc/2022/05/25/16314655/6e51d9aefcd8a391b4e58cff0825eda8_664966728335952334.png');
-INSERT INTO `genshin_role` VALUES (42, '米卡', 'Mika', 'ミカ', 4, 3, 3, 2, 0, '6285', 'mika_080', 'https://uploadstatic.mihoyo.com/ys-obc/2023/03/18/4328207/37fed1b2ed047eeea78833328ffb27e4_8054575673536318186.png');
-INSERT INTO `genshin_role` VALUES (43, '莫娜', 'Mona', 'モナ', 5, 1, 4, 1, 0, '1057', 'mona_041', 'https://uploadstatic.mihoyo.com/ys-obc/2022/02/16/6276411/d7d8e4a15f70e31a16edaa6d7389437f_2242463119371173498.png');
-INSERT INTO `genshin_role` VALUES (44, '那维莱特', 'Neuvillette', 'ヌヴィレット', 5, 1, 4, 12, 5, '-', 'neuvillette_087', 'https://genshin.honeyhunterworld.com/img/neuvillette_087_70.webp');
-INSERT INTO `genshin_role` VALUES (45, '纳西妲', 'Nahida', 'ナヒーダ', 5, 6, 4, 10, 4, '5111', 'nahida_073', 'https://uploadstatic.mihoyo.com/ys-obc/2022/10/24/4328207/f9f8f331dea3cc4920037df2018437d0_4958876478140111847.png');
-INSERT INTO `genshin_role` VALUES (46, '妮露', 'Nilou', 'ニィロウ', 5, 1, 0, 9, 4, '5020', 'nilou_070', 'https://uploadstatic.mihoyo.com/ys-obc/2022/10/14/4328207/4507cd1faa4999738dac3d6d5f5d7f94_7463503381974788231.png');
-INSERT INTO `genshin_role` VALUES (47, '凝光', 'Ningguang', '凝光', 4, 5, 4, 3, 1, '78', 'ningguang_027', 'https://uploadstatic.mihoyo.com/ys-obc/2021/08/23/75276545/e4e41cdfac3bdc225f0b847f2cc2cd72_5640782607282153058.png');
-INSERT INTO `genshin_role` VALUES (48, '诺艾尔', 'Noelle', 'ノエル', 4, 5, 1, 1, 0, '111', 'noel_034', 'https://uploadstatic.mihoyo.com/ys-obc/2021/08/23/75276545/5cd5b91e504b2466197796cb26fcb7be_508847912159113655.png');
-INSERT INTO `genshin_role` VALUES (49, '七七', 'Qiqi', '七七', 5, 3, 0, 3, 1, '1056', 'qiqi_035', 'https://uploadstatic.mihoyo.com/ys-obc/2021/08/23/75276545/a08d22cf34d2836519a80a8537fe12c8_7861266877849414180.png');
-INSERT INTO `genshin_role` VALUES (50, '绮良良', 'Kirara', '綺良々', 4, 6, 0, 6, 2, '6594', 'momoka_061', 'https://act-upload.mihoyo.com/ys-obc/2023/05/22/4328207/3d3c77af378ae13a284da6ee46e7c8a5_6115762659247939353.png');
-INSERT INTO `genshin_role` VALUES (51, '琴', 'Jean', 'ジン', 5, 4, 0, 1, 0, '59', 'qin_003', 'https://uploadstatic.mihoyo.com/ys-obc/2022/02/16/6276411/a7608c6a588467440f7685a22ab6547c_3946325001679449884.png');
-INSERT INTO `genshin_role` VALUES (52, '赛诺', 'Cyno', 'セノ', 5, 2, 3, 11, 4, '4780', 'cyno_071', 'https://uploadstatic.mihoyo.com/ys-obc/2022/09/20/4328207/b3847d2416145eb8bb6343302e2b4dca_6997837798254516316.png');
-INSERT INTO `genshin_role` VALUES (53, '砂糖', 'Sucrose', 'スクロース', 4, 4, 4, 0, 0, '1055', 'sucrose_043', 'https://uploadstatic.mihoyo.com/ys-obc/2021/08/23/75276545/b30efaf1e19725ddda490a2028b17464_6998283335917930867.png');
-INSERT INTO `genshin_role` VALUES (54, '珊瑚宫心海', 'Sangonomiya Kokomi', '珊瑚宮心海', 5, 1, 4, 6, 2, '2403', 'kokomi_054', 'https://uploadstatic.mihoyo.com/ys-obc/2021/09/21/75379475/5f6f5d0c81155aea5c939ba08249e5d5_6649173224604660824.png');
-INSERT INTO `genshin_role` VALUES (55, '申鹤', 'Shenhe', '申鶴', 5, 3, 3, 3, 1, '3386', 'shenhe_063', 'https://uploadstatic.mihoyo.com/ys-obc/2022/01/05/16314655/e2dfeee83654c0a6a7436b7c120c105a_6628180966971160404.png');
-INSERT INTO `genshin_role` VALUES (56, '神里绫华', 'Kamisato Ayaka', '神里綾華', 5, 3, 0, 7, 2, '2123', 'ayaka_002', 'https://uploadstatic.mihoyo.com/ys-obc/2021/07/21/75276545/eaef31b81b190dc676413b099c540526_6543346382757797116.png');
-INSERT INTO `genshin_role` VALUES (57, '神里绫人', 'Kamisato Ayato', '神里綾人', 5, 1, 0, 7, 2, '3875', 'ayato_066', 'https://uploadstatic.mihoyo.com/ys-obc/2022/03/25/4328207/d16fbf95d62771daa65ab5d04f6abbd5_8453888407594383379.png');
-INSERT INTO `genshin_role` VALUES (58, '提纳里', 'Tighnari', 'ティナリ', 5, 6, 2, 0, 4, '4334', 'tighnari_069', 'https://uploadstatic.mihoyo.com/ys-obc/2022/08/23/75379475/6953568084aaa02bc7a774430f1f3b56_9172357402103659910.png');
-INSERT INTO `genshin_role` VALUES (59, '托马', 'Thoma', 'トーマ', 4, 0, 3, 6, 2, '2606', 'tohma_050', 'https://uploadstatic.mihoyo.com/ys-obc/2021/11/02/16314655/f4b404cae89b96327a5b87500f7833c9_6577116317420146203.png');
-INSERT INTO `genshin_role` VALUES (60, '温迪', 'Venti', 'ウェンティ', 5, 4, 2, 2, 0, '57', 'venti_022', 'https://uploadstatic.mihoyo.com/ys-obc/2021/08/23/75276545/3008da32b80ba05f243bc2c858b534b5_540461000064419548.png');
-INSERT INTO `genshin_role` VALUES (61, '五郎', 'Gorou', 'ゴロー', 4, 5, 2, 8, 2, '3275', 'gorou_055', 'https://uploadstatic.mihoyo.com/ys-obc/2021/12/14/16314655/1535aaa6189d4262445c0a66ead22eb9_8396030312270652951.png');
-INSERT INTO `genshin_role` VALUES (62, '香菱', 'Xiangling', '香菱', 4, 0, 3, 4, 1, '112', 'xiangling_023', 'https://uploadstatic.mihoyo.com/ys-obc/2021/08/23/75276545/83a69074378a0837ca65d33e9052d729_6648871595979928785.png');
-INSERT INTO `genshin_role` VALUES (63, '宵宫', 'Yoimiya', '宵宮', 5, 0, 2, 6, 2, '2124', 'yoimiya_049', 'https://uploadstatic.mihoyo.com/ys-obc/2021/08/10/75276545/43014af35ae9c4cdf19a8323aa04a0a9_2108182380466335233.png');
-INSERT INTO `genshin_role` VALUES (64, '魈', 'Xiao', '魈', 5, 4, 3, 3, 1, '1498', 'xiao_026', 'https://uploadstatic.mihoyo.com/ys-obc/2021/08/23/75276545/a02533e3ac055344982bcfd04865ae72_6103227973780149519.png');
-INSERT INTO `genshin_role` VALUES (65, '辛焱', 'Xinyan', '辛炎', 4, 0, 1, 5, 1, '1291', 'xinyan_044', 'https://uploadstatic.mihoyo.com/ys-obc/2021/08/23/75276545/a4b09e58a0d52ea0808b4cef5725ac93_6743022430414510479.png');
-INSERT INTO `genshin_role` VALUES (66, '行秋', 'Xingqiu', '行秋', 4, 1, 0, 5, 1, '241', 'xingqiu_025', 'https://uploadstatic.mihoyo.com/ys-obc/2021/08/23/75276545/cd48b60376438c60dbaaa8a85e6a480b_2048377578381627282.png');
-INSERT INTO `genshin_role` VALUES (67, '烟绯', 'Yanfei', '煙緋', 4, 0, 4, 5, 1, '1795', 'feiyan_048', 'https://uploadstatic.mihoyo.com/ys-obc/2021/08/23/75276545/b8952d8a5d2d266126ce370c4eb78438_4209492093986588378.png');
-INSERT INTO `genshin_role` VALUES (68, '瑶瑶', 'Yaoyao', 'ヨォーヨ', 4, 6, 3, 4, 4, '5866', 'yaoyao_077', 'https://uploadstatic.mihoyo.com/ys-obc/2023/01/17/4328207/6616c1963d8b8cd12303e683872778d6_5414525268363973241.png');
-INSERT INTO `genshin_role` VALUES (69, '夜兰', 'Yelan', '夜蘭', 5, 1, 2, 3, 1, '4081', 'yelan_060', 'https://uploadstatic.mihoyo.com/ys-obc/2022/05/10/4328207/79396e8f1225b66e201036e086dd2d8a_128490390219389789.png');
-INSERT INTO `genshin_role` VALUES (70, '优菈', 'Eula', 'エウルア', 5, 3, 1, 1, 0, '2040', 'eula_051', 'https://uploadstatic.mihoyo.com/ys-obc/2021/08/23/75276545/525f808e85fb7a13c37debaf3c7d1463_4010662131576296773.png');
-INSERT INTO `genshin_role` VALUES (71, '云堇', 'Yun Jin', '雲菫', 4, 5, 3, 4, 1, '3387', 'yunjin_064', 'https://uploadstatic.mihoyo.com/ys-obc/2022/01/05/16314655/6f4bbe7d060f72a0c84e868887ac7a32_4711867403945994990.png');
-INSERT INTO `genshin_role` VALUES (72, '早柚', 'Sayu', '早柚', 4, 4, 1, 8, 2, '2125', 'sayu_053', 'https://uploadstatic.mihoyo.com/ys-obc/2021/08/10/75276545/4f50355892c08017346ea3ab80071b9c_1725343112540399387.png');
-INSERT INTO `genshin_role` VALUES (73, '钟离', 'Zhongli', '鍾離', 5, 5, 3, 5, 1, '1290', 'zhongli_030', 'https://uploadstatic.mihoyo.com/ys-obc/2021/08/23/75276545/6682780141a9e7788da99c71b1cfd5c3_6751062493374563471.png');
-INSERT INTO `genshin_role` VALUES (74, '重云', 'Chongyun', '重雲', 4, 3, 1, 4, 1, '644', 'chongyun_036', 'https://uploadstatic.mihoyo.com/ys-obc/2021/08/23/75276545/0bd80f58871b97281be47fcd6e2d7487_1302151446666002486.png');
+INSERT INTO `genshin_role` VALUES (19, '芙宁娜', 'Furina', 'フリーナ', 5, 1, 0, 13, 5, '-', 'furina_089', 'https://genshin.honeyhunterworld.com/img/furina_089_icon_70.webp');
+INSERT INTO `genshin_role` VALUES (20, '甘雨', 'Ganyu', '甘雨', 5, 3, 2, 4, 1, '1433', 'ganyu_037', 'https://uploadstatic.mihoyo.com/ys-obc/2021/08/23/75276545/8b9946e573bf7aff9801c580707a23e1_3026364173026253689.png');
+INSERT INTO `genshin_role` VALUES (21, '胡桃', 'Hu Tao', '胡桃', 5, 0, 3, 4, 1, '1627', 'hutao_046', 'https://uploadstatic.mihoyo.com/ys-obc/2021/08/23/75276545/8980427ee3cecce2a46400d2c0af6d20_4290442929626456243.png');
+INSERT INTO `genshin_role` VALUES (22, '荒泷一斗', 'Arataki Itto', '荒瀧一斗', 5, 5, 1, 7, 2, '3276', 'itto_057', 'https://uploadstatic.mihoyo.com/ys-obc/2021/12/14/16314655/567d0cf114a7f799d650df6e4c7cc0e2_8422200515118882596.jpg');
+INSERT INTO `genshin_role` VALUES (23, '九条裟罗', 'Kujou Sara', '九条裟羅', 4, 2, 2, 7, 2, '2402', 'sara_056', 'https://uploadstatic.mihoyo.com/ys-obc/2021/09/01/16314655/5284b4f47bf6d9e9451d79ad5066d744_9148992125502860596.png');
+INSERT INTO `genshin_role` VALUES (24, '久岐忍', 'Kuki Shinobu', '久岐忍', 4, 2, 0, 7, 2, '4148', 'shinobu_065', 'https://uploadstatic.mihoyo.com/ys-obc/2022/05/10/4328207/33c41932d1b5531ac73bca243c761816_9206912725698153960.png');
+INSERT INTO `genshin_role` VALUES (25, '卡维', 'Kaveh', 'カーヴェ', 4, 6, 1, 10, 4, '6490', 'kaveh_081', 'https://uploadstatic.mihoyo.com/ys-obc/2023/04/11/4328207/27f90730a0c5c4d6ff4d29ebfb1c5d60_7616208328714055928.png');
+INSERT INTO `genshin_role` VALUES (26, '凯亚', 'Kaeya', 'ガイア', 4, 3, 0, 2, 0, '76', 'kaeya_015', 'https://uploadstatic.mihoyo.com/ys-obc/2021/08/23/75276545/60d8b985eef1e6e0e959410893a75dc0_6659933186171988912.png');
+INSERT INTO `genshin_role` VALUES (27, '坎蒂丝', 'Candace', 'キャンディス', 4, 1, 3, 11, 4, '4781', 'candace_072', 'https://uploadstatic.mihoyo.com/ys-obc/2022/09/20/4328207/0587df6ac5144c9dd023b0f73ceaf8be_7837788427682725710.png');
+INSERT INTO `genshin_role` VALUES (28, '柯莱', 'Collei', 'コレイ', 4, 6, 2, 0, 4, '4333', 'collei_067', 'https://uploadstatic.mihoyo.com/ys-obc/2022/08/23/75379475/a0150a8489abc5011a44b4f6419ccec7_2812696932246907984.png');
+INSERT INTO `genshin_role` VALUES (29, '可莉', 'Klee', 'クレー', 5, 0, 4, 0, 0, '55', 'klee_029', 'https://uploadstatic.mihoyo.com/ys-obc/2021/06/21/283462834/d2972c634d9d81979774b22b49d1ab01_887661176891008491.png');
+INSERT INTO `genshin_role` VALUES (30, '刻晴', 'Keqing', '刻晴', 5, 2, 0, 3, 1, '1058', 'keqing_042', 'https://uploadstatic.mihoyo.com/ys-obc/2021/08/23/75276545/666155bbd60391341253e4b1daace9d4_2687379046030308520.png');
+INSERT INTO `genshin_role` VALUES (31, '莱欧斯利', 'Wriothesley', 'リオセスリ', 5, 3, 4, 14, 5, '-', 'wriothesley_086', 'https://genshin.honeyhunterworld.com/img/wriothesley_086_100.webp');
+INSERT INTO `genshin_role` VALUES (32, '莱依拉', 'Layla', 'レイラ', 4, 1, 0, 10, 4, '5297', 'layla_074', 'https://uploadstatic.mihoyo.com/ys-obc/2022/10/24/4328207/f7f5c758e157cc6d6ca7b7a378d665e6_8346107013175588314.png');
+INSERT INTO `genshin_role` VALUES (33, '雷电将军', 'Raiden Shogun', '雷電将軍', 5, 2, 3, 8, 2, '2404', 'shougun_052', 'https://uploadstatic.mihoyo.com/ys-obc/2021/09/01/16314655/4f2125e44d2b9e15611877eda1794ec7_7083452076426995696.png');
+INSERT INTO `genshin_role` VALUES (34, '雷泽', 'Razor', 'レザー', 4, 2, 1, 1, 0, '56', 'razor_020', 'https://uploadstatic.mihoyo.com/ys-obc/2021/08/23/75276545/24edfa5586de73329a2b2c5c5d4262a3_3505783202009716970.png');
+INSERT INTO `genshin_role` VALUES (35, '丽莎', 'Lisa', 'リサ', 4, 2, 4, 2, 0, '92', 'lisa_006', 'https://uploadstatic.mihoyo.com/ys-obc/2021/08/23/75276545/014d59ec5b78c3499b90f45fc80c00a4_5392359609224242061.png');
+INSERT INTO `genshin_role` VALUES (36, '林尼', 'Lyney', 'リネ', 5, 2, 4, 12, 5, '6937', 'liney_084', 'https://act-upload.mihoyo.com/ys-obc/2023/08/17/24077343/04309f44cfd43ecaad1c6b17504e842b_4501929243289411018.png');
+INSERT INTO `genshin_role` VALUES (37, '琳妮特', 'Lynette', 'リネット', 4, 0, 0, 14, 5, '6938', 'linette_083', 'https://act-upload.mihoyo.com/ys-obc/2023/08/17/24077343/74feea88c304c86a33be3fd191d055dc_2469184593388252358.png');
+INSERT INTO `genshin_role` VALUES (38, '流浪者', 'The Wanderer', '放浪者', 5, 4, 4, 9, 4, '5494', 'wanderer_075', 'https://uploadstatic.mihoyo.com/ys-obc/2022/12/06/4328207/fb1713aa667884c5552452170b5931fa_2453175231688862665.png');
+INSERT INTO `genshin_role` VALUES (39, '鹿野院平藏', 'Shikanoin Heizou', '鹿野院平蔵', 4, 4, 4, 6, 2, '4197', 'heizo_059', 'https://uploadstatic.mihoyo.com/ys-obc/2022/07/09/4328207/cc145e6cd2f0dacb39ce36f7ebf257fc_7138351098291917226.png');
+INSERT INTO `genshin_role` VALUES (40, '罗莎莉亚', 'Rosaria', 'ロサリア', 4, 3, 3, 2, 0, '1744', 'rosaria_045', 'https://uploadstatic.mihoyo.com/ys-obc/2022/02/16/6276411/bdec34acae15315368017c1dbc29e106_1767613545250694082.png');
+INSERT INTO `genshin_role` VALUES (41, '旅行者（空）', 'Traveler', '旅人（空）', 5, -1, 0, -1, -1, '4074', 'playerboy_005', 'https://uploadstatic.mihoyo.com/ys-obc/2022/05/24/4328207/cb560b65a2880d2fa03d1d25faa50805_8382943334706958229.png');
+INSERT INTO `genshin_role` VALUES (42, '旅行者（荧）', 'Traveler', '旅人（荧）', 5, -1, 0, -1, -1, '4073', 'playergirl_007', 'https://uploadstatic.mihoyo.com/ys-obc/2022/05/25/16314655/6e51d9aefcd8a391b4e58cff0825eda8_664966728335952334.png');
+INSERT INTO `genshin_role` VALUES (43, '米卡', 'Mika', 'ミカ', 4, 3, 3, 2, 0, '6285', 'mika_080', 'https://uploadstatic.mihoyo.com/ys-obc/2023/03/18/4328207/37fed1b2ed047eeea78833328ffb27e4_8054575673536318186.png');
+INSERT INTO `genshin_role` VALUES (44, '莫娜', 'Mona', 'モナ', 5, 1, 4, 1, 0, '1057', 'mona_041', 'https://uploadstatic.mihoyo.com/ys-obc/2022/02/16/6276411/d7d8e4a15f70e31a16edaa6d7389437f_2242463119371173498.png');
+INSERT INTO `genshin_role` VALUES (45, '那维莱特', 'Neuvillette', 'ヌヴィレット', 5, 1, 4, 12, 5, '-', 'neuvillette_087', 'https://genshin.honeyhunterworld.com/img/neuvillette_087_70.webp');
+INSERT INTO `genshin_role` VALUES (46, '纳西妲', 'Nahida', 'ナヒーダ', 5, 6, 4, 10, 4, '5111', 'nahida_073', 'https://uploadstatic.mihoyo.com/ys-obc/2022/10/24/4328207/f9f8f331dea3cc4920037df2018437d0_4958876478140111847.png');
+INSERT INTO `genshin_role` VALUES (47, '妮露', 'Nilou', 'ニィロウ', 5, 1, 0, 9, 4, '5020', 'nilou_070', 'https://uploadstatic.mihoyo.com/ys-obc/2022/10/14/4328207/4507cd1faa4999738dac3d6d5f5d7f94_7463503381974788231.png');
+INSERT INTO `genshin_role` VALUES (48, '凝光', 'Ningguang', '凝光', 4, 5, 4, 3, 1, '78', 'ningguang_027', 'https://uploadstatic.mihoyo.com/ys-obc/2021/08/23/75276545/e4e41cdfac3bdc225f0b847f2cc2cd72_5640782607282153058.png');
+INSERT INTO `genshin_role` VALUES (49, '诺艾尔', 'Noelle', 'ノエル', 4, 5, 1, 1, 0, '111', 'noel_034', 'https://uploadstatic.mihoyo.com/ys-obc/2021/08/23/75276545/5cd5b91e504b2466197796cb26fcb7be_508847912159113655.png');
+INSERT INTO `genshin_role` VALUES (50, '七七', 'Qiqi', '七七', 5, 3, 0, 3, 1, '1056', 'qiqi_035', 'https://uploadstatic.mihoyo.com/ys-obc/2021/08/23/75276545/a08d22cf34d2836519a80a8537fe12c8_7861266877849414180.png');
+INSERT INTO `genshin_role` VALUES (51, '绮良良', 'Kirara', '綺良々', 4, 6, 0, 6, 2, '6594', 'momoka_061', 'https://act-upload.mihoyo.com/ys-obc/2023/05/22/4328207/3d3c77af378ae13a284da6ee46e7c8a5_6115762659247939353.png');
+INSERT INTO `genshin_role` VALUES (52, '琴', 'Jean', 'ジン', 5, 4, 0, 1, 0, '59', 'qin_003', 'https://uploadstatic.mihoyo.com/ys-obc/2022/02/16/6276411/a7608c6a588467440f7685a22ab6547c_3946325001679449884.png');
+INSERT INTO `genshin_role` VALUES (53, '赛诺', 'Cyno', 'セノ', 5, 2, 3, 11, 4, '4780', 'cyno_071', 'https://uploadstatic.mihoyo.com/ys-obc/2022/09/20/4328207/b3847d2416145eb8bb6343302e2b4dca_6997837798254516316.png');
+INSERT INTO `genshin_role` VALUES (54, '砂糖', 'Sucrose', 'スクロース', 4, 4, 4, 0, 0, '1055', 'sucrose_043', 'https://uploadstatic.mihoyo.com/ys-obc/2021/08/23/75276545/b30efaf1e19725ddda490a2028b17464_6998283335917930867.png');
+INSERT INTO `genshin_role` VALUES (55, '珊瑚宫心海', 'Sangonomiya Kokomi', '珊瑚宮心海', 5, 1, 4, 6, 2, '2403', 'kokomi_054', 'https://uploadstatic.mihoyo.com/ys-obc/2021/09/21/75379475/5f6f5d0c81155aea5c939ba08249e5d5_6649173224604660824.png');
+INSERT INTO `genshin_role` VALUES (56, '申鹤', 'Shenhe', '申鶴', 5, 3, 3, 3, 1, '3386', 'shenhe_063', 'https://uploadstatic.mihoyo.com/ys-obc/2022/01/05/16314655/e2dfeee83654c0a6a7436b7c120c105a_6628180966971160404.png');
+INSERT INTO `genshin_role` VALUES (57, '神里绫华', 'Kamisato Ayaka', '神里綾華', 5, 3, 0, 7, 2, '2123', 'ayaka_002', 'https://uploadstatic.mihoyo.com/ys-obc/2021/07/21/75276545/eaef31b81b190dc676413b099c540526_6543346382757797116.png');
+INSERT INTO `genshin_role` VALUES (58, '神里绫人', 'Kamisato Ayato', '神里綾人', 5, 1, 0, 7, 2, '3875', 'ayato_066', 'https://uploadstatic.mihoyo.com/ys-obc/2022/03/25/4328207/d16fbf95d62771daa65ab5d04f6abbd5_8453888407594383379.png');
+INSERT INTO `genshin_role` VALUES (59, '提纳里', 'Tighnari', 'ティナリ', 5, 6, 2, 0, 4, '4334', 'tighnari_069', 'https://uploadstatic.mihoyo.com/ys-obc/2022/08/23/75379475/6953568084aaa02bc7a774430f1f3b56_9172357402103659910.png');
+INSERT INTO `genshin_role` VALUES (60, '托马', 'Thoma', 'トーマ', 4, 0, 3, 6, 2, '2606', 'tohma_050', 'https://uploadstatic.mihoyo.com/ys-obc/2021/11/02/16314655/f4b404cae89b96327a5b87500f7833c9_6577116317420146203.png');
+INSERT INTO `genshin_role` VALUES (61, '温迪', 'Venti', 'ウェンティ', 5, 4, 2, 2, 0, '57', 'venti_022', 'https://uploadstatic.mihoyo.com/ys-obc/2021/08/23/75276545/3008da32b80ba05f243bc2c858b534b5_540461000064419548.png');
+INSERT INTO `genshin_role` VALUES (62, '五郎', 'Gorou', 'ゴロー', 4, 5, 2, 8, 2, '3275', 'gorou_055', 'https://uploadstatic.mihoyo.com/ys-obc/2021/12/14/16314655/1535aaa6189d4262445c0a66ead22eb9_8396030312270652951.png');
+INSERT INTO `genshin_role` VALUES (63, '夏洛蒂', 'Charlotte', 'シャルロット', 4, 3, 4, 13, 5, '-', 'charlotte_088', 'https://genshin.honeyhunterworld.com/img/charlotte_088_side_icon_70.webp');
+INSERT INTO `genshin_role` VALUES (64, '香菱', 'Xiangling', '香菱', 4, 0, 3, 4, 1, '112', 'xiangling_023', 'https://uploadstatic.mihoyo.com/ys-obc/2021/08/23/75276545/83a69074378a0837ca65d33e9052d729_6648871595979928785.png');
+INSERT INTO `genshin_role` VALUES (65, '宵宫', 'Yoimiya', '宵宮', 5, 0, 2, 6, 2, '2124', 'yoimiya_049', 'https://uploadstatic.mihoyo.com/ys-obc/2021/08/10/75276545/43014af35ae9c4cdf19a8323aa04a0a9_2108182380466335233.png');
+INSERT INTO `genshin_role` VALUES (66, '魈', 'Xiao', '魈', 5, 4, 3, 3, 1, '1498', 'xiao_026', 'https://uploadstatic.mihoyo.com/ys-obc/2021/08/23/75276545/a02533e3ac055344982bcfd04865ae72_6103227973780149519.png');
+INSERT INTO `genshin_role` VALUES (67, '辛焱', 'Xinyan', '辛炎', 4, 0, 1, 5, 1, '1291', 'xinyan_044', 'https://uploadstatic.mihoyo.com/ys-obc/2021/08/23/75276545/a4b09e58a0d52ea0808b4cef5725ac93_6743022430414510479.png');
+INSERT INTO `genshin_role` VALUES (68, '行秋', 'Xingqiu', '行秋', 4, 1, 0, 5, 1, '241', 'xingqiu_025', 'https://uploadstatic.mihoyo.com/ys-obc/2021/08/23/75276545/cd48b60376438c60dbaaa8a85e6a480b_2048377578381627282.png');
+INSERT INTO `genshin_role` VALUES (69, '烟绯', 'Yanfei', '煙緋', 4, 0, 4, 5, 1, '1795', 'feiyan_048', 'https://uploadstatic.mihoyo.com/ys-obc/2021/08/23/75276545/b8952d8a5d2d266126ce370c4eb78438_4209492093986588378.png');
+INSERT INTO `genshin_role` VALUES (70, '瑶瑶', 'Yaoyao', 'ヨォーヨ', 4, 6, 3, 4, 4, '5866', 'yaoyao_077', 'https://uploadstatic.mihoyo.com/ys-obc/2023/01/17/4328207/6616c1963d8b8cd12303e683872778d6_5414525268363973241.png');
+INSERT INTO `genshin_role` VALUES (71, '夜兰', 'Yelan', '夜蘭', 5, 1, 2, 3, 1, '4081', 'yelan_060', 'https://uploadstatic.mihoyo.com/ys-obc/2022/05/10/4328207/79396e8f1225b66e201036e086dd2d8a_128490390219389789.png');
+INSERT INTO `genshin_role` VALUES (72, '优菈', 'Eula', 'エウルア', 5, 3, 1, 1, 0, '2040', 'eula_051', 'https://uploadstatic.mihoyo.com/ys-obc/2021/08/23/75276545/525f808e85fb7a13c37debaf3c7d1463_4010662131576296773.png');
+INSERT INTO `genshin_role` VALUES (73, '云堇', 'Yun Jin', '雲菫', 4, 5, 3, 4, 1, '3387', 'yunjin_064', 'https://uploadstatic.mihoyo.com/ys-obc/2022/01/05/16314655/6f4bbe7d060f72a0c84e868887ac7a32_4711867403945994990.png');
+INSERT INTO `genshin_role` VALUES (74, '早柚', 'Sayu', '早柚', 4, 4, 1, 8, 2, '2125', 'sayu_053', 'https://uploadstatic.mihoyo.com/ys-obc/2021/08/10/75276545/4f50355892c08017346ea3ab80071b9c_1725343112540399387.png');
+INSERT INTO `genshin_role` VALUES (75, '钟离', 'Zhongli', '鍾離', 5, 5, 3, 5, 1, '1290', 'zhongli_030', 'https://uploadstatic.mihoyo.com/ys-obc/2021/08/23/75276545/6682780141a9e7788da99c71b1cfd5c3_6751062493374563471.png');
+INSERT INTO `genshin_role` VALUES (76, '重云', 'Chongyun', '重雲', 4, 3, 1, 4, 1, '644', 'chongyun_036', 'https://uploadstatic.mihoyo.com/ys-obc/2021/08/23/75276545/0bd80f58871b97281be47fcd6e2d7487_1302151446666002486.png');
 
 -- ----------------------------
 -- Table structure for genshin_version
 -- ----------------------------
 DROP TABLE IF EXISTS `genshin_version`;
 CREATE TABLE `genshin_version`  (
-  `id` int(11) NOT NULL COMMENT '主键',
+  `id` int NOT NULL COMMENT '主键',
   `version` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '版本号',
   `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL COMMENT '版本名称',
   `version_start` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL COMMENT '版本开始日期',
@@ -1444,19 +1226,20 @@ INSERT INTO `genshin_version` VALUES (25, '3.6', '盛典与慧业', '2023-04-12'
 INSERT INTO `genshin_version` VALUES (26, '3.7', '决斗！召唤之巅！', '2023-05-24', '2023-07-04', NULL, NULL);
 INSERT INTO `genshin_version` VALUES (27, '3.8', '清夏！乐园？大秘境！', '2023-07-05', '2023-08-15', NULL, NULL);
 INSERT INTO `genshin_version` VALUES (28, '4.0', '仿若无因飘落的轻雨', '2023-08-16', '2023-09-26', NULL, '开启枫丹版本，开启水下探索');
+INSERT INTO `genshin_version` VALUES (29, '4.1', '向深水中的晨星', '2023-09-27', '2023-11-07', NULL, NULL);
 
 -- ----------------------------
 -- Table structure for genshin_weapon
 -- ----------------------------
 DROP TABLE IF EXISTS `genshin_weapon`;
 CREATE TABLE `genshin_weapon`  (
-  `id` int(11) NOT NULL,
+  `id` int NOT NULL,
   `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `name_en` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `name_ja` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
-  `weapon` int(11) NULL DEFAULT NULL,
-  `star` int(11) NULL DEFAULT NULL,
-  `item` int(11) NULL DEFAULT NULL,
+  `weapon` int NULL DEFAULT NULL,
+  `star` int NULL DEFAULT NULL,
+  `item` int NULL DEFAULT NULL,
   `mhy_url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `wiki_url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `icon_url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
@@ -1535,118 +1318,120 @@ INSERT INTO `genshin_weapon` VALUES (66, '降临之剑', 'Sword of Descension', 
 INSERT INTO `genshin_weapon` VALUES (67, '竭泽', 'Trawler', '竭沢', 2, 4, 9, '4437', '15418', 'https://uploadstatic.mihoyo.com/ys-obc/2022/08/22/75833613/309f2eeac9f89fbcad57cdfa6e70b193_1880593930919834126.png');
 INSERT INTO `genshin_weapon` VALUES (68, '金流监督', 'Cashflow Supervision', '凛流の監視者', 4, 5, 14, '-', '14513', 'https://genshin.honeyhunterworld.com/img/i_n14513_35.webp');
 INSERT INTO `genshin_weapon` VALUES (69, '静谧之曲', 'Song of Stillness', '静謐なる曲', 2, 4, 12, '7041', '15425', 'https://act-upload.mihoyo.com/ys-obc/2023/08/15/75833613/92e4eabd174b3db36cc88cfa86733a14_2788781843870566136.png');
-INSERT INTO `genshin_weapon` VALUES (70, '决斗之枪', 'Deathmatch', '死闘の槍', 3, 4, 1, '972', '13405', 'https://uploadstatic.mihoyo.com/ys-obc/2020/07/13/76373921/bfb97f07e9bc595b008fed2337c7289d_8534797406018130646.png');
-INSERT INTO `genshin_weapon` VALUES (71, '绝弦', 'The Stringless', '絶弦', 2, 4, 0, '176', '15402', 'https://uploadstatic.mihoyo.com/ys-obc/2020/03/22/75833613/2ea701466be00898d0ada7d09a2f849c_4135463535146683034.png');
-INSERT INTO `genshin_weapon` VALUES (72, '勘探钻机', 'Prospector\'s Drill', 'プロスペクタードリル', 3, 4, 12, '-', '13427', 'https://genshin.honeyhunterworld.com/img/i_n13427_35.webp');
-INSERT INTO `genshin_weapon` VALUES (73, '口袋魔导书', 'Pocket Grimoire', 'ポケット魔導書', 4, 2, 0, '142', '14201', 'https://uploadstatic.mihoyo.com/ys-obc/2020/03/19/75833613/877be88d4393febf2eebf0d0842991b1_5203967974566406481.png');
-INSERT INTO `genshin_weapon` VALUES (74, '狼的末路', 'Wolf\'s Gravestone', '狼の末路', 1, 5, 2, '218', '12502', 'https://uploadstatic.mihoyo.com/ys-obc/2020/03/23/75833613/22b30db150bfea372b73678157955047_3499980040949492760.png');
-INSERT INTO `genshin_weapon` VALUES (75, '狼牙', 'Wolf-Fang', '狼牙', 1, 4, 0, '6970', '11424', 'https://act-upload.mihoyo.com/ys-obc/2023/08/15/75833613/2c8f2808bf93d96a8d0da1819ee5c034_8012248203357127516.png');
-INSERT INTO `genshin_weapon` VALUES (76, '浪影阔剑', 'Tidal Shadow', '波影段平', 1, 4, 14, '7043', '12425', 'https://act-upload.mihoyo.com/ys-obc/2023/08/14/75833613/c59b4980865d0fd036e54cc2536b729e_4170706688072895425.png');
-INSERT INTO `genshin_weapon` VALUES (77, '冷刃', 'Cool Steel', '冷刃', 0, 3, 0, '161', '11301', 'https://uploadstatic.mihoyo.com/ys-obc/2020/03/20/75833613/24bdaea5978d2634d74dad47442d6122_9127538621522062301.png');
-INSERT INTO `genshin_weapon` VALUES (78, '黎明神剑', 'Harbinger of Dawn', '黎明の神剣', 0, 3, 1, '164', '11302', 'https://uploadstatic.mihoyo.com/ys-obc/2020/03/20/75833613/471586149ecedabc50df80a71c1a4e13_7638998658566853121.png');
-INSERT INTO `genshin_weapon` VALUES (79, '历练的猎弓', 'Seasoned Hunter\'s Bow', '歴戦の狩猟弓', 2, 2, 1, '143', '15201', 'https://uploadstatic.mihoyo.com/ys-obc/2020/03/19/75833613/bda299007ed693390a7629dec62ad9c8_4027560520984292648.png');
-INSERT INTO `genshin_weapon` VALUES (80, '聊聊棒', 'Talking Stick', '話し合い棒', 1, 4, 10, '6967', '12424', 'https://act-upload.mihoyo.com/ys-obc/2023/08/15/75833613/1de728030fa4c420e9f62d526296ee67_6402529312940218345.png');
-INSERT INTO `genshin_weapon` VALUES (81, '烈阳之嗣', 'Scion of the Blazing Sun', '烈日の後嗣', 2, 4, 9, '6968', '15424', 'https://act-upload.mihoyo.com/ys-obc/2023/08/15/75833613/60b7f6098716d7a6454959e7eacc0d67_2016910356950350589.png');
-INSERT INTO `genshin_weapon` VALUES (82, '猎弓', 'Hunter\'s Bow', '狩猟弓', 2, 1, 1, '125', '15101', 'https://uploadstatic.mihoyo.com/ys-obc/2020/03/19/75833613/bf332b2c47143efb3f9c99baf63e72b3_5155894237240012716.png');
-INSERT INTO `genshin_weapon` VALUES (83, '猎人之径', 'Hunter\'s Path', '狩人の道', 2, 5, 9, '4330', '15511', 'https://uploadstatic.mihoyo.com/ys-obc/2022/08/23/75833613/0e8ee7822fc3f5ea9aafb3cff3050cc6_9046847550919521806.png');
-INSERT INTO `genshin_weapon` VALUES (84, '流浪的晚星', 'Wandering Evenstar', '彷徨いし星', 4, 4, 10, '5017', '14416', 'https://uploadstatic.mihoyo.com/ys-obc/2022/09/27/75833613/b5f48ce0a7de21a6b64d634b28fd4439_2784641002626504821.png');
-INSERT INTO `genshin_weapon` VALUES (85, '流浪乐章', 'The Widsith', '流浪楽章', 4, 4, 1, '192', '14402', 'https://uploadstatic.mihoyo.com/ys-obc/2020/03/22/75833613/e827b8eb972d3ac0f42569fe6d5e291b_1329731327757714701.png');
-INSERT INTO `genshin_weapon` VALUES (86, '流月针', 'Crescent Pike', '流月の針', 3, 4, 3, '321', '13403', 'https://uploadstatic.mihoyo.com/ys-obc/2020/03/28/75833613/5c5a76b799e189de9257fe0bad6ab347_9004313317699341160.png');
-INSERT INTO `genshin_weapon` VALUES (87, '龙脊长枪', 'Dragonspine Spear', 'ドラゴンスピア', 3, 4, 1, '1363', '13409', 'https://uploadstatic.mihoyo.com/ys-obc/2020/12/03/75833613/a9505cecd5f3c45d8b857ccff349b35d_8684082608956278787.png');
-INSERT INTO `genshin_weapon` VALUES (88, '笼钓瓶一心', 'Kagotsurube Isshin', '籠釣瓶一心', 0, 4, 8, '4201', '11416', 'https://uploadstatic.mihoyo.com/ys-obc/2022/07/12/75833613/680747c67b82c468a6f7d52729d55ab2_2604332460683105535.png');
-INSERT INTO `genshin_weapon` VALUES (89, '落霞', 'Fading Twilight', '落霞', 2, 4, 5, '4090', '15411', 'https://uploadstatic.mihoyo.com/ys-obc/2022/05/27/75833613/ef7f8ca8e6e70dcb479ce05f5e291598_7248274570035336894.png');
-INSERT INTO `genshin_weapon` VALUES (90, '旅行剑', 'Traveler\'s Handy Sword', '旅道の剣', 0, 3, 2, '708', '11303', 'https://uploadstatic.mihoyo.com/ys-obc/2020/06/25/15363053/ea426d267c69897cc818c5d5a9e386ea_4399217366335298544.png');
-INSERT INTO `genshin_weapon` VALUES (91, '掠食者', 'Predator', 'プレデター', 2, 4, 7, '2639', '15415', 'https://uploadstatic.mihoyo.com/ys-obc/2021/08/30/75833613/ef3893709fb8e9becbc9376e211552c6_3729425257940998281.png');
-INSERT INTO `genshin_weapon` VALUES (92, '玛海菈的水色', 'Mahara Aquamarine', 'マカイラの水色', 1, 4, 9, '4792', '12415', 'https://uploadstatic.mihoyo.com/ys-obc/2022/09/27/75833613/b2879f7524fa93c08740f7071f83b7c8_746417133740528223.png');
-INSERT INTO `genshin_weapon` VALUES (93, '曚云之月', 'Mouun\'s Moon', '曚雲の月', 2, 4, 7, '3076', '15416', 'https://uploadstatic.mihoyo.com/ys-obc/2021/10/11/75833613/dbd17d93d77cb60ccc2cf17327ff95c2_5638231530432896456.png');
-INSERT INTO `genshin_weapon` VALUES (94, '魔导绪论', 'Magic Guide', '魔導緒論', 4, 3, 0, '162', '14301', 'https://uploadstatic.mihoyo.com/ys-obc/2020/03/20/75833613/c154d6129fabcfd551b6f33b88d06d37_8283966138624579260.png');
-INSERT INTO `genshin_weapon` VALUES (95, '沐浴龙血的剑', 'Bloodtainted Greatsword', '龍血を浴びた剣', 1, 3, 1, '130', '12302', 'https://uploadstatic.mihoyo.com/ys-obc/2020/03/19/75833613/6612743f57016119d5d86d65b0bb3c78_6863185488096462582.png');
-INSERT INTO `genshin_weapon` VALUES (96, '磐岩结绿', 'Primordial Jade Cutter', '磐岩結緑', 0, 5, 4, '1497', '11505', 'https://uploadstatic.mihoyo.com/ys-obc/2021/02/02/75833613/bfa02af5665193d9b8153107d5484e57_8272816573994913980.png');
-INSERT INTO `genshin_weapon` VALUES (97, '破魔之弓', 'Hamayumi', '破魔の弓', 2, 4, 7, '2287', '15414', 'https://uploadstatic.mihoyo.com/ys-obc/2021/07/19/75833613/dda4a567d9ae43dc385e1fd3b7b5fed8_657560530658326338.png');
-INSERT INTO `genshin_weapon` VALUES (98, '千岩古剑', 'Lithic Blade', '千岩古剣', 1, 4, 3, '1611', '12410', 'https://uploadstatic.mihoyo.com/ys-obc/2021/02/02/75833613/a457b731ddc05ea27498c1dbab1ad4e9_5817136873215016548.png');
-INSERT INTO `genshin_weapon` VALUES (99, '千岩长枪', 'Lithic Spear', '千岩長槍', 3, 4, 5, '1610', '13406', 'https://uploadstatic.mihoyo.com/ys-obc/2021/02/02/75833613/ea70a04d4aa0df1574e7f3d807551883_6915284450779257640.png');
-INSERT INTO `genshin_weapon` VALUES (100, '千夜浮梦', 'A Thousand Floating Dreams', '千夜に浮かぶ夢', 4, 5, 10, '5110', '14511', 'https://uploadstatic.mihoyo.com/ys-obc/2022/10/30/75833613/d7bf0d1fc452b0485a8e34f351647914_359689588087564593.png');
-INSERT INTO `genshin_weapon` VALUES (101, '忍冬之果', 'Frostbearer', '冬忍びの実', 4, 4, 2, '1377', '14412', 'https://uploadstatic.mihoyo.com/ys-obc/2020/12/16/75833613/ac42040366e47673837f75b3e7fc1263_8560032881788677555.png');
-INSERT INTO `genshin_weapon` VALUES (102, '若水', 'Aqua Simulacra', '若水', 2, 5, 3, '4082', '15508', 'https://uploadstatic.mihoyo.com/ys-obc/2022/05/27/75833613/47d410a40f030af54aa7de9ae8981c70_7226284745793519243.png');
-INSERT INTO `genshin_weapon` VALUES (103, '森林王器', 'Forest Regalia', '森林のレガリア', 1, 4, 11, '4445', '12417', 'https://uploadstatic.mihoyo.com/ys-obc/2022/08/23/75833613/881de45b96f658cd4dc2cb41887b658a_4120914496140254122.png');
-INSERT INTO `genshin_weapon` VALUES (104, '神乐之真意', 'Kagura\'s Verity', '神楽の真意', 4, 5, 8, '3563', '14509', 'https://uploadstatic.mihoyo.com/ys-obc/2022/02/13/75833613/97f9c91d1d85b8975969b043e8ff673b_1750342366655799865.png');
-INSERT INTO `genshin_weapon` VALUES (105, '神射手之誓', 'Sharpshooter\'s Oath', 'シャープシューターの誓い', 2, 3, 1, '167', '15302', 'https://uploadstatic.mihoyo.com/ys-obc/2020/03/20/75833613/8ec0ab79c3a2e30828331e0d53428fec_5600004519324126064.png');
-INSERT INTO `genshin_weapon` VALUES (106, '圣显之钥', 'Key of Hierophany', 'ヒエロファニーの鍵', 1, 5, 11, '5018', '11511', 'https://uploadstatic.mihoyo.com/ys-obc/2022/10/13/75833613/17063cbff7f8f01b9c5a45cb6f0f0bff_152247890090555758.png');
-INSERT INTO `genshin_weapon` VALUES (107, '饰铁之花', 'Mailed Flower', '鉄メッキの花', 1, 4, 2, '6234', '12418', 'https://uploadstatic.mihoyo.com/ys-obc/2023/02/27/75833613/5d7a680686988dcdb9148bd329314e5d_6610854458714663668.png');
-INSERT INTO `genshin_weapon` VALUES (108, '试作澹月', 'Prototype Crescent', '澹月·試作', 2, 4, 4, '240', '15406', 'https://uploadstatic.mihoyo.com/ys-obc/2020/03/24/75833613/6d9776dea64400a58adb4eaf824c1618_8563998658668279437.png');
-INSERT INTO `genshin_weapon` VALUES (109, '试作古华', 'Prototype Archaic', '古華·試作', 1, 4, 5, '144', '12406', 'https://uploadstatic.mihoyo.com/ys-obc/2020/03/19/75833613/8f971bf97933800f22eeb1d1afeec757_5656486488252227606.png');
-INSERT INTO `genshin_weapon` VALUES (110, '试作金珀', 'Prototype Amber', '金珀·試作', 4, 4, 4, '319', '14406', 'https://uploadstatic.mihoyo.com/ys-obc/2020/03/27/75833613/043803dbf1729027d76feaa7c24aa67b_1248549900106447863.png');
-INSERT INTO `genshin_weapon` VALUES (111, '试作星镰', 'Prototype Starglitter', '星鎌·試作', 3, 4, 5, '393', '13402', 'https://uploadstatic.mihoyo.com/ys-obc/2020/04/08/75833613/388378b90036d2b75302bb7b67bae64f_7385946179060436684.png');
-INSERT INTO `genshin_weapon` VALUES (112, '试作斩岩', 'Prototype Rancour', '斬岩·試作', 0, 4, 4, '226', '11406', 'https://uploadstatic.mihoyo.com/ys-obc/2020/03/24/75833613/7916a14d5e0ecaea8a37db5505c01f2e_1831722239667693958.png');
-INSERT INTO `genshin_weapon` VALUES (113, '四风原典', 'Lost Prayer to the Sacred Winds', '四風原典', 4, 5, 2, '297', '14502', 'https://uploadstatic.mihoyo.com/ys-obc/2020/03/26/75833613/6804c9a9c7e8444a9e9d41523bc9da04_4817566713925112072.png');
-INSERT INTO `genshin_weapon` VALUES (114, '松籁响起之时', 'Song of Broken Pines', '松韻の響く頃', 1, 5, 0, '2039', '12503', 'https://uploadstatic.mihoyo.com/ys-obc/2021/05/12/75833613/9601bc8290aa991fe52c42b81f57a6d2_6288984929976131281.png');
-INSERT INTO `genshin_weapon` VALUES (115, '讨龙英杰谭', 'Thrilling Tales of Dragon Slayers', '龍殺しの英傑譚', 4, 3, 1, '137', '14302', 'https://uploadstatic.mihoyo.com/ys-obc/2020/03/19/75833613/960be0723a8299db9ccb6a02f74e8e2e_8743657917550828069.png');
-INSERT INTO `genshin_weapon` VALUES (116, '天空之傲', 'Skyward Pride', '天空の傲', 1, 5, 1, '291', '12501', 'https://uploadstatic.mihoyo.com/ys-obc/2020/03/26/75833613/93684c0ffeb85fa7388967a178260f1a_8512604404883559254.png');
-INSERT INTO `genshin_weapon` VALUES (117, '天空之脊', 'Skyward Spine', '天空の脊', 3, 5, 2, '1077', '13502', 'https://uploadstatic.mihoyo.com/ys-obc/2020/09/17/75833613/fe7b0e7f80a4e1c9876d27b89cbc93ec_8576774571833165082.png');
-INSERT INTO `genshin_weapon` VALUES (118, '天空之卷', 'Skyward Atlas', '天空の巻', 4, 5, 1, '227', '14501', 'https://uploadstatic.mihoyo.com/ys-obc/2020/03/24/75833613/d16313992a8ba86e6ba4a84977b59ca4_8815818653896805010.png');
-INSERT INTO `genshin_weapon` VALUES (119, '天空之刃', 'Skyward Blade', '天空の刃', 0, 5, 1, '215', '11502', 'https://uploadstatic.mihoyo.com/ys-obc/2020/03/23/75833613/445ee7341d31462920858367cadc6fc1_3531531098390151221.png');
-INSERT INTO `genshin_weapon` VALUES (120, '天空之翼', 'Skyward Harp', '天空の翼', 2, 5, 1, '323', '15501', 'https://uploadstatic.mihoyo.com/ys-obc/2020/03/29/75833613/05f12093a755817ad3c51f53db1039a4_5002287290900373405.png');
-INSERT INTO `genshin_weapon` VALUES (121, '天目影打刀', 'Amenoma Kageuchi', '天目影打', 0, 4, 6, '2307', '11414', 'https://uploadstatic.mihoyo.com/ys-obc/2021/10/21/75833613/ed49afc0e189b8292bba65e91d19fecf_4776350835348014308.png');
-INSERT INTO `genshin_weapon` VALUES (122, '铁蜂刺', 'Iron Sting', '鉄蜂の刺し', 0, 4, 5, '175', '11407', 'https://uploadstatic.mihoyo.com/ys-obc/2020/03/22/75833613/3aab2b1b2703f755d88330ed161568b1_8216113915867690243.png');
-INSERT INTO `genshin_weapon` VALUES (123, '铁尖枪', 'Iron Point', '鉄尖槍', 3, 2, 2, '160', '13201', 'https://uploadstatic.mihoyo.com/ys-obc/2020/03/20/75833613/6189a5177288ec1a426710bfcb41885b_1406125984012296163.png');
-INSERT INTO `genshin_weapon` VALUES (124, '铁影阔剑', 'Ferrous Shadow', '鉄影段平', 1, 3, 0, '129', '12301', 'https://uploadstatic.mihoyo.com/ys-obc/2020/03/19/75833613/9f92bc7c1b1c9f667d8b36a2890dba3c_4966013475177272313.png');
-INSERT INTO `genshin_weapon` VALUES (125, '图莱杜拉的回忆', 'Tullaytullah’s Remembrance', 'トゥライトゥーラの記憶', 4, 5, 9, '5378', '14512', 'https://uploadstatic.mihoyo.com/ys-obc/2022/12/03/75833613/c9cd14ef84a833b9b46a4a4b1c18c877_7487205367345361877.png');
-INSERT INTO `genshin_weapon` VALUES (126, '万国诸海图谱', 'Mappa Mare', '万国諸海の図譜', 4, 4, 5, '198', '14407', 'https://uploadstatic.mihoyo.com/ys-obc/2020/03/22/75833613/bb5d973a357ab939cc3c6c193000cfca_8857068874429107380.png');
-INSERT INTO `genshin_weapon` VALUES (127, '万世流涌大典', 'Rite of the Eternal Flow', '久遠流転の大典', 4, 5, 13, '-', '14514', 'https://genshin.honeyhunterworld.com/img/i_n14514_35.webp');
-INSERT INTO `genshin_weapon` VALUES (128, '王下近侍', 'King\'s Squire', '王の近侍', 3, 2, 9, '4446', '15417', 'https://uploadstatic.mihoyo.com/ys-obc/2022/08/23/75833613/d3d10fa92028b6f036c34d52ecee3a20_7523555327997551643.png');
-INSERT INTO `genshin_weapon` VALUES (129, '苇海信标', 'Beacon of the Reed Sea', 'アアルビーコン', 1, 5, 9, '6179', '12511', 'https://uploadstatic.mihoyo.com/ys-obc/2023/02/27/75833613/dfaec978aacb79719af6666bde002e51_1344662909160731485.png');
-INSERT INTO `genshin_weapon` VALUES (130, '无锋剑', 'Dull Blade', '無鋒の剣', 0, 1, 0, '127', '11101', 'https://uploadstatic.mihoyo.com/ys-obc/2020/03/19/75833613/fee1b4cdc14a3dce1f548a99967d0a4d_3322549636151970165.png');
-INSERT INTO `genshin_weapon` VALUES (131, '无工之剑', 'The Unforged', '無工の剣', 1, 5, 4, '1288', '12504', 'https://uploadstatic.mihoyo.com/ys-obc/2020/11/03/75833613/d4ecd5c1f63d73c86a17ad3b382ab95c_6771529426315730357.png');
-INSERT INTO `genshin_weapon` VALUES (132, '无垠蔚蓝之歌', 'Ballad of the Boundless Blue', '果てなき紺碧の唄', 4, 4, 1, '-', '14426', 'https://genshin.honeyhunterworld.com/img/i_n14426_35.webp');
-INSERT INTO `genshin_weapon` VALUES (133, '雾切之回光', 'Mistsplitter Reforged', '霧切の廻光', 0, 5, 6, '2289', '11509', 'https://uploadstatic.mihoyo.com/ys-obc/2021/07/18/75833613/a3eb5b2dbfaed0dc91f39038db3919b2_3947809028567339166.png');
-INSERT INTO `genshin_weapon` VALUES (134, '西风大剑', 'Favonius Greatsword', '西風大剣', 1, 4, 2, '174', '12401', 'https://uploadstatic.mihoyo.com/ys-obc/2020/03/22/75833613/60cca5eecb54f5df17e9aadae0f20116_5349417019139180282.png');
-INSERT INTO `genshin_weapon` VALUES (135, '西风剑', 'Favonius Sword', '西風剣', 0, 4, 0, '208', '11401', 'https://uploadstatic.mihoyo.com/ys-obc/2020/03/23/75833613/0b4101418da4c458e2df1ee94953c21f_743806312164207500.png');
-INSERT INTO `genshin_weapon` VALUES (136, '西风猎弓', 'Favonius Warbow', '西風猟弓', 2, 4, 2, '195', '15401', 'https://uploadstatic.mihoyo.com/ys-obc/2020/04/03/75833613/e0761fb637cb5fd3971f4195bbb1b58c_2054410022054716358.png');
-INSERT INTO `genshin_weapon` VALUES (137, '西风秘典', 'Favonius Codex', '西風秘典', 4, 4, 0, '185', '14401', 'https://uploadstatic.mihoyo.com/ys-obc/2020/03/22/75833613/d5fd5471553ba8ef97c9a8a1dd967470_2181206993669361058.png');
-INSERT INTO `genshin_weapon` VALUES (138, '西风长枪', 'Favonius Lance', '西風長槍', 3, 4, 2, '1079', '13407', 'https://uploadstatic.mihoyo.com/ys-obc/2020/09/18/75833613/6140a0079a81382e3c44a02a9e84126e_3640803810731897553.png');
-INSERT INTO `genshin_weapon` VALUES (139, '西福斯的月光', 'Xiphos\' Moonlight', 'サイフォスの月明かり', 0, 4, 11, '5019', '11418', 'https://uploadstatic.mihoyo.com/ys-obc/2022/10/13/75833613/0588b3acc33fe683a499ede1fd154358_1475750523378583293.png');
-INSERT INTO `genshin_weapon` VALUES (140, '息灾', 'Calamity Queller', '息災', 3, 5, 4, '3398', '13507', 'https://uploadstatic.mihoyo.com/ys-obc/2022/01/04/75833613/bc53d31707c6d8c7637162871f59ba4e_4605074879267649188.png');
-INSERT INTO `genshin_weapon` VALUES (141, '喜多院十文字', 'Kitain Cross Spear', '喜多院十文字槍', 3, 4, 8, '2310', '13414', 'https://uploadstatic.mihoyo.com/ys-obc/2021/07/20/75833613/7783dfe92cfe7e589471ba204ec37f6d_932589671452620706.png');
-INSERT INTO `genshin_weapon` VALUES (142, '匣里龙吟', 'Lion\'s Roar', '匣中龍吟', 0, 4, 3, '141', '11405', 'https://uploadstatic.mihoyo.com/ys-obc/2020/03/19/75833613/157123aec9296f06c27def671ac923b1_3170648805240315119.png');
-INSERT INTO `genshin_weapon` VALUES (143, '匣里灭辰', 'Dragon\'s Bane', '匣中滅龍', 3, 4, 4, '171', '13401', 'https://uploadstatic.mihoyo.com/ys-obc/2020/03/22/75833613/b753959a45fc9989e39dd945e8769e4a_6217077251181025856.png');
-INSERT INTO `genshin_weapon` VALUES (144, '匣里日月', 'Solar Pearl', '匣中日月', 4, 4, 3, '217', '14405', 'https://uploadstatic.mihoyo.com/ys-obc/2020/03/23/75833613/ac439934d1093ab4f9eaac59784f3a0c_3374221950943383956.png');
-INSERT INTO `genshin_weapon` VALUES (145, '峡湾长歌', 'Ballad of the Fjords', '峡湾高歌', 3, 4, 14, '6966', '13424', 'https://act-upload.mihoyo.com/ys-obc/2023/08/15/75833613/8e3fd7d9ca42d78b8c3894f4ddb583bb_6791975368893247791.png');
-INSERT INTO `genshin_weapon` VALUES (146, '衔珠海皇', 'Luxurious Sea-Lord', '銜玉の海皇', 1, 4, 5, '2603', '12412', 'https://uploadstatic.mihoyo.com/ys-obc/2021/08/29/75833613/da92ce666f6f5a37c283b29c2f2eb592_1653541597481079247.png');
-INSERT INTO `genshin_weapon` VALUES (147, '新手长枪', 'Beginner\'s Protector', '新米の長槍', 3, 1, 2, '118', '13101', 'https://uploadstatic.mihoyo.com/ys-obc/2020/03/20/75833613/b72786043e38c86cfca0605f587f83d5_7801496279198261696.png');
-INSERT INTO `genshin_weapon` VALUES (148, '信使', 'Messenger', '文使い', 2, 3, 4, '686', '15305', 'https://uploadstatic.mihoyo.com/ys-obc/2020/06/21/75833613/16f64d570b8d5a72000191df60f62601_8526863970829738869.png');
-INSERT INTO `genshin_weapon` VALUES (149, '学徒笔记', 'Apprentice\'s Notes', '生徒ノート', 4, 1, 0, '124', '14101', 'https://uploadstatic.mihoyo.com/ys-obc/2020/03/19/75833613/79bdee9646f7cd1f3e757d9f26bd3d68_8508785103108153146.png');
-INSERT INTO `genshin_weapon` VALUES (150, '雪葬的星银', 'Snow-Tombed Starsilver', '雪葬の星銀', 1, 4, 0, '1362', '12411', 'https://uploadstatic.mihoyo.com/ys-obc/2020/12/03/75833613/1d809e4dc4cb46d286de580f7d37b84b_2295500733774520474.png');
-INSERT INTO `genshin_weapon` VALUES (151, '训练大剑', 'Waster Greatsword', '訓練用大剣', 1, 1, 1, '123', '12101', 'https://uploadstatic.mihoyo.com/ys-obc/2020/03/19/75833613/2fc6f5c0c4a8f0547ab17cd06e2d9a14_6235791695356383945.png');
-INSERT INTO `genshin_weapon` VALUES (152, '鸦羽弓', 'Raven Bow', '鴉羽の弓', 2, 3, 0, '139', '15301', 'https://uploadstatic.mihoyo.com/ys-obc/2020/03/19/75833613/3624d7d0a0ef89d91cb1166bac6d5518_603388374697378447.png');
-INSERT INTO `genshin_weapon` VALUES (153, '遗祀玉珑', 'Sacrificial Jade', '古祠玉瓏', 4, 4, 3, '6969', '14424', 'https://act-upload.mihoyo.com/ys-obc/2023/08/15/75833613/1be86afe0d9128d9ed22b788b70e22fb_4806496666522331250.png');
-INSERT INTO `genshin_weapon` VALUES (154, '以理服人', 'Debate Club', '理屈責め', 1, 3, 4, '131', '12305', 'https://uploadstatic.mihoyo.com/ys-obc/2020/03/19/75833613/059f200b99d098fd1791a5b6df57fb15_2429287944097179245.png');
-INSERT INTO `genshin_weapon` VALUES (155, '异世界行记', 'Otherworldly Story', '異世界旅行記', 4, 3, 2, '685', '14303', 'https://uploadstatic.mihoyo.com/ys-obc/2020/06/21/75833613/99f89aff67fb655d40c72b4c9e3c2dbd_3678797272332929121.png');
-INSERT INTO `genshin_weapon` VALUES (156, '银剑', 'Silver Sword', '銀の剣', 0, 2, 0, '126', '11201', 'https://uploadstatic.mihoyo.com/ys-obc/2020/03/19/75833613/8abcfb0e788eee0d872a8b5ab36b54c9_3740162289790477109.png');
-INSERT INTO `genshin_weapon` VALUES (157, '盈满之实', 'Fruit of Fulfillment', '満悦の実', 4, 4, 10, '4444', '14417', 'https://uploadstatic.mihoyo.com/ys-obc/2022/08/22/75833613/789a0c301fd928969ac55776a30ec2d1_1756473021548622532.png');
-INSERT INTO `genshin_weapon` VALUES (158, '佣兵重剑', 'Old Merc\'s Pal', '傭兵の重剣', 1, 2, 1, '158', '12201', 'https://uploadstatic.mihoyo.com/ys-obc/2020/03/20/75833613/478f9e83909a2bf2545d7f70d765b788_5488112487273325804.png');
-INSERT INTO `genshin_weapon` VALUES (159, '幽夜华尔兹', 'Mitternachts Waltz', '幽夜のワルツ', 2, 4, 0, '2127', '15412', 'https://uploadstatic.mihoyo.com/ys-obc/2021/06/07/75833613/20fae82e8d237efc703cebebe371a32a_7003112924895248286.png');
-INSERT INTO `genshin_weapon` VALUES (160, '雨裁', 'Rainslasher', '雨裁', 1, 4, 4, '180', '12405', 'https://uploadstatic.mihoyo.com/ys-obc/2020/03/21/75833613/d1004336c0b48f25a7d3546b57bce070_1026700881516126262.png');
-INSERT INTO `genshin_weapon` VALUES (161, '原木刀', 'Sapwood Blade', '原木刀', 1, 4, 11, '4440', '11417', 'https://uploadstatic.mihoyo.com/ys-obc/2022/08/23/75833613/fd6ba0f1c2db8473aece023a6edec48a_1888608505606874212.png');
-INSERT INTO `genshin_weapon` VALUES (162, '钺矛', 'Halberd', '鉾槍', 3, 3, 4, '724', '13302', 'https://uploadstatic.mihoyo.com/ys-obc/2020/06/21/75833613/2ef0c79a0d05d49f3c7c884520e70ef6_7423804349833045135.png');
-INSERT INTO `genshin_weapon` VALUES (163, '昭心', 'Eye of Perception', '昭心', 4, 4, 4, '690', '14409', 'https://uploadstatic.mihoyo.com/ys-obc/2020/06/21/76373921/dafe7f5cdecac90aec82b1a4ba04ff25_8710250991471280781.png');
-INSERT INTO `genshin_weapon` VALUES (164, '证誓之明瞳', 'Oathsworn Eye', '誓いの明瞳', 4, 4, 6, '3611', '14415', 'https://uploadstatic.mihoyo.com/ys-obc/2022/02/13/75833613/47899a33ddd3f573f55c76df4a7802d2_3094185401289107894.png');
-INSERT INTO `genshin_weapon` VALUES (165, '薙草之稻光', 'Engulfing Lightning', '草薙の稲光', 3, 5, 8, '2602', '13509', 'https://uploadstatic.mihoyo.com/ys-obc/2021/08/29/75833613/8b0a05031b78c76f506045a2a990c411_8186351970748341837.png');
-INSERT INTO `genshin_weapon` VALUES (166, '终末嗟叹之诗', 'Elegy for the End', '終焉を嘆く詩', 2, 5, 1, '1682', '15503', 'https://uploadstatic.mihoyo.com/ys-obc/2021/03/15/75833613/7543084fd200a934c835c5f4e3c43561_1445795416639899431.png');
-INSERT INTO `genshin_weapon` VALUES (167, '钟剑', 'The Bell', '鐘の剣', 1, 4, 0, '214', '12402', 'https://uploadstatic.mihoyo.com/ys-obc/2020/03/23/75833613/17fa7c1aaf90e8ee33985e9bede2c57a_8855621887112870500.png');
-INSERT INTO `genshin_weapon` VALUES (168, '斫峰之刃', 'Summit Shaper', '斬山の刃', 0, 5, 3, '1356', '11504', 'https://uploadstatic.mihoyo.com/ys-obc/2020/12/23/75833613/16d127e84bb154ad5b18322f8cce9cf2_7289288347603811546.png');
-INSERT INTO `genshin_weapon` VALUES (169, '宗室大剑', 'Royal Greatsword', '旧貴族大剣', 1, 4, 2, '206', '12404', 'https://uploadstatic.mihoyo.com/ys-obc/2020/03/23/75833613/21ba2927f014300431edad9fc7d519d1_1243866720697859716.png');
-INSERT INTO `genshin_weapon` VALUES (170, '宗室猎枪', 'Royal Spear', '旧貴族猟槍', 3, 4, 4, '1287', '13408', 'https://uploadstatic.mihoyo.com/ys-obc/2020/11/03/75833613/5f0ecdf6675c087059ef9bdcf34f8bb7_8359121231390835579.png');
-INSERT INTO `genshin_weapon` VALUES (171, '宗室秘法录', 'Royal Grimoire', '旧貴族秘法録', 4, 4, 0, '194', '14404', 'https://uploadstatic.mihoyo.com/ys-obc/2020/03/22/75833613/098ee6b954cc8b44400d6ed3c601f107_5142741724020145957.png');
-INSERT INTO `genshin_weapon` VALUES (172, '宗室长弓', 'Royal Bow', '旧貴族長弓', 2, 4, 2, '178', '15404', 'https://uploadstatic.mihoyo.com/ys-obc/2020/03/22/75833613/5e126c30f3d95cdf7c9d173527e82919_3096417559484041900.png');
-INSERT INTO `genshin_weapon` VALUES (173, '宗室长剑', 'Royal Longsword', '旧貴族長剣', 0, 4, 0, '199', '11404', 'https://uploadstatic.mihoyo.com/ys-obc/2020/03/22/75833613/de675880f3e60488abec363d5579a502_3227188272282171556.png');
-INSERT INTO `genshin_weapon` VALUES (174, '最初的大魔术', 'The First Great Magic', '最初の大魔術', 2, 5, 12, '6936', '15512', 'https://act-upload.mihoyo.com/ys-obc/2023/08/15/75833613/2191581ead642083cfc0ec7990b943e7_7821882148795668773.png');
+INSERT INTO `genshin_weapon` VALUES (70, '静水流涌之辉', 'Splendor of Still Waters', '静水流転の輝き', 0, 5, 13, '-', '11513', 'https://genshin.honeyhunterworld.com/img/i_n11513_awaken_icon_70.webp');
+INSERT INTO `genshin_weapon` VALUES (71, '决斗之枪', 'Deathmatch', '死闘の槍', 3, 4, 1, '972', '13405', 'https://uploadstatic.mihoyo.com/ys-obc/2020/07/13/76373921/bfb97f07e9bc595b008fed2337c7289d_8534797406018130646.png');
+INSERT INTO `genshin_weapon` VALUES (72, '绝弦', 'The Stringless', '絶弦', 2, 4, 0, '176', '15402', 'https://uploadstatic.mihoyo.com/ys-obc/2020/03/22/75833613/2ea701466be00898d0ada7d09a2f849c_4135463535146683034.png');
+INSERT INTO `genshin_weapon` VALUES (73, '勘探钻机', 'Prospector\'s Drill', 'プロスペクタードリル', 3, 4, 12, '-', '13427', 'https://genshin.honeyhunterworld.com/img/i_n13427_35.webp');
+INSERT INTO `genshin_weapon` VALUES (74, '口袋魔导书', 'Pocket Grimoire', 'ポケット魔導書', 4, 2, 0, '142', '14201', 'https://uploadstatic.mihoyo.com/ys-obc/2020/03/19/75833613/877be88d4393febf2eebf0d0842991b1_5203967974566406481.png');
+INSERT INTO `genshin_weapon` VALUES (75, '狼的末路', 'Wolf\'s Gravestone', '狼の末路', 1, 5, 2, '218', '12502', 'https://uploadstatic.mihoyo.com/ys-obc/2020/03/23/75833613/22b30db150bfea372b73678157955047_3499980040949492760.png');
+INSERT INTO `genshin_weapon` VALUES (76, '狼牙', 'Wolf-Fang', '狼牙', 1, 4, 0, '6970', '11424', 'https://act-upload.mihoyo.com/ys-obc/2023/08/15/75833613/2c8f2808bf93d96a8d0da1819ee5c034_8012248203357127516.png');
+INSERT INTO `genshin_weapon` VALUES (77, '浪影阔剑', 'Tidal Shadow', '波影段平', 1, 4, 14, '7043', '12425', 'https://act-upload.mihoyo.com/ys-obc/2023/08/14/75833613/c59b4980865d0fd036e54cc2536b729e_4170706688072895425.png');
+INSERT INTO `genshin_weapon` VALUES (78, '冷刃', 'Cool Steel', '冷刃', 0, 3, 0, '161', '11301', 'https://uploadstatic.mihoyo.com/ys-obc/2020/03/20/75833613/24bdaea5978d2634d74dad47442d6122_9127538621522062301.png');
+INSERT INTO `genshin_weapon` VALUES (79, '黎明神剑', 'Harbinger of Dawn', '黎明の神剣', 0, 3, 1, '164', '11302', 'https://uploadstatic.mihoyo.com/ys-obc/2020/03/20/75833613/471586149ecedabc50df80a71c1a4e13_7638998658566853121.png');
+INSERT INTO `genshin_weapon` VALUES (80, '历练的猎弓', 'Seasoned Hunter\'s Bow', '歴戦の狩猟弓', 2, 2, 1, '143', '15201', 'https://uploadstatic.mihoyo.com/ys-obc/2020/03/19/75833613/bda299007ed693390a7629dec62ad9c8_4027560520984292648.png');
+INSERT INTO `genshin_weapon` VALUES (81, '聊聊棒', 'Talking Stick', '話し合い棒', 1, 4, 10, '6967', '12424', 'https://act-upload.mihoyo.com/ys-obc/2023/08/15/75833613/1de728030fa4c420e9f62d526296ee67_6402529312940218345.png');
+INSERT INTO `genshin_weapon` VALUES (82, '烈阳之嗣', 'Scion of the Blazing Sun', '烈日の後嗣', 2, 4, 9, '6968', '15424', 'https://act-upload.mihoyo.com/ys-obc/2023/08/15/75833613/60b7f6098716d7a6454959e7eacc0d67_2016910356950350589.png');
+INSERT INTO `genshin_weapon` VALUES (83, '猎弓', 'Hunter\'s Bow', '狩猟弓', 2, 1, 1, '125', '15101', 'https://uploadstatic.mihoyo.com/ys-obc/2020/03/19/75833613/bf332b2c47143efb3f9c99baf63e72b3_5155894237240012716.png');
+INSERT INTO `genshin_weapon` VALUES (84, '猎人之径', 'Hunter\'s Path', '狩人の道', 2, 5, 9, '4330', '15511', 'https://uploadstatic.mihoyo.com/ys-obc/2022/08/23/75833613/0e8ee7822fc3f5ea9aafb3cff3050cc6_9046847550919521806.png');
+INSERT INTO `genshin_weapon` VALUES (85, '流浪的晚星', 'Wandering Evenstar', '彷徨いし星', 4, 4, 10, '5017', '14416', 'https://uploadstatic.mihoyo.com/ys-obc/2022/09/27/75833613/b5f48ce0a7de21a6b64d634b28fd4439_2784641002626504821.png');
+INSERT INTO `genshin_weapon` VALUES (86, '流浪乐章', 'The Widsith', '流浪楽章', 4, 4, 1, '192', '14402', 'https://uploadstatic.mihoyo.com/ys-obc/2020/03/22/75833613/e827b8eb972d3ac0f42569fe6d5e291b_1329731327757714701.png');
+INSERT INTO `genshin_weapon` VALUES (87, '流月针', 'Crescent Pike', '流月の針', 3, 4, 3, '321', '13403', 'https://uploadstatic.mihoyo.com/ys-obc/2020/03/28/75833613/5c5a76b799e189de9257fe0bad6ab347_9004313317699341160.png');
+INSERT INTO `genshin_weapon` VALUES (88, '龙脊长枪', 'Dragonspine Spear', 'ドラゴンスピア', 3, 4, 1, '1363', '13409', 'https://uploadstatic.mihoyo.com/ys-obc/2020/12/03/75833613/a9505cecd5f3c45d8b857ccff349b35d_8684082608956278787.png');
+INSERT INTO `genshin_weapon` VALUES (89, '笼钓瓶一心', 'Kagotsurube Isshin', '籠釣瓶一心', 0, 4, 8, '4201', '11416', 'https://uploadstatic.mihoyo.com/ys-obc/2022/07/12/75833613/680747c67b82c468a6f7d52729d55ab2_2604332460683105535.png');
+INSERT INTO `genshin_weapon` VALUES (90, '落霞', 'Fading Twilight', '落霞', 2, 4, 5, '4090', '15411', 'https://uploadstatic.mihoyo.com/ys-obc/2022/05/27/75833613/ef7f8ca8e6e70dcb479ce05f5e291598_7248274570035336894.png');
+INSERT INTO `genshin_weapon` VALUES (91, '旅行剑', 'Traveler\'s Handy Sword', '旅道の剣', 0, 3, 2, '708', '11303', 'https://uploadstatic.mihoyo.com/ys-obc/2020/06/25/15363053/ea426d267c69897cc818c5d5a9e386ea_4399217366335298544.png');
+INSERT INTO `genshin_weapon` VALUES (92, '掠食者', 'Predator', 'プレデター', 2, 4, 7, '2639', '15415', 'https://uploadstatic.mihoyo.com/ys-obc/2021/08/30/75833613/ef3893709fb8e9becbc9376e211552c6_3729425257940998281.png');
+INSERT INTO `genshin_weapon` VALUES (93, '玛海菈的水色', 'Mahara Aquamarine', 'マカイラの水色', 1, 4, 9, '4792', '12415', 'https://uploadstatic.mihoyo.com/ys-obc/2022/09/27/75833613/b2879f7524fa93c08740f7071f83b7c8_746417133740528223.png');
+INSERT INTO `genshin_weapon` VALUES (94, '曚云之月', 'Mouun\'s Moon', '曚雲の月', 2, 4, 7, '3076', '15416', 'https://uploadstatic.mihoyo.com/ys-obc/2021/10/11/75833613/dbd17d93d77cb60ccc2cf17327ff95c2_5638231530432896456.png');
+INSERT INTO `genshin_weapon` VALUES (95, '魔导绪论', 'Magic Guide', '魔導緒論', 4, 3, 0, '162', '14301', 'https://uploadstatic.mihoyo.com/ys-obc/2020/03/20/75833613/c154d6129fabcfd551b6f33b88d06d37_8283966138624579260.png');
+INSERT INTO `genshin_weapon` VALUES (96, '沐浴龙血的剑', 'Bloodtainted Greatsword', '龍血を浴びた剣', 1, 3, 1, '130', '12302', 'https://uploadstatic.mihoyo.com/ys-obc/2020/03/19/75833613/6612743f57016119d5d86d65b0bb3c78_6863185488096462582.png');
+INSERT INTO `genshin_weapon` VALUES (97, '磐岩结绿', 'Primordial Jade Cutter', '磐岩結緑', 0, 5, 4, '1497', '11505', 'https://uploadstatic.mihoyo.com/ys-obc/2021/02/02/75833613/bfa02af5665193d9b8153107d5484e57_8272816573994913980.png');
+INSERT INTO `genshin_weapon` VALUES (98, '破魔之弓', 'Hamayumi', '破魔の弓', 2, 4, 7, '2287', '15414', 'https://uploadstatic.mihoyo.com/ys-obc/2021/07/19/75833613/dda4a567d9ae43dc385e1fd3b7b5fed8_657560530658326338.png');
+INSERT INTO `genshin_weapon` VALUES (99, '千岩古剑', 'Lithic Blade', '千岩古剣', 1, 4, 3, '1611', '12410', 'https://uploadstatic.mihoyo.com/ys-obc/2021/02/02/75833613/a457b731ddc05ea27498c1dbab1ad4e9_5817136873215016548.png');
+INSERT INTO `genshin_weapon` VALUES (100, '千岩长枪', 'Lithic Spear', '千岩長槍', 3, 4, 5, '1610', '13406', 'https://uploadstatic.mihoyo.com/ys-obc/2021/02/02/75833613/ea70a04d4aa0df1574e7f3d807551883_6915284450779257640.png');
+INSERT INTO `genshin_weapon` VALUES (101, '千夜浮梦', 'A Thousand Floating Dreams', '千夜に浮かぶ夢', 4, 5, 10, '5110', '14511', 'https://uploadstatic.mihoyo.com/ys-obc/2022/10/30/75833613/d7bf0d1fc452b0485a8e34f351647914_359689588087564593.png');
+INSERT INTO `genshin_weapon` VALUES (102, '忍冬之果', 'Frostbearer', '冬忍びの実', 4, 4, 2, '1377', '14412', 'https://uploadstatic.mihoyo.com/ys-obc/2020/12/16/75833613/ac42040366e47673837f75b3e7fc1263_8560032881788677555.png');
+INSERT INTO `genshin_weapon` VALUES (103, '若水', 'Aqua Simulacra', '若水', 2, 5, 3, '4082', '15508', 'https://uploadstatic.mihoyo.com/ys-obc/2022/05/27/75833613/47d410a40f030af54aa7de9ae8981c70_7226284745793519243.png');
+INSERT INTO `genshin_weapon` VALUES (104, '森林王器', 'Forest Regalia', '森林のレガリア', 1, 4, 11, '4445', '12417', 'https://uploadstatic.mihoyo.com/ys-obc/2022/08/23/75833613/881de45b96f658cd4dc2cb41887b658a_4120914496140254122.png');
+INSERT INTO `genshin_weapon` VALUES (105, '神乐之真意', 'Kagura\'s Verity', '神楽の真意', 4, 5, 8, '3563', '14509', 'https://uploadstatic.mihoyo.com/ys-obc/2022/02/13/75833613/97f9c91d1d85b8975969b043e8ff673b_1750342366655799865.png');
+INSERT INTO `genshin_weapon` VALUES (106, '神射手之誓', 'Sharpshooter\'s Oath', 'シャープシューターの誓い', 2, 3, 1, '167', '15302', 'https://uploadstatic.mihoyo.com/ys-obc/2020/03/20/75833613/8ec0ab79c3a2e30828331e0d53428fec_5600004519324126064.png');
+INSERT INTO `genshin_weapon` VALUES (107, '圣显之钥', 'Key of Hierophany', 'ヒエロファニーの鍵', 1, 5, 11, '5018', '11511', 'https://uploadstatic.mihoyo.com/ys-obc/2022/10/13/75833613/17063cbff7f8f01b9c5a45cb6f0f0bff_152247890090555758.png');
+INSERT INTO `genshin_weapon` VALUES (108, '饰铁之花', 'Mailed Flower', '鉄メッキの花', 1, 4, 2, '6234', '12418', 'https://uploadstatic.mihoyo.com/ys-obc/2023/02/27/75833613/5d7a680686988dcdb9148bd329314e5d_6610854458714663668.png');
+INSERT INTO `genshin_weapon` VALUES (109, '试作澹月', 'Prototype Crescent', '澹月·試作', 2, 4, 4, '240', '15406', 'https://uploadstatic.mihoyo.com/ys-obc/2020/03/24/75833613/6d9776dea64400a58adb4eaf824c1618_8563998658668279437.png');
+INSERT INTO `genshin_weapon` VALUES (110, '试作古华', 'Prototype Archaic', '古華·試作', 1, 4, 5, '144', '12406', 'https://uploadstatic.mihoyo.com/ys-obc/2020/03/19/75833613/8f971bf97933800f22eeb1d1afeec757_5656486488252227606.png');
+INSERT INTO `genshin_weapon` VALUES (111, '试作金珀', 'Prototype Amber', '金珀·試作', 4, 4, 4, '319', '14406', 'https://uploadstatic.mihoyo.com/ys-obc/2020/03/27/75833613/043803dbf1729027d76feaa7c24aa67b_1248549900106447863.png');
+INSERT INTO `genshin_weapon` VALUES (112, '试作星镰', 'Prototype Starglitter', '星鎌·試作', 3, 4, 5, '393', '13402', 'https://uploadstatic.mihoyo.com/ys-obc/2020/04/08/75833613/388378b90036d2b75302bb7b67bae64f_7385946179060436684.png');
+INSERT INTO `genshin_weapon` VALUES (113, '试作斩岩', 'Prototype Rancour', '斬岩·試作', 0, 4, 4, '226', '11406', 'https://uploadstatic.mihoyo.com/ys-obc/2020/03/24/75833613/7916a14d5e0ecaea8a37db5505c01f2e_1831722239667693958.png');
+INSERT INTO `genshin_weapon` VALUES (114, '水仙十字之剑', 'Sword of Narzissenkreuz', '水仙十字の剣', 0, 4, 12, '-', '11428', 'https://genshin.honeyhunterworld.com/img/i_n11428_70.webp');
+INSERT INTO `genshin_weapon` VALUES (115, '四风原典', 'Lost Prayer to the Sacred Winds', '四風原典', 4, 5, 2, '297', '14502', 'https://uploadstatic.mihoyo.com/ys-obc/2020/03/26/75833613/6804c9a9c7e8444a9e9d41523bc9da04_4817566713925112072.png');
+INSERT INTO `genshin_weapon` VALUES (116, '松籁响起之时', 'Song of Broken Pines', '松韻の響く頃', 1, 5, 0, '2039', '12503', 'https://uploadstatic.mihoyo.com/ys-obc/2021/05/12/75833613/9601bc8290aa991fe52c42b81f57a6d2_6288984929976131281.png');
+INSERT INTO `genshin_weapon` VALUES (117, '讨龙英杰谭', 'Thrilling Tales of Dragon Slayers', '龍殺しの英傑譚', 4, 3, 1, '137', '14302', 'https://uploadstatic.mihoyo.com/ys-obc/2020/03/19/75833613/960be0723a8299db9ccb6a02f74e8e2e_8743657917550828069.png');
+INSERT INTO `genshin_weapon` VALUES (118, '天空之傲', 'Skyward Pride', '天空の傲', 1, 5, 1, '291', '12501', 'https://uploadstatic.mihoyo.com/ys-obc/2020/03/26/75833613/93684c0ffeb85fa7388967a178260f1a_8512604404883559254.png');
+INSERT INTO `genshin_weapon` VALUES (119, '天空之脊', 'Skyward Spine', '天空の脊', 3, 5, 2, '1077', '13502', 'https://uploadstatic.mihoyo.com/ys-obc/2020/09/17/75833613/fe7b0e7f80a4e1c9876d27b89cbc93ec_8576774571833165082.png');
+INSERT INTO `genshin_weapon` VALUES (120, '天空之卷', 'Skyward Atlas', '天空の巻', 4, 5, 1, '227', '14501', 'https://uploadstatic.mihoyo.com/ys-obc/2020/03/24/75833613/d16313992a8ba86e6ba4a84977b59ca4_8815818653896805010.png');
+INSERT INTO `genshin_weapon` VALUES (121, '天空之刃', 'Skyward Blade', '天空の刃', 0, 5, 1, '215', '11502', 'https://uploadstatic.mihoyo.com/ys-obc/2020/03/23/75833613/445ee7341d31462920858367cadc6fc1_3531531098390151221.png');
+INSERT INTO `genshin_weapon` VALUES (122, '天空之翼', 'Skyward Harp', '天空の翼', 2, 5, 1, '323', '15501', 'https://uploadstatic.mihoyo.com/ys-obc/2020/03/29/75833613/05f12093a755817ad3c51f53db1039a4_5002287290900373405.png');
+INSERT INTO `genshin_weapon` VALUES (123, '天目影打刀', 'Amenoma Kageuchi', '天目影打', 0, 4, 6, '2307', '11414', 'https://uploadstatic.mihoyo.com/ys-obc/2021/10/21/75833613/ed49afc0e189b8292bba65e91d19fecf_4776350835348014308.png');
+INSERT INTO `genshin_weapon` VALUES (124, '铁蜂刺', 'Iron Sting', '鉄蜂の刺し', 0, 4, 5, '175', '11407', 'https://uploadstatic.mihoyo.com/ys-obc/2020/03/22/75833613/3aab2b1b2703f755d88330ed161568b1_8216113915867690243.png');
+INSERT INTO `genshin_weapon` VALUES (125, '铁尖枪', 'Iron Point', '鉄尖槍', 3, 2, 2, '160', '13201', 'https://uploadstatic.mihoyo.com/ys-obc/2020/03/20/75833613/6189a5177288ec1a426710bfcb41885b_1406125984012296163.png');
+INSERT INTO `genshin_weapon` VALUES (126, '铁影阔剑', 'Ferrous Shadow', '鉄影段平', 1, 3, 0, '129', '12301', 'https://uploadstatic.mihoyo.com/ys-obc/2020/03/19/75833613/9f92bc7c1b1c9f667d8b36a2890dba3c_4966013475177272313.png');
+INSERT INTO `genshin_weapon` VALUES (127, '图莱杜拉的回忆', 'Tullaytullah’s Remembrance', 'トゥライトゥーラの記憶', 4, 5, 9, '5378', '14512', 'https://uploadstatic.mihoyo.com/ys-obc/2022/12/03/75833613/c9cd14ef84a833b9b46a4a4b1c18c877_7487205367345361877.png');
+INSERT INTO `genshin_weapon` VALUES (128, '万国诸海图谱', 'Mappa Mare', '万国諸海の図譜', 4, 4, 5, '198', '14407', 'https://uploadstatic.mihoyo.com/ys-obc/2020/03/22/75833613/bb5d973a357ab939cc3c6c193000cfca_8857068874429107380.png');
+INSERT INTO `genshin_weapon` VALUES (129, '万世流涌大典', 'Rite of the Eternal Flow', '久遠流転の大典', 4, 5, 13, '-', '14514', 'https://genshin.honeyhunterworld.com/img/i_n14514_35.webp');
+INSERT INTO `genshin_weapon` VALUES (130, '王下近侍', 'King\'s Squire', '王の近侍', 3, 2, 9, '4446', '15417', 'https://uploadstatic.mihoyo.com/ys-obc/2022/08/23/75833613/d3d10fa92028b6f036c34d52ecee3a20_7523555327997551643.png');
+INSERT INTO `genshin_weapon` VALUES (131, '苇海信标', 'Beacon of the Reed Sea', 'アアルビーコン', 1, 5, 9, '6179', '12511', 'https://uploadstatic.mihoyo.com/ys-obc/2023/02/27/75833613/dfaec978aacb79719af6666bde002e51_1344662909160731485.png');
+INSERT INTO `genshin_weapon` VALUES (132, '无锋剑', 'Dull Blade', '無鋒の剣', 0, 1, 0, '127', '11101', 'https://uploadstatic.mihoyo.com/ys-obc/2020/03/19/75833613/fee1b4cdc14a3dce1f548a99967d0a4d_3322549636151970165.png');
+INSERT INTO `genshin_weapon` VALUES (133, '无工之剑', 'The Unforged', '無工の剣', 1, 5, 4, '1288', '12504', 'https://uploadstatic.mihoyo.com/ys-obc/2020/11/03/75833613/d4ecd5c1f63d73c86a17ad3b382ab95c_6771529426315730357.png');
+INSERT INTO `genshin_weapon` VALUES (134, '无垠蔚蓝之歌', 'Ballad of the Boundless Blue', '果てなき紺碧の唄', 4, 4, 1, '-', '14426', 'https://genshin.honeyhunterworld.com/img/i_n14426_35.webp');
+INSERT INTO `genshin_weapon` VALUES (135, '雾切之回光', 'Mistsplitter Reforged', '霧切の廻光', 0, 5, 6, '2289', '11509', 'https://uploadstatic.mihoyo.com/ys-obc/2021/07/18/75833613/a3eb5b2dbfaed0dc91f39038db3919b2_3947809028567339166.png');
+INSERT INTO `genshin_weapon` VALUES (136, '西风大剑', 'Favonius Greatsword', '西風大剣', 1, 4, 2, '174', '12401', 'https://uploadstatic.mihoyo.com/ys-obc/2020/03/22/75833613/60cca5eecb54f5df17e9aadae0f20116_5349417019139180282.png');
+INSERT INTO `genshin_weapon` VALUES (137, '西风剑', 'Favonius Sword', '西風剣', 0, 4, 0, '208', '11401', 'https://uploadstatic.mihoyo.com/ys-obc/2020/03/23/75833613/0b4101418da4c458e2df1ee94953c21f_743806312164207500.png');
+INSERT INTO `genshin_weapon` VALUES (138, '西风猎弓', 'Favonius Warbow', '西風猟弓', 2, 4, 2, '195', '15401', 'https://uploadstatic.mihoyo.com/ys-obc/2020/04/03/75833613/e0761fb637cb5fd3971f4195bbb1b58c_2054410022054716358.png');
+INSERT INTO `genshin_weapon` VALUES (139, '西风秘典', 'Favonius Codex', '西風秘典', 4, 4, 0, '185', '14401', 'https://uploadstatic.mihoyo.com/ys-obc/2020/03/22/75833613/d5fd5471553ba8ef97c9a8a1dd967470_2181206993669361058.png');
+INSERT INTO `genshin_weapon` VALUES (140, '西风长枪', 'Favonius Lance', '西風長槍', 3, 4, 2, '1079', '13407', 'https://uploadstatic.mihoyo.com/ys-obc/2020/09/18/75833613/6140a0079a81382e3c44a02a9e84126e_3640803810731897553.png');
+INSERT INTO `genshin_weapon` VALUES (141, '西福斯的月光', 'Xiphos\' Moonlight', 'サイフォスの月明かり', 0, 4, 11, '5019', '11418', 'https://uploadstatic.mihoyo.com/ys-obc/2022/10/13/75833613/0588b3acc33fe683a499ede1fd154358_1475750523378583293.png');
+INSERT INTO `genshin_weapon` VALUES (142, '息灾', 'Calamity Queller', '息災', 3, 5, 4, '3398', '13507', 'https://uploadstatic.mihoyo.com/ys-obc/2022/01/04/75833613/bc53d31707c6d8c7637162871f59ba4e_4605074879267649188.png');
+INSERT INTO `genshin_weapon` VALUES (143, '喜多院十文字', 'Kitain Cross Spear', '喜多院十文字槍', 3, 4, 8, '2310', '13414', 'https://uploadstatic.mihoyo.com/ys-obc/2021/07/20/75833613/7783dfe92cfe7e589471ba204ec37f6d_932589671452620706.png');
+INSERT INTO `genshin_weapon` VALUES (144, '匣里龙吟', 'Lion\'s Roar', '匣中龍吟', 0, 4, 3, '141', '11405', 'https://uploadstatic.mihoyo.com/ys-obc/2020/03/19/75833613/157123aec9296f06c27def671ac923b1_3170648805240315119.png');
+INSERT INTO `genshin_weapon` VALUES (145, '匣里灭辰', 'Dragon\'s Bane', '匣中滅龍', 3, 4, 4, '171', '13401', 'https://uploadstatic.mihoyo.com/ys-obc/2020/03/22/75833613/b753959a45fc9989e39dd945e8769e4a_6217077251181025856.png');
+INSERT INTO `genshin_weapon` VALUES (146, '匣里日月', 'Solar Pearl', '匣中日月', 4, 4, 3, '217', '14405', 'https://uploadstatic.mihoyo.com/ys-obc/2020/03/23/75833613/ac439934d1093ab4f9eaac59784f3a0c_3374221950943383956.png');
+INSERT INTO `genshin_weapon` VALUES (147, '峡湾长歌', 'Ballad of the Fjords', '峡湾高歌', 3, 4, 14, '6966', '13424', 'https://act-upload.mihoyo.com/ys-obc/2023/08/15/75833613/8e3fd7d9ca42d78b8c3894f4ddb583bb_6791975368893247791.png');
+INSERT INTO `genshin_weapon` VALUES (148, '衔珠海皇', 'Luxurious Sea-Lord', '銜玉の海皇', 1, 4, 5, '2603', '12412', 'https://uploadstatic.mihoyo.com/ys-obc/2021/08/29/75833613/da92ce666f6f5a37c283b29c2f2eb592_1653541597481079247.png');
+INSERT INTO `genshin_weapon` VALUES (149, '新手长枪', 'Beginner\'s Protector', '新米の長槍', 3, 1, 2, '118', '13101', 'https://uploadstatic.mihoyo.com/ys-obc/2020/03/20/75833613/b72786043e38c86cfca0605f587f83d5_7801496279198261696.png');
+INSERT INTO `genshin_weapon` VALUES (150, '信使', 'Messenger', '文使い', 2, 3, 4, '686', '15305', 'https://uploadstatic.mihoyo.com/ys-obc/2020/06/21/75833613/16f64d570b8d5a72000191df60f62601_8526863970829738869.png');
+INSERT INTO `genshin_weapon` VALUES (151, '学徒笔记', 'Apprentice\'s Notes', '生徒ノート', 4, 1, 0, '124', '14101', 'https://uploadstatic.mihoyo.com/ys-obc/2020/03/19/75833613/79bdee9646f7cd1f3e757d9f26bd3d68_8508785103108153146.png');
+INSERT INTO `genshin_weapon` VALUES (152, '雪葬的星银', 'Snow-Tombed Starsilver', '雪葬の星銀', 1, 4, 0, '1362', '12411', 'https://uploadstatic.mihoyo.com/ys-obc/2020/12/03/75833613/1d809e4dc4cb46d286de580f7d37b84b_2295500733774520474.png');
+INSERT INTO `genshin_weapon` VALUES (153, '训练大剑', 'Waster Greatsword', '訓練用大剣', 1, 1, 1, '123', '12101', 'https://uploadstatic.mihoyo.com/ys-obc/2020/03/19/75833613/2fc6f5c0c4a8f0547ab17cd06e2d9a14_6235791695356383945.png');
+INSERT INTO `genshin_weapon` VALUES (154, '鸦羽弓', 'Raven Bow', '鴉羽の弓', 2, 3, 0, '139', '15301', 'https://uploadstatic.mihoyo.com/ys-obc/2020/03/19/75833613/3624d7d0a0ef89d91cb1166bac6d5518_603388374697378447.png');
+INSERT INTO `genshin_weapon` VALUES (155, '遗祀玉珑', 'Sacrificial Jade', '古祠玉瓏', 4, 4, 3, '6969', '14424', 'https://act-upload.mihoyo.com/ys-obc/2023/08/15/75833613/1be86afe0d9128d9ed22b788b70e22fb_4806496666522331250.png');
+INSERT INTO `genshin_weapon` VALUES (156, '以理服人', 'Debate Club', '理屈責め', 1, 3, 4, '131', '12305', 'https://uploadstatic.mihoyo.com/ys-obc/2020/03/19/75833613/059f200b99d098fd1791a5b6df57fb15_2429287944097179245.png');
+INSERT INTO `genshin_weapon` VALUES (157, '异世界行记', 'Otherworldly Story', '異世界旅行記', 4, 3, 2, '685', '14303', 'https://uploadstatic.mihoyo.com/ys-obc/2020/06/21/75833613/99f89aff67fb655d40c72b4c9e3c2dbd_3678797272332929121.png');
+INSERT INTO `genshin_weapon` VALUES (158, '银剑', 'Silver Sword', '銀の剣', 0, 2, 0, '126', '11201', 'https://uploadstatic.mihoyo.com/ys-obc/2020/03/19/75833613/8abcfb0e788eee0d872a8b5ab36b54c9_3740162289790477109.png');
+INSERT INTO `genshin_weapon` VALUES (159, '盈满之实', 'Fruit of Fulfillment', '満悦の実', 4, 4, 10, '4444', '14417', 'https://uploadstatic.mihoyo.com/ys-obc/2022/08/22/75833613/789a0c301fd928969ac55776a30ec2d1_1756473021548622532.png');
+INSERT INTO `genshin_weapon` VALUES (160, '佣兵重剑', 'Old Merc\'s Pal', '傭兵の重剣', 1, 2, 1, '158', '12201', 'https://uploadstatic.mihoyo.com/ys-obc/2020/03/20/75833613/478f9e83909a2bf2545d7f70d765b788_5488112487273325804.png');
+INSERT INTO `genshin_weapon` VALUES (161, '幽夜华尔兹', 'Mitternachts Waltz', '幽夜のワルツ', 2, 4, 0, '2127', '15412', 'https://uploadstatic.mihoyo.com/ys-obc/2021/06/07/75833613/20fae82e8d237efc703cebebe371a32a_7003112924895248286.png');
+INSERT INTO `genshin_weapon` VALUES (162, '雨裁', 'Rainslasher', '雨裁', 1, 4, 4, '180', '12405', 'https://uploadstatic.mihoyo.com/ys-obc/2020/03/21/75833613/d1004336c0b48f25a7d3546b57bce070_1026700881516126262.png');
+INSERT INTO `genshin_weapon` VALUES (163, '原木刀', 'Sapwood Blade', '原木刀', 1, 4, 11, '4440', '11417', 'https://uploadstatic.mihoyo.com/ys-obc/2022/08/23/75833613/fd6ba0f1c2db8473aece023a6edec48a_1888608505606874212.png');
+INSERT INTO `genshin_weapon` VALUES (164, '钺矛', 'Halberd', '鉾槍', 3, 3, 4, '724', '13302', 'https://uploadstatic.mihoyo.com/ys-obc/2020/06/21/75833613/2ef0c79a0d05d49f3c7c884520e70ef6_7423804349833045135.png');
+INSERT INTO `genshin_weapon` VALUES (165, '昭心', 'Eye of Perception', '昭心', 4, 4, 4, '690', '14409', 'https://uploadstatic.mihoyo.com/ys-obc/2020/06/21/76373921/dafe7f5cdecac90aec82b1a4ba04ff25_8710250991471280781.png');
+INSERT INTO `genshin_weapon` VALUES (166, '证誓之明瞳', 'Oathsworn Eye', '誓いの明瞳', 4, 4, 6, '3611', '14415', 'https://uploadstatic.mihoyo.com/ys-obc/2022/02/13/75833613/47899a33ddd3f573f55c76df4a7802d2_3094185401289107894.png');
+INSERT INTO `genshin_weapon` VALUES (167, '薙草之稻光', 'Engulfing Lightning', '草薙の稲光', 3, 5, 8, '2602', '13509', 'https://uploadstatic.mihoyo.com/ys-obc/2021/08/29/75833613/8b0a05031b78c76f506045a2a990c411_8186351970748341837.png');
+INSERT INTO `genshin_weapon` VALUES (168, '终末嗟叹之诗', 'Elegy for the End', '終焉を嘆く詩', 2, 5, 1, '1682', '15503', 'https://uploadstatic.mihoyo.com/ys-obc/2021/03/15/75833613/7543084fd200a934c835c5f4e3c43561_1445795416639899431.png');
+INSERT INTO `genshin_weapon` VALUES (169, '钟剑', 'The Bell', '鐘の剣', 1, 4, 0, '214', '12402', 'https://uploadstatic.mihoyo.com/ys-obc/2020/03/23/75833613/17fa7c1aaf90e8ee33985e9bede2c57a_8855621887112870500.png');
+INSERT INTO `genshin_weapon` VALUES (170, '斫峰之刃', 'Summit Shaper', '斬山の刃', 0, 5, 3, '1356', '11504', 'https://uploadstatic.mihoyo.com/ys-obc/2020/12/23/75833613/16d127e84bb154ad5b18322f8cce9cf2_7289288347603811546.png');
+INSERT INTO `genshin_weapon` VALUES (171, '宗室大剑', 'Royal Greatsword', '旧貴族大剣', 1, 4, 2, '206', '12404', 'https://uploadstatic.mihoyo.com/ys-obc/2020/03/23/75833613/21ba2927f014300431edad9fc7d519d1_1243866720697859716.png');
+INSERT INTO `genshin_weapon` VALUES (172, '宗室猎枪', 'Royal Spear', '旧貴族猟槍', 3, 4, 4, '1287', '13408', 'https://uploadstatic.mihoyo.com/ys-obc/2020/11/03/75833613/5f0ecdf6675c087059ef9bdcf34f8bb7_8359121231390835579.png');
+INSERT INTO `genshin_weapon` VALUES (173, '宗室秘法录', 'Royal Grimoire', '旧貴族秘法録', 4, 4, 0, '194', '14404', 'https://uploadstatic.mihoyo.com/ys-obc/2020/03/22/75833613/098ee6b954cc8b44400d6ed3c601f107_5142741724020145957.png');
+INSERT INTO `genshin_weapon` VALUES (174, '宗室长弓', 'Royal Bow', '旧貴族長弓', 2, 4, 2, '178', '15404', 'https://uploadstatic.mihoyo.com/ys-obc/2020/03/22/75833613/5e126c30f3d95cdf7c9d173527e82919_3096417559484041900.png');
+INSERT INTO `genshin_weapon` VALUES (175, '宗室长剑', 'Royal Longsword', '旧貴族長剣', 0, 4, 0, '199', '11404', 'https://uploadstatic.mihoyo.com/ys-obc/2020/03/22/75833613/de675880f3e60488abec363d5579a502_3227188272282171556.png');
+INSERT INTO `genshin_weapon` VALUES (176, '最初的大魔术', 'The First Great Magic', '最初の大魔術', 2, 5, 12, '6936', '15512', 'https://act-upload.mihoyo.com/ys-obc/2023/08/15/75833613/2191581ead642083cfc0ec7990b943e7_7821882148795668773.png');
 
 -- ----------------------------
 -- Table structure for honkai_relation
 -- ----------------------------
 DROP TABLE IF EXISTS `honkai_relation`;
 CREATE TABLE `honkai_relation`  (
-  `id` int(11) NOT NULL,
+  `id` int NOT NULL,
   `element` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL COMMENT '基本属性',
   `role` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL COMMENT '人物类型',
   `star` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL COMMENT '品质阶级',
@@ -1694,7 +1479,7 @@ INSERT INTO `honkai_relation` VALUES (29, NULL, '西琳', NULL, NULL);
 -- ----------------------------
 DROP TABLE IF EXISTS `honkai_role`;
 CREATE TABLE `honkai_role`  (
-  `id` int(11) NOT NULL,
+  `id` int NOT NULL,
   `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `element` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `role` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
@@ -1799,57 +1584,15 @@ INSERT INTO `honkai_role` VALUES (88, '终末协理0017', '4', '27', '3', '3', '
 INSERT INTO `honkai_role` VALUES (89, '终焉之律者', '4', '0', '0', '0', '2086', 'https://uploadstatic.mihoyo.com/bh3-wiki/2023/01/04/264755623/54085ecaead652d8e84cd1c9907f7b38_5757792017872581659.png');
 
 -- ----------------------------
--- Table structure for person_spring
--- ----------------------------
-DROP TABLE IF EXISTS `person_spring`;
-CREATE TABLE `person_spring`  (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
-  `age` int(11) NULL DEFAULT NULL,
-  `city` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
-  `note` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
-  PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 6 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = DYNAMIC;
-
--- ----------------------------
--- Records of person_spring
--- ----------------------------
-INSERT INTO `person_spring` VALUES (1, '张三', 18, '广州', '备注');
-INSERT INTO `person_spring` VALUES (2, '李四', 20, '福建', '');
-INSERT INTO `person_spring` VALUES (4, '小明改', 18, '上海', '');
-INSERT INTO `person_spring` VALUES (5, '小倍', 21, '北京', '');
-
--- ----------------------------
--- Table structure for qq_chat
--- ----------------------------
-DROP TABLE IF EXISTS `qq_chat`;
-CREATE TABLE `qq_chat`  (
-  `id` int(11) NOT NULL,
-  `type` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL COMMENT 'word/img/mp4/file',
-  `msg` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
-  `class` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
-  `style` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
-  `url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
-  PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = DYNAMIC;
-
--- ----------------------------
--- Records of qq_chat
--- ----------------------------
-INSERT INTO `qq_chat` VALUES (1, 'word', '你好！', NULL, NULL, NULL);
-INSERT INTO `qq_chat` VALUES (2, 'img', 'assets\\img\\page1\\001.jpg', NULL, NULL, NULL);
-INSERT INTO `qq_chat` VALUES (3, 'img', 'assets\\img\\page1\\002.jpg', NULL, NULL, 'assets\\img\\page1\\002.jpg');
-
--- ----------------------------
 -- Table structure for star_rail_relation
 -- ----------------------------
 DROP TABLE IF EXISTS `star_rail_relation`;
 CREATE TABLE `star_rail_relation`  (
-  `id` int(11) NOT NULL,
+  `id` int NOT NULL,
   `element_type` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   `weapon_type` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = MyISAM CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of star_rail_relation
@@ -1867,197 +1610,156 @@ INSERT INTO `star_rail_relation` VALUES (6, '量子', '虚无');
 -- ----------------------------
 DROP TABLE IF EXISTS `star_rail_role`;
 CREATE TABLE `star_rail_role`  (
-  `id` int(11) NOT NULL,
+  `id` int NOT NULL,
   `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
-  `star` int(11) NULL DEFAULT NULL,
-  `element` int(11) NULL DEFAULT NULL,
-  `weapon` int(11) NULL DEFAULT NULL,
+  `name_en` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
+  `name_ja` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
+  `star` int NULL DEFAULT NULL,
+  `element` int NULL DEFAULT NULL,
+  `weapon` int NULL DEFAULT NULL,
   `mhy_url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
+  `wiki_url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   `icon_url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = MyISAM CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of star_rail_role
 -- ----------------------------
-INSERT INTO `star_rail_role` VALUES (1, '阿兰', 4, 4, 0, '380', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/24/159305577/d17025f2f6c52f10ccbcc93a0acd1b70_8940478888129430393.png');
-INSERT INTO `star_rail_role` VALUES (2, '艾丝妲', 4, 1, 5, '52', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/24/159305577/4022a164be9404b271a965ec786cbf26_7272957779066061269.png');
-INSERT INTO `star_rail_role` VALUES (3, '白露', 5, 4, 4, '564', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/24/159305577/c684357d96e8098e898e4ee6665fd01c_7826766061944986617.png');
-INSERT INTO `star_rail_role` VALUES (4, '布洛妮娅', 5, 2, 5, '453', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/24/288909604/b6419ce18c6fbfbbbaffa7dd68d676f5_767729707412690608.png');
-INSERT INTO `star_rail_role` VALUES (5, '丹恒', 4, 2, 2, '406', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/24/159305577/e4a8703a06b4c42d692133c17b2cdc27_5408538855331042463.png');
-INSERT INTO `star_rail_role` VALUES (6, '丹恒•饮月', 5, 5, 0, '1472', 'https://act-upload.mihoyo.com/sr-wiki/2023/08/30/75216984/b4ce779a97f89e5a9c527b8f2a149d1f_8461686478390387922.png');
-INSERT INTO `star_rail_role` VALUES (7, '符玄', 5, 6, 3, '1646', 'https://act-upload.mihoyo.com/sr-wiki/2023/09/14/279865110/e4436a038b70cc69882fc9add94e70f7_7081735167856849522.png');
-INSERT INTO `star_rail_role` VALUES (8, '黑塔', 4, 3, 1, '49', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/24/159305577/2f3693ba8a48e4a81832dac8344a2d14_1221820779792422378.png');
-INSERT INTO `star_rail_role` VALUES (9, '虎克', 4, 1, 0, '76', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/24/159305577/ced28df529eadd5d3a65a74d7cd0f1ee_1327794469495696321.png');
-INSERT INTO `star_rail_role` VALUES (10, '姬子', 5, 1, 1, '407', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/24/288909604/4d5ac247ca1460b34b3f73244afbb0f6_8390343856757982675.png');
-INSERT INTO `star_rail_role` VALUES (11, '杰帕德', 5, 3, 3, '424', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/25/288909604/7d7ebb840d47c8f6cdf121ae0ddf5ada_7197802014505535697.png');
-INSERT INTO `star_rail_role` VALUES (12, '景元', 5, 4, 1, '389', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/24/288909604/95a06162f7df44a2b068e66939268b10_2067278512630665501.png');
-INSERT INTO `star_rail_role` VALUES (13, '卡芙卡', 5, 4, 6, '1298', 'https://act-upload.mihoyo.com/sr-wiki/2023/08/24/75216984/41b9106baff2aece4fd70fa8e8091e82_3804568336317547539.png');
-INSERT INTO `star_rail_role` VALUES (14, '开拓者·男', 5, 0, 0, '411', 'https://act-upload.mihoyo.com/sr-wiki/2023/09/15/75216984/9e264185ba9bda49576b96a4187e2798_1038569771573329881.png');
-INSERT INTO `star_rail_role` VALUES (15, '开拓者·女', 5, 1, 3, '872', 'https://act-upload.mihoyo.com/sr-wiki/2023/09/15/75216984/8026f2a5697d4c4c6605b5522a4f24da_944755470784967096.png');
-INSERT INTO `star_rail_role` VALUES (16, '克拉拉', 5, 0, 0, '414', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/24/288909604/827cb6eecdd28086ce68a1f39a9a0e09_6530506214724480230.png');
-INSERT INTO `star_rail_role` VALUES (17, '玲可', 4, 6, 4, '1543', 'https://act-upload.mihoyo.com/sr-wiki/2023/09/14/279865110/e02e6ad60e4cea0d8582803058bf9b70_8453316196841959392.png');
-INSERT INTO `star_rail_role` VALUES (18, '卢卡', 4, 0, 6, '1325', 'https://act-upload.mihoyo.com/sr-wiki/2023/07/17/75216984/0d7f1c9f746e1d4ad98b2a3360d9a27b_2137170666945226982.png');
-INSERT INTO `star_rail_role` VALUES (19, '罗刹', 5, 5, 4, '1188', 'https://act-upload.mihoyo.com/sr-wiki/2023/06/27/288909604/4aad9e7c7505854cd1de96aaf45887b8_4230062706052486537.png');
-INSERT INTO `star_rail_role` VALUES (20, '娜塔莎', 4, 0, 4, '46', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/22/288909604/98045ee394641ca42188a9c6b5ae186e_7769781659310285488.png');
-INSERT INTO `star_rail_role` VALUES (21, '佩拉', 4, 3, 6, '422', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/24/289862258/7099a63b46954eedc038bffc991a0437_5445770148856337075.png');
-INSERT INTO `star_rail_role` VALUES (22, '青雀', 4, 6, 1, '497', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/25/289862258/2b3abc5a3dbed9d233e61c11f659473c_3453594130231722833.png');
-INSERT INTO `star_rail_role` VALUES (23, '刃', 5, 2, 0, '1214', 'https://act-upload.mihoyo.com/sr-wiki/2023/07/19/75216984/7a2bbf147653d45cf77c1533e4e2ab6d_8453365043186544213.png');
-INSERT INTO `star_rail_role` VALUES (24, '三月七', 4, 3, 3, '48', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/24/288909604/6a4bd3468e9dbd577f26dbf8757f0b03_924968634176225322.png');
-INSERT INTO `star_rail_role` VALUES (25, '桑博', 4, 2, 6, '386', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/24/159305577/4021500c08db5dd7600373963a8fd7ae_2164524026920543792.png');
-INSERT INTO `star_rail_role` VALUES (26, '素裳', 4, 0, 2, '412', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/24/289862258/0f662b3c3a7f76bb8bab25dc48f3bef4_6922898942843883883.png');
-INSERT INTO `star_rail_role` VALUES (27, '停云', 4, 4, 5, '561', 'https://act-upload.mihoyo.com/sr-wiki/2023/09/19/75216984/70be4fa90ea6bb367e0c9b5d792a71bb_4095597624428699941.png');
-INSERT INTO `star_rail_role` VALUES (28, '瓦尔特', 5, 5, 6, '560', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/24/288909604/d5a01ddc0494595417fee74fa3285b56_8110023215605946848.png');
-INSERT INTO `star_rail_role` VALUES (29, '希儿', 5, 6, 2, '317', 'https://act-upload.mihoyo.com/sr-wiki/2023/09/19/75216984/f851fc1166a8ae10df9913a001cf3747_8690872658789789737.png');
-INSERT INTO `star_rail_role` VALUES (30, '希露瓦', 4, 4, 1, '423', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/24/159305577/e996982958ab237d46fd813099afbada_1034866961853716191.png');
-INSERT INTO `star_rail_role` VALUES (31, '彦卿', 5, 3, 2, '565', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/24/288909604/cc600801af1f864cfb32bbfb01d9d867_5952117643253221767.png');
-INSERT INTO `star_rail_role` VALUES (32, '银狼', 5, 6, 6, '1085', 'https://act-upload.mihoyo.com/sr-wiki/2023/06/06/75216984/f46d36d98046af1f1826281157a2c03a_112340971313076076.png');
-INSERT INTO `star_rail_role` VALUES (33, '驭空', 4, 5, 5, '1187', 'https://act-upload.mihoyo.com/sr-wiki/2023/06/25/75216984/2205802801c837ef1248a1f63dc49f83_9084284062801988345.png');
+INSERT INTO `star_rail_role` VALUES (25, '刃', 'Blade', '刃', 5, 2, 0, '1214', 'blade', 'https://act-upload.mihoyo.com/sr-wiki/2023/07/19/75216984/7a2bbf147653d45cf77c1533e4e2ab6d_8453365043186544213.png');
+INSERT INTO `star_rail_role` VALUES (24, '青雀', 'Qingque', '青雀', 4, 6, 1, '497', 'qingque', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/25/289862258/2b3abc5a3dbed9d233e61c11f659473c_3453594130231722833.png');
+INSERT INTO `star_rail_role` VALUES (23, '佩拉', 'Pela', 'ペラ', 4, 3, 6, '422', 'pela', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/24/289862258/7099a63b46954eedc038bffc991a0437_5445770148856337075.png');
+INSERT INTO `star_rail_role` VALUES (22, '娜塔莎', 'Natasha', 'ナターシャ', 4, 0, 4, '46', 'natasha', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/22/288909604/98045ee394641ca42188a9c6b5ae186e_7769781659310285488.png');
+INSERT INTO `star_rail_role` VALUES (21, '罗刹', 'Luocha', '羅刹', 5, 5, 4, '1188', 'luocha', 'https://act-upload.mihoyo.com/sr-wiki/2023/06/27/288909604/4aad9e7c7505854cd1de96aaf45887b8_4230062706052486537.png');
+INSERT INTO `star_rail_role` VALUES (20, '卢卡', 'Luka', 'ルカ', 4, 0, 6, '1325', 'luka', 'https://act-upload.mihoyo.com/sr-wiki/2023/07/17/75216984/0d7f1c9f746e1d4ad98b2a3360d9a27b_2137170666945226982.png');
+INSERT INTO `star_rail_role` VALUES (19, '玲可', 'Lynx', 'リンクス', 4, 6, 4, '1543', 'lynx', 'https://act-upload.mihoyo.com/sr-wiki/2023/09/14/279865110/e02e6ad60e4cea0d8582803058bf9b70_8453316196841959392.png');
+INSERT INTO `star_rail_role` VALUES (18, '克拉拉', 'Clara', 'クラーラ', 5, 0, 0, '414', 'clara', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/24/288909604/827cb6eecdd28086ce68a1f39a9a0e09_6530506214724480230.png');
+INSERT INTO `star_rail_role` VALUES (17, '开拓者·女', 'Trailblazer', '開拓者', 5, 1, 3, '872', 'trailblazer', 'https://act-upload.mihoyo.com/sr-wiki/2023/09/15/75216984/8026f2a5697d4c4c6605b5522a4f24da_944755470784967096.png');
+INSERT INTO `star_rail_role` VALUES (16, '开拓者·男', 'Trailblazer', '開拓者', 5, 0, 0, '411', 'trailblazer', 'https://act-upload.mihoyo.com/sr-wiki/2023/09/15/75216984/9e264185ba9bda49576b96a4187e2798_1038569771573329881.png');
+INSERT INTO `star_rail_role` VALUES (15, '卡芙卡', 'Kafka', 'カフカ', 5, 4, 6, '1298', 'kafka', 'https://act-upload.mihoyo.com/sr-wiki/2023/08/24/75216984/41b9106baff2aece4fd70fa8e8091e82_3804568336317547539.png');
+INSERT INTO `star_rail_role` VALUES (14, '镜流', 'Jingliu', '鏡流', 5, 3, 0, '-', 'jingliu', 'https://hsr.honeyhunterworld.com/img/character/jingliu-character_action_side_icon.webp');
+INSERT INTO `star_rail_role` VALUES (13, '景元', 'Jing Yuan', '景元', 5, 4, 1, '389', 'jing-yuan', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/24/288909604/95a06162f7df44a2b068e66939268b10_2067278512630665501.png');
+INSERT INTO `star_rail_role` VALUES (12, '杰帕德', 'Gepard', 'ジェパード', 5, 3, 3, '424', 'gepard', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/25/288909604/7d7ebb840d47c8f6cdf121ae0ddf5ada_7197802014505535697.png');
+INSERT INTO `star_rail_role` VALUES (11, '姬子', 'Himeko', '姫子', 5, 1, 1, '407', 'himeko', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/24/288909604/4d5ac247ca1460b34b3f73244afbb0f6_8390343856757982675.png');
+INSERT INTO `star_rail_role` VALUES (10, '虎克', 'Hook', 'フック', 4, 1, 0, '76', 'hook', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/24/159305577/ced28df529eadd5d3a65a74d7cd0f1ee_1327794469495696321.png');
+INSERT INTO `star_rail_role` VALUES (9, '黑塔', 'Herta', 'ヘルタ', 4, 3, 1, '49', 'herta', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/24/159305577/2f3693ba8a48e4a81832dac8344a2d14_1221820779792422378.png');
+INSERT INTO `star_rail_role` VALUES (8, '桂乃芬', 'Guinaifen', '桂乃芬', 4, 1, 6, '-', 'guinaifen', 'https://hsr.honeyhunterworld.com/img/character/guinaifen-character_action_side_icon.webp');
+INSERT INTO `star_rail_role` VALUES (7, '符玄', 'Fu Xuan', '符玄', 5, 6, 3, '1646', 'fu-xuan', 'https://act-upload.mihoyo.com/sr-wiki/2023/09/14/279865110/e4436a038b70cc69882fc9add94e70f7_7081735167856849522.png');
+INSERT INTO `star_rail_role` VALUES (6, '丹恒•饮月', 'Dan Heng • Imbibitor Lunae', '丹恒・飲月', 5, 5, 0, '1472', 'dan-heng-imbibitor-lunae', 'https://act-upload.mihoyo.com/sr-wiki/2023/08/30/75216984/b4ce779a97f89e5a9c527b8f2a149d1f_8461686478390387922.png');
+INSERT INTO `star_rail_role` VALUES (5, '丹恒', 'Dan Heng', '丹恒', 4, 2, 2, '406', 'dan-heng', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/24/159305577/e4a8703a06b4c42d692133c17b2cdc27_5408538855331042463.png');
+INSERT INTO `star_rail_role` VALUES (4, '布洛妮娅', 'Bronya', 'ブローニャ', 5, 2, 5, '453', 'bronya', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/24/288909604/b6419ce18c6fbfbbbaffa7dd68d676f5_767729707412690608.png');
+INSERT INTO `star_rail_role` VALUES (3, '白露', 'Bailu', '白露', 5, 4, 4, '564', 'bailu', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/24/159305577/c684357d96e8098e898e4ee6665fd01c_7826766061944986617.png');
+INSERT INTO `star_rail_role` VALUES (2, '艾丝妲', 'Asta', 'アスター', 4, 1, 5, '52', 'asta', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/24/159305577/4022a164be9404b271a965ec786cbf26_7272957779066061269.png');
+INSERT INTO `star_rail_role` VALUES (1, '阿兰', 'Arlan', 'アーラン', 4, 4, 0, '380', 'arlan', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/24/159305577/d17025f2f6c52f10ccbcc93a0acd1b70_8940478888129430393.png');
+INSERT INTO `star_rail_role` VALUES (26, '三月七', 'March 7th', '三月なのか', 4, 3, 3, '48', 'march-7th', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/24/288909604/6a4bd3468e9dbd577f26dbf8757f0b03_924968634176225322.png');
+INSERT INTO `star_rail_role` VALUES (27, '桑博', 'Sampo', 'サンポ', 4, 2, 6, '386', 'sampo', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/24/159305577/4021500c08db5dd7600373963a8fd7ae_2164524026920543792.png');
+INSERT INTO `star_rail_role` VALUES (28, '素裳', 'Sushang', '素裳', 4, 0, 2, '412', 'sushang', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/24/289862258/0f662b3c3a7f76bb8bab25dc48f3bef4_6922898942843883883.png');
+INSERT INTO `star_rail_role` VALUES (29, '停云', 'Tingyun', '停雲', 4, 4, 5, '561', 'tingyun', 'https://act-upload.mihoyo.com/sr-wiki/2023/09/19/75216984/70be4fa90ea6bb367e0c9b5d792a71bb_4095597624428699941.png');
+INSERT INTO `star_rail_role` VALUES (30, '托帕&账账', 'Topaz and Numby', 'トパーズ&カブ', 5, 1, 2, '-', 'topaz-and-numby', 'https://hsr.honeyhunterworld.com/img/character/topaz-and-numby-character_action_side_icon.webp');
+INSERT INTO `star_rail_role` VALUES (31, '瓦尔特', 'Welt', 'ヴェルト', 5, 5, 6, '560', 'welt', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/24/288909604/d5a01ddc0494595417fee74fa3285b56_8110023215605946848.png');
+INSERT INTO `star_rail_role` VALUES (32, '希儿', 'Seele', 'ゼーレ', 5, 6, 2, '317', 'seele', 'https://act-upload.mihoyo.com/sr-wiki/2023/09/19/75216984/f851fc1166a8ae10df9913a001cf3747_8690872658789789737.png');
+INSERT INTO `star_rail_role` VALUES (33, '希露瓦', 'Serval', 'セーバル', 4, 4, 1, '423', 'serval', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/24/159305577/e996982958ab237d46fd813099afbada_1034866961853716191.png');
+INSERT INTO `star_rail_role` VALUES (34, '彦卿', 'Yanqing', '彦卿', 5, 3, 2, '565', 'yanqing', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/24/288909604/cc600801af1f864cfb32bbfb01d9d867_5952117643253221767.png');
+INSERT INTO `star_rail_role` VALUES (35, '银狼', 'Silver Wolf', '銀狼', 5, 6, 6, '1085', 'silver-wolf', 'https://act-upload.mihoyo.com/sr-wiki/2023/06/06/75216984/f46d36d98046af1f1826281157a2c03a_112340971313076076.png');
+INSERT INTO `star_rail_role` VALUES (36, '驭空', 'Yukong', '御空', 4, 5, 5, '1187', 'yukong', 'https://act-upload.mihoyo.com/sr-wiki/2023/06/25/75216984/2205802801c837ef1248a1f63dc49f83_9084284062801988345.png');
 
 -- ----------------------------
 -- Table structure for star_rail_weapon
 -- ----------------------------
 DROP TABLE IF EXISTS `star_rail_weapon`;
 CREATE TABLE `star_rail_weapon`  (
-  `id` int(11) NOT NULL,
+  `id` int NOT NULL,
   `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
-  `weapon` int(11) NULL DEFAULT NULL,
-  `star` int(11) NULL DEFAULT NULL,
+  `name_en` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
+  `name_ja` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
+  `weapon` int NULL DEFAULT NULL,
+  `star` int NULL DEFAULT NULL,
   `mhy_url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
+  `wiki_url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   `icon_url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = MyISAM CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of star_rail_weapon
 -- ----------------------------
-INSERT INTO `star_rail_weapon` VALUES (1, '「我」的诞生', 1, 4, '196', 'https://uploadstatic.mihoyo.com/sr-wiki/2023/04/21/288909602/3ff519a5181824f854811e6ca77e208c_509101673108415116.png');
-INSERT INTO `star_rail_weapon` VALUES (2, '比阳光更明亮的', 0, 5, '1475', 'https://act-upload.mihoyo.com/sr-wiki/2023/08/29/299598919/a499022633e750c898fd3e006b8c385e_4808927037301415220.png');
-INSERT INTO `star_rail_weapon` VALUES (3, '别让世界静下来', 1, 4, '200', 'https://act-upload.mihoyo.com/sr-wiki/2023/05/06/288909604/556f94c66963b491c52f32323a51a841_6777260343113685386.png');
-INSERT INTO `star_rail_weapon` VALUES (4, '春水初生', 2, 4, '855', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/21/190590294/66a5f01dda8f0a7da58fb89abb7aef6f_1142572140416843653.png');
-INSERT INTO `star_rail_weapon` VALUES (5, '此时恰好', 4, 4, '846', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/21/190590294/2747312b548540c7a54233ce4d28ec93_1891498790757437734.png');
-INSERT INTO `star_rail_weapon` VALUES (6, '但战斗还未结束', 5, 5, '362', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/eb12f0678e96a9264c8b67d38e95f0d8_3498440638007475874.png');
-INSERT INTO `star_rail_weapon` VALUES (7, '到不了的彼岸', 0, 5, '1215', 'https://act-upload.mihoyo.com/sr-wiki/2023/07/13/289862258/c7fa978a7a73609c01e9627bd88ac27e_5735992228692577071.png');
-INSERT INTO `star_rail_weapon` VALUES (8, '等价交换', 4, 4, '847', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/21/190590294/10f8e4b3fe4a9819a59cb2537ea8cf78_5953019562556435160.png');
-INSERT INTO `star_rail_weapon` VALUES (9, '点个关注吧！', 2, 4, '854', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/21/190590294/e77c0b0db54799d6bd5e0496886a1c3a_3192066082147055344.png');
-INSERT INTO `star_rail_weapon` VALUES (10, '调和', 5, 3, '550', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/22/103492603/0526f6f02fb22d4f89e672f42b5080d2_7025757600934747848.png');
-INSERT INTO `star_rail_weapon` VALUES (11, '蕃息', 4, 3, '553', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/22/103492603/0a70d8b3db45dbd1ef7d725df4fc6c63_7009915096429872669.png');
-INSERT INTO `star_rail_weapon` VALUES (12, '锋镝', 2, 3, '326', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/cef0df677c17b578cb7643759a52a5ee_4307166806168746030.png');
-INSERT INTO `star_rail_weapon` VALUES (13, '拂晓之前', 1, 5, '361', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/a1f733dd784fbc6ecffc2a09b0b11104_7972399684465006295.png');
-INSERT INTO `star_rail_weapon` VALUES (14, '孤独的疗愈', 6, 5, '1477', 'https://act-upload.mihoyo.com/sr-wiki/2023/08/30/299598919/eced27ebe7faab9c25fa1cf82738ca5d_7438526283868577651.png');
-INSERT INTO `star_rail_weapon` VALUES (15, '棺的回响', 4, 5, '1186', 'https://act-upload.mihoyo.com/sr-wiki/2023/06/25/75216984/75e4640004acfe27c3a7450adbc220ae_72761699833139366.png');
-INSERT INTO `star_rail_weapon` VALUES (16, '过往未来', 5, 4, '852', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/21/190590294/80a0f12ef4c0e5f1695405b45d64253f_7149236409595209371.png');
-INSERT INTO `star_rail_weapon` VALUES (17, '后会有期', 6, 4, '543', 'https://uploadstatic.mihoyo.com/sr-wiki/2023/04/21/288909602/0255c9eadff1083f7ce7b3fc958f8c0d_289765888772424889.png');
-INSERT INTO `star_rail_weapon` VALUES (18, '琥珀', 3, 3, '331', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/957d8d26619f747b71850143c32ee1a9_6419055775139402596.png');
-INSERT INTO `star_rail_weapon` VALUES (19, '记一位星神的陨落', 0, 5, '844', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/26/288909604/5de6ade884bf419dc2adc1815bd5a109_1893890981000298645.png');
-INSERT INTO `star_rail_weapon` VALUES (20, '记忆的质料', 3, 5, '871', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/23/109341043/0ef2f92a4ee6f5bf8b848e6b2555ffa9_4868302018570081407.png');
-INSERT INTO `star_rail_weapon` VALUES (21, '记忆中的模样', 5, 4, '242', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/db37e0f07974f38f2482584d3ea1343c_5398624370127048356.png');
-INSERT INTO `star_rail_weapon` VALUES (22, '嘉果', 4, 3, '336', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/f97ca99cf03bfa210945ad220891302b_876506868934440869.png');
-INSERT INTO `star_rail_weapon` VALUES (23, '今日亦是和平的一日', 1, 4, '546', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/21/288909604/17f059bf3a7b77c184bf7e7571c29365_4959888878352010800.png');
-INSERT INTO `star_rail_weapon` VALUES (24, '俱殁', 0, 3, '556', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/22/103492603/5d68684855c1e6356991ec106160bb15_7665516313130129576.png');
-INSERT INTO `star_rail_weapon` VALUES (25, '决心如汗珠般闪耀', 6, 4, '853', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/21/190590294/d20eb92c6e6b45e01a74a3eae3236a0c_8544948651264708528.png');
-INSERT INTO `star_rail_weapon` VALUES (26, '开疆', 3, 3, '552', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/22/103492603/2a13e4c462242f585d1a359534f08207_804645297709649387.png');
-INSERT INTO `star_rail_weapon` VALUES (27, '朗道的选择', 3, 4, '419', 'https://uploadstatic.mihoyo.com/sr-wiki/2023/04/21/288909602/4fc10608f7f63460220af99661eff9eb_2173462361556697626.png');
-INSERT INTO `star_rail_weapon` VALUES (28, '乐圮', 0, 3, '324', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/3ce71ad24bb9b5239a0d251cf6a78b7c_8652755492929625822.png');
-INSERT INTO `star_rail_weapon` VALUES (29, '离弦', 2, 3, '327', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/fc4dac32f3a90eb614eb8852b4944c0a_339074751134485637.png');
-INSERT INTO `star_rail_weapon` VALUES (30, '猎物的视线', 6, 4, '225', 'https://uploadstatic.mihoyo.com/sr-wiki/2023/04/21/288909602/38142aab2e325f056fb903192712cd94_8435381312479183931.png');
-INSERT INTO `star_rail_weapon` VALUES (31, '灵钥', 1, 3, '325', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/09aec132b62a41a787a7a89ebfb9ba7f_4056017462349383335.png');
-INSERT INTO `star_rail_weapon` VALUES (32, '镂月裁云之意', 5, 4, '544', 'https://uploadstatic.mihoyo.com/sr-wiki/2023/04/21/288909602/93de9d798632df0c9ea660ac33926ba2_2747835853468939355.png');
-INSERT INTO `star_rail_weapon` VALUES (33, '轮契', 5, 3, '329', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/2d5a26a86d6401a3826b029a9cfeebfb_615755650846272907.png');
-INSERT INTO `star_rail_weapon` VALUES (34, '论剑', 2, 4, '316', 'https://uploadstatic.mihoyo.com/sr-wiki/2023/04/21/288909602/8ea6e08e213f1463dd592913057591b7_1597110980342981033.png');
-INSERT INTO `star_rail_weapon` VALUES (35, '秘密誓心', 0, 4, '222', 'https://act-upload.mihoyo.com/sr-wiki/2023/05/06/288909604/4058e6a3ca810444e16303d8f99e3cbf_3848396585828889644.png');
-INSERT INTO `star_rail_weapon` VALUES (36, '匿影', 6, 3, '551', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/22/103492603/52a5dc8b7e0aa01f070cbb207ebd3012_5303839694063749956.png');
-INSERT INTO `star_rail_weapon` VALUES (37, '暖夜不会漫长', 4, 4, '541', 'https://uploadstatic.mihoyo.com/sr-wiki/2023/04/21/288909602/31696161875bfbfef1396f8fb68f5be6_2865781185367897767.png');
-INSERT INTO `star_rail_weapon` VALUES (38, '齐颂', 5, 3, '330', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/75eb0b7c88042f1bce8766da913d1eeb_4996861006675453708.png');
-INSERT INTO `star_rail_weapon` VALUES (39, '如泥酣眠', 2, 5, '566', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/165b709388e973ac51e3bc790a0cfeff_5625680177342760428.png');
-INSERT INTO `star_rail_weapon` VALUES (40, '睿见', 1, 3, '554', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/22/103492603/c75dcb67628de9898cf56d8cf3da31b0_5106499027839641089.png');
-INSERT INTO `star_rail_weapon` VALUES (41, '时节不居', 4, 5, '567', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/22/214441058/e1f40839f00bd80e1060f00f4cba61b2_8158676828966241566.png');
-INSERT INTO `star_rail_weapon` VALUES (42, '戍御', 3, 3, '334', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/7bcda699ff0fbe7e55643c541c426a42_30081035558284699.png');
-INSERT INTO `star_rail_weapon` VALUES (43, '她已闭上双眼', 3, 5, '1677', 'https://act-upload.mihoyo.com/sr-wiki/2023/09/14/299598919/7788a275edacfbe671fca19b45d0c426_1574508016723203981.png');
-INSERT INTO `star_rail_weapon` VALUES (44, '天才们的休憩', 1, 4, '856', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/21/190590294/e751871e7cda9a1c3a0004866db887b4_4470314258641119676.png');
-INSERT INTO `star_rail_weapon` VALUES (45, '天倾', 0, 3, '323', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/7deb06a9a24d66e5f5ea4202d611d3bf_5037156115374524018.png');
-INSERT INTO `star_rail_weapon` VALUES (46, '同一种心情', 4, 4, '360', 'https://uploadstatic.mihoyo.com/sr-wiki/2023/04/21/288909602/97c0debc944e304c0054c136d18c50f1_6722877704474086839.png');
-INSERT INTO `star_rail_weapon` VALUES (47, '晚安与睡颜', 6, 4, '224', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/6af2613ab53f384442122bfd27720f92_1559406493845442336.png');
-INSERT INTO `star_rail_weapon` VALUES (48, '汪！散步时间！', 0, 4, '548', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/8374260f67cc5344eb48ad7f9e38eccc_3079203861207027155.png');
-INSERT INTO `star_rail_weapon` VALUES (49, '唯有沉默', 2, 4, '66', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/ccecfa65e89a767692c3d6b198e67375_8116761189465044541.png');
-INSERT INTO `star_rail_weapon` VALUES (50, '我们是地火', 3, 4, '849', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/21/190590294/0e829ea93e161cc0245dae46c2d18149_4486331441913943344.png');
-INSERT INTO `star_rail_weapon` VALUES (51, '无处可逃', 0, 4, '549', 'https://uploadstatic.mihoyo.com/sr-wiki/2023/04/21/288909602/b1e02ca609100c2893a81df73b3bd579_6100932689589816632.png');
-INSERT INTO `star_rail_weapon` VALUES (52, '无可取代的东西', 0, 5, '384', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/bf0c26e434d9ab68ac5380f3e3d68846_3240303378927572941.png');
-INSERT INTO `star_rail_weapon` VALUES (53, '舞！舞！舞！', 5, 4, '851', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/21/190590294/65b8f2e9cb7397b6c45e5f1c217c9619_945859113093771003.png');
-INSERT INTO `star_rail_weapon` VALUES (54, '物穰', 4, 3, '335', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/b93d356f7286d3d6ddd184dabbcab5bd_7272163511585222070.png');
-INSERT INTO `star_rail_weapon` VALUES (55, '相抗', 2, 3, '555', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/22/103492603/3c0cbb7b550046e3decd11f36f474d53_6579811914373072860.png');
-INSERT INTO `star_rail_weapon` VALUES (56, '新手任务开始前', 6, 4, '1087', 'https://act-upload.mihoyo.com/sr-wiki/2023/06/06/75216984/a8e614c788f29055767faa62095d8b77_4626089794247082485.png');
-INSERT INTO `star_rail_weapon` VALUES (57, '星海巡航', 2, 5, '870', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/23/288909604/a2b3f93e2efa2a18941ea6eef3c8367e_6303407602832083418.png');
-INSERT INTO `star_rail_weapon` VALUES (58, '延长记号', 6, 4, '850', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/21/190590294/46d03cb796c707c47eafc4be4d7a6429_239093705735527333.png');
-INSERT INTO `star_rail_weapon` VALUES (59, '鼹鼠党欢迎你', 0, 4, '241', 'https://uploadstatic.mihoyo.com/sr-wiki/2023/04/21/288909602/7fc99a0d879716aca211a681ff410c89_692449159536190412.png');
-INSERT INTO `star_rail_weapon` VALUES (60, '一场术后对话', 4, 4, '221', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/8b5deffd89904c55ac8d1fccc57a47af_7384354830209959343.png');
-INSERT INTO `star_rail_weapon` VALUES (61, '以世界之名', 6, 5, '273', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/21886feabacbc0b5a4410a8da110317f_602268217580203504.png');
-INSERT INTO `star_rail_weapon` VALUES (62, '银河铁道之夜', 1, 5, '390', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/6c099fbdcd488fdb7408e4132e562403_4528940612834658072.png');
-INSERT INTO `star_rail_weapon` VALUES (63, '幽邃', 6, 3, '333', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/49f73c7aac0155c42b68e3e839112487_5366746539759678931.png');
-INSERT INTO `star_rail_weapon` VALUES (64, '于夜色中', 2, 5, '268', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/fc882563a44b54e78d5e5f9a1e8c4399_4525887876546013963.png');
-INSERT INTO `star_rail_weapon` VALUES (65, '余生的第一天', 3, 4, '271', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/97235128d3abb0e6227653256a7a9b59_7891226001801475234.png');
-INSERT INTO `star_rail_weapon` VALUES (66, '与行星相会', 5, 4, '244', 'https://uploadstatic.mihoyo.com/sr-wiki/2023/04/21/288909602/e3481c397c1b6ecbe31d72091519f1b9_5419696652493888402.png');
-INSERT INTO `star_rail_weapon` VALUES (67, '宇宙市场趋势', 3, 4, '848', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/21/190590294/48204f8db9e77016a30146a81a5fbf83_6906827343452491493.png');
-INSERT INTO `star_rail_weapon` VALUES (68, '雨一直下', 6, 5, '1086', 'https://act-upload.mihoyo.com/sr-wiki/2023/06/06/75216984/3d151f458b578b51bbba714f357dd83f_8237289304680955596.png');
-INSERT INTO `star_rail_weapon` VALUES (69, '渊环', 6, 3, '332', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/5516b364c118b5f59699df8926fc9af9_5293043332629217911.png');
-INSERT INTO `star_rail_weapon` VALUES (70, '在蓝天下', 0, 4, '845', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/22/190590294/ae08a1fb40c821ab314dfb833713a762_5172986260277745251.png');
-INSERT INTO `star_rail_weapon` VALUES (71, '早餐的仪式感', 1, 4, '545', 'https://uploadstatic.mihoyo.com/sr-wiki/2023/04/21/288909602/2b4508ad5bce4db860214f0ce20813ca_3972556125864564980.png');
-INSERT INTO `star_rail_weapon` VALUES (72, '这就是我啦！', 3, 4, '542', 'https://uploadstatic.mihoyo.com/sr-wiki/2023/04/21/288909602/a6ba39da97774add5a33f21e3301310e_2372315290004238322.png');
-INSERT INTO `star_rail_weapon` VALUES (73, '只需等待', 6, 5, '1324', 'https://act-upload.mihoyo.com/sr-wiki/2023/07/17/75216984/7e6dbd865dda4072a15b1195cd5e0d00_3614059528685389289.png');
-INSERT INTO `star_rail_weapon` VALUES (74, '制胜的瞬间', 3, 5, '388', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/779152d00007614b68c5bf6c7e5ac1b4_7130725355751336176.png');
-INSERT INTO `star_rail_weapon` VALUES (75, '智库', 1, 3, '328', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/4486e863f260f041f33f97853888417a_3420723413949371482.png');
-INSERT INTO `star_rail_weapon` VALUES (76, '重返幽冥', 2, 4, '547', 'https://uploadstatic.mihoyo.com/sr-wiki/2023/04/21/288909602/da687b7cd5565c4886047ecc8dcc7035_8168745811377466824.png');
-
--- ----------------------------
--- Table structure for upload_dir
--- ----------------------------
-DROP TABLE IF EXISTS `upload_dir`;
-CREATE TABLE `upload_dir`  (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `dir_name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `create_start` bigint(20) NULL DEFAULT NULL,
-  PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = DYNAMIC;
-
--- ----------------------------
--- Records of upload_dir
--- ----------------------------
-
--- ----------------------------
--- Table structure for upload_files
--- ----------------------------
-DROP TABLE IF EXISTS `upload_files`;
-CREATE TABLE `upload_files`  (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
-  `dir_name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
-  `tags` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
-  `size` bigint(20) NULL DEFAULT NULL,
-  `type` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
-  `file_type` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
-  `extension` varchar(16) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
-  `note` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
-  `create_time` bigint(20) NULL DEFAULT NULL,
-  PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = DYNAMIC;
-
--- ----------------------------
--- Records of upload_files
--- ----------------------------
-
--- ----------------------------
--- Table structure for upload_tags
--- ----------------------------
-DROP TABLE IF EXISTS `upload_tags`;
-CREATE TABLE `upload_tags`  (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `tag` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `create_start` bigint(20) NULL DEFAULT NULL,
-  PRIMARY KEY (`id`, `tag`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = DYNAMIC;
-
--- ----------------------------
--- Records of upload_tags
--- ----------------------------
+INSERT INTO `star_rail_weapon` VALUES (51, '唯有沉默', 'Only Silence Remains', '沈黙のみ', 2, 4, '66', 'only-silence-remains', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/ccecfa65e89a767692c3d6b198e67375_8116761189465044541.png');
+INSERT INTO `star_rail_weapon` VALUES (50, '汪！散步时间！', 'Woof! Walk Time!', 'ワン！散歩の時間！', 0, 4, '548', 'woof-walk-time', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/8374260f67cc5344eb48ad7f9e38eccc_3079203861207027155.png');
+INSERT INTO `star_rail_weapon` VALUES (49, '晚安与睡颜', 'Good Night and Sleep Well', 'おやすみなさいと寝顔', 6, 4, '224', 'good-night-and-sleep-well', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/6af2613ab53f384442122bfd27720f92_1559406493845442336.png');
+INSERT INTO `star_rail_weapon` VALUES (48, '同一种心情', 'Shared Feeling', '同じ気持ち', 4, 4, '360', 'shared-feeling', 'https://uploadstatic.mihoyo.com/sr-wiki/2023/04/21/288909602/97c0debc944e304c0054c136d18c50f1_6722877704474086839.png');
+INSERT INTO `star_rail_weapon` VALUES (47, '天倾', 'Collapsing Sky', '天傾', 0, 3, '323', 'collapsing-sky', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/7deb06a9a24d66e5f5ea4202d611d3bf_5037156115374524018.png');
+INSERT INTO `star_rail_weapon` VALUES (46, '天才们的休憩', 'Geniuses\' Repose', '天才たちの休息', 1, 4, '856', 'geniuses-repose', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/21/190590294/e751871e7cda9a1c3a0004866db887b4_4470314258641119676.png');
+INSERT INTO `star_rail_weapon` VALUES (45, '她已闭上双眼', 'She Already Shut Her Eyes', '閉ざした瞳', 3, 5, '1677', 'she-already-shut-her-eyes', 'https://act-upload.mihoyo.com/sr-wiki/2023/09/14/299598919/7788a275edacfbe671fca19b45d0c426_1574508016723203981.png');
+INSERT INTO `star_rail_weapon` VALUES (44, '戍御', 'Defense', '防衛', 3, 3, '334', 'defense', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/7bcda699ff0fbe7e55643c541c426a42_30081035558284699.png');
+INSERT INTO `star_rail_weapon` VALUES (43, '时节不居', 'Time Waits for No One', '時節は居らず', 4, 5, '567', 'time-waits-for-no-one', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/22/214441058/e1f40839f00bd80e1060f00f4cba61b2_8158676828966241566.png');
+INSERT INTO `star_rail_weapon` VALUES (42, '睿见', 'Sagacity', '見識', 1, 3, '554', 'sagacity', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/22/103492603/c75dcb67628de9898cf56d8cf3da31b0_5106499027839641089.png');
+INSERT INTO `star_rail_weapon` VALUES (41, '如泥酣眠', 'Sleep Like the Dead', '泥の如き眠り', 2, 5, '566', 'sleep-like-the-dead', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/165b709388e973ac51e3bc790a0cfeff_5625680177342760428.png');
+INSERT INTO `star_rail_weapon` VALUES (40, '齐颂', 'Chorus', '斉頌', 5, 3, '330', 'chorus', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/75eb0b7c88042f1bce8766da913d1eeb_4996861006675453708.png');
+INSERT INTO `star_rail_weapon` VALUES (39, '暖夜不会漫长', 'Warmth Shortens Cold Nights', '暖かい夜は長くない', 4, 4, '541', 'warmth-shortens-cold-nights', 'https://uploadstatic.mihoyo.com/sr-wiki/2023/04/21/288909602/31696161875bfbfef1396f8fb68f5be6_2865781185367897767.png');
+INSERT INTO `star_rail_weapon` VALUES (38, '匿影', 'Hidden Shadow', '匿影', 6, 3, '551', 'hidden-shadow', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/22/103492603/52a5dc8b7e0aa01f070cbb207ebd3012_5303839694063749956.png');
+INSERT INTO `star_rail_weapon` VALUES (37, '秘密誓心', 'A Secret Vow', '秘密の誓い', 0, 4, '222', 'a-secret-vow', 'https://act-upload.mihoyo.com/sr-wiki/2023/05/06/288909604/4058e6a3ca810444e16303d8f99e3cbf_3848396585828889644.png');
+INSERT INTO `star_rail_weapon` VALUES (36, '论剑', 'Swordplay', '論剣', 2, 4, '316', 'swordplay', 'https://uploadstatic.mihoyo.com/sr-wiki/2023/04/21/288909602/8ea6e08e213f1463dd592913057591b7_1597110980342981033.png');
+INSERT INTO `star_rail_weapon` VALUES (35, '轮契', 'Meshing Cogs', '輪契', 5, 3, '329', 'meshing-cogs', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/2d5a26a86d6401a3826b029a9cfeebfb_615755650846272907.png');
+INSERT INTO `star_rail_weapon` VALUES (34, '镂月裁云之意', 'Carve the Moon, Weave the Clouds', '彫月裁雲の意', 5, 4, '544', 'carve-the-moon-weave-the-clouds', 'https://uploadstatic.mihoyo.com/sr-wiki/2023/04/21/288909602/93de9d798632df0c9ea660ac33926ba2_2747835853468939355.png');
+INSERT INTO `star_rail_weapon` VALUES (33, '灵钥', 'Passkey', '霊鍵', 1, 3, '325', 'passkey', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/09aec132b62a41a787a7a89ebfb9ba7f_4056017462349383335.png');
+INSERT INTO `star_rail_weapon` VALUES (32, '猎物的视线', 'Eyes of the Prey', '獲物の視線', 6, 4, '225', 'eyes-of-the-prey', 'https://uploadstatic.mihoyo.com/sr-wiki/2023/04/21/288909602/38142aab2e325f056fb903192712cd94_8435381312479183931.png');
+INSERT INTO `star_rail_weapon` VALUES (31, '离弦', 'Darting Arrow', '離弦', 2, 3, '327', 'darting-arrow', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/fc4dac32f3a90eb614eb8852b4944c0a_339074751134485637.png');
+INSERT INTO `star_rail_weapon` VALUES (30, '乐圮', 'Shattered Home', '楽壊', 0, 3, '324', 'shattered-home', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/3ce71ad24bb9b5239a0d251cf6a78b7c_8652755492929625822.png');
+INSERT INTO `star_rail_weapon` VALUES (29, '朗道的选择', 'Landau\'s Choice', 'ランドゥーの選択', 3, 4, '419', 'landaus-choice', 'https://uploadstatic.mihoyo.com/sr-wiki/2023/04/21/288909602/4fc10608f7f63460220af99661eff9eb_2173462361556697626.png');
+INSERT INTO `star_rail_weapon` VALUES (28, '开疆', 'Pioneering', '新天地', 3, 3, '552', 'pioneering', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/22/103492603/2a13e4c462242f585d1a359534f08207_804645297709649387.png');
+INSERT INTO `star_rail_weapon` VALUES (27, '决心如汗珠般闪耀', 'Resolution Shines As Pearls of Sweat', '決意は汗のように輝く', 6, 4, '853', 'resolution-shines-as-pearls-of-sweat', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/21/190590294/d20eb92c6e6b45e01a74a3eae3236a0c_8544948651264708528.png');
+INSERT INTO `star_rail_weapon` VALUES (26, '俱殁', 'Mutual Demise', '倶歿', 0, 3, '556', 'mutual-demise', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/22/103492603/5d68684855c1e6356991ec106160bb15_7665516313130129576.png');
+INSERT INTO `star_rail_weapon` VALUES (25, '今日亦是和平的一日', 'Today Is Another Peaceful Day', '今日も平和な一日', 1, 4, '546', 'today-is-another-peaceful-day', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/21/288909604/17f059bf3a7b77c184bf7e7571c29365_4959888878352010800.png');
+INSERT INTO `star_rail_weapon` VALUES (24, '嘉果', 'Fine Fruit', '嘉果', 4, 3, '336', 'fine-fruit', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/f97ca99cf03bfa210945ad220891302b_876506868934440869.png');
+INSERT INTO `star_rail_weapon` VALUES (23, '记忆中的模样', 'Memories of the Past', '記憶の中の姿', 5, 4, '242', 'memories-of-the-past', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/db37e0f07974f38f2482584d3ea1343c_5398624370127048356.png');
+INSERT INTO `star_rail_weapon` VALUES (22, '记忆的质料', 'Texture of Memories', '記憶の素材', 3, 5, '871', 'texture-of-memories', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/23/109341043/0ef2f92a4ee6f5bf8b848e6b2555ffa9_4868302018570081407.png');
+INSERT INTO `star_rail_weapon` VALUES (21, '记一位星神的陨落', 'On the Fall of an Aeon', 'とある星神の殞落を記す', 0, 5, '844', 'on-the-fall-of-an-aeon', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/26/288909604/5de6ade884bf419dc2adc1815bd5a109_1893890981000298645.png');
+INSERT INTO `star_rail_weapon` VALUES (20, '琥珀', 'Amber', '琥珀', 3, 3, '331', 'amber', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/957d8d26619f747b71850143c32ee1a9_6419055775139402596.png');
+INSERT INTO `star_rail_weapon` VALUES (19, '后会有期', 'We Will Meet Again', 'またお会いしましょう', 6, 4, '543', 'we-will-meet-again', 'https://uploadstatic.mihoyo.com/sr-wiki/2023/04/21/288909602/0255c9eadff1083f7ce7b3fc958f8c0d_289765888772424889.png');
+INSERT INTO `star_rail_weapon` VALUES (18, '过往未来', 'Past and Future', '過去と未来', 5, 4, '852', 'past-and-future', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/21/190590294/80a0f12ef4c0e5f1695405b45d64253f_7149236409595209371.png');
+INSERT INTO `star_rail_weapon` VALUES (17, '棺的回响', 'Echoes of the Coffin', '棺のこだま', 4, 5, '1186', 'echoes-of-the-coffin', 'https://act-upload.mihoyo.com/sr-wiki/2023/06/25/75216984/75e4640004acfe27c3a7450adbc220ae_72761699833139366.png');
+INSERT INTO `star_rail_weapon` VALUES (16, '孤独的疗愈', 'Solitary Healing', '孤独の癒やし', 6, 5, '1477', 'solitary-healing', 'https://act-upload.mihoyo.com/sr-wiki/2023/08/30/299598919/eced27ebe7faab9c25fa1cf82738ca5d_7438526283868577651.png');
+INSERT INTO `star_rail_weapon` VALUES (15, '拂晓之前', 'Before Dawn', '夜明け前', 1, 5, '361', 'before-dawn', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/a1f733dd784fbc6ecffc2a09b0b11104_7972399684465006295.png');
+INSERT INTO `star_rail_weapon` VALUES (14, '锋镝', 'Arrows', '矢じり', 2, 3, '326', 'arrows', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/cef0df677c17b578cb7643759a52a5ee_4307166806168746030.png');
+INSERT INTO `star_rail_weapon` VALUES (13, '烦恼着，幸福着', 'Worrisome, Blissful', '悩んで笑って', 2, 5, '-', 'worrisome-blissful', 'https://hsr.honeyhunterworld.com/img/item/worrisome-blissful-item_icon.webp');
+INSERT INTO `star_rail_weapon` VALUES (12, '蕃息', 'Multiplication', '蕃殖', 4, 3, '553', 'multiplication', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/22/103492603/0a70d8b3db45dbd1ef7d725df4fc6c63_7009915096429872669.png');
+INSERT INTO `star_rail_weapon` VALUES (11, '调和', 'Mediation', '同調', 5, 3, '550', 'mediation', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/22/103492603/0526f6f02fb22d4f89e672f42b5080d2_7025757600934747848.png');
+INSERT INTO `star_rail_weapon` VALUES (10, '点个关注吧！', 'Subscribe for More!', 'フォローして！', 2, 4, '854', 'subscribe-for-more', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/21/190590294/e77c0b0db54799d6bd5e0496886a1c3a_3192066082147055344.png');
+INSERT INTO `star_rail_weapon` VALUES (9, '等价交换', 'Quid Pro Quo', '等価交換', 4, 4, '847', 'quid-pro-quo', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/21/190590294/10f8e4b3fe4a9819a59cb2537ea8cf78_5953019562556435160.png');
+INSERT INTO `star_rail_weapon` VALUES (8, '到不了的彼岸', 'The Unreachable Side', '着かない彼岸', 0, 5, '1215', 'the-unreachable-side', 'https://act-upload.mihoyo.com/sr-wiki/2023/07/13/289862258/c7fa978a7a73609c01e9627bd88ac27e_5735992228692577071.png');
+INSERT INTO `star_rail_weapon` VALUES (7, '但战斗还未结束', 'But the Battle Isn\'t Over', 'だが戦争は終わらない', 5, 5, '362', 'but-the-battle-isnt-over', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/eb12f0678e96a9264c8b67d38e95f0d8_3498440638007475874.png');
+INSERT INTO `star_rail_weapon` VALUES (6, '此时恰好', 'Perfect Timing', '今が丁度', 4, 4, '846', 'perfect-timing', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/21/190590294/2747312b548540c7a54233ce4d28ec93_1891498790757437734.png');
+INSERT INTO `star_rail_weapon` VALUES (5, '此身为剑', 'I Shall Be My Own Sword', 'この身は剣なり', 0, 5, '-', 'i-shall-be-my-own-sword', 'https://hsr.honeyhunterworld.com/img/item/i-shall-be-my-own-sword-item_icon.webp');
+INSERT INTO `star_rail_weapon` VALUES (4, '春水初生', 'River Flows in Spring', '春水に初生する', 2, 4, '855', 'river-flows-in-spring', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/21/190590294/66a5f01dda8f0a7da58fb89abb7aef6f_1142572140416843653.png');
+INSERT INTO `star_rail_weapon` VALUES (3, '别让世界静下来', 'Make the World Clamor', 'この世界に喧噪を', 1, 4, '200', 'make-the-world-clamor', 'https://act-upload.mihoyo.com/sr-wiki/2023/05/06/288909604/556f94c66963b491c52f32323a51a841_6777260343113685386.png');
+INSERT INTO `star_rail_weapon` VALUES (2, '比阳光更明亮的', 'Brighter Than the Sun', '陽光より輝くもの', 0, 5, '1475', 'brighter-than-the-sun', 'https://act-upload.mihoyo.com/sr-wiki/2023/08/29/299598919/a499022633e750c898fd3e006b8c385e_4808927037301415220.png');
+INSERT INTO `star_rail_weapon` VALUES (1, '「我」的诞生', 'The Birth of the Self', '「私」の誕生', 1, 4, '196', 'the-birth-of-the-self', 'https://uploadstatic.mihoyo.com/sr-wiki/2023/04/21/288909602/3ff519a5181824f854811e6ca77e208c_509101673108415116.png');
+INSERT INTO `star_rail_weapon` VALUES (52, '我们是地火', 'We Are Wildfire', '我ら地炎', 3, 4, '849', 'we-are-wildfire', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/21/190590294/0e829ea93e161cc0245dae46c2d18149_4486331441913943344.png');
+INSERT INTO `star_rail_weapon` VALUES (53, '无处可逃', 'Nowhere to Run', '逃げ場なし', 0, 4, '549', 'nowhere-to-run', 'https://uploadstatic.mihoyo.com/sr-wiki/2023/04/21/288909602/b1e02ca609100c2893a81df73b3bd579_6100932689589816632.png');
+INSERT INTO `star_rail_weapon` VALUES (54, '无可取代的东西', 'Something Irreplaceable', 'かけがえのないもの', 0, 5, '384', 'something-irreplaceable', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/bf0c26e434d9ab68ac5380f3e3d68846_3240303378927572941.png');
+INSERT INTO `star_rail_weapon` VALUES (55, '舞！舞！舞！', 'Dance! Dance! Dance!', 'ダンス！ダンス！ダンス！', 5, 4, '851', 'dance-dance-dance', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/21/190590294/65b8f2e9cb7397b6c45e5f1c217c9619_945859113093771003.png');
+INSERT INTO `star_rail_weapon` VALUES (56, '物穰', 'Cornucopia', '物穣', 4, 3, '335', 'cornucopia', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/b93d356f7286d3d6ddd184dabbcab5bd_7272163511585222070.png');
+INSERT INTO `star_rail_weapon` VALUES (57, '相抗', 'Adversarial', '相抗', 2, 3, '555', 'adversarial', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/22/103492603/3c0cbb7b550046e3decd11f36f474d53_6579811914373072860.png');
+INSERT INTO `star_rail_weapon` VALUES (58, '新手任务开始前', 'Before the Tutorial Mission Starts', '初めてのクエストの前に', 6, 4, '1087', 'before-the-tutorial-mission-starts', 'https://act-upload.mihoyo.com/sr-wiki/2023/06/06/75216984/a8e614c788f29055767faa62095d8b77_4626089794247082485.png');
+INSERT INTO `star_rail_weapon` VALUES (59, '星海巡航', 'Cruising in the Stellar Sea', '星海巡航', 2, 5, '870', 'cruising-in-the-stellar-sea', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/23/288909604/a2b3f93e2efa2a18941ea6eef3c8367e_6303407602832083418.png');
+INSERT INTO `star_rail_weapon` VALUES (60, '延长记号', 'Fermata', 'フェルマータ', 6, 4, '850', 'fermata', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/21/190590294/46d03cb796c707c47eafc4be4d7a6429_239093705735527333.png');
+INSERT INTO `star_rail_weapon` VALUES (61, '鼹鼠党欢迎你', 'The Moles Welcome You', 'モグラ党へようこそ', 0, 4, '241', 'the-moles-welcome-you', 'https://uploadstatic.mihoyo.com/sr-wiki/2023/04/21/288909602/7fc99a0d879716aca211a681ff410c89_692449159536190412.png');
+INSERT INTO `star_rail_weapon` VALUES (62, '一场术后对话', 'Post-Op Conversation', '手術後の会話', 4, 4, '221', 'post-op-conversation', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/8b5deffd89904c55ac8d1fccc57a47af_7384354830209959343.png');
+INSERT INTO `star_rail_weapon` VALUES (63, '以世界之名', 'In the Name of the World', '世界の名を以て', 6, 5, '273', 'in-the-name-of-the-world', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/21886feabacbc0b5a4410a8da110317f_602268217580203504.png');
+INSERT INTO `star_rail_weapon` VALUES (64, '银河铁道之夜', 'Night on the Milky Way', '銀河鉄道の夜', 1, 5, '390', 'night-on-the-milky-way', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/6c099fbdcd488fdb7408e4132e562403_4528940612834658072.png');
+INSERT INTO `star_rail_weapon` VALUES (65, '幽邃', 'Void', '幽邃', 6, 3, '333', 'void', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/49f73c7aac0155c42b68e3e839112487_5366746539759678931.png');
+INSERT INTO `star_rail_weapon` VALUES (66, '于夜色中', 'In the Night', '夜の帳の中で', 2, 5, '268', 'in-the-night', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/fc882563a44b54e78d5e5f9a1e8c4399_4525887876546013963.png');
+INSERT INTO `star_rail_weapon` VALUES (67, '余生的第一天', 'Day One of My New Life', '余生の初日', 3, 4, '271', 'day-one-of-my-new-life', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/97235128d3abb0e6227653256a7a9b59_7891226001801475234.png');
+INSERT INTO `star_rail_weapon` VALUES (68, '与行星相会', 'Planetary Rendezvous', '惑星との出会い', 5, 4, '244', 'planetary-rendezvous', 'https://uploadstatic.mihoyo.com/sr-wiki/2023/04/21/288909602/e3481c397c1b6ecbe31d72091519f1b9_5419696652493888402.png');
+INSERT INTO `star_rail_weapon` VALUES (69, '宇宙市场趋势', 'Trend of the Universal Market', '星間市場のトレンド', 3, 4, '848', 'trend-of-the-universal-market', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/21/190590294/48204f8db9e77016a30146a81a5fbf83_6906827343452491493.png');
+INSERT INTO `star_rail_weapon` VALUES (70, '雨一直下', 'Incessant Rain', '降りやまぬ雨', 6, 5, '1086', 'incessant-rain', 'https://act-upload.mihoyo.com/sr-wiki/2023/06/06/75216984/3d151f458b578b51bbba714f357dd83f_8237289304680955596.png');
+INSERT INTO `star_rail_weapon` VALUES (71, '渊环', 'Loop', '淵環', 6, 3, '332', 'loop', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/5516b364c118b5f59699df8926fc9af9_5293043332629217911.png');
+INSERT INTO `star_rail_weapon` VALUES (72, '在蓝天下', 'Under the Blue Sky', '青空の下で', 0, 4, '845', 'under-the-blue-sky', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/22/190590294/ae08a1fb40c821ab314dfb833713a762_5172986260277745251.png');
+INSERT INTO `star_rail_weapon` VALUES (73, '早餐的仪式感', 'The Seriousness of Breakfast', '朝食の儀式感', 1, 4, '545', 'the-seriousness-of-breakfast', 'https://uploadstatic.mihoyo.com/sr-wiki/2023/04/21/288909602/2b4508ad5bce4db860214f0ce20813ca_3972556125864564980.png');
+INSERT INTO `star_rail_weapon` VALUES (74, '这就是我啦！', 'This Is Me!', 'これがウチだよ！', 3, 4, '542', 'this-is-me', 'https://uploadstatic.mihoyo.com/sr-wiki/2023/04/21/288909602/a6ba39da97774add5a33f21e3301310e_2372315290004238322.png');
+INSERT INTO `star_rail_weapon` VALUES (75, '只需等待', 'Patience Is All You Need', '待つのみ', 6, 5, '1324', 'patience-is-all-you-need', 'https://act-upload.mihoyo.com/sr-wiki/2023/07/17/75216984/7e6dbd865dda4072a15b1195cd5e0d00_3614059528685389289.png');
+INSERT INTO `star_rail_weapon` VALUES (76, '制胜的瞬间', 'Moment of Victory', '勝利の刹那', 3, 5, '388', 'moment-of-victory', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/779152d00007614b68c5bf6c7e5ac1b4_7130725355751336176.png');
+INSERT INTO `star_rail_weapon` VALUES (77, '智库', 'Data Bank', 'アーカイブ', 1, 3, '328', 'data-bank', 'https://act-upload.mihoyo.com/sr-wiki/2023/04/23/214441058/4486e863f260f041f33f97853888417a_3420723413949371482.png');
+INSERT INTO `star_rail_weapon` VALUES (78, '重返幽冥', 'Return to Darkness', '幽冥に帰す', 2, 4, '547', 'return-to-darkness', 'https://uploadstatic.mihoyo.com/sr-wiki/2023/04/21/288909602/da687b7cd5565c4886047ecc8dcc7035_8168745811377466824.png');
 
 SET FOREIGN_KEY_CHECKS = 1;

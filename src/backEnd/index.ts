@@ -515,7 +515,8 @@ const calcPoolData = () => {
           version: poolItem.version,
           name: poolItem.name,
           pool_start: poolItem.pool_start,
-          pool_end: poolItem.pool_end
+          pool_end: poolItem.pool_end,
+          pool_img: poolItem.pool_img
         }
         upContext = { ...roleNumOjb[name] }
       }
@@ -532,7 +533,8 @@ const calcPoolData = () => {
           version: poolItem.version,
           name: poolItem.name,
           pool_start: poolItem.pool_start,
-          pool_end: poolItem.pool_end
+          pool_end: poolItem.pool_end,
+          pool_img: poolItem.pool_img
         }
         upContext = { ...weaponNumObj[name] }
       }
@@ -593,6 +595,8 @@ export const _getPoolInfo = (params = {} as any) => {
             { key: 'version_start', res: 'version_start' },
             { key: 'version_end', res: 'version_end' },
             { key: 'version_img', res: 'version_img' },
+            { key: 'link', res: 'link' },
+            { key: 'preview', res: 'preview' },
             { key: 'remark', res: 'version_remark' },
           ],
           rule: '='
@@ -611,8 +615,8 @@ export const _getPoolInfo = (params = {} as any) => {
             version.includes(search) ||
             version_name.includes(search) ||
             name.includes(search) ||
-            up_5.includes(search) ||
-            up_4.includes(search)
+            (up_5 || '').includes(search) ||
+            (up_4 || '').includes(search)
           )
         ) {
           flag = Chk([

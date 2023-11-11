@@ -24,6 +24,7 @@
           <n-space :style="ua ? `flex:1;` : `min-width: 200px;`">
             <n-button type="success" style="width: 84px;" @click="searchPoolList(1)">搜索</n-button>
             <n-button type="warning" @click="clickReset">重置条件</n-button>
+            <n-button type="info" style="width: 84px;" @click="handleReflashCache">刷新缓存</n-button>
           </n-space>
         </n-space>
         <!-- 搜索统计表 -->
@@ -34,9 +35,9 @@
           <n-input :value="calcTableSearch" @update:value="handleCalcTableSearch" type="text" placeholder="搜索名称/版本号/up次数"
             :style="ua ? 'width: 200px' : 'min-width: 200px;'" />
           <n-space :style="ua ? `flex:1;` : `min-width: 200px;`">
-            <n-button type="success" style="width: 84px;" @click="handleReflashCache">刷新缓存</n-button>
-            <!-- <n-button type="success" style="width: 84px;" @click="searchTable1List(1)">搜索</n-button> -->
             <n-button type="warning" @click="clickReset1">重置条件</n-button>
+            <n-button type="info" style="width: 84px;" @click="handleReflashCache">刷新缓存</n-button>
+            <!-- <n-button type="success" style="width: 84px;" @click="searchTable1List(1)">搜索</n-button> -->
           </n-space>
         </n-space>
         <n-space :style="custStyle" style="margin: 10px 2px !important;">
@@ -87,6 +88,10 @@
                     @click="openPoolInfo(data)"></div>
                   <div v-html="data[head.key]" style="width: 13rem;" v-else-if="head.key == 'version_info'"
                     @click="openVersionInfo(data)">
+                  </div>
+                  <div v-else-if="['remark', 'link', 'preview'].includes(head.key)">
+                    <a v-if="data[head.key]" :href="data[head.key]" target="_blank">{{ head.label }}</a>
+                    <div v-else>-</div>
                   </div>
                   <div v-else>{{ data[head.key] }}</div>
                 </td>
@@ -142,7 +147,7 @@
                   <div v-html="data[head.key]" v-else-if="head.key == 'itemInfo'"></div>
                   <!-- 版本、卡池的图片弹窗 -->
                   <div v-html="data[head.key]" style="width: 10.5rem;" v-else-if="head.key == 'pool_info'"
-                    @click="openPoolInfo(data)"></div>
+                    @click="openPoolInfo(data, true)"></div>
                   <div v-else>{{ data[head.key] }}</div>
                 </td>
               </tr>
@@ -167,9 +172,9 @@
 import PicCard from "@/components/Card/PicCard.vue";
 import { useMessage } from "naive-ui";
 import { getPoolInfo } from "@/api/genshin";
-import { ref, onMounted, nextTick, onBeforeMount, watch, computed } from "vue";
+import { ref, onMounted, nextTick, onBeforeMount, watch, computed, h } from "vue";
 import { Page, queryGenshinRelation, queryCommonUrl, storage } from "@/utils"
-import { useLoadingBar, useDialog } from 'naive-ui'
+import { useLoadingBar, useDialog, NImage } from 'naive-ui'
 import { Aperture } from "@vicons/ionicons5";
 import { checkUA, DAY } from "@/utils";
 import {
@@ -255,6 +260,7 @@ let computedTable1 = computed(() => {
     let s = calcTableSearch.value
     tmpTable1 = tmpTable1.filter(item => (item.name.includes(s) || item.version == s || item.count == s))
   }
+  console.log(tmpTable1, 'tmpTable1');
   return tmpTable1
 })
 
@@ -274,10 +280,41 @@ const changePageSize = (size: number) => {
   searchPoolList(1)
 }
 
-const openPoolInfo = (row: any) => {
+const openPoolInfo = (row: any, calc = false) => {
+  let imgIno = `${row.version}版本 ` + (calc ? `${row.version_name || ''} ${row.name || ''}` : `${row.name} ${row.up_5 || ''}`)
   dialog.success({
-    title: '卡池图片',
-    content: () => `卡池图片: ${row.pool_info}`,
+    title: '卡池信息',
+    content: () => {
+      return [
+        h('div', {
+          style: {
+            display: 'flex',
+            alignItems: 'center',
+            flexDirection: 'column',
+          }
+        }, {
+          default: () => {
+            return [
+              h('a', { href: row.pool_img, target: '_blank' }, { default: () => `卡池图片: ${imgIno}` }),
+              h(NImage, {
+                src: row.pool_img,
+                imgProps: {
+                  style: {
+                    width: '100%',
+                  }
+                },
+                style: {
+                  marginTop: '10px',
+                  width: '390px',
+                  aspectRatio: 2
+                },
+                objectFit: 'contain'
+              }, { default: () => h('') })
+            ]
+          }
+        })
+      ]
+    },
     positiveText: '确定',
     onPositiveClick: () => { }
   })
@@ -285,8 +322,38 @@ const openPoolInfo = (row: any) => {
 
 const openVersionInfo = (row: any) => {
   dialog.success({
-    title: '版本图片',
-    content: () => `版本图片: ${row.version_info}`,
+    title: '版本信息',
+    content: () => {
+      return [
+        h('div', {
+          style: {
+            display: 'flex',
+            alignItems: 'center',
+            flexDirection: 'column',
+          }
+        }, {
+          default: () => {
+            return [
+              h('a', { href: row.version_img, target: '_blank' }, { default: () => `版本图片: ${row.version_name}  ${row.version_remark ? `(${row.version_remark})` : ''}` }),
+              h(NImage, {
+                src: row.version_img,
+                imgProps: {
+                  style: {
+                    width: '100%',
+                  }
+                },
+                style: {
+                  marginTop: '10px',
+                  width: '390px',
+                  aspectRatio: 2
+                },
+                objectFit: 'contain'
+              }, { default: () => h('') })
+            ]
+          }
+        })
+      ]
+    },
     positiveText: '确定',
     onPositiveClick: () => { }
   })
@@ -320,6 +387,7 @@ const queryPoolList = async () => {
     return;
   }
   total.value = data.total
+  console.log(data?.records, '??');
 
   tableData.value = data?.records.map((e: any) => {
     e.pool_stage = `第${e.pool_index}池${e.stage}期`
@@ -356,15 +424,25 @@ const queryPoolList = async () => {
     }
     else {
       let calcRecords = { ...data.roleCalc, ...data.weaponCalc }
+      console.log(calcRecords, 'calcRecords');
+      // <版本\期数\类型>与图片的映射
+      let versionKeyImgMap = {} as any
       let tmpKeys = Object.keys(calcRecords)
       let tmpValues: any[] = Object.values(calcRecords)
       let calcTable: any[] = []
       let tmp = {} as any
+      for (let i = 0; i < data.records.length; ++i) {
+        let item = data.records[i]
+        let vKey = `${item.version}_${item.stage}_${item.type}`
+        if (versionKeyImgMap[vKey]) { continue }
+        versionKeyImgMap[vKey] = item.pool_img
+      }
       // 过滤无效角色武器，并计算day2last，day2now，typeLabel
       for (let i = 0; i < tmpValues.length; ++i) {
         tmp = tmpValues[i]
         if (tmp.count == 0 || !tmp.now_up) { continue }
         let { now_up, last_up, icon_url, star, type, count } = tmp
+        let cKey = `${now_up.version}_${now_up.stage}_${type}`
         let calcData = {
           id: now_up.id,
           name: tmpKeys[i],
@@ -378,6 +456,8 @@ const queryPoolList = async () => {
           pool_start: now_up.pool_start,
           itemInfo: `<font color='${star > 4 ? '#fcb040' : '#8a2be2'}'>${tmpKeys[i]}</font><div>${star}星${(type > 1) ? '武器' : '角色'}</div>`,
           pool_info: `<font color='#18a058'>${now_up.name}</font><div>(${now_up.pool_start} ~ ${now_up.pool_end})</div>`,
+          pool_img: now_up.pool_img,
+          version_name: now_up.name
         }
         calcTable.push(calcData)
       }
@@ -408,6 +488,7 @@ const queryPoolList = async () => {
 }
 
 const handleReflashCache = () => {
+  storage.remove('genshinPool')
   storage.remove('genshinPoolCalcTable')
   queryPoolList()
   try {

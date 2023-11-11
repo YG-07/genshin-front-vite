@@ -601,6 +601,16 @@ export const honkaiRole: any[] = [
   },
   {
     "id": 61,
+    "name": "天行 · 绘星之卷",
+    "element": "5",
+    "role": "21",
+    "star": "3",
+    "damage": "3",
+    "url": "2840",
+    "icon_url": "https://act-upload.mihoyo.com/bh3-wiki/2023/11/01/4976467/be1a2f3347273c738d5ee5261275b6b8_5384008115405635330.png"
+  },
+  {
+    "id": 62,
     "name": "天元骑英",
     "element": "4",
     "role": "11",
@@ -610,7 +620,7 @@ export const honkaiRole: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/bh3-wiki/2022/01/07/6100274/44b273c7339ea0823da5b76ccdc17356_7195812762288875735.png"
   },
   {
-    "id": 62,
+    "id": 63,
     "name": "甜辣女孩",
     "element": "2",
     "role": "17",
@@ -620,7 +630,7 @@ export const honkaiRole: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/bh3-wiki/2021/11/02/77124895/b142b62d1962ab81351d55fce19d6fc7_2365488698118869948.png"
   },
   {
-    "id": 63,
+    "id": 64,
     "name": "无限 · 噬界之蛇",
     "element": "2",
     "role": "14",
@@ -630,7 +640,7 @@ export const honkaiRole: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/bh3-wiki/2021/11/02/77124895/480aede3b9d5aa95490fa80acfbab92b_8992930320807638919.png"
   },
   {
-    "id": 64,
+    "id": 65,
     "name": "午夜苦艾",
     "element": "4",
     "role": "15",
@@ -640,7 +650,7 @@ export const honkaiRole: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/bh3-wiki/2021/11/02/77124895/99d16c47d57a1a05c9a7c95ed36f44ad_3607419813930398239.png"
   },
   {
-    "id": 65,
+    "id": 66,
     "name": "雾都迅羽",
     "element": "1",
     "role": "5",
@@ -650,7 +660,7 @@ export const honkaiRole: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/bh3-wiki/2021/09/04/76361817/b9c0cd9d69031497650b05e92ffb48fe_8677499444287713630.png"
   },
   {
-    "id": 66,
+    "id": 67,
     "name": "薪炎之律者",
     "element": "1",
     "role": "0",
@@ -660,7 +670,7 @@ export const honkaiRole: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/bh3-wiki/2021/09/26/73514954/fd50a3be09cfd8b68ccd1b92fab787c0_673803583445326954.png"
   },
   {
-    "id": 67,
+    "id": 68,
     "name": "雪地狙击",
     "element": "0",
     "role": "2",
@@ -670,7 +680,7 @@ export const honkaiRole: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/bh3-wiki/2021/09/04/77124895/a4cd255549b5021b7a9f4d596a6d406a_1622258159849132188.png"
   },
   {
-    "id": 68,
+    "id": 69,
     "name": "血色玫瑰",
     "element": "1",
     "role": "3",
@@ -680,7 +690,7 @@ export const honkaiRole: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/bh3-wiki/2021/09/04/72350798/b50c180c92aab1de400c3d86d159a75f_1106909501462214359.png"
   },
   {
-    "id": 69,
+    "id": 70,
     "name": "魇夜星渊",
     "element": "3",
     "role": "10",
@@ -690,7 +700,7 @@ export const honkaiRole: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/bh3-wiki/2021/09/04/81417673/b7434607dcc7c80dd970ed4cf682d44a_4066663144614144526.png"
   },
   {
-    "id": 70,
+    "id": 71,
     "name": "夜隐重霞",
     "element": "0",
     "role": "7",
@@ -700,7 +710,7 @@ export const honkaiRole: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/bh3-wiki/2021/09/03/76361817/79feaa091c0f3d90a02ba70921e685f8_5693361591508065282.png"
   },
   {
-    "id": 71,
+    "id": 72,
     "name": "异度黑核侵蚀",
     "element": "0",
     "role": "2",
@@ -710,7 +720,7 @@ export const honkaiRole: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/bh3-wiki/2021/09/04/50494840/2829e1569f882deb968bf74281498d59_8011782976755008978.png"
   },
   {
-    "id": 72,
+    "id": 73,
     "name": "银狼的黎明",
     "element": "1",
     "role": "2",
@@ -720,7 +730,7 @@ export const honkaiRole: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/bh3-wiki/2021/09/04/50494840/e4eb2c6e750999cf18eb16785f166c60_5109839785243234098.png"
   },
   {
-    "id": 73,
+    "id": 74,
     "name": "樱火轮舞",
     "element": "1",
     "role": "4",
@@ -730,7 +740,7 @@ export const honkaiRole: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/bh3-wiki/2021/09/04/91006211/207c1f230e13cac3e088d102345c389a_7231313932039159273.png"
   },
   {
-    "id": 74,
+    "id": 75,
     "name": "樱桃炸弹",
     "element": "1",
     "role": "9",
@@ -740,7 +750,7 @@ export const honkaiRole: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/bh3-wiki/2021/09/03/77124895/16ed35bf60178e6d8707d12547e35087_8533105621720987823.png"
   },
   {
-    "id": 75,
+    "id": 76,
     "name": "影骑士 · 月轮",
     "element": "2",
     "role": "5",
@@ -750,7 +760,7 @@ export const honkaiRole: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/bh3-wiki/2021/09/04/72350798/b2cb6f16f2ce7c111c9910413625a5e0_3263177696179191025.png"
   },
   {
-    "id": 76,
+    "id": 77,
     "name": "影舞冲击",
     "element": "2",
     "role": "1",
@@ -760,7 +770,7 @@ export const honkaiRole: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/bh3-wiki/2021/09/03/91006211/7fc15e81ff59c995fa4f879a7bfae9c8_69976860617641256.png"
   },
   {
-    "id": 77,
+    "id": 78,
     "name": "玉骑士 · 月痕",
     "element": "1",
     "role": "23",
@@ -770,7 +780,7 @@ export const honkaiRole: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/bh3-wiki/2022/09/09/50494840/a2cac9bd01f70b177a8d6d28af25a919_8274598273580102056.png"
   },
   {
-    "id": 78,
+    "id": 79,
     "name": "御神装 · 勿忘",
     "element": "2",
     "role": "7",
@@ -780,7 +790,7 @@ export const honkaiRole: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/bh3-wiki/2021/09/05/73514954/e2c7322cd78d40d558bda4683e4e3a85_4219207119064686877.png"
   },
   {
-    "id": 79,
+    "id": 80,
     "name": "原罪猎人",
     "element": "2",
     "role": "8",
@@ -790,7 +800,7 @@ export const honkaiRole: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/bh3-wiki/2021/09/04/73514954/5181b1c63bf80fa4d20c817552267ef5_3724178600812535419.png"
   },
   {
-    "id": 80,
+    "id": 81,
     "name": "月下初拥",
     "element": "0",
     "role": "4",
@@ -800,7 +810,17 @@ export const honkaiRole: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/bh3-wiki/2021/09/03/73514954/7458c61ddceabc89c5e470cc58cafaf0_3764731769924571495.png"
   },
   {
-    "id": 81,
+    "id": 82,
+    "name": "月下誓约 · 予爱以心",
+    "element": "1",
+    "role": "4",
+    "star": "0",
+    "damage": "2",
+    "url": "2709",
+    "icon_url": "https://act-upload.mihoyo.com/bh3-wiki/2023/09/09/4976467/faa0c873f7028340008f97d8268b9a91_5154340318044942165.png"
+  },
+  {
+    "id": 83,
     "name": "云墨丹心",
     "element": "1",
     "role": "5",
@@ -810,7 +830,7 @@ export const honkaiRole: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/bh3-wiki/2021/09/03/73514954/0e1475d378a3bd6815f2735264397b13_3770607914018558266.png"
   },
   {
-    "id": 82,
+    "id": 84,
     "name": "战场疾风",
     "element": "0",
     "role": "3",
@@ -820,7 +840,7 @@ export const honkaiRole: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/bh3-wiki/2021/09/04/50494840/8b49bdb94378dbf2ba7d79fc962e278b_2455004414960406501.png"
   },
   {
-    "id": 83,
+    "id": 85,
     "name": "真红骑士 · 月蚀",
     "element": "2",
     "role": "3",
@@ -830,7 +850,7 @@ export const honkaiRole: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/bh3-wiki/2021/09/04/75216984/c695d129ada34d5821d8b6fb0c24c43f_3739634654550385914.png"
   },
   {
-    "id": 84,
+    "id": 86,
     "name": "真理之律者",
     "element": "4",
     "role": "2",
@@ -840,7 +860,7 @@ export const honkaiRole: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/bh3-wiki/2022/11/26/50494840/d18a2f8b79062b6b0855a91b61b5b37a_7009407622785809505.png"
   },
   {
-    "id": 85,
+    "id": 87,
     "name": "真我 · 人之律者",
     "element": "1",
     "role": "13",
@@ -850,7 +870,7 @@ export const honkaiRole: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/bh3-wiki/2022/08/02/264755623/075a2ae601c87cce283ecbaacea8a382_9124843153772421079.png"
   },
   {
-    "id": 86,
+    "id": 88,
     "name": "真炎幸魂",
     "element": "0",
     "role": "7",
@@ -860,7 +880,7 @@ export const honkaiRole: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/bh3-wiki/2021/09/04/81417673/69ecd56d8fcb5c508eb97f5de33bcab1_528022664381526258.png"
   },
   {
-    "id": 87,
+    "id": 89,
     "name": "织羽梦旌",
     "element": "2",
     "role": "26",
@@ -870,7 +890,7 @@ export const honkaiRole: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/bh3-wiki/2023/04/01/50494840/66153bedec82d51beb724aa646c2a994_5309025918979739831.png"
   },
   {
-    "id": 88,
+    "id": 90,
     "name": "终末协理0017",
     "element": "4",
     "role": "27",
@@ -880,7 +900,7 @@ export const honkaiRole: any[] = [
     "icon_url": "https://uploadstatic.mihoyo.com/bh3-wiki/2023/04/01/282941837/b7ade59c96648704a92dd503bf994a26_3343340243863476378.png"
   },
   {
-    "id": 89,
+    "id": 91,
     "name": "终焉之律者",
     "element": "4",
     "role": "0",

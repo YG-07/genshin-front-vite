@@ -19,6 +19,10 @@ console.log(env, 'env');
 </script>
 
 <style lang="scss">
+a {
+  text-decoration: none;
+}
+
 /*定义滚动条样式（高宽及背景）*/
 ::-webkit-scrollbar {
   width: 10px;
