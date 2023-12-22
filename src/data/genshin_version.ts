@@ -328,5 +328,16 @@ export const genshinVersion: any[] = [
     "link": "https://www.miyoushe.com/ys/article/45097870",
     "preview": "https://act.mihoyo.com/ys/event/e20231028preview/index.html",
     "remark": "水神芙宁娜"
+  },
+  {
+    "id": 31,
+    "version": "4.3",
+    "name": "蔷薇与铳枪",
+    "version_start": "2023-12-21",
+    "version_end": "2024-01-30",
+    "version_img": "https://upload-bbs.miyoushe.com/upload/2023/12/22/247584033/d8582bb3fd14837637345fbda91af2ac_6462804068768715822.png",
+    "link": "https://www.miyoushe.com/ys/article/46337935",
+    "preview": "https://act.mihoyo.com/ys/event/e20231209preview-yh731z/index.html",
+    "remark": null
   }
 ]

@@ -1709,10 +1709,10 @@ export const genshinPool: any[] = [
     "stage": 2,
     "name": "苍流踏花",
     "pool_start": "2023.11.28",
-    "pool_end": "2023.11.20",
+    "pool_end": "2023.11.19",
     "up_5": "神里绫人",
     "up_4": null,
-    "pool_img": null,
+    "pool_img": "https://upload-bbs.miyoushe.com/upload/2023/11/22/75276539/4b29b8731decc48174070f43d4b851bd_4693292216062016742.jpg",
     "remark": null
   },
   {
@@ -1721,10 +1721,10 @@ export const genshinPool: any[] = [
     "stage": 2,
     "name": "雳裁冥昭",
     "pool_start": "2023.11.28",
-    "pool_end": "2023.11.20",
+    "pool_end": "2023.11.19",
     "up_5": "赛诺",
     "up_4": null,
-    "pool_img": null,
+    "pool_img": "https://upload-bbs.miyoushe.com/upload/2023/11/22/75276539/ed179f5d6fd2b376d58fbea1cb7edd3f_3623503553750976989.jpg",
     "remark": null
   },
   {
@@ -1733,8 +1733,44 @@ export const genshinPool: any[] = [
     "stage": 2,
     "name": null,
     "pool_start": "2023.11.28",
-    "pool_end": "2023.11.20",
+    "pool_end": "2023.11.19",
     "up_5": "波乱月白经津 赤沙之杖",
+    "up_4": null,
+    "pool_img": "https://upload-bbs.miyoushe.com/upload/2023/11/22/75276539/935001ebbf92ed90f2fd173dd6d6e92f_7334599413286723118.jpg",
+    "remark": null
+  },
+  {
+    "id": 146,
+    "version": "4.3",
+    "stage": 1,
+    "name": "刺玫的铭誓",
+    "pool_start": "2023.11.20",
+    "pool_end": "2024.01.09",
+    "up_5": "娜维娅",
+    "up_4": "坎蒂丝 罗莎莉亚 砂糖",
+    "pool_img": "https://upload-bbs.miyoushe.com/upload/2023/12/14/75276539/6019e09402060d9d1837fb97c478a613_6858354946453636125.png",
+    "remark": null
+  },
+  {
+    "id": 147,
+    "version": "4.3",
+    "stage": 1,
+    "name": "白鹭之庭",
+    "pool_start": "2023.11.20",
+    "pool_end": "2024.01.09",
+    "up_5": "神里绫华",
+    "up_4": "坎蒂丝 罗莎莉亚 砂糖",
+    "pool_img": "https://upload-bbs.miyoushe.com/upload/2023/12/14/75276539/dff766e71a63279730172831e392f7a8_4799271988018058067.png",
+    "remark": null
+  },
+  {
+    "id": 148,
+    "version": "4.3",
+    "stage": 1,
+    "name": null,
+    "pool_start": "2023.11.20",
+    "pool_end": "2024.01.09",
+    "up_5": "裁断 雾切之回光",
     "up_4": null,
     "pool_img": null,
     "remark": null
