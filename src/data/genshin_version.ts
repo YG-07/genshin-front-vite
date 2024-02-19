@@ -339,5 +339,16 @@ export const genshinVersion: any[] = [
     "link": "https://www.miyoushe.com/ys/article/46337935",
     "preview": "https://act.mihoyo.com/ys/event/e20231209preview-yh731z/index.html",
     "remark": null
+  },
+  {
+    "id": 32,
+    "version": "4.4",
+    "name": "彩鹞栉春风",
+    "version_start": "2024-01-31",
+    "version_end": "2024-03-12",
+    "version_img": "https://upload-bbs.miyoushe.com/upload/2024/02/18/247584033/6664bf4828dfe386d73a2525f2ac092a_7044762580274736547.png",
+    "link": "https://www.miyoushe.com/ys/article/48130331",
+    "preview": "https://act.mihoyo.com/ys/event/e20240120preview/index.html",
+    "remark": null
   }
 ]
