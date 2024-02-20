@@ -130,7 +130,7 @@ const routes: Readonly<RouteRecordRaw[]> = [
   {
     path: '/blue_archive',
     name: 'blue_archive',
-    component: () => import(/* webpackChunkName: "home" */ '@/views/Home.vue'),
+    component: () => import(/* webpackChunkName: "blue_archive" */ '@/views/Home.vue'),
     meta: {
       title: '碧蓝档案',
       keepAlive: true
@@ -151,6 +151,15 @@ const routes: Readonly<RouteRecordRaw[]> = [
         component: () => import(/* webpackChunkName: "npc" */ '@/views/BlueArchive/npc.vue'),
         meta: {
           title: 'NPC和卫星',
+          keepAlive: true
+        }
+      },
+      {
+        path: 'picacg',
+        name: 'picacg',
+        component: () => import(/* webpackChunkName: "picacg" */ '@/views/BlueArchive/picacg.vue'),
+        meta: {
+          title: '漫画',
           keepAlive: true
         }
       },

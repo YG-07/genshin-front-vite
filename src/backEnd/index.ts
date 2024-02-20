@@ -17,6 +17,8 @@ import { starRailWeapon } from '@/data/star_rail_weapon';
 import { blueArchiveRelation } from '@/data/blue_archive_relation';
 import { blueArchiveNPC } from '@/data/blue_archive_npc';
 import { blueArchiveStudent } from '@/data/blue_archive_student';
+import { blueArchiveBook } from '@/data/blue_archive_book';
+import { blueArchivePicacg } from '@/data/blue_archive_picacg';
 
 // 武器池名称
 const WEAPON_POOL = '神铸赋形'
@@ -715,6 +717,26 @@ export const _getBlueAchiveRelationInfo = () => {
   return new Promise((resolve, reject) => {
     if (blueArchiveRelation) {
       return resolve(Res(blueArchiveRelation))
+    } else {
+      return reject(Res([], 500, '获取失败'))
+    }
+  })
+}
+
+export const _getBlueArchiveBookInfo = () => {
+  return new Promise((resolve, reject) => {
+    if (blueArchiveBook) {
+      return resolve(Res(blueArchiveBook))
+    } else {
+      return reject(Res([], 500, '获取失败'))
+    }
+  })
+}
+
+export const _getBlueArchivePicacgInfo = () => {
+  return new Promise((resolve, reject) => {
+    if (blueArchivePicacg) {
+      return resolve(Res(blueArchivePicacg))
     } else {
       return reject(Res([], 500, '获取失败'))
     }

@@ -23,7 +23,7 @@ BOOK_JSON_FILE = f'./{BLUE_PATH}/blue_archive_book.ts'
 PIC_JSON_FILE = f'./{BLUE_PATH}/blue_archive_picacg.ts'
 # 书的表 字段：id, book_name, total
 book_list = []
-# 漫画图片表 字段：id, book, book_name, name, url, img_url
+# 漫画图片表 字段：id, book, book_name, name, url, img_url, page(排序后生成)
 pic_list = []
 book_id = 0
 pic_total = 0
@@ -52,13 +52,31 @@ def delete_files_in_directory(directory_path):
             print(f"无法删除文件 {file_path}. 原因: {e}")
             
 
+# 排序并写入json文件
 def write_json():
   global book_list
   global pic_list
   with open(BOOK_JSON_FILE, 'w', encoding='utf-8') as f1:
     f1.write(f'export const blueArchiveBook: any[] = {str(book_list)}')
+    print(f'> 写入{BOOK_JSON_FILE}成功')
+  # 先根据book升序，再根据name升序 
+  sort_pic_list = sorted(pic_list, key=lambda pic: (pic["book"], pic["name"]))
+  # 设置页数字段
+  pic_len = len(sort_pic_list)
+  if pic_len > 0:
+    book = sort_pic_list[0]["book"]
+    num = 0
+    for i in range(pic_len):
+      if sort_pic_list[i]["book"] == book:
+        num = num + 1
+      else:
+        book = sort_pic_list[i]["book"]
+        num = 1
+      sort_pic_list[i]["page"] = num
+
   with open(PIC_JSON_FILE, 'w', encoding='utf-8') as f2:
-    f2.write(f'export const blueArchivePicacg: any[] = {str(pic_list)}')
+    f2.write(f'export const blueArchivePicacg: any[] = {str(sort_pic_list)}')
+    print(f'> 写入{PIC_JSON_FILE}成功')
 
 
 # 请求首页
@@ -127,6 +145,14 @@ def read_main():
         os.mkdir(pic_path)
         print(f'成功创建“{pic_path}”目录...')
 
+      book_id = len(book_list) + 1
+      if use_json == True:
+        book_list.append({
+          "id": book_id,
+          "book_name": book_title,
+          "total": pic_total
+        })
+        pic_total = 0
       url_els = etree.HTML(dom_text).xpath('//div[@class="model-tab-content"]//a')
       if len(url_els) == 0:
         print(f'获取"{book_title}"的章节元素【class="model-tab-content"】失败！')
@@ -142,14 +168,6 @@ def read_main():
           if len(index) > 0:
             title = index[0]
           start_html(href, book_title, title)
-      book_id = len(book_list) + 1
-      if use_json == True:
-        book_list.append({
-          "id": book_id,
-          "book_name": book_title,
-          "total": pic_total
-        })
-        pic_total = 0
     if use_json == True:
       write_json()
 

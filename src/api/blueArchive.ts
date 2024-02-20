@@ -1,7 +1,9 @@
 import {
   _getStudentInfo,
   _getNPCInfo,
-  _getBlueAchiveRelationInfo
+  _getBlueAchiveRelationInfo,
+  _getBlueArchiveBookInfo,
+  _getBlueArchivePicacgInfo
 } from '@/backEnd';
 /** 碧蓝档案相关接口 */
 
@@ -18,4 +20,14 @@ export const getNPCInfo = (params: any) => {
 // 获取关系列表
 export const getBlueAchiveRelationInfo = () => {
   return _getBlueAchiveRelationInfo()
+}
+
+// 获取漫画书列表
+export const getBlueArchiveBookInfo = () => {
+  return _getBlueArchiveBookInfo()
+}
+
+// 获取漫画图片列表
+export const getBlueArchivePicacgInfo = () => {
+  return _getBlueArchivePicacgInfo()
 }
