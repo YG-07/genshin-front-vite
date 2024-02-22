@@ -11,6 +11,7 @@
       <n-layout content-style="flex: 1;" has-sider>
         <MenuBar />
         <n-layout-content :content-style="ua?`padding: 24px;`:`padding: 5px;`">
+          <n-back-top :right="(ua ? 40 : 5)"/>
           <router-view v-slot="{ Component }"> 
             <keep-alive>
               <component
