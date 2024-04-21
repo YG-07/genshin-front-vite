@@ -350,5 +350,27 @@ export const genshinVersion: any[] = [
     "link": "https://www.miyoushe.com/ys/article/48130331",
     "preview": "https://act.mihoyo.com/ys/event/e20240120preview/index.html",
     "remark": null
+  },
+  {
+    "id": 33,
+    "version": "4.5",
+    "name": "铓锋锦间裁",
+    "version_start": "2024-03-13",
+    "version_end": "2024-04-02",
+    "version_img": null,
+    "link": "https://www.miyoushe.com/ys/article/49869420",
+    "preview": "https://act.mihoyo.com/ys/event/e20230302preview-2hu94k/index.html",
+    "remark": null
+  },
+  {
+    "id": 34,
+    "version": "4.6",
+    "name": "两界为火，赤夜将熄",
+    "version_start": "2024-04-23",
+    "version_end": "2024-06-05",
+    "version_img": null,
+    "link": "https://www.miyoushe.com/ys/article/51426021",
+    "preview": "https://act.mihoyo.com/ys/event/e20240413preview-pvtga2/index.html",
+    "remark": null
   }
 ]

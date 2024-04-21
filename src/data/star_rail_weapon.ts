@@ -1013,13 +1013,57 @@ export const starRailWeapon: any[] = [
   },
   {
     "id": 93,
+    "name": "驶向第二次生命",
+    "name_en": "Sailing Towards A Second Life",
+    "name_ja": "二度目の生に向かって",
+    "weapon": 5,
+    "star": 2,
+    "mhy_url": "-",
+    "wiki_url": "sailing-towards-a-second-life",
+    "icon_url": "https://starrail.honeyhunterworld.com/img/item/sailing-towards-a-second-life-item_icon.webp"
+  },
+  {
+    "id": 94,
+    "name": "为了明日的旅途",
+    "name_en": "For Tomorrow's Journey",
+    "name_ja": "明日の旅のために",
+    "weapon": 4,
+    "star": 5,
+    "mhy_url": "-",
+    "wiki_url": "for-tomorrows-journey",
+    "icon_url": "https://starrail.honeyhunterworld.com/img/item/for-tomorrows-journey-item_icon.webp"
+  },
+  {
+    "id": 95,
+    "name": "无边曼舞",
+    "name_en": "Boundless Choreo",
+    "name_ja": "終わりなき舞踏",
+    "weapon": 4,
+    "star": 6,
+    "mhy_url": "-",
+    "wiki_url": "boundless-choreo",
+    "icon_url": "https://starrail.honeyhunterworld.com/img/item/boundless-choreo-item_icon.webp"
+  },
+  {
+    "id": 96,
+    "name": "夜色流光溢彩",
+    "name_en": "Flowing Nightglow",
+    "name_ja": "光あふれる夜",
+    "weapon": 5,
+    "star": 5,
+    "mhy_url": "-",
+    "wiki_url": "flowing-nightglow-item",
+    "icon_url": "https://starrail.honeyhunterworld.com/img/item/flowing-nightglow-item_icon.webp"
+  },
+  {
+    "id": 97,
     "name": "游戏尘寰",
     "name_en": "Earthly Escapade",
     "name_ja": "人生は遊び",
     "weapon": 5,
     "star": 5,
-    "mhy_url": "-",
+    "mhy_url": "2412",
     "wiki_url": "earthly-escapade",
-    "icon_url": "https://hsr.honeyhunterworld.com/img/item/earthly-escapade-item_icon.webp"
+    "icon_url": "https://act-upload.mihoyo.com/sr-wiki/2024/02/26/279865110/06085c3087a073f139293ce200ee7795_4513079687137045348.png"
   }
 ]

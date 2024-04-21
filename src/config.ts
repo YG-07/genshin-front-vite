@@ -18,7 +18,7 @@ const API_URL = IP[env]?.API_URL as any
 const dev = (env == 'development' || env == 'test')
 /** 资源路径 */
 const FILE_BASE = dev ? '/' : '/gs/'
-const version = 'V1.1.240220'
+const version = 'V1.1.240421'
 
 export {
   API_URL, env, dev, version, FILE_BASE

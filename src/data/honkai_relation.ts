@@ -236,5 +236,19 @@ export const honkaiRelation: any[] = [
     "role": "赫丽娅",
     "star": null,
     "damage": null
+  },
+  {
+    "id": 33,
+    "element": null,
+    "role": "瑟莉姆",
+    "star": null,
+    "damage": null
+  },
+  {
+    "id": 34,
+    "element": null,
+    "role": "「灯」",
+    "star": null,
+    "damage": null
   }
 ]
