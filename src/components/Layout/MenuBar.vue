@@ -108,6 +108,38 @@ const menuOptions: MenuOption[] = [
     ]
   },
   {
+    label: "鸣潮",
+    key: "waves",
+    icon: renderIcon(normalIcon('https://prod-alicdn-community.kurobbs.com/forum/5e5bb6eaa1de43e6bcb66eb8d780e92c20240509.png')),
+    children: [
+      {
+        label: renderRoute("waves_role", "共鸣者"),
+        key: "waves_role",
+        icon: renderIcon(normalIcon('https://prod-alicdn-community.kurobbs.com/forum/5e5bb6eaa1de43e6bcb66eb8d780e92c20240509.png'))
+      },
+      {
+        label: renderRoute("waves_weapon", "武器"),
+        key: "waves_weapon",
+        icon: renderIcon(normalIcon('https://prod-alicdn-community.kurobbs.com/forum/f92b449640374599ae7326e2b46f40b620240509.png'))
+      },
+      {
+        label: renderRoute("waves_item", "突破材料"),
+        key: "waves_item",
+        icon: renderIcon(normalIcon('https://prod-alicdn-community.kurobbs.com/forum/c530b90c692e491ab832ac475cd8784f20240509.png'))
+      },
+      {
+        label: renderRoute("echoes", "声骸"),
+        key: "echoes",
+        icon: renderIcon(normalIcon('https://prod-alicdn-community.kurobbs.com/forum/6bcb87fced844da1a4e90989101751ab20240509.png'))
+      },
+      {
+        label: renderRoute("waves_effect", "共鸣效果"),
+        key: "waves_effect",
+        icon: renderIcon(normalIcon('https://prod-alicdn-community.kurobbs.com/forum/dce83a0c37ae42bbb7b08a599381348820240519.png'))
+      },
+    ]
+  },
+  {
     label: "碧蓝档案",
     key: "blue_archive",
     icon: renderIcon(normalIcon('https://cdnimg.gamekee.com/wiki2.0/images/w_240/h_237/829/43637/2023/6/31/862156.png')),

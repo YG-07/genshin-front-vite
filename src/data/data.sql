@@ -1,7 +1,7 @@
 /*
  Navicat Premium Data Transfer
 
- Source Server         : localhost
+ Source Server         : host
  Source Server Type    : MySQL
  Source Server Version : 50726
  Source Host           : localhost:3306
@@ -11,7 +11,7 @@
  Target Server Version : 50726
  File Encoding         : 65001
 
- Date: 21/04/2024 16:39:35
+ Date: 02/06/2024 14:18:43
 */
 
 SET NAMES utf8mb4;
@@ -444,6 +444,8 @@ INSERT INTO `common_const` VALUES (14, 'star_rail_role', '/{id}-character/?lang=
 INSERT INTO `common_const` VALUES (15, 'star_rail_weapon', '/{id}-item/?lang=CN', 'starRail');
 INSERT INTO `common_const` VALUES (16, 'star_rail_mhy_url', '/sr/wiki/content/{id}/detail', 'starRail');
 INSERT INTO `common_const` VALUES (17, 'star_rail_wiki_base', 'https://hsr.honeyhunterworld.com', 'starRail');
+INSERT INTO `common_const` VALUES (18, 'waves_base', 'https://wiki.kurobbs.com', 'waves');
+INSERT INTO `common_const` VALUES (19, 'waves_url', '/mc/item/{id}', 'waves');
 
 -- ----------------------------
 -- Table structure for genshin_book
@@ -1856,5 +1858,332 @@ INSERT INTO `star_rail_weapon` VALUES (94, '为了明日的旅途', 'For Tomorro
 INSERT INTO `star_rail_weapon` VALUES (95, '无边曼舞', 'Boundless Choreo', '終わりなき舞踏', 4, 6, '-', 'boundless-choreo', 'https://starrail.honeyhunterworld.com/img/item/boundless-choreo-item_icon.webp');
 INSERT INTO `star_rail_weapon` VALUES (96, '夜色流光溢彩', 'Flowing Nightglow', '光あふれる夜', 5, 5, '-', 'flowing-nightglow-item', 'https://starrail.honeyhunterworld.com/img/item/flowing-nightglow-item_icon.webp');
 INSERT INTO `star_rail_weapon` VALUES (97, '游戏尘寰', 'Earthly Escapade', '人生は遊び', 5, 5, '2412', 'earthly-escapade', 'https://act-upload.mihoyo.com/sr-wiki/2024/02/26/279865110/06085c3087a073f139293ce200ee7795_4513079687137045348.png');
+
+-- ----------------------------
+-- Table structure for waves_echoes
+-- ----------------------------
+DROP TABLE IF EXISTS `waves_echoes`;
+CREATE TABLE `waves_echoes`  (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
+  `level` int(11) NULL DEFAULT NULL,
+  `suit` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
+  `cost` int(11) NULL DEFAULT NULL,
+  `unusual` int(11) NULL DEFAULT NULL,
+  `url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
+  `icon_url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = MyISAM CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of waves_echoes
+-- ----------------------------
+INSERT INTO `waves_echoes` VALUES (1, '阿嗞嗞', 3, '2,6,8', 2, 0, '1220433708060852224', 'https://prod-alicdn-community.kurobbs.com/forum/88f3ddaacaa24db8b22497f354562e4420240426.png');
+INSERT INTO `waves_echoes` VALUES (2, '哀声鸷', 1, '2', 0, 1, '1226646168287657984', 'https://prod-alicdn-community.kurobbs.com/forum/6b0eae92354149809d27038163476a2f20240426.png');
+INSERT INTO `waves_echoes` VALUES (3, '暗鬃狼', 2, '1,3', 1, 0, '1226590538269016064', 'https://prod-alicdn-community.kurobbs.com/forum/9c7c0b57f7c54db6a0d659cc93ba973620240426.png');
+INSERT INTO `waves_echoes` VALUES (4, '车刃镰', 2, '4,8', 1, 0, '1226640652761120768', 'https://prod-alicdn-community.kurobbs.com/forum/b7327ba4b7d04b51bbba45e79faa2db720240426.png');
+INSERT INTO `waves_echoes` VALUES (5, '刺玫菇', 2, '0,3', 1, 0, '1226588387643834368', 'https://prod-alicdn-community.kurobbs.com/forum/89be7e6fa54a45a185a9a8e49503110d20240426.png');
+INSERT INTO `waves_echoes` VALUES (6, '刺玫菇（稚形）', 3, '3,4', 2, 0, '1226584915250855936', 'https://prod-alicdn-community.kurobbs.com/forum/9c79c765494045778356140847c9919920240426.png');
+INSERT INTO `waves_echoes` VALUES (7, '遁地鼠', 3, '0,3', 2, 0, '1226583774962204672', 'https://prod-alicdn-community.kurobbs.com/forum/e2da3c6f17ec44bab82f9a02697050a120240426.png');
+INSERT INTO `waves_echoes` VALUES (8, '飞廉之猩', 1, '4', 0, 1, '1226644899569418240', 'https://prod-alicdn-community.kurobbs.com/forum/28e034b5491b4ff5b1f666c01fb599e520240426.png');
+INSERT INTO `waves_echoes` VALUES (9, '咕咕河豚', 3, '0,2', 2, 0, '1226583048462614528', 'https://prod-alicdn-community.kurobbs.com/forum/ecd7eb4a70604810b4e912e6c4f5586020240426.png');
+INSERT INTO `waves_echoes` VALUES (10, '寒霜陆龟', 3, '0,2', 2, 1, '1226588979015532544', 'https://prod-alicdn-community.kurobbs.com/forum/9ce8a0ef4f174d0a8e547abc22a353c320240426.png');
+INSERT INTO `waves_echoes` VALUES (11, '呼咻咻', 3, '4,7,8', 2, 0, '1226484952189714432', 'https://prod-alicdn-community.kurobbs.com/forum/0169f205ae224a5790207540f65fe08d20240426.png');
+INSERT INTO `waves_echoes` VALUES (12, '辉萤军势', 1, '0', 0, 0, '1226645831690567680', 'https://prod-alicdn-community.kurobbs.com/forum/474a951580dc4230b0af1f514e7ec06b20240426.png');
+INSERT INTO `waves_echoes` VALUES (13, '火鬃狼', 3, '1,7', 2, 0, '1226590922899275776', 'https://prod-alicdn-community.kurobbs.com/forum/e428ba1cfa504a1eb1ba3704ce8a642c20240426.png');
+INSERT INTO `waves_echoes` VALUES (14, '坚岩斗士', 2, '7,8', 1, 0, '1226486792046329856', 'https://prod-alicdn-community.kurobbs.com/forum/65d31043ee3f4e96b42239e109d3151a20240426.png');
+INSERT INTO `waves_echoes` VALUES (15, '箭簇熊', 2, '6,8', 1, 0, '1226590192217964544', 'https://prod-alicdn-community.kurobbs.com/forum/f41ba7c7a298425db6096e6398413c0f20240426.png');
+INSERT INTO `waves_echoes` VALUES (16, '惊蛰猎手', 3, '1,5', 2, 0, '1226565696153010176', 'https://prod-alicdn-community.kurobbs.com/forum/c3e21f5fa27542dab5e10918fa25db4720240426.png');
+INSERT INTO `waves_echoes` VALUES (17, '晶螯蝎', 3, '6,8', 2, 0, '1226638667651563520', 'https://prod-alicdn-community.kurobbs.com/forum/289698a6d68c4cb1b8b43310d3dba99420240426.png');
+INSERT INTO `waves_echoes` VALUES (18, '啾啾河豚', 3, '3,4', 2, 0, '1226583367284244480', 'https://prod-alicdn-community.kurobbs.com/forum/793e4a9865b94c1b8ca49a3f0faaaed920240426.png');
+INSERT INTO `waves_echoes` VALUES (19, '聚械机偶', 1, '6', 0, 0, '1226646691564830720', 'https://prod-alicdn-community.kurobbs.com/forum/b262f4102cc141b4bf729231030f363d20240426.png');
+INSERT INTO `waves_echoes` VALUES (20, '咔嚓嚓', 3, '1,6,7', 2, 0, '1226485748633518080', 'https://prod-alicdn-community.kurobbs.com/forum/593b08fd33df403c97744343f5117ae620240426.png');
+INSERT INTO `waves_echoes` VALUES (21, '冷凝棱镜', 3, '0,3,8', 2, 0, '1226489560878366720', 'https://prod-alicdn-community.kurobbs.com/forum/27f965424e7e451aaeab967d99ea286120240426.png');
+INSERT INTO `waves_echoes` VALUES (22, '燎照之骑', 1, '1', 0, 0, '1226643230416781312', 'https://prod-alicdn-community.kurobbs.com/forum/d4223bda276e4417bc24af1283bdd0f420240426.png');
+INSERT INTO `waves_echoes` VALUES (23, '裂变幼岩', 3, '5,7,8', 2, 0, '1226488419553722368', 'https://prod-alicdn-community.kurobbs.com/forum/a4606e65227a4c85a0d7de4aa1a2fcc620240426.png');
+INSERT INTO `waves_echoes` VALUES (24, '绿熔蜥', 2, '1,8', 1, 0, '1226584585180102656', 'https://prod-alicdn-community.kurobbs.com/forum/f8f633034f3f4e9c92879e17abb1072e20240426.png');
+INSERT INTO `waves_echoes` VALUES (25, '绿熔蜥（稚形）', 3, '1,5,6', 2, 0, '1226584300298780672', 'https://prod-alicdn-community.kurobbs.com/forum/932037c0c114454c82a27d35a8c0c16b20240426.png');
+INSERT INTO `waves_echoes` VALUES (26, '鸣泣战士', 3, '1,4,5', 2, 0, '1226564083271155712', 'https://prod-alicdn-community.kurobbs.com/forum/3a7d10fd860f45808e6ee4fa3fcde6a920240426.png');
+INSERT INTO `waves_echoes` VALUES (27, '鸣钟之龟', 0, '7,8', 0, 0, '1226643538400329728', 'https://prod-alicdn-community.kurobbs.com/forum/abe3743f93fc4fe5bd4dbdfd7affa15420240426.png');
+INSERT INTO `waves_echoes` VALUES (28, '冥渊守卫', 2, '6,7', 1, 0, '1226578462708416512', 'https://prod-alicdn-community.kurobbs.com/forum/2f3a653b034d4940b3d36c6a64b0e17a20240426.png');
+INSERT INTO `waves_echoes` VALUES (29, '磐石守卫', 2, '2,7', 1, 1, '1226576414143234048', 'https://prod-alicdn-community.kurobbs.com/forum/10741880c9044363bc9bd9ec027edaaf20240426.png');
+INSERT INTO `waves_echoes` VALUES (30, '破霜猎手', 3, '0,2', 2, 0, '1226565293197836288', 'https://prod-alicdn-community.kurobbs.com/forum/2bdef5792db44fa3a42748373d2d798a20240426.png');
+INSERT INTO `waves_echoes` VALUES (31, '青羽鹭', 2, '2,4', 1, 0, '1226574587876163584', 'https://prod-alicdn-community.kurobbs.com/forum/11510b2a239a4c9ebc3c8f3d9ea1a90020240426.png');
+INSERT INTO `waves_echoes` VALUES (32, '热熔棱镜', 3, '0,1,6', 2, 0, '1226490024546091008', 'https://prod-alicdn-community.kurobbs.com/forum/2bc4dc14bfb54af490df01140331345220240426.png');
+INSERT INTO `waves_echoes` VALUES (33, '审判战士', 3, '2,3', 2, 0, '1226564860433743872', 'https://prod-alicdn-community.kurobbs.com/forum/1c1da210b52645ad8d6ef8d522fae7ef20240426.png');
+INSERT INTO `waves_echoes` VALUES (34, '朔雷之鳞', 1, '5', 0, 0, '1226643913647931392', 'https://prod-alicdn-community.kurobbs.com/forum/8c108c3f9a084929b64d1c5c7bb6b42620240427.png');
+INSERT INTO `waves_echoes` VALUES (35, '碎獠猪', 3, '0,4,8', 2, 0, '1226582425977569280', 'https://prod-alicdn-community.kurobbs.com/forum/2b539da411d34331be4570036ddc023e20240427.png');
+INSERT INTO `waves_echoes` VALUES (36, '通行灯偶', 3, '1,4,5', 2, 0, '1226641436634595328', 'https://prod-alicdn-community.kurobbs.com/forum/6c9b3aeea9f2452fb5ace0137f370b0020240427.png');
+INSERT INTO `waves_echoes` VALUES (37, '呜咔咔', 3, '3,6,7', 2, 0, '1226489048216977408', 'https://prod-alicdn-community.kurobbs.com/forum/2bbdf5b238b244d7ab38e21c9d60da0320240426.png');
+INSERT INTO `waves_echoes` VALUES (38, '无常凶鹭', 1, '8', 0, 1, '1226647016656945152', 'https://prod-alicdn-community.kurobbs.com/forum/8b71b922b9e047089252fc809b3c1a0520240426.png');
+INSERT INTO `waves_echoes` VALUES (39, '无冠者', 1, '3', 0, 0, '1226644317286776832', 'https://prod-alicdn-community.kurobbs.com/forum/04e42a1684004c4eadecfbccc36dc1b420240427.png');
+INSERT INTO `waves_echoes` VALUES (40, '无妄者', 0, '3', 0, 0, '1232847204642304000', 'https://prod-alicdn-community.kurobbs.com/forum/bce78415bf9648a3b5922f4856f44ade20240426.jpg');
+INSERT INTO `waves_echoes` VALUES (41, '戏猿', 2, '4,7', 1, 0, '1226639756450938880', 'https://prod-alicdn-community.kurobbs.com/forum/fbf019b1e67c4806afabce7abea7215520240426.png');
+INSERT INTO `waves_echoes` VALUES (42, '先锋幼岩', 3, '5,6,7', 2, 0, '1226487837967335424', 'https://prod-alicdn-community.kurobbs.com/forum/775f00cce78d4ec18ec0d0626e17875c20240515.png');
+INSERT INTO `waves_echoes` VALUES (43, '巡徊猎手', 3, '4,5', 2, 0, '1226567441608425472', 'https://prod-alicdn-community.kurobbs.com/forum/e0e5bf0f5ee04fbdb9ac7bc56bab806420240426.png');
+INSERT INTO `waves_echoes` VALUES (44, '巡哨机傀', 2, '0,2', 1, 0, '1226640976158736384', 'https://prod-alicdn-community.kurobbs.com/forum/82df33ec8ee143318e64c5d06df8b18620240427.png');
+INSERT INTO `waves_echoes` VALUES (45, '湮灭棱镜', 3, '2,3,5', 2, 0, '1226563572111327232', 'https://prod-alicdn-community.kurobbs.com/forum/b08de64745534b4c8a49e17bdbca924020240426.png');
+INSERT INTO `waves_echoes` VALUES (46, '衍射棱镜', 3, '1,2,5', 2, 0, '1226539187111542784', 'https://prod-alicdn-community.kurobbs.com/forum/94a69cd7077f49cb885b2f6e2e5575fc20240426.png');
+INSERT INTO `waves_echoes` VALUES (47, '游弋蝶', 3, '2,7,8', 2, 0, '1226581622646718464', 'https://prod-alicdn-community.kurobbs.com/forum/6ca2cbcef1484e81bf2330c698ed27ca20240427.png');
+INSERT INTO `waves_echoes` VALUES (48, '幼猿', 3, '4,6', 2, 0, '1226639387960360960', 'https://prod-alicdn-community.kurobbs.com/forum/739a60644aaf4c9392bc746bc1e0d42a20240426.png');
+INSERT INTO `waves_echoes` VALUES (49, '云闪之鳞', 1, '5', 0, 1, '1226642459549843456', 'https://prod-alicdn-community.kurobbs.com/forum/e21bf8535ec846309a8677e098da1e1620240427.png');
+INSERT INTO `waves_echoes` VALUES (50, '振铎乐师', 2, '0,3', 1, 0, '1226575731407011840', 'https://prod-alicdn-community.kurobbs.com/forum/118cd65a53274b0d8606e10bc438f32620240427.png');
+INSERT INTO `waves_echoes` VALUES (51, '紫羽鹭', 2, '1,5', 1, 0, '1226568900014063616', 'https://prod-alicdn-community.kurobbs.com/forum/36a883d4c3994e648d0f70997c349f7120240426.png');
+INSERT INTO `waves_echoes` VALUES (52, '奏谕乐师', 2, '5,6', 1, 0, '1226575239276740608', 'https://prod-alicdn-community.kurobbs.com/forum/2f98d4f95a0d42329c225913527fe80f20240427.png');
+
+-- ----------------------------
+-- Table structure for waves_echoes_effect
+-- ----------------------------
+DROP TABLE IF EXISTS `waves_echoes_effect`;
+CREATE TABLE `waves_echoes_effect`  (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
+  `suit2` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
+  `suit5` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
+  `url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
+  `icon_url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = MyISAM CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of waves_echoes_effect
+-- ----------------------------
+INSERT INTO `waves_echoes_effect` VALUES (1, '凝夜白霜', '冷凝伤害提升10%', '使用普攻或重击后，冷凝伤害提升10%，该效果可叠加3层，持续15秒', '1212037090995421184', 'https://prod-alicdn-community.kurobbs.com/forum/dce83a0c37ae42bbb7b08a599381348820240519.png');
+INSERT INTO `waves_echoes_effect` VALUES (2, '熔山裂谷', '热熔伤害提升10%', '使用共鸣技能时，热熔伤害提升30%，持续15秒', '1233505199486468096', 'https://prod-alicdn-community.kurobbs.com/forum/c05a891d08044d86b733d69c4e49100620240519.png');
+INSERT INTO `waves_echoes_effect` VALUES (3, '浮星祛暗', '衍射伤害提升10%', '使用变奏技能登场时，衍射伤害提升30%，持续15秒', '1233504230639992832', 'https://prod-alicdn-community.kurobbs.com/forum/929de412225047a5b9da6552bc7f278d20240519.png');
+INSERT INTO `waves_echoes_effect` VALUES (4, '沉日劫明', '湮灭伤害提升10%', '使用普攻或重击时，湮灭伤害提升7.5%，该效果可叠加4层，持续15秒', '1233504904249409536', 'https://prod-alicdn-community.kurobbs.com/forum/beb4b925a193420cb7df565a089265d420240519.png');
+INSERT INTO `waves_echoes_effect` VALUES (5, '啸谷长风', '气动伤害提升10%', '使用变奏技能登场时，气动伤害提升30%，持续15秒', '1233504762221887488', 'https://prod-alicdn-community.kurobbs.com/forum/38b9912eaea44a56a61329382fa49fb520240519.png');
+INSERT INTO `waves_echoes_effect` VALUES (6, '彻空冥雷', '导电伤害提升10%', '使用重击或共鸣技能时，各获得一层导电伤害提升15%的效果，该效果可叠加两层，每层各持续15秒', '1233505002939936768', 'https://prod-alicdn-community.kurobbs.com/forum/4681bf1b8e174d6abda7686aaba51e4e20240519.png');
+INSERT INTO `waves_echoes_effect` VALUES (7, '不绝余音', '攻击力提升10%', '在场时，自身攻击力每1.5秒提升5%，该效果最多叠加四层。延奏技能伤害提升60%', '1233505098310021120', 'https://prod-alicdn-community.kurobbs.com/forum/f1603a6a58c64cc7835d25cba3437c1620240519.png');
+INSERT INTO `waves_echoes_effect` VALUES (8, '轻云出月', '共鸣效率提升10%', '使用延奏技能后，下一个登场的共鸣者攻击力提升22.5%，持续15秒', '1233505120063127552', 'https://prod-alicdn-community.kurobbs.com/forum/c2053819f817439a9a664ad2d0f1085220240519.png');
+INSERT INTO `waves_echoes_effect` VALUES (9, '隐世回光', '治疗效果提升10%', '自身为友方提供治疗时，全队共鸣者攻击力提升15%，持续30秒', '1233106270208733184', 'https://prod-alicdn-community.kurobbs.com/forum/9cec31b96cc04015a04e14952f33304720240519.png');
+
+-- ----------------------------
+-- Table structure for waves_item
+-- ----------------------------
+DROP TABLE IF EXISTS `waves_item`;
+CREATE TABLE `waves_item`  (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
+  `item` int(11) NULL DEFAULT NULL,
+  `star` int(11) NULL DEFAULT NULL,
+  `url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
+  `icon_url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = MyISAM CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of waves_item
+-- ----------------------------
+INSERT INTO `waves_item` VALUES (1, '声律花蕾', 0, 5, '1228421164320243712', 'https://prod-alicdn-community.kurobbs.com/forum/3bbec3f3ac424473b36dc524963d3d4020240424.png');
+INSERT INTO `waves_item` VALUES (2, '声律新叶', 0, 4, '1228420963434053632', 'https://prod-alicdn-community.kurobbs.com/forum/7998968b100a433380c8dfcc9ab6cc8e20240424.png');
+INSERT INTO `waves_item` VALUES (3, '声律萌芽', 0, 3, '1228420688862330880', 'https://prod-alicdn-community.kurobbs.com/forum/74ea8789d6874a89a74223952faff0fb20240424.png');
+INSERT INTO `waves_item` VALUES (4, '声律种核', 0, 2, '1228420453004034048', 'https://prod-alicdn-community.kurobbs.com/forum/ff68427677f34e0989401aa12429984b20240424.png');
+INSERT INTO `waves_item` VALUES (5, '海蚀嵌合体239', 1, 5, '1228420233943924736', 'https://prod-alicdn-community.kurobbs.com/forum/0e65e0148e664937b8e733478fb19e1420240424.png');
+INSERT INTO `waves_item` VALUES (6, '海蚀嵌合体235', 1, 4, '1228419607126163456', 'https://prod-alicdn-community.kurobbs.com/forum/60c0e3ecf556417699f47301176052ff20240424.png');
+INSERT INTO `waves_item` VALUES (7, '海蚀嵌合体226', 1, 3, '1228419199683084288', 'https://prod-alicdn-community.kurobbs.com/forum/612374a29ce14304a945f91b7a77120a20240424.png');
+INSERT INTO `waves_item` VALUES (8, '海蚀嵌合体210', 1, 2, '1228418707477315584', 'https://prod-alicdn-community.kurobbs.com/forum/7dd9516bf5654767b8e095e12b0f016f20240424.png');
+INSERT INTO `waves_item` VALUES (9, '急板涡流', 2, 5, '1228417795086172160', 'https://prod-alicdn-community.kurobbs.com/forum/949fc328fdec43438b8ba9f31bf6872c20240424.png');
+INSERT INTO `waves_item` VALUES (10, '行板涡流', 2, 4, '1228417620301135872', 'https://prod-alicdn-community.kurobbs.com/forum/d6a4a69ad65e466d991f81dcbcd4500620240424.png');
+INSERT INTO `waves_item` VALUES (11, '柔板涡流', 2, 3, '1228417408962740224', 'https://prod-alicdn-community.kurobbs.com/forum/c79dc21812114c76b03975d17787d16b20240424.png');
+INSERT INTO `waves_item` VALUES (12, '慢板涡流', 2, 2, '1228416958960058368', 'https://prod-alicdn-community.kurobbs.com/forum/d632ef9a46ef4b22a7c591db0a7ad00620240424.png');
+INSERT INTO `waves_item` VALUES (13, '高纯晶化燃素', 3, 5, '1228416437650014208', 'https://prod-alicdn-community.kurobbs.com/forum/a815d2e02d424b5bbfddb2e2acdd49cb20240424.png');
+INSERT INTO `waves_item` VALUES (14, '精馏晶化燃素', 3, 4, '1228416237443301376', 'https://prod-alicdn-community.kurobbs.com/forum/6852ffbf11be418490c266703372762020240424.png');
+INSERT INTO `waves_item` VALUES (15, '粗萃晶化燃素', 3, 3, '1228415271956463616', 'https://prod-alicdn-community.kurobbs.com/forum/9f8f502d4a504fef8b3c03584c42b5d320240424.png');
+INSERT INTO `waves_item` VALUES (16, '含杂晶化燃素', 3, 2, '1228415017123135488', 'https://prod-alicdn-community.kurobbs.com/forum/4c084711d0cf45dc89de74831019842420240424.png');
+INSERT INTO `waves_item` VALUES (17, '异构金属液滴', 4, 5, '1228414540012666880', 'https://prod-alicdn-community.kurobbs.com/forum/9cb131e2c86041aa87e1208861324b0a20240518.png');
+INSERT INTO `waves_item` VALUES (18, '极化金属液滴', 4, 4, '1228414386790547456', 'https://prod-alicdn-community.kurobbs.com/forum/69cc0536735b4105a5b855d3290df1eb20240424.png');
+INSERT INTO `waves_item` VALUES (19, '活性金属液滴', 4, 3, '1228407125724708864', 'https://prod-alicdn-community.kurobbs.com/forum/6565e2b368b44a00ab59e4f6ae0d5bde20240424.png');
+INSERT INTO `waves_item` VALUES (20, '惰性金属液滴', 4, 2, '1228402999284547584', 'https://prod-alicdn-community.kurobbs.com/forum/d57965a5120849efa16798b370a7544220240424.png');
+
+-- ----------------------------
+-- Table structure for waves_relation
+-- ----------------------------
+DROP TABLE IF EXISTS `waves_relation`;
+CREATE TABLE `waves_relation`  (
+  `id` int(11) NOT NULL,
+  `element_type` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
+  `weapon_type` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
+  `item_type` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
+  `echoes_level_type` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
+  `echoes_suit_type` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
+  `echoes_cost_type` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
+  `echoes_unusual_type` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = MyISAM CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of waves_relation
+-- ----------------------------
+INSERT INTO `waves_relation` VALUES (-1, '全部', '全部', '全部', '全部', '全部', '全部', '全部');
+INSERT INTO `waves_relation` VALUES (0, '气动', '长刃', '声律', '海啸', '凝夜白霜', 'COST 4', '普通');
+INSERT INTO `waves_relation` VALUES (1, '导电', '臂铠', '海蚀嵌合体', '怒涛', '熔山裂谷', 'COST 3', '异相声骸');
+INSERT INTO `waves_relation` VALUES (2, '冷凝', '迅刀', '涡流', '巨浪', '浮星祛暗', 'COST 1', NULL);
+INSERT INTO `waves_relation` VALUES (3, '热熔', '配枪', '化燃素', '轻波', '沉日劫明', NULL, NULL);
+INSERT INTO `waves_relation` VALUES (4, '衍射', '音感仪', '金属液滴', NULL, '啸谷长风', NULL, NULL);
+INSERT INTO `waves_relation` VALUES (5, '湮灭', NULL, NULL, NULL, '彻空冥雷', NULL, NULL);
+INSERT INTO `waves_relation` VALUES (6, NULL, NULL, NULL, NULL, '不绝余音', NULL, NULL);
+INSERT INTO `waves_relation` VALUES (7, NULL, NULL, NULL, NULL, '隐世回光', NULL, NULL);
+INSERT INTO `waves_relation` VALUES (8, NULL, NULL, NULL, NULL, '轻云出月', NULL, NULL);
+
+-- ----------------------------
+-- Table structure for waves_role
+-- ----------------------------
+DROP TABLE IF EXISTS `waves_role`;
+CREATE TABLE `waves_role`  (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
+  `star` int(11) NULL DEFAULT NULL,
+  `element` int(11) NULL DEFAULT NULL,
+  `weapon` int(11) NULL DEFAULT NULL,
+  `item` int(11) NULL DEFAULT NULL,
+  `url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
+  `icon_url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = MyISAM CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of waves_role
+-- ----------------------------
+INSERT INTO `waves_role` VALUES (1, '安可', 5, 3, 4, 2, '1242296163679776768', 'https://prod-alicdn-community.kurobbs.com/forum/60608a0a87b84cdcb195305970f007c620240516.png');
+INSERT INTO `waves_role` VALUES (2, '忌炎', 5, 0, 0, 1, '1240073643014045696', 'https://prod-alicdn-community.kurobbs.com/forum/0a046ba41d274b46850d710fe0e068c420240516.png');
+INSERT INTO `waves_role` VALUES (3, '鉴心', 5, 0, 1, 0, '1242295527595823104', 'https://prod-alicdn-community.kurobbs.com/forum/ef1200b85e2141cda8e1d0414d76958d20240516.png');
+INSERT INTO `waves_role` VALUES (4, '卡卡罗', 5, 1, 0, 1, '1242295483584421888', 'https://prod-alicdn-community.kurobbs.com/forum/0f38553c30c148a89d417463457dd71520240516.png');
+INSERT INTO `waves_role` VALUES (5, '凌阳', 5, 2, 1, 0, '1242296125975633920', 'https://prod-alicdn-community.kurobbs.com/forum/d5644b750f094fbaaee0b14f4fe9bc5520240516.png');
+INSERT INTO `waves_role` VALUES (6, '漂泊者-男-湮灭', 5, 5, 2, 4, '1242115703531454464', 'https://prod-alicdn-community.kurobbs.com/forum/4a17be9c00854f9ca85f4b460b32653f20240527.png');
+INSERT INTO `waves_role` VALUES (7, '漂泊者-男-衍射', 5, 4, 2, 4, '1239724074505539584', 'https://prod-alicdn-community.kurobbs.com/forum/987ea840e0034091b409e4a5b7d320d120240527.png');
+INSERT INTO `waves_role` VALUES (8, '漂泊者-女-湮灭', 5, 5, 2, 4, '1242103196649603072', 'https://prod-alicdn-community.kurobbs.com/forum/b406ac3876794ec6bbfe538fbe40ae4220240527.png');
+INSERT INTO `waves_role` VALUES (9, '漂泊者-女-衍射', 5, 4, 2, 4, '1242294789908504576', 'https://prod-alicdn-community.kurobbs.com/forum/b44dad638ce6498284fb5b569c0a2ed720240527.png');
+INSERT INTO `waves_role` VALUES (10, '维里奈', 5, 4, 4, 2, '1242295554161025024', 'https://prod-alicdn-community.kurobbs.com/forum/76b353a5c6484f56b6136ebf66f884c020240516.png');
+INSERT INTO `waves_role` VALUES (11, '白芷', 4, 2, 4, 2, '1233429754977792000', 'https://prod-alicdn-community.kurobbs.com/forum/958496ed75854bd98449b419a2c7842d20240516.png');
+INSERT INTO `waves_role` VALUES (12, '炽霞', 4, 3, 3, 3, '1240039812638883840', 'https://prod-alicdn-community.kurobbs.com/forum/3e098f94b9314c979200fd342e0bc89520240516.png');
+INSERT INTO `waves_role` VALUES (13, '丹瑾', 4, 5, 2, 4, '1233430505140629504', 'https://prod-alicdn-community.kurobbs.com/forum/05d2882b5bbc4d50b7e9a54ca5a9c34420240516.png');
+INSERT INTO `waves_role` VALUES (14, '莫特斐', 4, 3, 3, 3, '1240157802556833792', 'https://prod-alicdn-community.kurobbs.com/forum/7144c592e83f4bc695b9eea3065a922b20240516.png');
+INSERT INTO `waves_role` VALUES (15, '秋水', 4, 0, 3, 3, '1233210783276019712', 'https://prod-alicdn-community.kurobbs.com/forum/154338ab1ce24c07ad939913e62aed3320240516.png');
+INSERT INTO `waves_role` VALUES (16, '散华', 4, 2, 2, 4, '1233492733107564544', 'https://prod-alicdn-community.kurobbs.com/forum/42e5f2298c544b0f88dfa248914f02d820240516.png');
+INSERT INTO `waves_role` VALUES (17, '桃祈', 4, 5, 0, 1, '1240051046261592064', 'https://prod-alicdn-community.kurobbs.com/forum/1bf059fd27d1467786469d632d698d9a20240516.png');
+INSERT INTO `waves_role` VALUES (18, '秧秧', 4, 0, 2, 4, '1233436648562032640', 'https://prod-alicdn-community.kurobbs.com/forum/266bbd25a203481bbf02fd4cf38f38ec20240516.png');
+INSERT INTO `waves_role` VALUES (19, '渊武', 4, 1, 1, 0, '1239990507047161856', 'https://prod-alicdn-community.kurobbs.com/forum/318e1f2e17a4416eb7213e62d7f153ae20240516.png');
+
+-- ----------------------------
+-- Table structure for waves_select_element
+-- ----------------------------
+DROP TABLE IF EXISTS `waves_select_element`;
+CREATE TABLE `waves_select_element`  (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
+  `icon_url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = MyISAM CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of waves_select_element
+-- ----------------------------
+INSERT INTO `waves_select_element` VALUES (0, '气动', 'img/气动.png');
+INSERT INTO `waves_select_element` VALUES (1, '导电', 'img/导电.png');
+INSERT INTO `waves_select_element` VALUES (2, '冷凝', 'img/冷凝.png');
+INSERT INTO `waves_select_element` VALUES (3, '热熔', 'img/热熔.png');
+INSERT INTO `waves_select_element` VALUES (4, '衍射', 'img/衍射.png');
+INSERT INTO `waves_select_element` VALUES (5, '湮灭', 'img/湮灭.png');
+
+-- ----------------------------
+-- Table structure for waves_select_item
+-- ----------------------------
+DROP TABLE IF EXISTS `waves_select_item`;
+CREATE TABLE `waves_select_item`  (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
+  `icon_url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = MyISAM CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of waves_select_item
+-- ----------------------------
+INSERT INTO `waves_select_item` VALUES (0, '声律', 'https://prod-alicdn-community.kurobbs.com/forum/3bbec3f3ac424473b36dc524963d3d4020240424.png');
+INSERT INTO `waves_select_item` VALUES (1, '海蚀嵌合体', 'https://prod-alicdn-community.kurobbs.com/forum/0e65e0148e664937b8e733478fb19e1420240424.png');
+INSERT INTO `waves_select_item` VALUES (2, '涡流', 'https://prod-alicdn-community.kurobbs.com/forum/949fc328fdec43438b8ba9f31bf6872c20240424.png');
+INSERT INTO `waves_select_item` VALUES (3, '化燃素', 'https://prod-alicdn-community.kurobbs.com/forum/a815d2e02d424b5bbfddb2e2acdd49cb20240424.png');
+INSERT INTO `waves_select_item` VALUES (4, '金属液滴', 'https://prod-alicdn-community.kurobbs.com/forum/9cb131e2c86041aa87e1208861324b0a20240518.png');
+
+-- ----------------------------
+-- Table structure for waves_weapon
+-- ----------------------------
+DROP TABLE IF EXISTS `waves_weapon`;
+CREATE TABLE `waves_weapon`  (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
+  `weapon` int(11) NULL DEFAULT NULL,
+  `star` int(11) NULL DEFAULT NULL,
+  `item` int(11) NULL DEFAULT NULL,
+  `url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
+  `icon_url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = MyISAM CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of waves_weapon
+-- ----------------------------
+INSERT INTO `waves_weapon` VALUES (1, '苍鳞千嶂', 0, 5, 1, '1212075560371568640', 'https://prod-alicdn-community.kurobbs.com/forum/e99be3c12c4d499e94ed7e1018d9aa2020240515.png');
+INSERT INTO `waves_weapon` VALUES (2, '浩境粼光', 0, 5, 1, '1234660319850987520', 'https://prod-alicdn-community.kurobbs.com/forum/9d03ac72843f4678ad74f19b63b8562220240515.png');
+INSERT INTO `waves_weapon` VALUES (3, '千古洑流', 2, 5, 4, '1235741466408321024', 'https://prod-alicdn-community.kurobbs.com/forum/0e0b0d56a84545b5b5bb2f4572987cf620240515.png');
+INSERT INTO `waves_weapon` VALUES (4, '擎渊怒涛', 1, 5, 0, '1236476554553131008', 'https://prod-alicdn-community.kurobbs.com/forum/d389e53ffeea4243a7d98c05353e1a4e20240515.png');
+INSERT INTO `waves_weapon` VALUES (5, '停驻之烟', 3, 5, 3, '1236044731675115520', 'https://prod-alicdn-community.kurobbs.com/forum/3ad0f3ade9154c31b801431b0794871a20240515.png');
+INSERT INTO `waves_weapon` VALUES (6, '漪澜浮录', 4, 5, 2, '1237352221406724096', 'https://prod-alicdn-community.kurobbs.com/forum/c30c1eead55a477f8bdef645dd2fcc6920240515.png');
+INSERT INTO `waves_weapon` VALUES (7, '奔雷', 3, 4, 3, '1236043792183128064', 'https://prod-alicdn-community.kurobbs.com/forum/69623bd4215540e19dea3804828c0bea20240515.png');
+INSERT INTO `waves_weapon` VALUES (8, '不归孤军', 2, 4, 4, '1235737480380874752', 'https://prod-alicdn-community.kurobbs.com/forum/19e96574f1744469a52dd4c2bc686fac20240515.png');
+INSERT INTO `waves_weapon` VALUES (9, '穿击枪-26型', 3, 4, 3, '1236042844271869952', 'https://prod-alicdn-community.kurobbs.com/forum/9fe166e88f8449d2a7c3b53d404fcf6320240515.png');
+INSERT INTO `waves_weapon` VALUES (10, '东落', 0, 4, 1, '1234657707445518336', 'https://prod-alicdn-community.kurobbs.com/forum/23ed6190c5f24b488cc094ba39c37a8420240515.png');
+INSERT INTO `waves_weapon` VALUES (11, '飞景', 2, 4, 4, '1235740456805793792', 'https://prod-alicdn-community.kurobbs.com/forum/0986d693d15142a79d3ab0516994de3620240515.png');
+INSERT INTO `waves_weapon` VALUES (12, '飞逝', 3, 4, 3, '1236041531165310976', 'https://prod-alicdn-community.kurobbs.com/forum/c49b9c52b2cc411e9edf2fcf276768f420240515.png');
+INSERT INTO `waves_weapon` VALUES (13, '钢影拳-21丁型', 1, 4, 0, '1236473086564171776', 'https://prod-alicdn-community.kurobbs.com/forum/057a625afefc4c31aa5e478bee0ce90e20240515.png');
+INSERT INTO `waves_weapon` VALUES (14, '骇行', 1, 4, 0, '1236475489592733696', 'https://prod-alicdn-community.kurobbs.com/forum/b9936dbc75f643f5989ea2730b81438b20240515.png');
+INSERT INTO `waves_weapon` VALUES (15, '呼啸重音', 1, 4, 0, '1236470883560521728', 'https://prod-alicdn-community.kurobbs.com/forum/793663e9b6764769b6b4798d5a53da9320240515.png');
+INSERT INTO `waves_weapon` VALUES (16, '华彩乐段', 3, 4, 3, '1236038785232728064', 'https://prod-alicdn-community.kurobbs.com/forum/4bcec6be3c5f4c25b03c3a5dfaede1ca20240515.png');
+INSERT INTO `waves_weapon` VALUES (17, '今州守望', 4, 4, 2, '1237127161969045504', 'https://prod-alicdn-community.kurobbs.com/forum/09524ff61b2641bca039cebd79c267c320240515.png');
+INSERT INTO `waves_weapon` VALUES (18, '金掌', 1, 4, 0, '1236474584931692544', 'https://prod-alicdn-community.kurobbs.com/forum/27cb09cb87ba4a1f9b3099cc336b24db20240515.png');
+INSERT INTO `waves_weapon` VALUES (19, '鸣动仪-25型', 4, 4, 2, '1237126664622505984', 'https://prod-alicdn-community.kurobbs.com/forum/2d227d4065284c23b838221f5cd8c14620240515.png');
+INSERT INTO `waves_weapon` VALUES (20, '袍泽之固', 1, 4, 0, '1236471541259497472', 'https://prod-alicdn-community.kurobbs.com/forum/21cea73aee744eb7a01452a76d97561020240515.png');
+INSERT INTO `waves_weapon` VALUES (21, '奇幻变奏', 4, 4, 2, '1237124902078050304', 'https://prod-alicdn-community.kurobbs.com/forum/a4345a9622ec4a4b95ae0938ec75a0f620240515.png');
+INSERT INTO `waves_weapon` VALUES (22, '清音', 4, 4, 2, '1237130153218080768', 'https://prod-alicdn-community.kurobbs.com/forum/5aba0358dc4c409e808af72c7a5447ea20240515.png');
+INSERT INTO `waves_weapon` VALUES (23, '瞬斩刀-18型', 2, 4, 4, '1235736228783783936', 'https://prod-alicdn-community.kurobbs.com/forum/2916665c825a472184cb849c888cd36a20240515.png');
+INSERT INTO `waves_weapon` VALUES (24, '纹秋', 0, 4, 1, '1234556940667650048', 'https://prod-alicdn-community.kurobbs.com/forum/ac0092a1780949b38c849e7af20cd95b20240515.png');
+INSERT INTO `waves_weapon` VALUES (25, '无眠烈火', 3, 4, 3, '1236039842291056640', 'https://prod-alicdn-community.kurobbs.com/forum/0d4de61a0aaa46889e61ee41cf21c73120240515.png');
+INSERT INTO `waves_weapon` VALUES (26, '西升', 2, 4, 4, '1235738854938181632', 'https://prod-alicdn-community.kurobbs.com/forum/68930990cedc4556a34386cd15326aff20240515.png');
+INSERT INTO `waves_weapon` VALUES (27, '行进序曲', 2, 4, 4, '1235734921134014464', 'https://prod-alicdn-community.kurobbs.com/forum/22ae880ce27545618ca1959c11542db220240515.png');
+INSERT INTO `waves_weapon` VALUES (28, '异度', 4, 4, 2, '1237128153629786112', 'https://prod-alicdn-community.kurobbs.com/forum/2ea2eea1938340409820b3f2507899b920240515.png');
+INSERT INTO `waves_weapon` VALUES (29, '异响空灵', 0, 4, 1, '1234655249734369280', 'https://prod-alicdn-community.kurobbs.com/forum/b93cc8da9e35477ebdad88922db05c2920240515.png');
+INSERT INTO `waves_weapon` VALUES (30, '永夜长明', 0, 4, 1, '1234520763155677184', 'https://prod-alicdn-community.kurobbs.com/forum/ce79ed42c38e4c0aa9f42890d8e6177520240515.png');
+INSERT INTO `waves_weapon` VALUES (31, '重破刃-41型', 0, 4, 1, '1234524207241297920', 'https://prod-alicdn-community.kurobbs.com/forum/a0d8e0ec335c4fa68941908141f812aa20240515.png');
+INSERT INTO `waves_weapon` VALUES (32, '暗夜臂铠·夜芒', 1, 3, 0, '1236466103190618112', 'https://prod-alicdn-community.kurobbs.com/forum/69f8d713b297467e8fc5be57d4aae2ed20240515.png');
+INSERT INTO `waves_weapon` VALUES (33, '暗夜矩阵·暝光', 4, 3, 2, '1237119572410957824', 'https://prod-alicdn-community.kurobbs.com/forum/3d698a1f5f7b4ca5ae9d29de8ffd56e520240515.png');
+INSERT INTO `waves_weapon` VALUES (34, '暗夜佩枪·暗星', 3, 3, 3, '1236034125207240704', 'https://prod-alicdn-community.kurobbs.com/forum/112c8e99221f494eba3fc3ba6917643820240515.png');
+INSERT INTO `waves_weapon` VALUES (35, '暗夜迅刀·黑闪', 2, 3, 4, '1235728896129564672', 'https://prod-alicdn-community.kurobbs.com/forum/0112f311b94148449ef84ba41d2ade3620240515.png');
+INSERT INTO `waves_weapon` VALUES (36, '暗夜长刃·玄明', 0, 3, 1, '1234532918475161600', 'https://prod-alicdn-community.kurobbs.com/forum/526a1c88debd4c0f8e61337e4f3fc58720240515.png');
+INSERT INTO `waves_weapon` VALUES (37, '戍关臂铠·拔山', 1, 3, 0, '1236467667162693632', 'https://prod-alicdn-community.kurobbs.com/forum/3a934301633543569d6ac83f3a76af1720240515.png');
+INSERT INTO `waves_weapon` VALUES (38, '戍关佩枪·平云', 3, 3, 3, '1236035253667954688', 'https://prod-alicdn-community.kurobbs.com/forum/e609036ef36c4009af8393110481968e20240515.png');
+INSERT INTO `waves_weapon` VALUES (39, '戍关迅刀·镇海', 2, 3, 4, '1235733364892041216', 'https://prod-alicdn-community.kurobbs.com/forum/aa59468c8b0e432aa69f10db66597d5520240515.png');
+INSERT INTO `waves_weapon` VALUES (40, '戍关音感仪·留光', 4, 3, 2, '1237123692203147264', 'https://prod-alicdn-community.kurobbs.com/forum/f75580f2cdfe4818a7a3aef9f863d19720240515.png');
+INSERT INTO `waves_weapon` VALUES (41, '戍关长刃·定军', 0, 3, 1, '1234527199221444608', 'https://prod-alicdn-community.kurobbs.com/forum/4eec58e23fa34297a921cad0ec0c5f9d20240515.png');
+INSERT INTO `waves_weapon` VALUES (42, '源能臂铠·测肆', 1, 3, 0, '1236468638647386112', 'https://prod-alicdn-community.kurobbs.com/forum/3314eb52069a43c288d4c80e537bf4e420240515.png');
+INSERT INTO `waves_weapon` VALUES (43, '源能佩枪·测叁', 3, 3, 3, '1236035898198261760', 'https://prod-alicdn-community.kurobbs.com/forum/75a631f609c848e2a09304ccb65eade220240515.png');
+INSERT INTO `waves_weapon` VALUES (44, '源能迅刀·测贰', 2, 3, 4, '1235730447443230720', 'https://prod-alicdn-community.kurobbs.com/forum/aac15c6ce49e41afb1a6a77d86bbe7b820240515.png');
+INSERT INTO `waves_weapon` VALUES (45, '源能音感仪·测五', 4, 3, 2, '1237120942685880320', 'https://prod-alicdn-community.kurobbs.com/forum/a5ee51991feb41fea52483797b03d64220240515.png');
+INSERT INTO `waves_weapon` VALUES (46, '源能长刃·测壹', 0, 3, 1, '1234531534143680512', 'https://prod-alicdn-community.kurobbs.com/forum/5f7c6884d0014dc2a4c8afeb86a6c7cc20240515.png');
+INSERT INTO `waves_weapon` VALUES (47, '远行者臂铠·破障', 1, 3, 0, '1236469410628562944', 'https://prod-alicdn-community.kurobbs.com/forum/a28f3d87c31340d582d604396ba3d38c20240515.png');
+INSERT INTO `waves_weapon` VALUES (48, '远行者矩阵·探幽', 4, 3, 2, '1237123211850481664', 'https://prod-alicdn-community.kurobbs.com/forum/4cee6285b6fe479792e56e556d5c185c20240515.png');
+INSERT INTO `waves_weapon` VALUES (49, '远行者佩枪·洞察', 3, 3, 3, '1236037565722062848', 'https://prod-alicdn-community.kurobbs.com/forum/bb42b919a19f4c6393a2b6769bb332ba20240515.png');
+INSERT INTO `waves_weapon` VALUES (50, '远行者迅刀·旅迹', 2, 3, 4, '1235731923329282048', 'https://prod-alicdn-community.kurobbs.com/forum/72f37b67e593438f8418d5ef269947df20240515.png');
+INSERT INTO `waves_weapon` VALUES (51, '远行者长刃·辟路', 0, 3, 4, '1234529824660062208', 'https://prod-alicdn-community.kurobbs.com/forum/b342963a1b2b4da1baefebb34b3a856520240515.png');
+INSERT INTO `waves_weapon` VALUES (52, '原初臂铠·磐岩', 1, 2, 0, '1236465696937275392', 'https://prod-alicdn-community.kurobbs.com/forum/85f92e6f868c4894a151f1c5b357fd7820240515.png');
+INSERT INTO `waves_weapon` VALUES (53, '原初佩枪·穿林', 3, 2, 3, '1236032772573560832', 'https://prod-alicdn-community.kurobbs.com/forum/72662b6a43634179ac21ba3033f24d4d20240515.png');
+INSERT INTO `waves_weapon` VALUES (54, '原初迅刀·鸣雨', 2, 2, 4, '1235727892780744704', 'https://prod-alicdn-community.kurobbs.com/forum/e9cdd7da09844f58b9bc631927b889f020240515.png');
+INSERT INTO `waves_weapon` VALUES (55, '原初音感仪·听浪', 4, 2, 2, '1236801536653717504', 'https://prod-alicdn-community.kurobbs.com/forum/e847656135a94f2eb37ea61a312f6e0420240515.png');
+INSERT INTO `waves_weapon` VALUES (56, '原初长刃·朴石', 0, 2, 1, '1234546642669862912', 'https://prod-alicdn-community.kurobbs.com/forum/49274746ec9243279da50c45000cea2c20240515.png');
+INSERT INTO `waves_weapon` VALUES (57, '教学臂铠', 1, 1, 0, '1236464707693899776', 'https://prod-alicdn-community.kurobbs.com/forum/e1b164be260341f6a1c7a8732143e78a20240515.png');
+INSERT INTO `waves_weapon` VALUES (58, '教学佩枪', 3, 1, 3, '1236030951984132096', 'https://prod-alicdn-community.kurobbs.com/forum/a69f930d56f347f0a50ade11e4fe661a20240515.png');
+INSERT INTO `waves_weapon` VALUES (59, '教学迅刀', 2, 1, 4, '1235726363255042048', 'https://prod-alicdn-community.kurobbs.com/forum/356d86dcb80e4371adecad7e60c58b2920240515.png');
+INSERT INTO `waves_weapon` VALUES (60, '教学音感仪', 4, 1, 2, '1236789215576784896', 'https://prod-alicdn-community.kurobbs.com/forum/8408e23a84c94019a2f37dc902b90cd320240515.png');
+INSERT INTO `waves_weapon` VALUES (61, '教学长刃', 0, 1, 1, '1234552553262088192', 'https://prod-alicdn-community.kurobbs.com/forum/f2c3c8a3790f4b999c0435f1bbb3a64a20240515.png');
 
 SET FOREIGN_KEY_CHECKS = 1;

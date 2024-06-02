@@ -8,8 +8,6 @@
           共{{ total }}位，已展示{{ roleList.length }}位
         </n-gradient-text>
       </div>
-      <n-skeleton v-if="loading" :width="300" :sharp="false" size="medium" />
-      <UrlSelect v-else />
     </n-layout-header>
     <n-layout>
       <n-layout-header>
@@ -19,9 +17,11 @@
         <n-space v-show="searchShow" v-else class="space-main" :style="custStyle">
           <n-select :value="star" @update:value="handleStar" :options="relationInfo?.star"
             :style="ua ? 'width: 200px' : ''" />
-          <n-select :render-label="renderWeaponLabel" :value="weapon" @update:value="handleWeapon"
-            :options="relationInfo?.weapon" :style="ua ? 'width: 200px' : ''" />
-          <n-select :value="element" @update:value="handleElement" :options="relationInfo?.element"
+          <n-select :render-label="renderElementLabel" :value="element" @update:value="handleElement"
+            :options="relationInfo?.element" :style="ua ? 'width: 200px' : ''" />
+          <n-select :value="weapon" @update:value="handleWeapon" :options="relationInfo?.weapon"
+            :style="ua ? 'width: 200px' : ''" />
+          <n-select :render-label="renderItemLabel" :value="item" @update:value="handleItem" :options="relationInfo?.item"
             :style="ua ? 'width: 200px' : ''" />
           <n-input :value="searchName" @keyup.enter="handleNameChg" @update:value="handleName" type="text"
             placeholder="搜索角色名" :style="ua ? 'width: 200px' : 'min-width: 200px;'" />
@@ -40,8 +40,7 @@
         </n-space>
         <n-space v-else-if="!loading && roleList.length > 0" :style="custStyle">
           <div v-for="(item, index) in roleList" :key="index">
-            <PicCard :width="w" :height="H" :src="item.imgSrc" :item="item" :mhy_url="item.mhy_URL"
-              :wiki_url="item.wiki_URL" objectFit="contain" />
+            <WavesCard :width="w" :height="H" :src="item.imgSrc" :item="item" :url="item.surl" objectFit="contain" />
           </div>
         </n-space>
         <n-space v-else style="width: 100%;" :style="custStyle">
@@ -69,25 +68,25 @@
 </template>
 
 <script lang="ts" setup>
-import PicCard from "@/components/Card/PicCard.vue";
+import WavesCard from "@/components/Card/WavesCard.vue";
 import { SelectOption, useMessage } from "naive-ui";
-import { getStarRoleInfo } from "@/api/starRail";
+import { getWavesRoleInfo } from "@/api/waves";
 import { ref, onMounted, onBeforeMount, h } from "vue";
-import { Page, queryCommonUrl, queryStarRailRelation } from "@/utils"
+import { Page, queryCommonUrl, queryWavesRelation } from "@/utils"
 import { useLoadingBar } from 'naive-ui'
 import { Aperture } from "@vicons/ionicons5";
-import UrlSelect from "@/components/content/UrlSelect.vue";
 import { checkUA } from "@/utils";
 import CommonIcon from "@/components/Icon/CommonIcon.vue";
-import { useRoute } from "vue-router";
-import { starRailSelectWeapon } from "@/data/star_rail_select";
+import { wavesSelectItem } from "@/data/waves_select_item"
+import { wavesSelectElement } from "@/data/waves_select_element"
+import { FILE_BASE } from "@/config"
 
 const ua = ref(checkUA())
-let w = ref(100)  // 45 100
-let H = ref(169)  // 76 169  45:76
+let w = ref(0)  // 45 117
+let H = ref(0)  // 76 156  24:32
 if (ua.value) {
-  w.value = 100
-  H.value = 169
+  w.value = 117
+  H.value = 156
 } else {
   w.value = 45
   H.value = 76
@@ -96,15 +95,15 @@ if (ua.value) {
 const loading = ref(false)
 const loadingBar = useLoadingBar()
 const message = useMessage();
-const route = useRoute()
+let searchFlag = true
 let page = ref<Page>({
   pageNum: 1,
   pageSize: 100,
 });
-
-let searchShow = ref(true)
+let searchShow = ref(searchFlag)
 let searchName = ref("");
 let element = ref<number>(-2);
+let item = ref<number>(-2);
 let weapon = ref<number>(-2);
 let star = ref<number>(-2);
 
@@ -117,6 +116,10 @@ let custStyle = ref<string>(`
     flex-wrap: wrap;
   `)
 
+const handleItem = (value: any) => {
+  item.value = value
+  searchRoleList(1)
+}
 const handleWeapon = (value: any) => {
   weapon.value = value
   searchRoleList(1)
@@ -137,7 +140,7 @@ const handleNameChg = (event: Event) => {
 }
 const clickReset = () => {
   searchName.value = ""
-  weapon.value = element.value = star.value = -2
+  weapon.value = item.value = element.value = star.value = -2
   searchRoleList(1)
 }
 
@@ -146,17 +149,44 @@ const changePageSize = (size: number) => {
   searchRoleList(1)
 }
 
-const renderWeaponLabel = (option: any) => {
+const renderItemLabel = (option: any) => {
   return [
     h('div', {
-      className: 'render-star-rail-weapon-label'
+      style: {
+        display: 'flex',
+        alignItems: 'center'
+      }
     }, {
       default: () => {
         return [
           option.value > -1 ? h(
             CommonIcon, {
-            url: starRailSelectWeapon[option.value].icon_url,
-            size: 30,
+            url: wavesSelectItem[option.value].icon_url,
+            size: 30
+          }, { default: () => h('') }
+          ) : undefined,
+          h('span', {}, { default: () => option.label as string })
+        ]
+      }
+    }
+    )
+  ]
+}
+
+const renderElementLabel = (option: any) => {
+  return [
+    h('div', {
+      style: {
+        display: 'flex',
+        alignItems: 'center'
+      }
+    }, {
+      default: () => {
+        return [
+          option.value > -1 ? h(
+            CommonIcon, {
+            url: FILE_BASE + wavesSelectElement[option.value].icon_url,
+            size: 30
           }, { default: () => h('') }
           ) : undefined,
           h('span', {}, { default: () => option.label as string })
@@ -175,11 +205,12 @@ const queryRoleList = async () => {
   let params = {
     name: searchName.value,
     element: element.value,
+    item: item.value,
     weapon: weapon.value,
     star: star.value,
     page: page.value,
   } as any;
-  let { code, data, msg } = await getStarRoleInfo(params) as any;
+  let { code, data, msg } = await getWavesRoleInfo(params) as any;
   if (code != 200) {
     message.error(msg);
     setTimeout(() => {
@@ -189,12 +220,10 @@ const queryRoleList = async () => {
     return;
   }
   total.value = data.total
-  const { star_rail_base, star_rail_wiki_base, star_rail_mhy_url, star_rail_role } = await queryCommonUrl() as any
-  const mhyRoleUrl = `${star_rail_base}${star_rail_mhy_url}`
-  const wikiRoleUrl = `${star_rail_wiki_base}${star_rail_role}`
+  const { waves_base, waves_url } = await queryCommonUrl() as any
+  const roleUrl = `${waves_base}${waves_url}`
   roleList.value = data?.records.map((e: any) => {
-    e.mhy_URL = mhyRoleUrl.replace('{id}', e.mhy_url)
-    e.wiki_URL = wikiRoleUrl.replace('{id}', e.wiki_url)
+    e.surl = roleUrl.replace('{id}', e.url)
     e.imgSrc = e.icon_url
     return e
   })
@@ -212,7 +241,7 @@ const searchRoleList = async (e: number) => {
 }
 
 onBeforeMount(async () => {
-  relationInfo.value = await queryStarRailRelation() as any
+  relationInfo.value = await queryWavesRelation() as any
 })
 onMounted(() => {
   queryRoleList()

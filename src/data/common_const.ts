@@ -100,5 +100,17 @@ export const commonConst: any[] = [
     "key": "star_rail_wiki_base",
     "value": "https://hsr.honeyhunterworld.com",
     "type": "starRail"
+  },
+  {
+    "id": 18,
+    "key": "waves_base",
+    "value": "https://wiki.kurobbs.com",
+    "type": "waves"
+  },
+  {
+    "id": 19,
+    "key": "waves_url",
+    "value": "/mc/item/{id}",
+    "type": "waves"
   }
 ]

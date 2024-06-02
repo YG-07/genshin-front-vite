@@ -3,6 +3,7 @@ import { storage } from './storage';
 import { commonMethod, checkUA, queryCommonUrl, emitter } from './common';
 import { queryGenshinRelation } from './genshin';
 import { queryHonkaiRelation } from './honkai';
+import { queryWavesRelation } from './waves';
 import { queryBlueArchiveRelation } from './blueArchive';
 import { queryStarRailRelation } from './starRail';
 
@@ -19,6 +20,7 @@ export {
   queryCommonUrl,
   queryGenshinRelation,
   queryHonkaiRelation,
+  queryWavesRelation,
   queryBlueArchiveRelation,
   queryStarRailRelation
 }

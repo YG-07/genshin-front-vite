@@ -2,14 +2,12 @@
   <n-layout>
     <n-layout-header class="header-top">
       <div>
-        <h2>角色</h2>
+        <h2>武器</h2>
         <n-skeleton v-if="loading" :width="150" :sharp="false" size="medium" />
         <n-gradient-text v-else :gradient="{ from: 'rgb(85, 85, 85)', to: 'rgb(170, 170, 170)' }">
-          共{{ total }}位，已展示{{ roleList.length }}位
+          共{{ total }}位，已展示{{ weaponList.length }}个
         </n-gradient-text>
       </div>
-      <n-skeleton v-if="loading" :width="300" :sharp="false" size="medium" />
-      <UrlSelect v-else />
     </n-layout-header>
     <n-layout>
       <n-layout-header>
@@ -19,12 +17,12 @@
         <n-space v-show="searchShow" v-else class="space-main" :style="custStyle">
           <n-select :value="star" @update:value="handleStar" :options="relationInfo?.star"
             :style="ua ? 'width: 200px' : ''" />
-          <n-select :render-label="renderWeaponLabel" :value="weapon" @update:value="handleWeapon"
-            :options="relationInfo?.weapon" :style="ua ? 'width: 200px' : ''" />
-          <n-select :value="element" @update:value="handleElement" :options="relationInfo?.element"
+          <n-select :value="weapon" @update:value="handleWeapon" :options="relationInfo?.weapon"
+            :style="ua ? 'width: 200px' : ''" />
+          <n-select :render-label="renderItemLabel" :value="item" @update:value="handleItem" :options="relationInfo?.item"
             :style="ua ? 'width: 200px' : ''" />
           <n-input :value="searchName" @keyup.enter="handleNameChg" @update:value="handleName" type="text"
-            placeholder="搜索角色名" :style="ua ? 'width: 200px' : 'min-width: 200px;'" />
+            placeholder="搜索武器名" :style="ua ? 'width: 200px' : 'min-width: 200px;'" />
           <n-space :style="ua ? `flex:1;` : `min-width: 200px;`">
             <n-button type="success" style="width: 84px;" @click="searchRoleList(1)">搜索</n-button>
             <n-button type="warning" @click="clickReset">重置条件</n-button>
@@ -38,10 +36,9 @@
             <n-skeleton :width="100" :height="123" :sharp="false" size="medium" />
           </div>
         </n-space>
-        <n-space v-else-if="!loading && roleList.length > 0" :style="custStyle">
-          <div v-for="(item, index) in roleList" :key="index">
-            <PicCard :width="w" :height="H" :src="item.imgSrc" :item="item" :mhy_url="item.mhy_URL"
-              :wiki_url="item.wiki_URL" objectFit="contain" />
+        <n-space v-else-if="!loading && weaponList.length > 0" :style="custStyle">
+          <div v-for="(item, index) in weaponList" :key="index">
+            <WavesCard :src="item.imgSrc" :item="item" :url="item.surl" />
           </div>
         </n-space>
         <n-space v-else style="width: 100%;" :style="custStyle">
@@ -69,47 +66,34 @@
 </template>
 
 <script lang="ts" setup>
-import PicCard from "@/components/Card/PicCard.vue";
+import WavesCard from "@/components/Card/WavesCard.vue";
 import { SelectOption, useMessage } from "naive-ui";
-import { getStarRoleInfo } from "@/api/starRail";
+import { getWavesWeaponInfo } from "@/api/waves";
 import { ref, onMounted, onBeforeMount, h } from "vue";
-import { Page, queryCommonUrl, queryStarRailRelation } from "@/utils"
+import { Page, queryCommonUrl, queryWavesRelation } from "@/utils"
 import { useLoadingBar } from 'naive-ui'
 import { Aperture } from "@vicons/ionicons5";
-import UrlSelect from "@/components/content/UrlSelect.vue";
 import { checkUA } from "@/utils";
 import CommonIcon from "@/components/Icon/CommonIcon.vue";
-import { useRoute } from "vue-router";
-import { starRailSelectWeapon } from "@/data/star_rail_select";
+import { wavesSelectItem } from "@/data/waves_select_item"
 
 const ua = ref(checkUA())
-let w = ref(100)  // 45 100
-let H = ref(169)  // 76 169  45:76
-if (ua.value) {
-  w.value = 100
-  H.value = 169
-} else {
-  w.value = 45
-  H.value = 76
-}
-
 const loading = ref(false)
 const loadingBar = useLoadingBar()
 const message = useMessage();
-const route = useRoute()
+let searchFlag = true
 let page = ref<Page>({
   pageNum: 1,
   pageSize: 100,
 });
-
-let searchShow = ref(true)
+let searchShow = ref(searchFlag)
 let searchName = ref("");
-let element = ref<number>(-2);
+let item = ref<number>(-2);
 let weapon = ref<number>(-2);
 let star = ref<number>(-2);
 
 let total = ref(0)
-let roleList = ref<Array<any>>([]);
+let weaponList = ref<Array<any>>([]);
 let custStyle = ref<string>(`
     ${ua.value ? 'margin: 20px;' : 'margin:2px; gap: 8px 5px;'}
     display: flex;
@@ -117,12 +101,12 @@ let custStyle = ref<string>(`
     flex-wrap: wrap;
   `)
 
-const handleWeapon = (value: any) => {
-  weapon.value = value
+const handleItem = (value: any) => {
+  item.value = value
   searchRoleList(1)
 }
-const handleElement = (value: any) => {
-  element.value = value
+const handleWeapon = (value: any) => {
+  weapon.value = value
   searchRoleList(1)
 }
 const handleStar = (value: any) => {
@@ -137,7 +121,7 @@ const handleNameChg = (event: Event) => {
 }
 const clickReset = () => {
   searchName.value = ""
-  weapon.value = element.value = star.value = -2
+  weapon.value = item.value = star.value = -2
   searchRoleList(1)
 }
 
@@ -146,17 +130,20 @@ const changePageSize = (size: number) => {
   searchRoleList(1)
 }
 
-const renderWeaponLabel = (option: any) => {
+const renderItemLabel = (option: any) => {
   return [
     h('div', {
-      className: 'render-star-rail-weapon-label'
+      style: {
+        display: 'flex',
+        alignItems: 'center'
+      }
     }, {
       default: () => {
         return [
           option.value > -1 ? h(
             CommonIcon, {
-            url: starRailSelectWeapon[option.value].icon_url,
-            size: 30,
+            url: wavesSelectItem[option.value].icon_url,
+            size: 30
           }, { default: () => h('') }
           ) : undefined,
           h('span', {}, { default: () => option.label as string })
@@ -174,12 +161,12 @@ const queryRoleList = async () => {
   loading.value = true
   let params = {
     name: searchName.value,
-    element: element.value,
+    item: item.value,
     weapon: weapon.value,
     star: star.value,
     page: page.value,
   } as any;
-  let { code, data, msg } = await getStarRoleInfo(params) as any;
+  let { code, data, msg } = await getWavesWeaponInfo(params) as any;
   if (code != 200) {
     message.error(msg);
     setTimeout(() => {
@@ -189,12 +176,10 @@ const queryRoleList = async () => {
     return;
   }
   total.value = data.total
-  const { star_rail_base, star_rail_wiki_base, star_rail_mhy_url, star_rail_role } = await queryCommonUrl() as any
-  const mhyRoleUrl = `${star_rail_base}${star_rail_mhy_url}`
-  const wikiRoleUrl = `${star_rail_wiki_base}${star_rail_role}`
-  roleList.value = data?.records.map((e: any) => {
-    e.mhy_URL = mhyRoleUrl.replace('{id}', e.mhy_url)
-    e.wiki_URL = wikiRoleUrl.replace('{id}', e.wiki_url)
+  const { waves_base, waves_url } = await queryCommonUrl() as any
+  const roleUrl = `${waves_base}${waves_url}`
+  weaponList.value = data?.records.map((e: any) => {
+    e.surl = roleUrl.replace('{id}', e.url)
     e.imgSrc = e.icon_url
     return e
   })
@@ -206,13 +191,13 @@ const queryRoleList = async () => {
 
 const searchRoleList = async (e: number) => {
   page.value.pageNum = e
-  roleList.value = []
+  weaponList.value = []
   total.value = 0
   queryRoleList()
 }
 
 onBeforeMount(async () => {
-  relationInfo.value = await queryStarRailRelation() as any
+  relationInfo.value = await queryWavesRelation() as any
 })
 onMounted(() => {
   queryRoleList()

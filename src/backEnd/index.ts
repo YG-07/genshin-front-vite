@@ -14,6 +14,12 @@ import { genshinVersion } from '@/data/genshin_version';
 import { starRailRelation } from '@/data/star_rail_relation';
 import { starRailRole } from '@/data/star_rail_role';
 import { starRailWeapon } from '@/data/star_rail_weapon';
+import { wavesRole } from '@/data/waves_role';
+import { wavesWeapon } from '@/data/waves_weapon';
+import { wavesItem } from '@/data/waves_item';
+import { wavesEchoes } from '@/data/waves_echoes';
+import { wavesEchoesEffect } from '@/data/waves_echoes_effect';
+import { wavesRelation } from '@/data/waves_relation';
 import { blueArchiveRelation } from '@/data/blue_archive_relation';
 import { blueArchiveNPC } from '@/data/blue_archive_npc';
 import { blueArchiveStudent } from '@/data/blue_archive_student';
@@ -575,6 +581,192 @@ const calcPoolData = () => {
   }
 }
 
+export const _getWavesRelationInfo = (params = {} as any) => {
+  return new Promise((resolve, reject) => {
+    if (wavesRelation) {
+      return resolve(Res(wavesRelation))
+    } else {
+      return reject(Res([], 500, '获取失败'))
+    }
+  })
+}
+
+export const _getWavesRoleInfo = (params = {} as any) => {
+  return new Promise((resolve, reject) => {
+    if (wavesRole) {
+      let { name, star, element, weapon, item, page } = params
+      name = name || ''
+      let _wavesRole: any[] = []
+      for (let i = 0; i < wavesRole.length; ++i) {
+        let e = wavesRole[i] as any
+        let flag: boolean = true
+        if (e.name.indexOf(name) > -1) {
+          flag = Chk([
+            [star, e.star],
+            [weapon, e.weapon],
+            [element, e.element],
+            [item, e.item],
+          ])
+          if (flag) {
+            _wavesRole.push(e);
+          }
+        }
+      }
+      let { m, n } = GetPage(_wavesRole.length, page)
+      return resolve(Res({
+        records: _wavesRole.slice(m, n),
+        total: _wavesRole.length
+      }))
+    } else {
+      return reject(Res({
+        records: [],
+        total: 0
+      }, 500, '获取失败'))
+    }
+  })
+}
+
+export const _getWavesWeaponInfo = (params = {} as any) => {
+  return new Promise((resolve, reject) => {
+    if (wavesWeapon) {
+      let { name, star, weapon, item, page } = params
+      name = name || ''
+      let _wavesWeapon: any[] = []
+      for (let i = 0; i < wavesWeapon.length; ++i) {
+        let e = wavesWeapon[i] as any
+        let flag: boolean = true
+        if (e.name.indexOf(name) > -1) {
+          flag = Chk([
+            [star, e.star],
+            [weapon, e.weapon],
+            [item, e.item],
+          ])
+          if (flag) {
+            _wavesWeapon.push(e);
+          }
+        }
+      }
+      let { m, n } = GetPage(_wavesWeapon.length, page)
+      return resolve(Res({
+        records: _wavesWeapon.slice(m, n),
+        total: _wavesWeapon.length
+      }))
+    } else {
+      return reject(Res({
+        records: [],
+        total: 0
+      }, 500, '获取失败'))
+    }
+  })
+}
+
+export const _getWavesItemInfo = (params = {} as any) => {
+  return new Promise((resolve, reject) => {
+    if (wavesItem) {
+      let { name, star, item, page } = params
+      name = name || ''
+      let _wavesItem: any[] = []
+      for (let i = 0; i < wavesItem.length; ++i) {
+        let e = wavesItem[i] as any
+        let flag: boolean = true
+        if (e.name.indexOf(name) > -1) {
+          flag = Chk([
+            [star, e.star],
+            [item, e.item],
+          ])
+          if (flag) {
+            _wavesItem.push(e);
+          }
+        }
+      }
+      let { m, n } = GetPage(_wavesItem.length, page)
+      return resolve(Res({
+        records: _wavesItem.slice(m, n),
+        total: _wavesItem.length
+      }))
+    } else {
+      return reject(Res({
+        records: [],
+        total: 0
+      }, 500, '获取失败'))
+    }
+  })
+}
+
+export const _getWavesEchoesInfo = (params = {} as any) => {
+  return new Promise((resolve, reject) => {
+    if (wavesEchoes) {
+      let { name, level, suit, cost, unusual, page } = params
+      name = name || ''
+      let _wavesEchoes: any[] = []
+      for (let i = 0; i < wavesEchoes.length; ++i) {
+        let e = wavesEchoes[i] as any
+        let flag: boolean = true
+        if (e.name.indexOf(name) > -1) {
+          flag = Chk([
+            [level, e.level],
+            [cost, e.cost],
+            [unusual, e.unusual],
+          ])
+          if (!suit.includes(-2)) {
+            let suitArr = e.suit.split(',').map((x: any) => Number(x));
+            // 确保 suit 的每个元素都在 suitArr 中
+            flag = (flag && suit.every((x: any) => suitArr.includes(x)));
+            console.log(flag, e.suit, suit, ';;');
+          }
+          if (flag) {
+            _wavesEchoes.push(e);
+          }
+        }
+      }
+      let { m, n } = GetPage(_wavesEchoes.length, page)
+      return resolve(Res({
+        records: _wavesEchoes.slice(m, n),
+        total: _wavesEchoes.length
+      }))
+    } else {
+      return reject(Res({
+        records: [],
+        total: 0
+      }, 500, '获取失败'))
+    }
+  })
+}
+
+export const _getWavesEchoesEffectInfo = (params = {} as any) => {
+  return new Promise((resolve, reject) => {
+    if (wavesEchoesEffect) {
+      let { name, suit, page } = params
+      name = name || ''
+      let _wavesEchoesEffect: any[] = []
+      for (let i = 0; i < wavesEchoesEffect.length; ++i) {
+        let e = wavesEchoesEffect[i] as any
+        let flag: boolean = true
+        if (e.name.includes(name) ||
+          e.suit2.includes(name) ||
+          e.suit5.includes(name)) {
+          if (suit != -2) {
+            flag = (flag && (e.id == suit + 1));
+          }
+          if (flag) {
+            _wavesEchoesEffect.push(e);
+          }
+        }
+      }
+      let { m, n } = GetPage(_wavesEchoesEffect.length, page)
+      return resolve(Res({
+        records: _wavesEchoesEffect.slice(m, n),
+        total: _wavesEchoesEffect.length
+      }))
+    } else {
+      return reject(Res({
+        records: [],
+        total: 0
+      }, 500, '获取失败'))
+    }
+  })
+}
+
 export const _getPoolInfo = (params = {} as any) => {
   return new Promise((resolve, reject) => {
     let resp = checkPoolInfoData()
@@ -685,7 +877,7 @@ export const _getStudentInfo = (params = {} as any) => {
 export const _getNPCInfo = (params = {} as any) => {
   return new Promise((resolve, reject) => {
     if (blueArchiveNPC) {
-      let { name, position, weapon, star, page } = params
+      let { name, page } = params
       name = name || ''
       let _blueArchiveNPC: any[] = []
       for (let i = 0; i < blueArchiveNPC.length; ++i) {

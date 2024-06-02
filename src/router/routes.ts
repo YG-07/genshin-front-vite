@@ -165,6 +165,62 @@ const routes: Readonly<RouteRecordRaw[]> = [
       },
     ]
   },
+  {
+    path: '/waves',
+    name: 'waves',
+    component: () => import(/* webpackChunkName: "waves" */ '@/views/Home.vue'),
+    meta: {
+      title: '鸣潮',
+      keepAlive: true
+    },
+    children: [
+      {
+        path: 'role',
+        name: 'waves_role',
+        component: () => import(/* webpackChunkName: "waves_role" */ '@/views/Waves/Role.vue'),
+        meta: {
+          title: '共鸣者',
+          keepAlive: true
+        }
+      },
+      {
+        path: 'weapon',
+        name: 'waves_weapon',
+        component: () => import(/* webpackChunkName: "waves_weapon" */ '@/views/Waves/Weapon.vue'),
+        meta: {
+          title: '武器',
+          keepAlive: true
+        }
+      },
+      {
+        path: 'item',
+        name: 'waves_item',
+        component: () => import(/* webpackChunkName: "waves_item" */ '@/views/Waves/Item.vue'),
+        meta: {
+          title: '突破材料',
+          keepAlive: true
+        }
+      },
+      {
+        path: 'echoes',
+        name: 'echoes',
+        component: () => import(/* webpackChunkName: "echoes" */ '@/views/Waves/Echoes.vue'),
+        meta: {
+          title: '声骸',
+          keepAlive: true
+        }
+      },
+      {
+        path: 'effect',
+        name: 'waves_effect',
+        component: () => import(/* webpackChunkName: "waves_effect" */ '@/views/Waves/Effect.vue'),
+        meta: {
+          title: '共鸣效果',
+          keepAlive: true
+        }
+      },
+    ]
+  }
 ]
 
 export default routes as any
