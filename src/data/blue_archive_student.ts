@@ -18,6 +18,23 @@ export const blueArchiveStudent: any[] = [
   },
   {
     "id": 2,
+    "name": "阿露（礼服）",
+    "name_ja": null,
+    "star": 3,
+    "position": 3,
+    "weapon": 7,
+    "url": "614734",
+    "img_urls": null,
+    "icon_url": "https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2024/1/22/301473.png",
+    "banner": 0,
+    "attack": 1,
+    "defense": 1,
+    "school": 1,
+    "club": 5,
+    "map_get": 0
+  },
+  {
+    "id": 3,
     "name": "阿露（正月）",
     "name_ja": "陸八魔 アル",
     "star": 3,
@@ -34,7 +51,7 @@ export const blueArchiveStudent: any[] = [
     "map_get": 0
   },
   {
-    "id": 3,
+    "id": 4,
     "name": "艾米",
     "name_ja": "和泉元艾米",
     "star": 3,
@@ -47,11 +64,28 @@ export const blueArchiveStudent: any[] = [
     "attack": 0,
     "defense": 0,
     "school": 3,
-    "club": 24,
+    "club": 25,
     "map_get": 0
   },
   {
-    "id": 4,
+    "id": 5,
+    "name": "艾米（泳装）",
+    "name_ja": null,
+    "star": 3,
+    "position": 3,
+    "weapon": 1,
+    "url": "607106",
+    "img_urls": null,
+    "icon_url": "https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2023/11/6/604973.png",
+    "banner": 0,
+    "attack": 2,
+    "defense": 2,
+    "school": 3,
+    "club": 25,
+    "map_get": 0
+  },
+  {
+    "id": 6,
     "name": "爱丽丝",
     "name_ja": "天童（てんどう）アリス",
     "star": 3,
@@ -64,11 +98,11 @@ export const blueArchiveStudent: any[] = [
     "attack": 2,
     "defense": 2,
     "school": 3,
-    "club": 19,
+    "club": 20,
     "map_get": 1
   },
   {
-    "id": 5,
+    "id": 7,
     "name": "爱丽丝（女仆）",
     "name_ja": "天童アリス",
     "star": 3,
@@ -81,11 +115,11 @@ export const blueArchiveStudent: any[] = [
     "attack": 2,
     "defense": 0,
     "school": 3,
-    "club": 19,
+    "club": 20,
     "map_get": 0
   },
   {
-    "id": 6,
+    "id": 8,
     "name": "爱莉",
     "name_ja": "栗村（くりむら） アイリ",
     "star": 2,
@@ -98,11 +132,28 @@ export const blueArchiveStudent: any[] = [
     "attack": 0,
     "defense": 0,
     "school": 2,
-    "club": 14,
+    "club": 15,
     "map_get": 1
   },
   {
-    "id": 7,
+    "id": 9,
+    "name": "爱莉（乐队）",
+    "name_ja": null,
+    "star": 1,
+    "position": 0,
+    "weapon": 2,
+    "url": "620813",
+    "img_urls": null,
+    "icon_url": "https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2024/3/26/622613.png",
+    "banner": 2,
+    "attack": 0,
+    "defense": 2,
+    "school": 2,
+    "club": 15,
+    "map_get": 0
+  },
+  {
+    "id": 10,
     "name": "巴",
     "name_ja": "佐城 トモエ",
     "star": 1,
@@ -115,11 +166,11 @@ export const blueArchiveStudent: any[] = [
     "attack": 1,
     "defense": 2,
     "school": 7,
-    "club": 25,
+    "club": 26,
     "map_get": 0
   },
   {
-    "id": 8,
+    "id": 11,
     "name": "白子",
     "name_ja": "砂狼シロコ",
     "star": 3,
@@ -136,7 +187,7 @@ export const blueArchiveStudent: any[] = [
     "map_get": 1
   },
   {
-    "id": 9,
+    "id": 12,
     "name": "白子（骑行）",
     "name_ja": "砂狼 シロコ",
     "star": 3,
@@ -153,7 +204,7 @@ export const blueArchiveStudent: any[] = [
     "map_get": 0
   },
   {
-    "id": 10,
+    "id": 13,
     "name": "白子（泳装）",
     "name_ja": "砂狼シロコ",
     "star": 3,
@@ -170,7 +221,7 @@ export const blueArchiveStudent: any[] = [
     "map_get": 0
   },
   {
-    "id": 11,
+    "id": 14,
     "name": "初音未来（联动）",
     "name_ja": "初音ミク",
     "star": 3,
@@ -183,11 +234,11 @@ export const blueArchiveStudent: any[] = [
     "attack": 0,
     "defense": 0,
     "school": 10,
-    "club": 40,
+    "club": 42,
     "map_get": 0
   },
   {
-    "id": 12,
+    "id": 15,
     "name": "吹雪",
     "name_ja": "合歓垣（ねむがき）フブキ",
     "star": 1,
@@ -204,7 +255,7 @@ export const blueArchiveStudent: any[] = [
     "map_get": 0
   },
   {
-    "id": 13,
+    "id": 16,
     "name": "椿",
     "name_ja": "春日ツバキ",
     "star": 2,
@@ -217,11 +268,28 @@ export const blueArchiveStudent: any[] = [
     "attack": 1,
     "defense": 2,
     "school": 4,
-    "club": 36,
+    "club": 37,
     "map_get": 1
   },
   {
-    "id": 14,
+    "id": 17,
+    "name": "椿（导游）",
+    "name_ja": null,
+    "star": 3,
+    "position": 0,
+    "weapon": 2,
+    "url": "618557",
+    "img_urls": null,
+    "icon_url": "https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2024/2/28/565261.png",
+    "banner": 0,
+    "attack": 1,
+    "defense": 1,
+    "school": 4,
+    "club": 37,
+    "map_get": 0
+  },
+  {
+    "id": 18,
     "name": "淳子",
     "name_ja": "赤司ジュンコ",
     "star": 2,
@@ -238,7 +306,7 @@ export const blueArchiveStudent: any[] = [
     "map_get": 1
   },
   {
-    "id": 15,
+    "id": 19,
     "name": "淳子（正月）",
     "name_ja": "赤司 ジュンコ",
     "star": 1,
@@ -255,7 +323,7 @@ export const blueArchiveStudent: any[] = [
     "map_get": 0
   },
   {
-    "id": 16,
+    "id": 20,
     "name": "菲娜",
     "name_ja": "朝比奈（アサヒナ） フィーナ",
     "star": 1,
@@ -268,11 +336,11 @@ export const blueArchiveStudent: any[] = [
     "attack": 1,
     "defense": 0,
     "school": 4,
-    "club": 34,
+    "club": 35,
     "map_get": 1
   },
   {
-    "id": 17,
+    "id": 21,
     "name": "枫",
     "name_ja": "勇美枫",
     "star": 3,
@@ -285,11 +353,11 @@ export const blueArchiveStudent: any[] = [
     "attack": 0,
     "defense": 2,
     "school": 4,
-    "club": 36,
+    "club": 37,
     "map_get": 0
   },
   {
-    "id": 18,
+    "id": 22,
     "name": "枫香",
     "name_ja": "爱清 フウカ",
     "star": 2,
@@ -306,7 +374,7 @@ export const blueArchiveStudent: any[] = [
     "map_get": 0
   },
   {
-    "id": 19,
+    "id": 23,
     "name": "枫香（正月）",
     "name_ja": "愛清 フウカ",
     "star": 3,
@@ -323,7 +391,7 @@ export const blueArchiveStudent: any[] = [
     "map_get": 0
   },
   {
-    "id": 20,
+    "id": 24,
     "name": "歌原",
     "name_ja": "白石（しらいし）ウタハ",
     "star": 2,
@@ -336,11 +404,11 @@ export const blueArchiveStudent: any[] = [
     "attack": 1,
     "defense": 1,
     "school": 3,
-    "club": 21,
+    "club": 22,
     "map_get": 0
   },
   {
-    "id": 21,
+    "id": 25,
     "name": "歌原（应援团）",
     "name_ja": "白石（しらいし）ウタハ",
     "star": 3,
@@ -353,11 +421,11 @@ export const blueArchiveStudent: any[] = [
     "attack": 2,
     "defense": 2,
     "school": 3,
-    "club": 21,
+    "club": 22,
     "map_get": 0
   },
   {
-    "id": 22,
+    "id": 26,
     "name": "宫子",
     "name_ja": "月雪ミヤコ",
     "star": 3,
@@ -370,11 +438,11 @@ export const blueArchiveStudent: any[] = [
     "attack": 1,
     "defense": 1,
     "school": 8,
-    "club": 38,
+    "club": 40,
     "map_get": 0
   },
   {
-    "id": 23,
+    "id": 27,
     "name": "宫子（泳装）",
     "name_ja": "月雪ミヤコ",
     "star": 3,
@@ -387,11 +455,11 @@ export const blueArchiveStudent: any[] = [
     "attack": 0,
     "defense": 1,
     "school": 8,
-    "club": 38,
+    "club": 40,
     "map_get": 0
   },
   {
-    "id": 24,
+    "id": 28,
     "name": "果穗",
     "name_ja": "桑上カホ",
     "star": 3,
@@ -404,11 +472,28 @@ export const blueArchiveStudent: any[] = [
     "attack": 2,
     "defense": 1,
     "school": 4,
-    "club": 33,
+    "club": 34,
     "map_get": 0
   },
   {
-    "id": 25,
+    "id": 29,
+    "name": "海香",
+    "name_ja": null,
+    "star": 3,
+    "position": 0,
+    "weapon": 3,
+    "url": "618563",
+    "img_urls": null,
+    "icon_url": "https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2024/2/28/455226.png",
+    "banner": 0,
+    "attack": 2,
+    "defense": 2,
+    "school": 4,
+    "club": 35,
+    "map_get": 0
+  },
+  {
+    "id": 30,
     "name": "好美",
     "name_ja": "伊原木（いばらぎ）ヨシミ",
     "star": 1,
@@ -421,11 +506,28 @@ export const blueArchiveStudent: any[] = [
     "attack": 1,
     "defense": 1,
     "school": 2,
-    "club": 14,
+    "club": 15,
     "map_get": 1
   },
   {
-    "id": 26,
+    "id": 31,
+    "name": "好美（乐队）",
+    "name_ja": null,
+    "star": 3,
+    "position": 0,
+    "weapon": 3,
+    "url": "620883",
+    "img_urls": null,
+    "icon_url": "https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2024/3/26/213417.png",
+    "banner": 1,
+    "attack": 0,
+    "defense": 2,
+    "school": 2,
+    "club": 15,
+    "map_get": 0
+  },
+  {
+    "id": 32,
     "name": "和纱",
     "name_ja": "杏山 カズサ",
     "star": 3,
@@ -438,11 +540,28 @@ export const blueArchiveStudent: any[] = [
     "attack": 1,
     "defense": 1,
     "school": 2,
-    "club": 14,
+    "club": 15,
     "map_get": 0
   },
   {
-    "id": 27,
+    "id": 33,
+    "name": "和纱（乐队）",
+    "name_ja": null,
+    "star": 3,
+    "position": 0,
+    "weapon": 3,
+    "url": "620843",
+    "img_urls": null,
+    "icon_url": "https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2024/3/26/334899.png",
+    "banner": 1,
+    "attack": 0,
+    "defense": 2,
+    "school": 2,
+    "club": 15,
+    "map_get": 0
+  },
+  {
+    "id": 34,
     "name": "和香",
     "name_ja": "天见ノドカ",
     "star": 1,
@@ -455,11 +574,11 @@ export const blueArchiveStudent: any[] = [
     "attack": 0,
     "defense": 1,
     "school": 7,
-    "club": 26,
+    "club": 27,
     "map_get": 0
   },
   {
-    "id": 28,
+    "id": 35,
     "name": "和香（温泉）",
     "name_ja": "天見 ノドカ",
     "star": 3,
@@ -472,11 +591,11 @@ export const blueArchiveStudent: any[] = [
     "attack": 0,
     "defense": 2,
     "school": 7,
-    "club": 26,
+    "club": 27,
     "map_get": 0
   },
   {
-    "id": 29,
+    "id": 36,
     "name": "鹤城",
     "name_ja": "剑先（けんざき）ツルギ",
     "star": 3,
@@ -489,11 +608,11 @@ export const blueArchiveStudent: any[] = [
     "attack": 1,
     "defense": 1,
     "school": 2,
-    "club": 10,
+    "club": 11,
     "map_get": 0
   },
   {
-    "id": 30,
+    "id": 37,
     "name": "鹤城（泳装）",
     "name_ja": "剑崎（けんざき）ツルギ",
     "star": 1,
@@ -506,16 +625,16 @@ export const blueArchiveStudent: any[] = [
     "attack": 2,
     "defense": 2,
     "school": 2,
-    "club": 10,
+    "club": 11,
     "map_get": 0
   },
   {
-    "id": 31,
+    "id": 38,
     "name": "红叶",
     "name_ja": "秋泉モミジ",
     "star": 2,
     "position": 0,
-    "weapon": 4,
+    "weapon": 6,
     "url": "161228",
     "img_urls": "https://cdnimg.gamekee.com/wiki2.0/images/w_908/h_1210/829/43637/2023/7/23/941538.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_3843/h_2437/829/43637/2023/7/23/512627.png",
     "icon_url": "https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2023/7/25/140055.png",
@@ -523,11 +642,11 @@ export const blueArchiveStudent: any[] = [
     "attack": 3,
     "defense": 1,
     "school": 7,
-    "club": 28,
+    "club": 29,
     "map_get": 0
   },
   {
-    "id": 32,
+    "id": 39,
     "name": "花绘",
     "name_ja": "朝顔(あさがお) ハナエ",
     "star": 2,
@@ -540,11 +659,11 @@ export const blueArchiveStudent: any[] = [
     "attack": 0,
     "defense": 1,
     "school": 2,
-    "club": 15,
+    "club": 16,
     "map_get": 0
   },
   {
-    "id": 33,
+    "id": 40,
     "name": "花绘（圣诞）",
     "name_ja": "朝顔 ハナエ",
     "star": 3,
@@ -557,11 +676,11 @@ export const blueArchiveStudent: any[] = [
     "attack": 2,
     "defense": 2,
     "school": 2,
-    "club": 15,
+    "club": 16,
     "map_get": 0
   },
   {
-    "id": 34,
+    "id": 41,
     "name": "花凛",
     "name_ja": "角楯カリン",
     "star": 3,
@@ -574,11 +693,11 @@ export const blueArchiveStudent: any[] = [
     "attack": 1,
     "defense": 1,
     "school": 3,
-    "club": 20,
+    "club": 21,
     "map_get": 1
   },
   {
-    "id": 35,
+    "id": 42,
     "name": "花凛（兔女郎）",
     "name_ja": "角楯 カリン",
     "star": 3,
@@ -591,11 +710,11 @@ export const blueArchiveStudent: any[] = [
     "attack": 2,
     "defense": 1,
     "school": 3,
-    "club": 20,
+    "club": 21,
     "map_get": 0
   },
   {
-    "id": 36,
+    "id": 43,
     "name": "花子",
     "name_ja": "浦和ハナコ",
     "star": 2,
@@ -608,11 +727,11 @@ export const blueArchiveStudent: any[] = [
     "attack": 1,
     "defense": 2,
     "school": 2,
-    "club": 13,
+    "club": 14,
     "map_get": 0
   },
   {
-    "id": 37,
+    "id": 44,
     "name": "花子（泳装）",
     "name_ja": "浦和 ハナコ",
     "star": 3,
@@ -625,11 +744,11 @@ export const blueArchiveStudent: any[] = [
     "attack": 3,
     "defense": 1,
     "school": 2,
-    "club": 13,
+    "club": 14,
     "map_get": 0
   },
   {
-    "id": 38,
+    "id": 45,
     "name": "惠",
     "name_ja": "下倉 メグ",
     "star": 3,
@@ -646,7 +765,7 @@ export const blueArchiveStudent: any[] = [
     "map_get": 0
   },
   {
-    "id": 39,
+    "id": 46,
     "name": "佳代子",
     "name_ja": "鬼形カヨコ",
     "star": 2,
@@ -663,7 +782,24 @@ export const blueArchiveStudent: any[] = [
     "map_get": 1
   },
   {
-    "id": 40,
+    "id": 47,
+    "name": "佳代子（礼服）",
+    "name_ja": null,
+    "star": 3,
+    "position": 0,
+    "weapon": 5,
+    "url": "614736",
+    "img_urls": null,
+    "icon_url": "https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2024/1/22/962767.png",
+    "banner": 0,
+    "attack": 1,
+    "defense": 0,
+    "school": 1,
+    "club": 5,
+    "map_get": 0
+  },
+  {
+    "id": 48,
     "name": "佳代子（正月）",
     "name_ja": "鬼方カヨコ",
     "star": 3,
@@ -680,7 +816,7 @@ export const blueArchiveStudent: any[] = [
     "map_get": 0
   },
   {
-    "id": 41,
+    "id": 49,
     "name": "菫",
     "name_ja": "乙花 スミレ",
     "star": 3,
@@ -693,11 +829,11 @@ export const blueArchiveStudent: any[] = [
     "attack": 1,
     "defense": 2,
     "school": 3,
-    "club": 23,
+    "club": 24,
     "map_get": 0
   },
   {
-    "id": 42,
+    "id": 50,
     "name": "静子",
     "name_ja": "河和（かわわ）シズコ",
     "star": 2,
@@ -710,11 +846,11 @@ export const blueArchiveStudent: any[] = [
     "attack": 2,
     "defense": 2,
     "school": 4,
-    "club": 34,
+    "club": 35,
     "map_get": 0
   },
   {
-    "id": 43,
+    "id": 51,
     "name": "静子（泳装）",
     "name_ja": "河和（かわわ）シズコ",
     "star": 1,
@@ -727,11 +863,28 @@ export const blueArchiveStudent: any[] = [
     "attack": 2,
     "defense": 1,
     "school": 4,
-    "club": 34,
+    "club": 35,
     "map_get": 0
   },
   {
-    "id": 44,
+    "id": 52,
+    "name": "桔梗",
+    "name_ja": null,
+    "star": 3,
+    "position": 3,
+    "weapon": 7,
+    "url": "605895",
+    "img_urls": null,
+    "icon_url": "https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2023/10/23/546626.png",
+    "banner": 0,
+    "attack": 3,
+    "defense": 1,
+    "school": 4,
+    "club": 38,
+    "map_get": 0
+  },
+  {
+    "id": 53,
     "name": "康娜",
     "name_ja": "尾刃 カンナ",
     "star": 3,
@@ -744,45 +897,11 @@ export const blueArchiveStudent: any[] = [
     "attack": 1,
     "defense": 1,
     "school": 9,
-    "club": 39,
+    "club": 41,
     "map_get": 0
   },
   {
-    "id": 45,
-    "name": "柯托莉",
-    "name_ja": "豊見（とよみ）コトリ",
-    "star": 1,
-    "position": 3,
-    "weapon": 9,
-    "url": "67655",
-    "img_urls": "https://cdnimg.gamekee.com/wiki2.0/images/829/94828/2021/10/4/231252.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_1920/h_1080/829/190853/2022/9/29/158256.png",
-    "icon_url": "https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/3/95047.png",
-    "banner": 0,
-    "attack": 1,
-    "defense": 0,
-    "school": 3,
-    "club": 21,
-    "map_get": 1
-  },
-  {
-    "id": 46,
-    "name": "柯托莉（应援团）",
-    "name_ja": "豊見（とよみ）コトリ",
-    "star": 3,
-    "position": 0,
-    "weapon": 9,
-    "url": "168823",
-    "img_urls": "https://cdnimg.gamekee.com/wiki2.0/images/w_908/h_1210/829/43637/2023/8/6/158428.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_3451/h_2559/829/43637/2023/8/6/452001.png",
-    "icon_url": "https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2023/8/6/480564.png",
-    "banner": 0,
-    "attack": 0,
-    "defense": 2,
-    "school": 3,
-    "club": 21,
-    "map_get": 0
-  },
-  {
-    "id": 47,
+    "id": 54,
     "name": "濑名",
     "name_ja": "氷室セナ",
     "star": 3,
@@ -799,7 +918,24 @@ export const blueArchiveStudent: any[] = [
     "map_get": 0
   },
   {
-    "id": 48,
+    "id": 55,
+    "name": "莲华",
+    "name_ja": null,
+    "star": 3,
+    "position": 0,
+    "weapon": 7,
+    "url": "605892",
+    "img_urls": null,
+    "icon_url": "https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2023/10/23/462299.png",
+    "banner": 0,
+    "attack": 3,
+    "defense": 1,
+    "school": 4,
+    "club": 38,
+    "map_get": 0
+  },
+  {
+    "id": 56,
     "name": "莲见",
     "name_ja": "羽川ハスミ",
     "star": 2,
@@ -812,11 +948,11 @@ export const blueArchiveStudent: any[] = [
     "attack": 1,
     "defense": 1,
     "school": 2,
-    "club": 10,
+    "club": 11,
     "map_get": 1
   },
   {
-    "id": 49,
+    "id": 57,
     "name": "莲见（体操服）",
     "name_ja": "羽川 ハスミ",
     "star": 1,
@@ -829,11 +965,11 @@ export const blueArchiveStudent: any[] = [
     "attack": 2,
     "defense": 2,
     "school": 2,
-    "club": 10,
+    "club": 11,
     "map_get": 0
   },
   {
-    "id": 50,
+    "id": 58,
     "name": "玲纱",
     "name_ja": "宇沢レイサ",
     "star": 3,
@@ -846,11 +982,11 @@ export const blueArchiveStudent: any[] = [
     "attack": 1,
     "defense": 1,
     "school": 2,
-    "club": 16,
+    "club": 17,
     "map_get": 0
   },
   {
-    "id": 51,
+    "id": 59,
     "name": "铃美",
     "name_ja": "守月スズミ",
     "star": 1,
@@ -863,11 +999,11 @@ export const blueArchiveStudent: any[] = [
     "attack": 0,
     "defense": 1,
     "school": 2,
-    "club": 16,
+    "club": 17,
     "map_get": 1
   },
   {
-    "id": 52,
+    "id": 60,
     "name": "绫音",
     "name_ja": " 奥空アヤネ",
     "star": 2,
@@ -884,7 +1020,7 @@ export const blueArchiveStudent: any[] = [
     "map_get": 1
   },
   {
-    "id": 53,
+    "id": 61,
     "name": "绫音（泳装）",
     "name_ja": "奥空 アヤネ",
     "star": 1,
@@ -901,7 +1037,7 @@ export const blueArchiveStudent: any[] = [
     "map_get": 0
   },
   {
-    "id": 54,
+    "id": 62,
     "name": "瑠美",
     "name_ja": "朱城ルミ",
     "star": 3,
@@ -914,11 +1050,11 @@ export const blueArchiveStudent: any[] = [
     "attack": 0,
     "defense": 1,
     "school": 5,
-    "club": 32,
+    "club": 33,
     "map_get": 0
   },
   {
-    "id": 55,
+    "id": 63,
     "name": "绿",
     "name_ja": "才羽 ミドリ",
     "star": 3,
@@ -931,11 +1067,28 @@ export const blueArchiveStudent: any[] = [
     "attack": 1,
     "defense": 0,
     "school": 3,
-    "club": 19,
+    "club": 20,
     "map_get": 0
   },
   {
-    "id": 56,
+    "id": 64,
+    "name": "绿（女仆）",
+    "name_ja": null,
+    "star": 3,
+    "position": 0,
+    "weapon": 7,
+    "url": "590231",
+    "img_urls": null,
+    "icon_url": "https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2024/4/23/984571.png",
+    "banner": 0,
+    "attack": 3,
+    "defense": 0,
+    "school": 3,
+    "club": 20,
+    "map_get": 0
+  },
+  {
+    "id": 65,
     "name": "玛丽",
     "name_ja": "伊落マリー",
     "star": 2,
@@ -948,11 +1101,11 @@ export const blueArchiveStudent: any[] = [
     "attack": 2,
     "defense": 2,
     "school": 2,
-    "club": 11,
-    "map_get": 0
+    "club": 12,
+    "map_get": 1
   },
   {
-    "id": 57,
+    "id": 66,
     "name": "玛丽（体操服）",
     "name_ja": "伊落マリー",
     "star": 3,
@@ -965,11 +1118,11 @@ export const blueArchiveStudent: any[] = [
     "attack": 2,
     "defense": 2,
     "school": 2,
-    "club": 11,
+    "club": 12,
     "map_get": 0
   },
   {
-    "id": 58,
+    "id": 67,
     "name": "玛丽娜",
     "name_ja": "池仓 マリナ",
     "star": 3,
@@ -982,11 +1135,11 @@ export const blueArchiveStudent: any[] = [
     "attack": 1,
     "defense": 0,
     "school": 7,
-    "club": 25,
+    "club": 26,
     "map_get": 0
   },
   {
-    "id": 59,
+    "id": 68,
     "name": "满",
     "name_ja": "千鸟满",
     "star": 1,
@@ -999,11 +1152,11 @@ export const blueArchiveStudent: any[] = [
     "attack": 2,
     "defense": 0,
     "school": 4,
-    "club": 35,
+    "club": 36,
     "map_get": 0
   },
   {
-    "id": 60,
+    "id": 69,
     "name": "梅露",
     "name_ja": "姫木メル",
     "star": 3,
@@ -1016,11 +1169,11 @@ export const blueArchiveStudent: any[] = [
     "attack": 1,
     "defense": 0,
     "school": 7,
-    "club": 28,
+    "club": 29,
     "map_get": 0
   },
   {
-    "id": 61,
+    "id": 70,
     "name": "美祢",
     "name_ja": "蒼森 ミネ",
     "star": 3,
@@ -1033,11 +1186,11 @@ export const blueArchiveStudent: any[] = [
     "attack": 0,
     "defense": 0,
     "school": 2,
-    "club": 15,
+    "club": 16,
     "map_get": 0
   },
   {
-    "id": 62,
+    "id": 71,
     "name": "美咲",
     "name_ja": "戒野 ミサキ",
     "star": 3,
@@ -1054,7 +1207,7 @@ export const blueArchiveStudent: any[] = [
     "map_get": 0
   },
   {
-    "id": 63,
+    "id": 72,
     "name": "美游",
     "name_ja": "霞沢ミユ",
     "star": 3,
@@ -1067,11 +1220,11 @@ export const blueArchiveStudent: any[] = [
     "attack": 1,
     "defense": 0,
     "school": 8,
-    "club": 38,
+    "club": 40,
     "map_get": 0
   },
   {
-    "id": 64,
+    "id": 73,
     "name": "美游（泳装）",
     "name_ja": "霞沢ミユ",
     "star": 1,
@@ -1084,11 +1237,11 @@ export const blueArchiveStudent: any[] = [
     "attack": 0,
     "defense": 0,
     "school": 8,
-    "club": 38,
+    "club": 40,
     "map_get": 0
   },
   {
-    "id": 65,
+    "id": 74,
     "name": "萌绘",
     "name_ja": "風倉 モエ",
     "star": 3,
@@ -1101,11 +1254,11 @@ export const blueArchiveStudent: any[] = [
     "attack": 1,
     "defense": 0,
     "school": 8,
-    "club": 38,
+    "club": 40,
     "map_get": 0
   },
   {
-    "id": 66,
+    "id": 75,
     "name": "明里",
     "name_ja": "鳄渕 アカリ",
     "star": 2,
@@ -1122,7 +1275,24 @@ export const blueArchiveStudent: any[] = [
     "map_get": 1
   },
   {
-    "id": 67,
+    "id": 76,
+    "name": "明里（正月）",
+    "name_ja": null,
+    "star": 3,
+    "position": 4,
+    "weapon": 3,
+    "url": "615923",
+    "img_urls": null,
+    "icon_url": "https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2024/2/6/529413.png",
+    "banner": 0,
+    "attack": 2,
+    "defense": 2,
+    "school": 1,
+    "club": 6,
+    "map_get": 0
+  },
+  {
+    "id": 77,
     "name": "明日奈",
     "name_ja": "一之瀬 アスナ",
     "star": 1,
@@ -1135,11 +1305,11 @@ export const blueArchiveStudent: any[] = [
     "attack": 2,
     "defense": 0,
     "school": 3,
-    "club": 20,
+    "club": 21,
     "map_get": 1
   },
   {
-    "id": 68,
+    "id": 78,
     "name": "明日奈（兔女郎）",
     "name_ja": "一之瀬明日奈",
     "star": 3,
@@ -1152,11 +1322,11 @@ export const blueArchiveStudent: any[] = [
     "attack": 2,
     "defense": 0,
     "school": 3,
-    "club": 20,
+    "club": 21,
     "map_get": 0
   },
   {
-    "id": 69,
+    "id": 79,
     "name": "睦月",
     "name_ja": "浅黄ムツキ",
     "star": 2,
@@ -1173,7 +1343,7 @@ export const blueArchiveStudent: any[] = [
     "map_get": 1
   },
   {
-    "id": 70,
+    "id": 80,
     "name": "睦月（正月）",
     "name_ja": "浅黄ムツキ",
     "star": 3,
@@ -1190,7 +1360,7 @@ export const blueArchiveStudent: any[] = [
     "map_get": 0
   },
   {
-    "id": 71,
+    "id": 81,
     "name": "南",
     "name_ja": "近衛ミナ",
     "star": 3,
@@ -1203,11 +1373,11 @@ export const blueArchiveStudent: any[] = [
     "attack": 0,
     "defense": 1,
     "school": 5,
-    "club": 31,
+    "club": 32,
     "map_get": 0
   },
   {
-    "id": 72,
+    "id": 82,
     "name": "尼禄",
     "name_ja": "美甘ネル",
     "star": 3,
@@ -1220,11 +1390,11 @@ export const blueArchiveStudent: any[] = [
     "attack": 1,
     "defense": 0,
     "school": 3,
-    "club": 20,
+    "club": 21,
     "map_get": 1
   },
   {
-    "id": 73,
+    "id": 83,
     "name": "尼禄（兔女郎）",
     "name_ja": "美甘ネル",
     "star": 3,
@@ -1237,11 +1407,11 @@ export const blueArchiveStudent: any[] = [
     "attack": 0,
     "defense": 1,
     "school": 3,
-    "club": 20,
+    "club": 21,
     "map_get": 0
   },
   {
-    "id": 74,
+    "id": 84,
     "name": "诺亚",
     "name_ja": "生塩 ノア",
     "star": 3,
@@ -1254,11 +1424,28 @@ export const blueArchiveStudent: any[] = [
     "attack": 2,
     "defense": 2,
     "school": 3,
-    "club": 18,
+    "club": 19,
     "map_get": 0
   },
   {
-    "id": 75,
+    "id": 85,
+    "name": "绮良良",
+    "name_ja": null,
+    "star": 3,
+    "position": 0,
+    "weapon": 3,
+    "url": "578163",
+    "img_urls": null,
+    "icon_url": "https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2024/4/10/367844.png",
+    "banner": 0,
+    "attack": 3,
+    "defense": 0,
+    "school": 1,
+    "club": 10,
+    "map_get": 0
+  },
+  {
+    "id": 86,
     "name": "千世",
     "name_ja": "和楽チセ",
     "star": 2,
@@ -1271,11 +1458,11 @@ export const blueArchiveStudent: any[] = [
     "attack": 2,
     "defense": 1,
     "school": 4,
-    "club": 33,
+    "club": 34,
     "map_get": 1
   },
   {
-    "id": 76,
+    "id": 87,
     "name": "千世（泳装）",
     "name_ja": "和楽チセ",
     "star": 3,
@@ -1288,11 +1475,11 @@ export const blueArchiveStudent: any[] = [
     "attack": 2,
     "defense": 0,
     "school": 4,
-    "club": 33,
+    "club": 34,
     "map_get": 0
   },
   {
-    "id": 77,
+    "id": 88,
     "name": "千夏",
     "name_ja": "火宫千夏",
     "star": 1,
@@ -1309,7 +1496,7 @@ export const blueArchiveStudent: any[] = [
     "map_get": 0
   },
   {
-    "id": 78,
+    "id": 89,
     "name": "千夏（温泉）",
     "name_ja": "火宫千夏",
     "star": 3,
@@ -1326,7 +1513,7 @@ export const blueArchiveStudent: any[] = [
     "map_get": 0
   },
   {
-    "id": 79,
+    "id": 90,
     "name": "千寻",
     "name_ja": "各务（かがみ）チヒロ",
     "star": 3,
@@ -1339,11 +1526,11 @@ export const blueArchiveStudent: any[] = [
     "attack": 1,
     "defense": 1,
     "school": 3,
-    "club": 22,
+    "club": 23,
     "map_get": 0
   },
   {
-    "id": 80,
+    "id": 91,
     "name": "切里诺",
     "name_ja": "连河（れんかわ）チェリノ",
     "star": 3,
@@ -1356,11 +1543,11 @@ export const blueArchiveStudent: any[] = [
     "attack": 1,
     "defense": 0,
     "school": 7,
-    "club": 25,
+    "club": 26,
     "map_get": 0
   },
   {
-    "id": 81,
+    "id": 92,
     "name": "切里诺（温泉）",
     "name_ja": "连河切里诺",
     "star": 3,
@@ -1373,11 +1560,11 @@ export const blueArchiveStudent: any[] = [
     "attack": 0,
     "defense": 1,
     "school": 7,
-    "club": 25,
+    "club": 26,
     "map_get": 0
   },
   {
-    "id": 82,
+    "id": 93,
     "name": "芹娜",
     "name_ja": "鷲見（すみ）セリナ",
     "star": 1,
@@ -1390,11 +1577,11 @@ export const blueArchiveStudent: any[] = [
     "attack": 2,
     "defense": 0,
     "school": 2,
-    "club": 15,
+    "club": 16,
     "map_get": 1
   },
   {
-    "id": 83,
+    "id": 94,
     "name": "芹娜（圣诞）",
     "name_ja": "鷲見 セリナ",
     "star": 3,
@@ -1407,11 +1594,11 @@ export const blueArchiveStudent: any[] = [
     "attack": 1,
     "defense": 2,
     "school": 2,
-    "club": 15,
+    "club": 16,
     "map_get": 0
   },
   {
-    "id": 84,
+    "id": 95,
     "name": "芹香",
     "name_ja": "黒見（くろみ）セリカ",
     "star": 2,
@@ -1428,7 +1615,7 @@ export const blueArchiveStudent: any[] = [
     "map_get": 1
   },
   {
-    "id": 85,
+    "id": 96,
     "name": "芹香（正月）",
     "name_ja": "黒見（くろみ）セリカ",
     "star": 3,
@@ -1445,7 +1632,41 @@ export const blueArchiveStudent: any[] = [
     "map_get": 0
   },
   {
-    "id": 86,
+    "id": 97,
+    "name": "琴里",
+    "name_ja": "豊見（とよみ）コトリ",
+    "star": 1,
+    "position": 3,
+    "weapon": 9,
+    "url": "67655",
+    "img_urls": "https://cdnimg.gamekee.com/wiki2.0/images/829/94828/2021/10/4/231252.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_1920/h_1080/829/190853/2022/9/29/158256.png",
+    "icon_url": "https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/3/95047.png",
+    "banner": 0,
+    "attack": 1,
+    "defense": 0,
+    "school": 3,
+    "club": 22,
+    "map_get": 1
+  },
+  {
+    "id": 98,
+    "name": "琴里（应援团）",
+    "name_ja": "豊見（とよみ）コトリ",
+    "star": 3,
+    "position": 0,
+    "weapon": 9,
+    "url": "168823",
+    "img_urls": "https://cdnimg.gamekee.com/wiki2.0/images/w_908/h_1210/829/43637/2023/8/6/158428.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_3451/h_2559/829/43637/2023/8/6/452001.png",
+    "icon_url": "https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2023/8/6/480564.png",
+    "banner": 0,
+    "attack": 0,
+    "defense": 2,
+    "school": 3,
+    "club": 22,
+    "map_get": 0
+  },
+  {
+    "id": 99,
     "name": "晴",
     "name_ja": "小钩 ハレ",
     "star": 2,
@@ -1458,11 +1679,28 @@ export const blueArchiveStudent: any[] = [
     "attack": 0,
     "defense": 0,
     "school": 3,
-    "club": 22,
+    "club": 23,
     "map_get": 1
   },
   {
-    "id": 87,
+    "id": 100,
+    "name": "晴（野营）",
+    "name_ja": null,
+    "star": 3,
+    "position": 3,
+    "weapon": 3,
+    "url": "609143",
+    "img_urls": null,
+    "icon_url": "https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2023/11/28/105191.png",
+    "banner": 0,
+    "attack": 0,
+    "defense": 0,
+    "school": 3,
+    "club": 23,
+    "map_get": 0
+  },
+  {
+    "id": 101,
     "name": "晴奈",
     "name_ja": "黑馆ハルナ",
     "star": 3,
@@ -1479,7 +1717,24 @@ export const blueArchiveStudent: any[] = [
     "map_get": 1
   },
   {
-    "id": 88,
+    "id": 102,
+    "name": "晴奈（体操服）",
+    "name_ja": null,
+    "star": 3,
+    "position": 2,
+    "weapon": 7,
+    "url": "578165",
+    "img_urls": null,
+    "icon_url": "https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2023/8/19/417394.png",
+    "banner": 0,
+    "attack": 3,
+    "defense": 1,
+    "school": 1,
+    "club": 6,
+    "map_get": 0
+  },
+  {
+    "id": 103,
     "name": "晴奈（正月）",
     "name_ja": "黒舘 ハルナ",
     "star": 3,
@@ -1496,7 +1751,7 @@ export const blueArchiveStudent: any[] = [
     "map_get": 0
   },
   {
-    "id": 89,
+    "id": 104,
     "name": "泉",
     "name_ja": "狮子堂イズミ",
     "star": 3,
@@ -1513,7 +1768,7 @@ export const blueArchiveStudent: any[] = [
     "map_get": 1
   },
   {
-    "id": 90,
+    "id": 105,
     "name": "泉（泳装）",
     "name_ja": "狮子堂泉",
     "star": 1,
@@ -1530,7 +1785,7 @@ export const blueArchiveStudent: any[] = [
     "map_get": 0
   },
   {
-    "id": 91,
+    "id": 106,
     "name": "泉奈",
     "name_ja": "久田イズナ",
     "star": 3,
@@ -1543,11 +1798,11 @@ export const blueArchiveStudent: any[] = [
     "attack": 2,
     "defense": 0,
     "school": 4,
-    "club": 35,
+    "club": 36,
     "map_get": 1
   },
   {
-    "id": 92,
+    "id": 107,
     "name": "泉奈（泳装）",
     "name_ja": "久田イズナ",
     "star": 3,
@@ -1560,11 +1815,11 @@ export const blueArchiveStudent: any[] = [
     "attack": 2,
     "defense": 2,
     "school": 4,
-    "club": 35,
+    "club": 36,
     "map_get": 0
   },
   {
-    "id": 93,
+    "id": 108,
     "name": "日富美",
     "name_ja": "阿慈谷ヒフミ",
     "star": 3,
@@ -1577,11 +1832,11 @@ export const blueArchiveStudent: any[] = [
     "attack": 1,
     "defense": 0,
     "school": 2,
-    "club": 13,
+    "club": 14,
     "map_get": 1
   },
   {
-    "id": 94,
+    "id": 109,
     "name": "日富美（泳装）",
     "name_ja": "阿慈谷ヒフミ",
     "star": 3,
@@ -1594,11 +1849,11 @@ export const blueArchiveStudent: any[] = [
     "attack": 1,
     "defense": 1,
     "school": 2,
-    "club": 13,
-    "map_get": 0
+    "club": 14,
+    "map_get": 1
   },
   {
-    "id": 95,
+    "id": 110,
     "name": "日和",
     "name_ja": "槌永日和",
     "star": 3,
@@ -1615,7 +1870,7 @@ export const blueArchiveStudent: any[] = [
     "map_get": 0
   },
   {
-    "id": 96,
+    "id": 111,
     "name": "日鞠",
     "name_ja": "明星 ヒマリ",
     "star": 3,
@@ -1628,11 +1883,11 @@ export const blueArchiveStudent: any[] = [
     "attack": 1,
     "defense": 0,
     "school": 3,
-    "club": 24,
+    "club": 25,
     "map_get": 0
   },
   {
-    "id": 97,
+    "id": 112,
     "name": "日奈",
     "name_ja": "空崎ヒナ（空崎日奈）",
     "star": 3,
@@ -1649,7 +1904,24 @@ export const blueArchiveStudent: any[] = [
     "map_get": 1
   },
   {
-    "id": 98,
+    "id": 113,
+    "name": "日奈（礼服）",
+    "name_ja": null,
+    "star": 3,
+    "position": 0,
+    "weapon": 9,
+    "url": "611753",
+    "img_urls": null,
+    "icon_url": "https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2024/0/29/344077.png",
+    "banner": 1,
+    "attack": 0,
+    "defense": 3,
+    "school": 1,
+    "club": 4,
+    "map_get": 0
+  },
+  {
+    "id": 114,
     "name": "日奈（泳装）",
     "name_ja": "空崎日奈",
     "star": 3,
@@ -1666,7 +1938,7 @@ export const blueArchiveStudent: any[] = [
     "map_get": 0
   },
   {
-    "id": 99,
+    "id": 115,
     "name": "日向",
     "name_ja": "若叶ヒナタ",
     "star": 3,
@@ -1679,11 +1951,11 @@ export const blueArchiveStudent: any[] = [
     "attack": 2,
     "defense": 1,
     "school": 2,
-    "club": 11,
+    "club": 12,
     "map_get": 0
   },
   {
-    "id": 100,
+    "id": 116,
     "name": "日向（泳装）",
     "name_ja": "若叶ヒナタ",
     "star": 3,
@@ -1696,11 +1968,11 @@ export const blueArchiveStudent: any[] = [
     "attack": 0,
     "defense": 0,
     "school": 2,
-    "club": 11,
+    "club": 12,
     "map_get": 0
   },
   {
-    "id": 101,
+    "id": 117,
     "name": "若藻",
     "name_ja": "狐坂ワカモ",
     "star": 3,
@@ -1713,11 +1985,11 @@ export const blueArchiveStudent: any[] = [
     "attack": 2,
     "defense": 0,
     "school": 4,
-    "club": 37,
+    "club": 39,
     "map_get": 0
   },
   {
-    "id": 102,
+    "id": 118,
     "name": "若藻（泳装）",
     "name_ja": "狐坂ワカモ",
     "star": 3,
@@ -1730,11 +2002,11 @@ export const blueArchiveStudent: any[] = [
     "attack": 1,
     "defense": 1,
     "school": 4,
-    "club": 37,
+    "club": 39,
     "map_get": 0
   },
   {
-    "id": 103,
+    "id": 119,
     "name": "三森",
     "name_ja": "水羽三森",
     "star": 3,
@@ -1747,11 +2019,11 @@ export const blueArchiveStudent: any[] = [
     "attack": 2,
     "defense": 0,
     "school": 4,
-    "club": 36,
+    "club": 37,
     "map_get": 0
   },
   {
-    "id": 104,
+    "id": 120,
     "name": "三森（泳装）",
     "name_ja": "水羽 ミモリ",
     "star": 3,
@@ -1764,11 +2036,11 @@ export const blueArchiveStudent: any[] = [
     "attack": 2,
     "defense": 2,
     "school": 4,
-    "club": 36,
+    "club": 37,
     "map_get": 0
   },
   {
-    "id": 105,
+    "id": 121,
     "name": "纱绫",
     "name_ja": "薬子サヤ",
     "star": 3,
@@ -1781,11 +2053,11 @@ export const blueArchiveStudent: any[] = [
     "attack": 0,
     "defense": 0,
     "school": 5,
-    "club": 29,
+    "club": 30,
     "map_get": 0
   },
   {
-    "id": 106,
+    "id": 122,
     "name": "纱绫（私服）",
     "name_ja": "药子纱绫",
     "star": 3,
@@ -1798,11 +2070,11 @@ export const blueArchiveStudent: any[] = [
     "attack": 1,
     "defense": 2,
     "school": 5,
-    "club": 29,
-    "map_get": 0
+    "club": 30,
+    "map_get": 1
   },
   {
-    "id": 107,
+    "id": 123,
     "name": "纱织",
     "name_ja": "纱织",
     "star": 3,
@@ -1819,7 +2091,7 @@ export const blueArchiveStudent: any[] = [
     "map_get": 0
   },
   {
-    "id": 108,
+    "id": 124,
     "name": "时",
     "name_ja": "飛鳥馬（あすま）トキ",
     "star": 3,
@@ -1832,11 +2104,11 @@ export const blueArchiveStudent: any[] = [
     "attack": 0,
     "defense": 3,
     "school": 3,
-    "club": 20,
+    "club": 21,
     "map_get": 0
   },
   {
-    "id": 109,
+    "id": 125,
     "name": "时（兔女郎）",
     "name_ja": "飛鳥馬（あすま）トキ",
     "star": 3,
@@ -1849,11 +2121,11 @@ export const blueArchiveStudent: any[] = [
     "attack": 0,
     "defense": 0,
     "school": 3,
-    "club": 20,
+    "club": 21,
     "map_get": 0
   },
   {
-    "id": 110,
+    "id": 126,
     "name": "时雨",
     "name_ja": "間宵 シグレ",
     "star": 3,
@@ -1866,11 +2138,28 @@ export const blueArchiveStudent: any[] = [
     "attack": 0,
     "defense": 1,
     "school": 7,
-    "club": 26,
+    "club": 27,
     "map_get": 0
   },
   {
-    "id": 111,
+    "id": 127,
+    "name": "时雨（温泉）",
+    "name_ja": null,
+    "star": 3,
+    "position": 2,
+    "weapon": 4,
+    "url": "161204",
+    "img_urls": null,
+    "icon_url": "https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2023/9/11/606076.png",
+    "banner": 0,
+    "attack": 1,
+    "defense": 2,
+    "school": 7,
+    "club": 27,
+    "map_get": 0
+  },
+  {
+    "id": 128,
     "name": "实梨",
     "name_ja": "安守ミノリ",
     "star": 3,
@@ -1883,11 +2172,28 @@ export const blueArchiveStudent: any[] = [
     "attack": 0,
     "defense": 2,
     "school": 7,
-    "club": 27,
+    "club": 28,
     "map_get": 0
   },
   {
-    "id": 112,
+    "id": 129,
+    "name": "食蜂操祈",
+    "name_ja": null,
+    "star": 3,
+    "position": 3,
+    "weapon": 5,
+    "url": "603139",
+    "img_urls": null,
+    "icon_url": "https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2023/9/26/988876.png",
+    "banner": 1,
+    "attack": 0,
+    "defense": 1,
+    "school": 11,
+    "club": 42,
+    "map_get": 0
+  },
+  {
+    "id": 130,
     "name": "瞬",
     "name_ja": "春原 シュン",
     "star": 3,
@@ -1900,11 +2206,11 @@ export const blueArchiveStudent: any[] = [
     "attack": 0,
     "defense": 0,
     "school": 5,
-    "club": 30,
+    "club": 31,
     "map_get": 0
   },
   {
-    "id": 113,
+    "id": 131,
     "name": "瞬（幼女）",
     "name_ja": "春原瞬",
     "star": 3,
@@ -1917,11 +2223,11 @@ export const blueArchiveStudent: any[] = [
     "attack": 0,
     "defense": 0,
     "school": 5,
-    "club": 30,
+    "club": 31,
     "map_get": 0
   },
   {
-    "id": 114,
+    "id": 132,
     "name": "桃井",
     "name_ja": "才羽 桃井",
     "star": 2,
@@ -1934,11 +2240,28 @@ export const blueArchiveStudent: any[] = [
     "attack": 1,
     "defense": 0,
     "school": 3,
-    "club": 19,
+    "club": 20,
     "map_get": 0
   },
   {
-    "id": 115,
+    "id": 133,
+    "name": "桃井（女仆）",
+    "name_ja": null,
+    "star": 3,
+    "position": 0,
+    "weapon": 3,
+    "url": "590230",
+    "img_urls": null,
+    "icon_url": "https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2024/4/23/4508.png",
+    "banner": 0,
+    "attack": 3,
+    "defense": 0,
+    "school": 3,
+    "club": 20,
+    "map_get": 0
+  },
+  {
+    "id": 134,
     "name": "桐乃",
     "name_ja": "中務キリノ",
     "star": 2,
@@ -1955,7 +2278,7 @@ export const blueArchiveStudent: any[] = [
     "map_get": 1
   },
   {
-    "id": 116,
+    "id": 135,
     "name": "未花",
     "name_ja": "聖園（みその）ミカ",
     "star": 3,
@@ -1968,11 +2291,28 @@ export const blueArchiveStudent: any[] = [
     "attack": 1,
     "defense": 0,
     "school": 2,
-    "club": 17,
+    "club": 18,
     "map_get": 0
   },
   {
-    "id": 117,
+    "id": 136,
+    "name": "霞",
+    "name_ja": null,
+    "star": 3,
+    "position": 0,
+    "weapon": 5,
+    "url": "169361",
+    "img_urls": null,
+    "icon_url": "https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2023/9/7/436743.png",
+    "banner": 0,
+    "attack": 3,
+    "defense": 1,
+    "school": 1,
+    "club": 9,
+    "map_get": 0
+  },
+  {
+    "id": 137,
     "name": "夏",
     "name_ja": "柚鳥 ナツ",
     "star": 3,
@@ -1985,11 +2325,11 @@ export const blueArchiveStudent: any[] = [
     "attack": 2,
     "defense": 1,
     "school": 2,
-    "club": 14,
+    "club": 15,
     "map_get": 0
   },
   {
-    "id": 118,
+    "id": 138,
     "name": "响",
     "name_ja": "猫塚(ねこづか)ヒビキ",
     "star": 3,
@@ -2002,11 +2342,11 @@ export const blueArchiveStudent: any[] = [
     "attack": 0,
     "defense": 1,
     "school": 3,
-    "club": 21,
+    "club": 22,
     "map_get": 1
   },
   {
-    "id": 119,
+    "id": 139,
     "name": "响（应援团）",
     "name_ja": "猫塚 ヒビキ",
     "star": 1,
@@ -2019,11 +2359,11 @@ export const blueArchiveStudent: any[] = [
     "attack": 0,
     "defense": 0,
     "school": 3,
-    "club": 21,
+    "club": 22,
     "map_get": 0
   },
   {
-    "id": 120,
+    "id": 140,
     "name": "小春",
     "name_ja": "下江小春",
     "star": 3,
@@ -2036,11 +2376,11 @@ export const blueArchiveStudent: any[] = [
     "attack": 0,
     "defense": 1,
     "school": 2,
-    "club": 13,
+    "club": 14,
     "map_get": 0
   },
   {
-    "id": 121,
+    "id": 141,
     "name": "小春（泳装）",
     "name_ja": "下江コハル",
     "star": 1,
@@ -2053,11 +2393,11 @@ export const blueArchiveStudent: any[] = [
     "attack": 2,
     "defense": 1,
     "school": 2,
-    "club": 13,
+    "club": 14,
     "map_get": 0
   },
   {
-    "id": 122,
+    "id": 142,
     "name": "小雪",
     "name_ja": "黒崎 コユキ",
     "star": 3,
@@ -2070,11 +2410,11 @@ export const blueArchiveStudent: any[] = [
     "attack": 2,
     "defense": 1,
     "school": 3,
-    "club": 18,
+    "club": 19,
     "map_get": 0
   },
   {
-    "id": 123,
+    "id": 143,
     "name": "小玉",
     "name_ja": "音瀬コタマ",
     "star": 1,
@@ -2087,11 +2427,28 @@ export const blueArchiveStudent: any[] = [
     "attack": 0,
     "defense": 0,
     "school": 3,
-    "club": 22,
+    "club": 23,
     "map_get": 0
   },
   {
-    "id": 124,
+    "id": 144,
+    "name": "小玉（野营）",
+    "name_ja": null,
+    "star": 3,
+    "position": 3,
+    "weapon": 5,
+    "url": "609145",
+    "img_urls": null,
+    "icon_url": "https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2023/11/28/291212.png",
+    "banner": 0,
+    "attack": 1,
+    "defense": 1,
+    "school": 3,
+    "club": 23,
+    "map_get": 0
+  },
+  {
+    "id": 145,
     "name": "咲",
     "name_ja": "空井咲",
     "star": 3,
@@ -2104,11 +2461,11 @@ export const blueArchiveStudent: any[] = [
     "attack": 1,
     "defense": 2,
     "school": 8,
-    "club": 38,
+    "club": 40,
     "map_get": 0
   },
   {
-    "id": 125,
+    "id": 146,
     "name": "咲（泳装）",
     "name_ja": "空井サキ",
     "star": 3,
@@ -2121,11 +2478,11 @@ export const blueArchiveStudent: any[] = [
     "attack": 0,
     "defense": 1,
     "school": 8,
-    "club": 38,
+    "club": 40,
     "map_get": 0
   },
   {
-    "id": 126,
+    "id": 147,
     "name": "心奈",
     "name_ja": "春原（すのはら）ココナ",
     "star": 3,
@@ -2138,11 +2495,11 @@ export const blueArchiveStudent: any[] = [
     "attack": 1,
     "defense": 2,
     "school": 5,
-    "club": 30,
+    "club": 31,
     "map_get": 0
   },
   {
-    "id": 127,
+    "id": 148,
     "name": "星野",
     "name_ja": "小鳥遊（たかなし）ホシノ",
     "star": 3,
@@ -2159,7 +2516,7 @@ export const blueArchiveStudent: any[] = [
     "map_get": 1
   },
   {
-    "id": 128,
+    "id": 149,
     "name": "星野（泳装）",
     "name_ja": "小鳥遊（たかなし）ホシノ",
     "star": 3,
@@ -2176,7 +2533,7 @@ export const blueArchiveStudent: any[] = [
     "map_get": 0
   },
   {
-    "id": 129,
+    "id": 150,
     "name": "亚津子",
     "name_ja": "秤アツコ",
     "star": 3,
@@ -2193,7 +2550,7 @@ export const blueArchiveStudent: any[] = [
     "map_get": 0
   },
   {
-    "id": 130,
+    "id": 151,
     "name": "亚子",
     "name_ja": "亚子",
     "star": 3,
@@ -2210,7 +2567,24 @@ export const blueArchiveStudent: any[] = [
     "map_get": 0
   },
   {
-    "id": 131,
+    "id": 152,
+    "name": "亚子（礼服）",
+    "name_ja": null,
+    "star": 3,
+    "position": 3,
+    "weapon": 5,
+    "url": "611610",
+    "img_urls": null,
+    "icon_url": "https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2024/0/25/297855.png",
+    "banner": 1,
+    "attack": 0,
+    "defense": 2,
+    "school": 1,
+    "club": 4,
+    "map_get": 0
+  },
+  {
+    "id": 153,
     "name": "遥香",
     "name_ja": "伊草 ハルカ",
     "star": 1,
@@ -2227,7 +2601,7 @@ export const blueArchiveStudent: any[] = [
     "map_get": 1
   },
   {
-    "id": 132,
+    "id": 154,
     "name": "遥香（正月）",
     "name_ja": "伊草ハルカ",
     "star": 3,
@@ -2244,7 +2618,7 @@ export const blueArchiveStudent: any[] = [
     "map_get": 0
   },
   {
-    "id": 133,
+    "id": 155,
     "name": "野宫",
     "name_ja": "十六夜 野宫",
     "star": 2,
@@ -2261,7 +2635,7 @@ export const blueArchiveStudent: any[] = [
     "map_get": 0
   },
   {
-    "id": 134,
+    "id": 156,
     "name": "野宫（泳装）",
     "name_ja": "十六夜 野宫",
     "star": 3,
@@ -2278,7 +2652,41 @@ export const blueArchiveStudent: any[] = [
     "map_get": 0
   },
   {
-    "id": 135,
+    "id": 157,
+    "name": "一花",
+    "name_ja": null,
+    "star": 3,
+    "position": 0,
+    "weapon": 3,
+    "url": "164610",
+    "img_urls": null,
+    "icon_url": "https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2023/9/7/636532.png",
+    "banner": 0,
+    "attack": 3,
+    "defense": 1,
+    "school": 2,
+    "club": 11,
+    "map_get": 0
+  },
+  {
+    "id": 158,
+    "name": "伊吹",
+    "name_ja": null,
+    "star": 1,
+    "position": 3,
+    "weapon": 3,
+    "url": "611643",
+    "img_urls": null,
+    "icon_url": "https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2024/0/25/235117.png",
+    "banner": 2,
+    "attack": 2,
+    "defense": 1,
+    "school": 1,
+    "club": 3,
+    "map_get": 0
+  },
+  {
+    "id": 159,
     "name": "伊吕波",
     "name_ja": "枣イロハ",
     "star": 3,
@@ -2295,12 +2703,12 @@ export const blueArchiveStudent: any[] = [
     "map_get": 0
   },
   {
-    "id": 136,
+    "id": 160,
     "name": "伊织",
     "name_ja": "銀鏡イオリ",
     "star": 3,
     "position": 0,
-    "weapon": 7,
+    "weapon": 1,
     "url": "59300",
     "img_urls": "https://cdnimg.gamekee.com/wiki2.0/images/829/4408/2021/10/4/582408.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_3160/h_2219/829/210034/2022/8/18/276426.png",
     "icon_url": "https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2022/7/3/371282.jpg",
@@ -2312,7 +2720,7 @@ export const blueArchiveStudent: any[] = [
     "map_get": 1
   },
   {
-    "id": 137,
+    "id": 161,
     "name": "伊织（泳装）",
     "name_ja": "银镜伊织",
     "star": 3,
@@ -2329,7 +2737,7 @@ export const blueArchiveStudent: any[] = [
     "map_get": 0
   },
   {
-    "id": 138,
+    "id": 162,
     "name": "樱子",
     "name_ja": "歌住サクラコ",
     "star": 3,
@@ -2342,11 +2750,11 @@ export const blueArchiveStudent: any[] = [
     "attack": 2,
     "defense": 2,
     "school": 2,
-    "club": 11,
+    "club": 12,
     "map_get": 0
   },
   {
-    "id": 139,
+    "id": 163,
     "name": "优香",
     "name_ja": "早濑ユウカ",
     "star": 2,
@@ -2359,11 +2767,11 @@ export const blueArchiveStudent: any[] = [
     "attack": 0,
     "defense": 1,
     "school": 3,
-    "club": 18,
+    "club": 19,
     "map_get": 1
   },
   {
-    "id": 140,
+    "id": 164,
     "name": "优香（体操服）",
     "name_ja": "早瀬 ユウカ",
     "star": 3,
@@ -2376,11 +2784,11 @@ export const blueArchiveStudent: any[] = [
     "attack": 2,
     "defense": 2,
     "school": 3,
-    "club": 18,
+    "club": 19,
     "map_get": 0
   },
   {
-    "id": 141,
+    "id": 165,
     "name": "忧",
     "name_ja": "古関 ウイ",
     "star": 3,
@@ -2393,15 +2801,15 @@ export const blueArchiveStudent: any[] = [
     "attack": 0,
     "defense": 0,
     "school": 2,
-    "club": 12,
+    "club": 13,
     "map_get": 0
   },
   {
-    "id": 142,
+    "id": 166,
     "name": "忧（泳装）",
     "name_ja": "古関 ウイ",
     "star": 3,
-    "position": 0,
+    "position": 3,
     "weapon": 7,
     "url": "595933",
     "img_urls": "https://cdnimg.gamekee.com/wiki2.0/images/w_908/h_1210/829/43637/2023/6/25/943708.jpg,https://cdnimg.gamekee.com/wiki2.0/images/w_3670/h_2677/829/43637/2023/6/24/87991.png",
@@ -2410,11 +2818,11 @@ export const blueArchiveStudent: any[] = [
     "attack": 1,
     "defense": 3,
     "school": 2,
-    "club": 12,
+    "club": 13,
     "map_get": 0
   },
   {
-    "id": 143,
+    "id": 167,
     "name": "柚子",
     "name_ja": "花岡（はなおか）ユズ",
     "star": 3,
@@ -2427,11 +2835,11 @@ export const blueArchiveStudent: any[] = [
     "attack": 1,
     "defense": 2,
     "school": 3,
-    "club": 19,
+    "club": 20,
     "map_get": 0
   },
   {
-    "id": 144,
+    "id": 168,
     "name": "柚子（女仆）",
     "name_ja": "花岡（はなおか）ユズ",
     "star": 1,
@@ -2444,11 +2852,45 @@ export const blueArchiveStudent: any[] = [
     "attack": 0,
     "defense": 3,
     "school": 3,
-    "club": 19,
+    "club": 20,
     "map_get": 0
   },
   {
-    "id": 145,
+    "id": 169,
+    "name": "御坂美琴",
+    "name_ja": null,
+    "star": 3,
+    "position": 0,
+    "weapon": 3,
+    "url": "603133",
+    "img_urls": null,
+    "icon_url": "https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2023/9/26/494859.png",
+    "banner": 1,
+    "attack": 1,
+    "defense": 1,
+    "school": 11,
+    "club": 42,
+    "map_get": 0
+  },
+  {
+    "id": 170,
+    "name": "缘里",
+    "name_ja": null,
+    "star": 3,
+    "position": 0,
+    "weapon": 7,
+    "url": "604513",
+    "img_urls": null,
+    "icon_url": "https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2023/10/8/640783.png",
+    "banner": 0,
+    "attack": 3,
+    "defense": 1,
+    "school": 4,
+    "club": 38,
+    "map_get": 0
+  },
+  {
+    "id": 171,
     "name": "月咏",
     "name_ja": "大野月咏",
     "star": 3,
@@ -2461,11 +2903,11 @@ export const blueArchiveStudent: any[] = [
     "attack": 2,
     "defense": 0,
     "school": 4,
-    "club": 35,
+    "club": 36,
     "map_get": 0
   },
   {
-    "id": 146,
+    "id": 172,
     "name": "真白",
     "name_ja": "静山（しずやま）マシロ",
     "star": 3,
@@ -2478,11 +2920,11 @@ export const blueArchiveStudent: any[] = [
     "attack": 0,
     "defense": 1,
     "school": 2,
-    "club": 10,
+    "club": 11,
     "map_get": 0
   },
   {
-    "id": 147,
+    "id": 173,
     "name": "真白（泳装）",
     "name_ja": "静山 マシロ",
     "star": 3,
@@ -2495,11 +2937,11 @@ export const blueArchiveStudent: any[] = [
     "attack": 2,
     "defense": 0,
     "school": 2,
-    "club": 10,
+    "club": 11,
     "map_get": 0
   },
   {
-    "id": 148,
+    "id": 174,
     "name": "真纪",
     "name_ja": " 小塗（こぬり）マキ",
     "star": 3,
@@ -2512,11 +2954,28 @@ export const blueArchiveStudent: any[] = [
     "attack": 1,
     "defense": 0,
     "school": 3,
-    "club": 22,
+    "club": 23,
     "map_get": 0
   },
   {
-    "id": 149,
+    "id": 175,
+    "name": "真琴",
+    "name_ja": null,
+    "star": 3,
+    "position": 0,
+    "weapon": 7,
+    "url": "611604",
+    "img_urls": null,
+    "icon_url": "https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2024/0/25/24322.png",
+    "banner": 1,
+    "attack": 1,
+    "defense": 2,
+    "school": 1,
+    "club": 3,
+    "map_get": 0
+  },
+  {
+    "id": 176,
     "name": "志美子",
     "name_ja": "円堂シミコ",
     "star": 1,
@@ -2529,11 +2988,11 @@ export const blueArchiveStudent: any[] = [
     "attack": 0,
     "defense": 0,
     "school": 2,
-    "club": 12,
+    "club": 13,
     "map_get": 1
   },
   {
-    "id": 150,
+    "id": 177,
     "name": "朱莉",
     "name_ja": "牛牧ジュリ",
     "star": 1,
@@ -2550,7 +3009,7 @@ export const blueArchiveStudent: any[] = [
     "map_get": 1
   },
   {
-    "id": 151,
+    "id": 178,
     "name": "朱音",
     "name_ja": "室笠（むろかさ）アカネ",
     "star": 2,
@@ -2563,11 +3022,11 @@ export const blueArchiveStudent: any[] = [
     "attack": 1,
     "defense": 0,
     "school": 3,
-    "club": 20,
+    "club": 21,
     "map_get": 0
   },
   {
-    "id": 152,
+    "id": 179,
     "name": "朱音（兔女郎）",
     "name_ja": "室笠（むろかさ）アカネ",
     "star": 3,
@@ -2580,11 +3039,11 @@ export const blueArchiveStudent: any[] = [
     "attack": 2,
     "defense": 1,
     "school": 3,
-    "club": 20,
+    "club": 21,
     "map_get": 0
   },
   {
-    "id": 153,
+    "id": 180,
     "name": "渚",
     "name_ja": "桐藤 ナギサ",
     "star": 3,
@@ -2597,11 +3056,11 @@ export const blueArchiveStudent: any[] = [
     "attack": 0,
     "defense": 1,
     "school": 2,
-    "club": 17,
+    "club": 18,
     "map_get": 0
   },
   {
-    "id": 154,
+    "id": 181,
     "name": "梓",
     "name_ja": "白洲アズサ（白洲梓）",
     "star": 3,
@@ -2614,11 +3073,11 @@ export const blueArchiveStudent: any[] = [
     "attack": 0,
     "defense": 1,
     "school": 2,
-    "club": 13,
+    "club": 14,
     "map_get": 0
   },
   {
-    "id": 155,
+    "id": 182,
     "name": "梓（泳装）",
     "name_ja": "白洲アズサ（白洲梓）",
     "star": 3,
@@ -2631,7 +3090,24 @@ export const blueArchiveStudent: any[] = [
     "attack": 2,
     "defense": 0,
     "school": 2,
-    "club": 13,
+    "club": 14,
+    "map_get": 0
+  },
+  {
+    "id": 183,
+    "name": "佐天泪子",
+    "name_ja": null,
+    "star": 1,
+    "position": 0,
+    "weapon": 2,
+    "url": "603140",
+    "img_urls": null,
+    "icon_url": "https://cdnimg.gamekee.com/wiki2.0/images/w_404/h_456/829/43637/2023/9/31/669673.png",
+    "banner": 2,
+    "attack": 1,
+    "defense": 2,
+    "school": 12,
+    "club": 42,
     "map_get": 0
   }
 ]

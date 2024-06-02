@@ -1963,9 +1963,9 @@ export const genshinPool: any[] = [
     "pool_start": "2024.04.24",
     "pool_end": "2024.05.15",
     "up_5": "阿蕾奇诺",
-    "up_4": null,
-    "pool_img": null,
-    "remark": null
+    "up_4": "香菱 菲米尼 琳妮特",
+    "pool_img": "https://upload-bbs.miyoushe.com/upload/2024/04/19/75276539/68815d969fd56225f656c2b2312d2f47_3017034329968026405.jpg",
+    "remark": "https://www.miyoushe.com/ys/article/51856264"
   },
   {
     "id": 165,
@@ -1975,9 +1975,9 @@ export const genshinPool: any[] = [
     "pool_start": "2024.04.24",
     "pool_end": "2024.05.15",
     "up_5": "林尼",
-    "up_4": null,
-    "pool_img": null,
-    "remark": null
+    "up_4": "香菱 菲米尼 琳妮特",
+    "pool_img": "https://upload-bbs.miyoushe.com/upload/2024/04/19/75276539/7e5d9b37e4fe8fa078abafd8e0ad061d_6796851107160785327.jpg",
+    "remark": "https://www.miyoushe.com/ys/article/51856267"
   },
   {
     "id": 166,
@@ -1988,8 +1988,8 @@ export const genshinPool: any[] = [
     "pool_end": "2024.05.15",
     "up_5": "赤月之形 最初的大魔术",
     "up_4": null,
-    "pool_img": null,
-    "remark": null
+    "pool_img": "https://upload-bbs.miyoushe.com/upload/2024/04/19/75276539/fdba79b7e3b249120c5bf40609893b85_2020695437144462662.jpg",
+    "remark": "https://www.miyoushe.com/ys/article/51856268"
   },
   {
     "id": 167,
@@ -1997,11 +1997,11 @@ export const genshinPool: any[] = [
     "stage": 2,
     "name": "余火变相",
     "pool_start": "2024.05.15",
-    "pool_end": "2024.06.05",
+    "pool_end": "2024.06.04",
     "up_5": "流浪者",
-    "up_4": null,
-    "pool_img": null,
-    "remark": null
+    "up_4": "莱依拉 珐露珊 北斗",
+    "pool_img": "https://upload-bbs.miyoushe.com/upload/2024/05/08/75276539/4835a3a5c736c558e7fdc3c8ed8ed6b5_5332051123096324109.jpg",
+    "remark": "https://www.miyoushe.com/ys/article/52680841"
   },
   {
     "id": 168,
@@ -2009,11 +2009,11 @@ export const genshinPool: any[] = [
     "stage": 2,
     "name": "心珠循琅",
     "pool_start": "2024.05.15",
-    "pool_end": "2024.06.05",
+    "pool_end": "2024.06.04",
     "up_5": "白术",
-    "up_4": null,
-    "pool_img": null,
-    "remark": null
+    "up_4": "莱依拉 珐露珊 北斗",
+    "pool_img": "https://upload-bbs.miyoushe.com/upload/2024/05/08/75276539/a92a94c734bb50c7e2403f605ab96fa6_3458354365899436476.jpg",
+    "remark": "https://www.miyoushe.com/ys/article/52680843"
   },
   {
     "id": 169,
@@ -2021,10 +2021,82 @@ export const genshinPool: any[] = [
     "stage": 2,
     "name": null,
     "pool_start": "2024.05.15",
-    "pool_end": "2024.06.05",
+    "pool_end": "2024.06.04",
     "up_5": "碧落之珑 图莱杜拉的回忆",
     "up_4": null,
+    "pool_img": "https://upload-bbs.miyoushe.com/upload/2024/05/08/75276539/3112b92a13fb2694094ff554603e4f0b_9096451714403841549.png",
+    "remark": "https://www.miyoushe.com/ys/article/52680845"
+  },
+  {
+    "id": 170,
+    "version": "4.7",
+    "stage": 1,
+    "name": "克洛琳德",
+    "pool_start": "2024.06.05",
+    "pool_end": "2024.06.19",
+    "up_5": "克洛琳德",
+    "up_4": "赛索斯",
+    "pool_img": "https://upload-bbs.miyoushe.com/upload/2024/05/24/75276539/aa51a2ef1dbf19c32ec87a531d7adfad_3935331670912511122.jpg",
+    "remark": null
+  },
+  {
+    "id": 171,
+    "version": "4.7",
+    "stage": 1,
+    "name": "敕诫枢谋",
+    "pool_start": "2024.06.05",
+    "pool_end": "2024.06.19",
+    "up_5": "艾尔海森",
+    "up_4": "赛索斯",
+    "pool_img": "https://upload-bbs.miyoushe.com/upload/2024/05/24/75276539/e98a402614acdf9165b56c6a0242387e_6925084467830741125.jpg",
+    "remark": null
+  },
+  {
+    "id": 172,
+    "version": "4.7",
+    "stage": 1,
+    "name": null,
+    "pool_start": "2024.06.05",
+    "pool_end": "2024.06.19",
+    "up_5": "赦罪 裁叶萃光",
+    "up_4": null,
     "pool_img": null,
+    "remark": null
+  },
+  {
+    "id": 173,
+    "version": "4.7",
+    "stage": 2,
+    "name": "希格雯",
+    "pool_start": "2024.06.19",
+    "pool_end": "2024-07-16",
+    "up_5": "希格雯",
+    "up_4": null,
+    "pool_img": "https://upload-bbs.miyoushe.com/upload/2024/05/24/75276539/e98a402614acdf9165b56c6a0242387e_6925084467830741125.jpg",
+    "remark": null
+  },
+  {
+    "id": 174,
+    "version": "4.7",
+    "stage": 2,
+    "name": "众水的颂诗",
+    "pool_start": "2024.06.19",
+    "pool_end": "2024-07-16",
+    "up_5": "芙宁娜",
+    "up_4": null,
+    "pool_img": "https://upload-bbs.miyoushe.com/upload/2024/05/24/75276539/e98a402614acdf9165b56c6a0242387e_6925084467830741125.jpg",
+    "remark": null
+  },
+  {
+    "id": 175,
+    "version": "4.7",
+    "stage": 2,
+    "name": null,
+    "pool_start": "2024.06.19",
+    "pool_end": "2024-07-16",
+    "up_5": "白雨心弦 静水流涌之辉",
+    "up_4": null,
+    "pool_img": "https://upload-bbs.miyoushe.com/upload/2024/05/24/75276539/29fa4d61332b80b6d1c52f6a57210c77_6799045137381700308.jpg",
     "remark": null
   }
 ]

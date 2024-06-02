@@ -2178,16 +2178,6 @@ export const blueArchivePicacg: any[] = [
     page: 12,
   },
   {
-    id: 226,
-    book: 2,
-    book_name: "【蔚蓝档案四格漫画】101话-",
-    name: "113-3.png",
-    url: "https://ba.gamekee.com/608757.html",
-    img_url:
-      "https://cdnimg.gamekee.com/wiki2.0/images/w_24/h_24/829/43637/2024/0/30/447232.png",
-    page: 13,
-  },
-  {
     id: 222,
     book: 2,
     book_name: "【蔚蓝档案四格漫画】101话-",

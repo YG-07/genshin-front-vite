@@ -357,7 +357,7 @@ export const genshinVersion: any[] = [
     "name": "铓锋锦间裁",
     "version_start": "2024-03-13",
     "version_end": "2024-04-02",
-    "version_img": null,
+    "version_img": "https://upload-bbs.miyoushe.com/upload/2024/03/01/191335050/e500ed811f8d47b606717d4e327c4566_2214203337716292951.jpeg",
     "link": "https://www.miyoushe.com/ys/article/49869420",
     "preview": "https://act.mihoyo.com/ys/event/e20230302preview-2hu94k/index.html",
     "remark": null
@@ -367,10 +367,21 @@ export const genshinVersion: any[] = [
     "version": "4.6",
     "name": "两界为火，赤夜将熄",
     "version_start": "2024-04-23",
-    "version_end": "2024-06-05",
-    "version_img": null,
+    "version_end": "2024-06-04",
+    "version_img": "https://upload-bbs.miyoushe.com/upload/2024/06/02/247584033/7439bcb5c000e9218afd1ef6d3c7f343_7795650680030079983.png",
     "link": "https://www.miyoushe.com/ys/article/51426021",
     "preview": "https://act.mihoyo.com/ys/event/e20240413preview-pvtga2/index.html",
+    "remark": null
+  },
+  {
+    "id": 35,
+    "version": "4.7",
+    "name": "纺坠终久之梦",
+    "version_start": "2024-06-05",
+    "version_end": "2024-07-16",
+    "version_img": "https://upload-bbs.miyoushe.com/upload/2024/05/24/75276539/208a422ba4287c6a5ac2be756e91f66d_8950046656312139069.jpg",
+    "link": "https://www.miyoushe.com/ys/article/53150307",
+    "preview": "https://act.mihoyo.com/ys/event/e20240525preview-d6s2mc/index.html",
     "remark": null
   }
 ]
