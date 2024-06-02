@@ -152,12 +152,12 @@ const menuOptions: MenuOption[] = [
       {
         label: renderRoute("npc", "NPC和卫星"),
         key: "npc",
-        icon: renderIcon(normalIcon('https://cdnimg.gamekee.com/wiki2.0/images/w_200/h_200/829/43637/2023/6/24/530011.jpg')),
+        icon: renderIcon(normalIcon('https://cdnimg.gamekee.com/wiki2.0/images/w_310/h_310/829/43637/2023/7/21/828040.png')),
       },
       {
         label: renderRoute("picacg", "漫画"),
         key: "picacg",
-        icon: renderIcon(normalIcon('https://cdnimg.gamekee.com/wiki2.0/images/w_200/h_200/829/43637/2023/6/24/530011.jpg')),
+        icon: renderIcon(normalIcon('https://cdnimg.gamekee.com/wiki2.0/images/w_68/h_68/829/43637/2023/6/6/186887.png')),
       },
     ]
   }

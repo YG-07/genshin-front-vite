@@ -79,6 +79,9 @@ const handleUrl = () => {
 
 <style lang="scss" scoped>
 .BluePicCard {
+  border: 1px solid #eee;
+  border-radius: 3px;
+
   .pic-item {
     display: flex;
     flex-direction: column;
