@@ -2033,11 +2033,11 @@ export const genshinPool: any[] = [
     "stage": 1,
     "name": "克洛琳德",
     "pool_start": "2024.06.05",
-    "pool_end": "2024.06.19",
+    "pool_end": "2024.06.25",
     "up_5": "克洛琳德",
-    "up_4": "赛索斯",
-    "pool_img": "https://upload-bbs.miyoushe.com/upload/2024/05/24/75276539/aa51a2ef1dbf19c32ec87a531d7adfad_3935331670912511122.jpg",
-    "remark": null
+    "up_4": "赛索斯 班尼特 托马",
+    "pool_img": "https://upload-bbs.miyoushe.com/upload/2024/05/31/75276539/e6db0a29b2f87f31d6828591500ae379_4583759034430940124.png",
+    "remark": "https://www.miyoushe.com/ys/article/53443722"
   },
   {
     "id": 171,
@@ -2045,11 +2045,11 @@ export const genshinPool: any[] = [
     "stage": 1,
     "name": "敕诫枢谋",
     "pool_start": "2024.06.05",
-    "pool_end": "2024.06.19",
+    "pool_end": "2024.06.25",
     "up_5": "艾尔海森",
-    "up_4": "赛索斯",
-    "pool_img": "https://upload-bbs.miyoushe.com/upload/2024/05/24/75276539/e98a402614acdf9165b56c6a0242387e_6925084467830741125.jpg",
-    "remark": null
+    "up_4": "赛索斯 班尼特 托马",
+    "pool_img": "https://upload-bbs.miyoushe.com/upload/2024/05/31/75276539/799f26a4e73463523dfd1bf398cf44c0_5744038809012465739.png",
+    "remark": "https://www.miyoushe.com/ys/article/53443723"
   },
   {
     "id": 172,
@@ -2057,46 +2057,46 @@ export const genshinPool: any[] = [
     "stage": 1,
     "name": null,
     "pool_start": "2024.06.05",
-    "pool_end": "2024.06.19",
+    "pool_end": "2024.06.25",
     "up_5": "赦罪 裁叶萃光",
     "up_4": null,
-    "pool_img": null,
-    "remark": null
+    "pool_img": "https://upload-bbs.miyoushe.com/upload/2024/05/31/75276539/d64ebb618f0c98278e90915812791b28_6562683629398856221.png",
+    "remark": "https://www.miyoushe.com/ys/article/53443725"
   },
   {
     "id": 173,
     "version": "4.7",
     "stage": 2,
     "name": "希格雯",
-    "pool_start": "2024.06.19",
-    "pool_end": "2024-07-16",
+    "pool_start": "2024.06.25",
+    "pool_end": "2024.07.16",
     "up_5": "希格雯",
-    "up_4": null,
-    "pool_img": "https://upload-bbs.miyoushe.com/upload/2024/05/24/75276539/e98a402614acdf9165b56c6a0242387e_6925084467830741125.jpg",
-    "remark": null
+    "up_4": "诺艾尔 嘉明 罗莎莉亚",
+    "pool_img": "https://upload-bbs.miyoushe.com/upload/2024/06/18/75276539/5b8073be488234b4c9c8a5d2eb40e601_4748295250943149331.png",
+    "remark": "https://www.miyoushe.com/ys/article/54031539"
   },
   {
     "id": 174,
     "version": "4.7",
     "stage": 2,
     "name": "众水的颂诗",
-    "pool_start": "2024.06.19",
-    "pool_end": "2024-07-16",
+    "pool_start": "2024.06.25",
+    "pool_end": "2024.07.16",
     "up_5": "芙宁娜",
-    "up_4": null,
-    "pool_img": "https://upload-bbs.miyoushe.com/upload/2024/05/24/75276539/e98a402614acdf9165b56c6a0242387e_6925084467830741125.jpg",
-    "remark": null
+    "up_4": "诺艾尔 嘉明 罗莎莉亚",
+    "pool_img": "https://upload-bbs.miyoushe.com/upload/2024/06/18/75276539/4b8b20057588aeb4e63c6a11c32032d1_1038496411610082164.png",
+    "remark": "https://www.miyoushe.com/ys/article/54031540"
   },
   {
     "id": 175,
     "version": "4.7",
     "stage": 2,
     "name": null,
-    "pool_start": "2024.06.19",
-    "pool_end": "2024-07-16",
+    "pool_start": "2024.06.25",
+    "pool_end": "2024.07.16",
     "up_5": "白雨心弦 静水流涌之辉",
     "up_4": null,
-    "pool_img": "https://upload-bbs.miyoushe.com/upload/2024/05/24/75276539/29fa4d61332b80b6d1c52f6a57210c77_6799045137381700308.jpg",
-    "remark": null
+    "pool_img": "https://upload-bbs.miyoushe.com/upload/2024/06/18/75276539/d32951b53690f4780243942bf4b457fe_1059622937236726571.png",
+    "remark": "https://www.miyoushe.com/ys/article/54031543"
   }
 ]

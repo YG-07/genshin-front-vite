@@ -5,27 +5,58 @@
       本网站是通过Python爬虫获取各个游戏的图鉴信息，如：图标、名称、官方链接等，没有显示的图片可能来自于拆包网的下一个游戏版本的物品。纯前端项目，模拟的数据库查询。
     </p>
     <h2>常用网站</h2>
-    <p>原神米游社日历活动：<a target="_blank"
-        href="https://bbs.mihoyo.com/ys/obc/channel/map/193">https://bbs.mihoyo.com/ys/obc/channel/map/193</a></p>
-    <p>原神米游社Wiki：<a target="_blank" href="https://bbs.mihoyo.com/ys/obc">https://bbs.mihoyo.com/ys/obc</a></p>
-    <p>原神拆包网：<a target="_blank"
-        href="https://genshin.honeyhunterworld.com/?lang=CHS">https://genshin.honeyhunterworld.com/?lang=CHS</a></p>
-    <p>原神米游社七圣召唤Wiki：<a target="_blank"
-        href="https://bbs.mihoyo.com/ys/obc/channel/map/231/234">https://bbs.mihoyo.com/ys/obc/channel/map/231/234</a></p>
-    <p>星穹铁道米游社Wiki：<a target="_blank" href="https://bbs.mihoyo.com/sr/wiki/">https://bbs.mihoyo.com/sr/wiki/</a></p>
-    <p>星穹铁道拆包网：<a target="_blank"
-        href="https://hsr.honeyhunterworld.com/?lang=CN">https://hsr.honeyhunterworld.com/?lang=CN</a></p>
-    <p>原神米游社大地图工具：<a target="_blank"
-        href="https://webstatic.mihoyo.com/ys/app/interactive-map/index.html">https://webstatic.mihoyo.com/ys/app/interactive-map/index.html</a>
-    </p>
-    <p>崩坏3米游社Wiki：<a target="_blank"
-        href="https://bbs.mihoyo.com/bh3/wiki/channel/map/17/18">https://bbs.mihoyo.com/bh3/wiki/channel/map/17/18</a></p>
-    <p>碧蓝档案Wiki：<a target="_blank" href="https://ba.gamekee.com">https://ba.gamekee.com</a></p>
-    <p>碧蓝档案千里眼：<a target="_blank" href="https://ba.gamekee.com/596691.html">https://ba.gamekee.com/596691.html</a></p>
+    <n-space>
+      <n-input :value="searchName" @update:value="handleName" type="text" placeholder="搜索网站名称"
+        :style="ua ? 'width: 200px' : 'min-width: 200px;'" />
+    </n-space>
+    <n-space v-for="(cate, indexCate) in usefullWebsiteFilterList" :key="indexCate" vertical>
+      <h3>{{ cate.cate }}</h3>
+      <n-space>
+        <n-card class="item-card" size="small" v-for="(item, indexItem) in cate.list" @click="gotoPage(item)"
+          :key="indexItem" :title="item.label" hoverable>
+        </n-card>
+      </n-space>
+    </n-space>
   </n-space>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import { computed, reactive, ref } from 'vue';
+import { _usefullWebsiteList } from './data';
+import { checkUA } from '@/utils';
+const ua = ref(checkUA())
+
+const handleName = (value: any) => {
+  searchName.value = value
+}
+
+const usefullWebsiteList = reactive<any>(_usefullWebsiteList)
+let searchName = ref('')
+const usefullWebsiteFilterList = computed(() => {
+  let s = searchName.value
+  let uewList = [] as any
+  let newItem = { cate: '搜索', list: [] as any } as any
+  if (s) {
+    for (let i = 0; i < usefullWebsiteList.length; i++) {
+      let item = usefullWebsiteList[i];
+      if (item.cate.includes(s)) {
+        uewList.push(item)
+      } else {
+        let list = item.list.filter((e: any) => e.label.includes(s) || e.value.includes(s)) as any
+        newItem.list.push(...list)
+      }
+    }
+    uewList.push(newItem)
+    return uewList
+  }
+  return usefullWebsiteList
+})
+
+const gotoPage = (item: any) => {
+  window.open(item.value, "_blank");
+}
+
+</script>
 
 <style lang="scss" scoped>
 .Footer {
@@ -33,5 +64,9 @@
     text-indent: 2em;
     margin: 2px 15px;
   }
+}
+
+.item-card {
+  cursor: pointer;
 }
 </style>

@@ -379,7 +379,7 @@ export const genshinVersion: any[] = [
     "name": "纺坠终久之梦",
     "version_start": "2024-06-05",
     "version_end": "2024-07-16",
-    "version_img": "https://upload-bbs.miyoushe.com/upload/2024/05/24/75276539/208a422ba4287c6a5ac2be756e91f66d_8950046656312139069.jpg",
+    "version_img": "https://upload-bbs.miyoushe.com/upload/2024/06/05/247584033/8c92f3c6c4176ea8253030156cfc734e_7936726452795872071.png",
     "link": "https://www.miyoushe.com/ys/article/53150307",
     "preview": "https://act.mihoyo.com/ys/event/e20240525preview-d6s2mc/index.html",
     "remark": null
