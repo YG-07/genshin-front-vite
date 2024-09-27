@@ -6,6 +6,9 @@
   "scripts": {
     "dev": "vite --host 0.0.0.0 --open",
     "build": "vue-tsc --noEmit && vite build --mode production",
+    "gitee": "vue-tsc --noEmit && vite build --mode gitee-production",
+    "github": "vue-tsc --noEmit && vite build --mode github-production",
+    "render": "vue-tsc --noEmit && vite build --mode render-production",
     "test": "vue-tsc --noEmit && vite build --mode test",
     "preview": "vite preview"
   },

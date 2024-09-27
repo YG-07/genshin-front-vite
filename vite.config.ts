@@ -1,4 +1,4 @@
-import { defineConfig } from 'vite'
+import { defineConfig, loadEnv } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import path from 'path'
 
@@ -47,23 +47,39 @@ export function setupBuild() {
 }
 
 // GitHub 打包
-// export default defineConfig({
-//   base: "/gs/",
-//   plugins: [vue()],
-//   define: {
-//     'process.env': {}
-//   },
-//   build: setupBuild(),
-//   resolve: {
-//     alias: {
-//       '@': path.resolve(__dirname, './src')
-//     },
-//     extensions: ['.mjs', '.js', '.ts', '.jsx', '.tsx', '.json']
-//   }
-// })
+const GithubConfig ={
+  base: "/gs/",
+  plugins: [vue()],
+  define: {
+    'process.env': {}
+  },
+  build: setupBuild(),
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './src')
+    },
+    extensions: ['.mjs', '.js', '.ts', '.jsx', '.tsx', '.json']
+  }
+}
 
-// gitee打包
-export default defineConfig({
+// Render 打包
+const RenderConfig = {
+  base: "./",
+  plugins: [vue()],
+  define: {
+    'process.env': {}
+  },
+  build: setupBuild(),
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './src')
+    },
+    extensions: ['.mjs', '.js', '.ts', '.jsx', '.tsx', '.json']
+  }
+}
+
+// Gitee打包
+const GiteeConfig = {
   base: "./",
   plugins: [vue()],
   define: {
@@ -77,5 +93,23 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src')
     },
     extensions: ['.mjs', '.js', '.ts', '.jsx', '.tsx', '.json']
+  }
+}
+
+const EnvConfigMap = {
+  base  : GiteeConfig,    // vite-app/dist
+  gitee : GiteeConfig,    // vite-app/dist
+  github: GithubConfig,   // dist
+  render: RenderConfig    // dist
+}
+
+export default defineConfig(({ mode }) => {
+  // 根据当前模式（开发或生产）加载环境变量
+  const env = loadEnv(mode, process.cwd() + '\\env');// 指定环境变量文件所在的目录
+  console.log("环境变量：", env);
+  let version = env.VITE_VERSION
+  return {
+    envDir: './env', // 指定环境变量文件所在的目录
+    ...EnvConfigMap[version]
   }
 })
